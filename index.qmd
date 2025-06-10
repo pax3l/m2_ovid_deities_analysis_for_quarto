@@ -1,41 +1,165 @@
 ---
-title: La Palma Earthquakes
+title: Le rôle des divinités dans les **Métamorphoses** d'Ovide
 author:
-  - name: Steve Purves
-    orcid: 0000-0002-0760-5497
+  - name: Axelle Penture
+    orcid: 
     corresponding: true
-    email: steve@curvenote.com
-    roles:
-      - Investigation
-      - Project administration
-      - Software
-      - Visualization
+    email: pentureaxelle@gmail.com
+    roles: Étudiante M2 HCHN 
     affiliations:
-      - Curvenote
-  - name: Rowan Cockett
-    orcid: 0000-0002-7859-8394
-    corresponding: false
-    roles: []
-    affiliations:
-      - Curvenote
+      - Paris Nanterre Université
+  #- name: Aurélien Berra
+    #orcid: 
+    #corresponding: false
+    #roles: [Directeur de recherche]
+    #affiliations:
+      #- Paris Nanterre Université 
 keywords:
-  - La Palma
-  - Earthquakes
+  - Ovide
+  - Les Métamorphoses
+  - Divinités
+  - Minerve
+  - Apollon 
+  - Jupiter
 abstract: |
-  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
+  none
 plain-language-summary: |
-  Earthquake data for the island of La Palma from the September 2021 eruption is found ...
+  none
 key-points:
-  - A web scraping script was developed to pull data from the Instituto Geogràphico Nacional into a machine-readable form for analysis
-  - Earthquake events on La Palma are consistent with the presence of both mantle and crustal reservoirs.
+  - none
+  - none
 date: last-modified
-bibliography: references.bib
+bibliography: references.bib #for now only a test version, to curate
 citation:
-  container-title: Earth and Space Science
+  container-title: None
 number-sections: true
 ---
+# Proposition de plan (points clés)
 
-## Introduction
+<!--## Plan du M1 
+
+I. La structure des *Métamorphoses* : le travail de Gilles Tronchet 
+
+1. Le découpage des *Métamorphoses* 
+Considérations générales 
+La définition de l’épisode 
+Le premier découpage de Gilles Tronchet 
+
+2. Les typologies des métamorphoses 
+Métamorphose : définitions 
+Typologie des métamorphoses par catégorie et par genre 
+
+3. Les schémas narratifs actanciels ou « algorithmes » 
+
+II. Préparation à l’exploration numérique de la structure dans les Métamorphoses
+
+1. Extraction de la méthode et des données 
+Les restrictions de la méthode de Gilles Tronchet dans le cadre d’une démarche
+numérique 
+Vers une exploration numérique 
+
+2. Exploration numérique : adapter les données 
+Travail autour des classifications 
+Traitement numérique du texte 
+
+3. Balayage lexical préliminaire avec Voyant Tools 
+Exploration de l’oeuvre 
+Exploration des épisodes des métamorphoses 
+
+III. Exploration numérique des Métamorphoses : réseaux et échelles de la
+métamorphose. 
+
+1. Analyse structurelle globale 
+Visualisation et analyse de la place des métamorphoses au sein du texte selon la
+caractérisation de Tronchet
+Analyse quantitative des vers dédiés à la métamorphose à l’échelle de l'oeuvre 
+
+2. Analyse de réseaux 
+Qui transforme qui ?
+En quoi transforme qui ?
+
+3. Modèle d’analyse d’une métamorphose
+--> 
+
+## Introduction (ce document)
+- Les Métamorphoses d'Ovide : entre tradition mythologique et innovation poétique
+- Problématique à peaufiner : Comment l'analyse computationnelle renouvelle-t-elle la lecture d'Ovide ?  Que révèle l'analyse quantitative des fonctions narratives de Minerve, Apollon et Jupiter ?
+- Focus sur Minerve, Apollon, Jupiter : explicaiton du choix
+- Méthodologie mixte : approche computationnelle (R) et analyse littéraire
+- Présentation du corpus : critères de sélection et d'encodage
+- Annonce du plan
+
+## **(I.) Fondations : corpus, données et méthodes**
+
+- **1. Constitution du corpus numérique**
+    - Numérisation et encodage des *Métamorphoses* : travail de Nadine Rakofsky et dépassement 
+    - Identification et extraction des mentions divines : pré travail d'encodage
+    - Critères et limites méthodologiques
+- **2. Minerve, Apollon, Jupiter : profils quantitatifs**
+    - Statistiques descriptives par divinité : les données initiales et le travail sur les données de l'année dernière
+    - Répartition chronologique (et thématiquep/r type d'épisode ?) + premières visualisations (graphique de distribution + heatmaps)
+    
+- **3. Méthodologie d'analyse de réseau**
+    - Théorie des graphes appliquée aux textes
+    - Construction des réseaux de personnages
+    - Mesures de centralité et d'influence
+
+## **(II.) Exploration des données : schémas et structures**
+
+- **1. Analyse structurelle globale** 
+    - Distribution des divinités choisies dans l'architecture de l'œuvre
+    - Corrélations entre livres, épisodes et interventions divines
+    - Clustering et typologie des épisodes
+- **2. Réseaux relationnels et interactions**
+    - Méthodologie d'analyse de réseau avec R
+    - Cartographie des interactions divines/Graphes de co-occurrence et d'interactions
+    - Centralité et influence narrative
+- [**3. Analyse lexicale et sémantique**
+    - Champs lexicaux associés à chaque divinité
+    - Analyse des sentiments et tonalités
+    - Évolution du vocabulaire dans l'œuvre]
+
+## **(III.)Interprétation & innovation ovidienne
+- Nouvelle lecture des hiérarchies divines : 
+    - Jupiter
+      (- Fréquence et typologie des métamorphoses jupitériennes
+      - Différences entre pouvoir théorique et pratiques narrative)
+    - Apollon 
+    - Minerve
+- Études d'épisodes
+    - *Arachné* : Minerve à la loupe numérique
+    - *Daphné* : déconstruction quantitative d'un mythe
+    - *Europe* : Jupiter entre données et interprétation
+    (à fixer ave ccertitude selon les articles de la biblio)
+
+- Synthèse : vers une poétique computationnelle d'Ovide
+  - Ce que les données révèlent du génie ovidien
+  - Limites et apports de l'approche numérique
+
+## Conclusion 
+  - Synthèse des résultats quantitatifs et qualitatifs
+  - Hiérarchies confirmées et révélations inattendues
+  - Apports méthodologiques : reproductibilité et nouvelles perspectives
+  - Limites de l'approche computationnelle en littérature antique
+  - Perspectives pour l'étude numérique des textes classiques
+
+## *Annexes*
+
+  - Annexe 1 : Corpus des mentions des divinités par livre 
+
+  - Annexe 2 : Code R principal et visualisations
+
+  - Annexe 3 : Carte.s de réseau détaillée.s 
+
+  - Bibliographie (1 page)
+
+# Introduction 
+- état de l'art sur les études des divinités dans les récits d'Ovide (quantitativement et thématiquement); état des travaux sur les Métamorphoses, parcellaires et problème de la taille du corpus. Proposition d'une approche numérique pour l'étude transversale à travers un fil rouge des divinités et de leur dynamique dans les récits de mtamorphoses, essai d'une méthode numérique à vocation d'analyse littéraire.
+- Mention des précédents travaux sur lesquels je me base pour les analyses : Guillaume Tronchet, les découpages des éditions que j'utilise, mes travaux de l'année passée et le fichier XML de Nadine Rakofsky. 
+
+---
+
+<!--
 
 ```{r}
 eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
@@ -61,32 +185,22 @@ avg_years_between_eruptions <- mean(diff(eruptions[-n_eruptions]))
 avg_years_between_eruptions
 ```
 
-Based on data up to and including 1971, eruptions on La Palma happen every `{r} round(avg_years_between_eruptions, 1)` years on average.
-
-Studies of the magma systems feeding the volcano, such as @marrero2019, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).
-
-Eight eruptions have been recorded since the late 1400s (@fig-timeline).
-
-Data and methods are discussed in @sec-data-methods.
-
-Let $x$ denote the number of eruptions in a year. Then, $x$ can be modeled by a Poisson distribution
-
 $$
 p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
 $$ {#eq-poisson}
 
 where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probability of an eruption in the next $t$ years can be calculated.
 
-| Name                 | Year   |
-| -------------------- | ------ |
-| Current              | 2021   |
-| Teneguía             | 1971   |
-| Nambroque            | 1949   |
-| El Charco            | 1712   |
-| Volcán San Antonio   | 1677   |
-| Volcán San Martin    | 1646   |
-| Tajuya near El Paso  | 1585   |
-| Montaña Quemada      | 1492   |
+| Name                | Year |
+|---------------------|------|
+| Current             | 2021 |
+| Teneguía            | 1971 |
+| Nambroque           | 1949 |
+| El Charco           | 1712 |
+| Volcán San Antonio  | 1677 |
+| Volcán San Martin   | 1646 |
+| Tajuya near El Paso | 1585 |
+| Montaña Quemada     | 1492 |
 
 : Recent historic eruptions on La Palma {#tbl-history}
 
@@ -94,7 +208,7 @@ where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probab
 
 ![Map of La Palma](images/la-palma-map.png){#fig-map}
 
-La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map). 
+La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map).
 
 {{< embed notebooks/explore-earthquakes.qmd#fig-spatial-plot >}}
 
@@ -105,7 +219,6 @@ La Palma is one of the west most islands in the Volcanic Archipelago of the Cana
 ## Conclusion
 
 ## References {.unnumbered}
-
-:::{#refs}
-
+-->
+::: {#refs}
 :::

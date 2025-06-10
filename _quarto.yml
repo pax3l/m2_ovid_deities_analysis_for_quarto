@@ -1,6 +1,19 @@
 project:
-  type: manuscript
+  type: book
 
+book:
+  title: "Le rôle des divinités dans les *Métamorphoses* d’Ovide : étude des cas de Minerve, Apollon et Jupiter"
+  author: "Axelle Penture"
+  date: 03-07-2025
+  chapters:
+    - index.qmd
+    - partie1.qmd
+    - partie2.qmd
+    - partie3.qmd
+    - conclusion.qmd
+
+bibliography: m2_biblio_mémoire_vtest.bib
+csl: chicago-annotated-bibliography.csl # ou autre à voir dans le dépôt GitHub
 execute:
   freeze: auto
 
@@ -12,6 +25,7 @@ format:
   docx: default
   jats: default
   agu-pdf: default
-
-
-
+  pdf:
+    toc: true
+    number-sections: true
+    latex-engine: xelatex

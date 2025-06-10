@@ -1,0 +1,5 @@
+---
+title: "partie1"
+author: "Axelle Penture"
+editor: visual
+---
