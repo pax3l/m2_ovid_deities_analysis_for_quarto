@@ -34,8 +34,10 @@ citation:
   container-title: None
 number-sections: true
 ---
+
 # Proposition de plan (points clés)
 
+```{=html}
 <!--## Plan du M1 
 
 I. La structure des *Métamorphoses* : le travail de Gilles Tronchet 
@@ -79,146 +81,84 @@ Qui transforme qui ?
 En quoi transforme qui ?
 
 3. Modèle d’analyse d’une métamorphose
---> 
+-->
+```
 
 ## Introduction (ce document)
-- Les Métamorphoses d'Ovide : entre tradition mythologique et innovation poétique
-- Problématique à peaufiner : Comment l'analyse computationnelle renouvelle-t-elle la lecture d'Ovide ?  Que révèle l'analyse quantitative des fonctions narratives de Minerve, Apollon et Jupiter ?
-- Focus sur Minerve, Apollon, Jupiter : explicaiton du choix
-- Méthodologie mixte : approche computationnelle (R) et analyse littéraire
-- Présentation du corpus : critères de sélection et d'encodage
-- Annonce du plan
+
+-   Les Métamorphoses d'Ovide : entre tradition mythologique et innovation poétique
+-   Problématique à peaufiner : Comment l'analyse computationnelle renouvelle-t-elle la lecture d'Ovide ? Que révèle l'analyse quantitative des fonctions narratives de Minerve, Apollon et Jupiter ?
+-   Focus sur Minerve, Apollon, Jupiter : explicaiton du choix
+-   Méthodologie mixte : approche computationnelle (R) et analyse littéraire
+-   Présentation du corpus : critères de sélection et d'encodage
+-   Annonce du plan
 
 ## **(I.) Fondations : corpus, données et méthodes**
 
-- **1. Constitution du corpus numérique**
-    - Numérisation et encodage des *Métamorphoses* : travail de Nadine Rakofsky et dépassement 
-    - Identification et extraction des mentions divines : pré travail d'encodage
-    - Critères et limites méthodologiques
-- **2. Minerve, Apollon, Jupiter : profils quantitatifs**
-    - Statistiques descriptives par divinité : les données initiales et le travail sur les données de l'année dernière
-    - Répartition chronologique (et thématiquep/r type d'épisode ?) + premières visualisations (graphique de distribution + heatmaps)
-    
-- **3. Méthodologie d'analyse de réseau**
-    - Théorie des graphes appliquée aux textes
-    - Construction des réseaux de personnages
-    - Mesures de centralité et d'influence
+-   **1. Constitution du corpus numérique**
+    -   Numérisation et encodage des *Métamorphoses* : travail de Nadine Rakofsky et dépassement
+    -   Identification et extraction des mentions divines : pré travail d'encodage
+    -   Critères et limites méthodologiques
+-   **2. Minerve, Apollon, Jupiter : profils quantitatifs**
+    -   Statistiques descriptives par divinité : les données initiales et le travail sur les données de l'année dernière
+    -   Répartition chronologique (et thématiquep/r type d'épisode ?) + premières visualisations (graphique de distribution + heatmaps)
+-   **3. Méthodologie d'analyse de réseau**
+    -   Théorie des graphes appliquée aux textes
+    -   Construction des réseaux de personnages
+    -   Mesures de centralité et d'influence
 
 ## **(II.) Exploration des données : schémas et structures**
 
-- **1. Analyse structurelle globale** 
-    - Distribution des divinités choisies dans l'architecture de l'œuvre
-    - Corrélations entre livres, épisodes et interventions divines
-    - Clustering et typologie des épisodes
-- **2. Réseaux relationnels et interactions**
-    - Méthodologie d'analyse de réseau avec R
-    - Cartographie des interactions divines/Graphes de co-occurrence et d'interactions
-    - Centralité et influence narrative
-- [**3. Analyse lexicale et sémantique**
-    - Champs lexicaux associés à chaque divinité
-    - Analyse des sentiments et tonalités
-    - Évolution du vocabulaire dans l'œuvre]
+-   **1. Analyse structurelle globale**
+    -   Distribution des divinités choisies dans l'architecture de l'œuvre
+    -   Corrélations entre livres, épisodes et interventions divines
+    -   Clustering et typologie des épisodes
+-   **2. Réseaux relationnels et interactions**
+    -   Méthodologie d'analyse de réseau avec R
+    -   Cartographie des interactions divines/Graphes de co-occurrence et d'interactions
+    -   Centralité et influence narrative
+-   \[**3. Analyse lexicale et sémantique**
+    -   Champs lexicaux associés à chaque divinité
+    -   Analyse des sentiments et tonalités
+    -   Évolution du vocabulaire dans l'œuvre\]
 
-## **(III.)Interprétation & innovation ovidienne
-- Nouvelle lecture des hiérarchies divines : 
-    - Jupiter
-      (- Fréquence et typologie des métamorphoses jupitériennes
-      - Différences entre pouvoir théorique et pratiques narrative)
-    - Apollon 
-    - Minerve
-- Études d'épisodes
-    - *Arachné* : Minerve à la loupe numérique
-    - *Daphné* : déconstruction quantitative d'un mythe
-    - *Europe* : Jupiter entre données et interprétation
-    (à fixer ave ccertitude selon les articles de la biblio)
+## **(III.)Interprétation & innovation ovidienne**
 
-- Synthèse : vers une poétique computationnelle d'Ovide
-  - Ce que les données révèlent du génie ovidien
-  - Limites et apports de l'approche numérique
-
-## Conclusion 
-  - Synthèse des résultats quantitatifs et qualitatifs
-  - Hiérarchies confirmées et révélations inattendues
-  - Apports méthodologiques : reproductibilité et nouvelles perspectives
-  - Limites de l'approche computationnelle en littérature antique
-  - Perspectives pour l'étude numérique des textes classiques
-
-## *Annexes*
-
-  - Annexe 1 : Corpus des mentions des divinités par livre 
-
-  - Annexe 2 : Code R principal et visualisations
-
-  - Annexe 3 : Carte.s de réseau détaillée.s 
-
-  - Bibliographie (1 page)
-
-# Introduction 
-- état de l'art sur les études des divinités dans les récits d'Ovide (quantitativement et thématiquement); état des travaux sur les Métamorphoses, parcellaires et problème de la taille du corpus. Proposition d'une approche numérique pour l'étude transversale à travers un fil rouge des divinités et de leur dynamique dans les récits de mtamorphoses, essai d'une méthode numérique à vocation d'analyse littéraire.
-- Mention des précédents travaux sur lesquels je me base pour les analyses : Guillaume Tronchet, les découpages des éditions que j'utilise, mes travaux de l'année passée et le fichier XML de Nadine Rakofsky. 
-
----
-
-<!--
-
-```{r}
-eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
-n_eruptions <- length(eruptions)
-```
-
-```{r}
-#| label: fig-timeline
-#| fig-cap: Timeline of recent earthquakes on La Palma
-#| fig-alt: An event plot of the years of the last 8 eruptions on La Palma.
-#| fig-height: 1.5
-#| fig-width: 6
-par(mar = c(3, 1, 1, 1) + 0.1)
-plot(eruptions, rep(0, n_eruptions), 
-  pch = "|", axes = FALSE)
-axis(1)
-box()
-```
-
-```{r}
-#| output: false
-avg_years_between_eruptions <- mean(diff(eruptions[-n_eruptions]))
-avg_years_between_eruptions
-```
-
-$$
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-$$ {#eq-poisson}
-
-where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probability of an eruption in the next $t$ years can be calculated.
-
-| Name                | Year |
-|---------------------|------|
-| Current             | 2021 |
-| Teneguía            | 1971 |
-| Nambroque           | 1949 |
-| El Charco           | 1712 |
-| Volcán San Antonio  | 1677 |
-| Volcán San Martin   | 1646 |
-| Tajuya near El Paso | 1585 |
-| Montaña Quemada     | 1492 |
-
-: Recent historic eruptions on La Palma {#tbl-history}
-
-@tbl-history summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.
-
-![Map of La Palma](images/la-palma-map.png){#fig-map}
-
-La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map).
-
-{{< embed notebooks/explore-earthquakes.qmd#fig-spatial-plot >}}
-
-@fig-spatial-plot shows the location of recent Earthquakes on La Palma.
-
-## Data & Methods {#sec-data-methods}
+-   Nouvelle lecture des hiérarchies divines :
+    -   Jupiter (- Fréquence et typologie des métamorphoses jupitériennes
+        -   Différences entre pouvoir théorique et pratiques narrative)
+    -   Apollon
+    -   Minerve
+-   Études d'épisodes
+    -   *Arachné* : Minerve à la loupe numérique
+    -   *Daphné* : déconstruction quantitative d'un mythe
+    -   *Europe* : Jupiter entre données et interprétation (à fixer ave ccertitude selon les articles de la biblio)
+-   Synthèse : vers une poétique computationnelle d'Ovide
+    -   Ce que les données révèlent du génie ovidien
+    -   Limites et apports de l'approche numérique
 
 ## Conclusion
 
-## References {.unnumbered}
--->
+-   Synthèse des résultats quantitatifs et qualitatifs
+-   Hiérarchies confirmées et révélations inattendues
+-   Apports méthodologiques : reproductibilité et nouvelles perspectives
+-   Limites de l'approche computationnelle en littérature antique
+-   Perspectives pour l'étude numérique des textes classiques
+
+## *Annexes*
+
+-   Annexe 1 : Corpus des mentions des divinités par livre
+
+-   Annexe 2 : Code R principal et visualisations
+
+-   Annexe 3 : Carte.s de réseau détaillée.s
+
+-   Bibliographie
+
+# Introduction
+
+-   État de l'art sur les études des divinités dans les textes d'Ovide (quantitativement et thématiquement); état des travaux sur les *Métamorphoses*, parcellaires et problème de la taille du corpus. Proposition d'une approche numérique pour l'étude transversale à travers un fil rouge des divinités et de leur dynamique dans les récits de mtamorphoses, essai d'une méthode numérique à vocation d'analyse littéraire.
+-   Mention des précédents travaux sur lesquels je me base pour les analyses : Guillaume Tronchet, les découpages des éditions que j'utilise, mes travaux de l'année passée et le fichier XML de Nadine Rakofsky.
+
 ::: {#refs}
 :::

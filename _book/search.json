@@ -23,8 +23,8 @@
     "objectID": "index.html#introduction-docuement-type",
     "href": "index.html#introduction-docuement-type",
     "title": "Le rôle des divinités dans les Métamorphoses d’Ovide : étude des cas de Minerve, Apollon et Jupiter",
-    "section": "1.4 Introduction (docuement type)",
-    "text": "1.4 Introduction (docuement type)\n\neruptions &lt;- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)\nn_eruptions &lt;- length(eruptions)\n\n\npar(mar = c(3, 1, 1, 1) + 0.1)\nplot(eruptions, rep(0, n_eruptions), \n  pch = \"|\", axes = FALSE)\naxis(1)\nbox()\n\n\n\n\n\n\n\nFigure 1.1: Timeline of recent earthquakes on La Palma\n\n\n\n\n\n\navg_years_between_eruptions &lt;- mean(diff(eruptions[-n_eruptions]))\navg_years_between_eruptions\n\n\\[\np(x) = \\frac{e^{-\\lambda} \\lambda^{x}}{x !}\n\\tag{1.1}\\]\nwhere \\(\\lambda\\) is the rate of eruptions per year. Using Equation 1.1, the probability of an eruption in the next \\(t\\) years can be calculated.\n\n\n\nTable 1.1: Recent historic eruptions on La Palma\n\n\n\n\n\nName\nYear\n\n\n\n\nCurrent\n2021\n\n\nTeneguía\n1971\n\n\nNambroque\n1949\n\n\nEl Charco\n1712\n\n\nVolcán San Antonio\n1677\n\n\nVolcán San Martin\n1646\n\n\nTajuya near El Paso\n1585\n\n\nMontaña Quemada\n1492\n\n\n\n\n\n\nTable 1.1 summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.\n\n\n\n\n\n\nFigure 1.2: Map of La Palma\n\n\n\nLa Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (Figure 1.2).\n\n\n\n\n\n\n\n\n\nFigure 1.3: Locations of earthquakes on La Palma since 2017\n\n\n\n\n\n\nFigure 1.3 shows the location of recent Earthquakes on La Palma.",
+    "section": "0.2 Introduction (docuement type)",
+    "text": "0.2 Introduction (docuement type)\n\neruptions &lt;- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)\nn_eruptions &lt;- length(eruptions)\n\n\npar(mar = c(3, 1, 1, 1) + 0.1)\nplot(eruptions, rep(0, n_eruptions), \n  pch = \"|\", axes = FALSE)\naxis(1)\nbox()\n\n\n\n\n\n\n\nFigure 1: Timeline of recent earthquakes on La Palma\n\n\n\n\n\n\navg_years_between_eruptions &lt;- mean(diff(eruptions[-n_eruptions]))\navg_years_between_eruptions\n\n\\[\np(x) = \\frac{e^{-\\lambda} \\lambda^{x}}{x !}\n\\tag{1}\\]\nwhere \\(\\lambda\\) is the rate of eruptions per year. Using Equation 1, the probability of an eruption in the next \\(t\\) years can be calculated.\n\n\n\nTable 1: Recent historic eruptions on La Palma\n\n\n\n\n\nName\nYear\n\n\n\n\nCurrent\n2021\n\n\nTeneguía\n1971\n\n\nNambroque\n1949\n\n\nEl Charco\n1712\n\n\nVolcán San Antonio\n1677\n\n\nVolcán San Martin\n1646\n\n\nTajuya near El Paso\n1585\n\n\nMontaña Quemada\n1492\n\n\n\n\n\n\nTable 1 summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.\n\n\n\n\n\n\nFigure 2: Map of La Palma\n\n\n\nLa Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (Figure 2).\n\n\n\n\n\n\n\n\n\nFigure 3: Locations of earthquakes on La Palma since 2017\n\n\n\n\n\n\nFigure 3 shows the location of recent Earthquakes on La Palma.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Le rôle des divinités dans les **Métamorphoses** d'Ovide</span>"
     ]
@@ -33,8 +33,8 @@
     "objectID": "index.html#sec-data-methods",
     "href": "index.html#sec-data-methods",
     "title": "Le rôle des divinités dans les Métamorphoses d’Ovide : étude des cas de Minerve, Apollon et Jupiter",
-    "section": "1.8 Data & Methods",
-    "text": "1.8 Data & Methods",
+    "section": "0.3 Data & Methods",
+    "text": "0.3 Data & Methods",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Le rôle des divinités dans les **Métamorphoses** d'Ovide</span>"
     ]
@@ -123,8 +123,8 @@
     "objectID": "index.html#iii.interprétation-innovation-ovidienne",
     "href": "index.html#iii.interprétation-innovation-ovidienne",
     "title": "Le rôle des divinités dans les Métamorphoses d’Ovide : étude des cas de Minerve, Apollon et Jupiter",
-    "section": "1.4 **(III.)Interprétation & innovation ovidienne",
-    "text": "1.4 **(III.)Interprétation & innovation ovidienne\n\nNouvelle lecture des hiérarchies divines :\n\nJupiter (- Fréquence et typologie des métamorphoses jupitériennes\n\nDifférences entre pouvoir théorique et pratiques narrative)\n\nApollon\nMinerve\n\nÉtudes d’épisodes\n\nArachné : Minerve à la loupe numérique\nDaphné : déconstruction quantitative d’un mythe\nEurope : Jupiter entre données et interprétation (à fixer ave ccertitude selon les articles de la biblio)\n\nSynthèse : vers une poétique computationnelle d’Ovide\n\nCe que les données révèlent du génie ovidien\nLimites et apports de l’approche numérique",
+    "section": "1.4 (III.)Interprétation & innovation ovidienne",
+    "text": "1.4 (III.)Interprétation & innovation ovidienne\n\nNouvelle lecture des hiérarchies divines :\n\nJupiter (- Fréquence et typologie des métamorphoses jupitériennes\n\nDifférences entre pouvoir théorique et pratiques narrative)\n\nApollon\nMinerve\n\nÉtudes d’épisodes\n\nArachné : Minerve à la loupe numérique\nDaphné : déconstruction quantitative d’un mythe\nEurope : Jupiter entre données et interprétation (à fixer ave ccertitude selon les articles de la biblio)\n\nSynthèse : vers une poétique computationnelle d’Ovide\n\nCe que les données révèlent du génie ovidien\nLimites et apports de l’approche numérique",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Le rôle des divinités dans les **Métamorphoses** d'Ovide</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "index.html#annexes",
     "title": "Le rôle des divinités dans les Métamorphoses d’Ovide : étude des cas de Minerve, Apollon et Jupiter",
     "section": "1.6 Annexes",
-    "text": "1.6 Annexes\n\nAnnexe 1 : Corpus des mentions des divinités par livre\nAnnexe 2 : Code R principal et visualisations\nAnnexe 3 : Carte.s de réseau détaillée.s\nBibliographie (1 page)\n\n\n1.6.1 Introduction\n\nétat de l’art sur les études des divinités dans les récits d’Ovide (quantitativement et thématiquement); état des travaux sur les Métamorphoses, parcellaires et problème de la taille du corpus. Proposition d’une approche numérique pour l’étude transversale à travers un fil rouge des divinités et de leur dynamique dans les récits de mtamorphoses, essai d’une méthode numérique à vocation d’analyse littéraire.\nMention des précédents travaux sur lesquels je me base pour les analyses : Guillaume Tronchet, les découpages des éditions que j’utilise, mes travaux de l’année passée et le fichier XML de Nadine Rakofsky.",
+    "text": "1.6 Annexes\n\nAnnexe 1 : Corpus des mentions des divinités par livre\nAnnexe 2 : Code R principal et visualisations\nAnnexe 3 : Carte.s de réseau détaillée.s\nBibliographie",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Le rôle des divinités dans les **Métamorphoses** d'Ovide</span>"
     ]
