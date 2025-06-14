@@ -120,7 +120,7 @@ En quoi transforme qui ?
 -   \[**3. Analyse lexicale et sémantique**
     -   Champs lexicaux associés à chaque divinité
     -   Analyse des sentiments et tonalités
-    -   Évolution du vocabulaire dans l'œuvre\]
+    -   Évolution du vocabulaire dans l'œuvre\pas de travail assez précis en amont, donc peu probable d'être réalisée...]
 
 ## **(III.)Interprétation & innovation ovidienne**
 
@@ -134,6 +134,7 @@ En quoi transforme qui ?
     -   *Daphné* : déconstruction quantitative d'un mythe
     -   *Europe* : Jupiter entre données et interprétation (à fixer ave ccertitude selon les articles de la biblio)
 -   Synthèse : vers une poétique computationnelle d'Ovide
+    - ? Ici l'édition numérique avec EVT ?
     -   Ce que les données révèlent du génie ovidien
     -   Limites et apports de l'approche numérique
 
