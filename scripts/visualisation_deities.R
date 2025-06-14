@@ -9,7 +9,7 @@ library(dplyr)
 library(tidyr)
 
 # Chargement des données (à adapter selon votre source)
-source("distribution_deities.R")
+source("https://raw.githubusercontent.com/pax3l/m2_ovid_deities_analysis_for_quarto/refs/heads/main/scripts/distribution_deities.R")
 
 # Fonction pour préparer les données pour les graphiques
 prepare_data_for_visualization <- function(data) {
@@ -29,7 +29,7 @@ prepare_data_for_visualization <- function(data) {
 plot_distribution_by_book <- function(data) {
   data_prepared <- prepare_data_for_visualization(data)
   
-  ggplot(data_prepared, aes(x = livre, fill = divinite)) +
+  ggplot(data_prepared, aes(x = livre, fill = divinité)) +
     geom_bar(position = "dodge", alpha = 0.8) +
     labs(
       title = "Répartition des mentions par livre et divinité",
