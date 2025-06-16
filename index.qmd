@@ -33,6 +33,33 @@ bibliography: references.bib #for now only a test version, to curate
 citation:
   container-title: None
 number-sections: true
+format:
+  html:
+    toc: true
+    toc-title: "Table des matières"
+    toc-depth: 3
+    toc-location: left
+    toc-collapse: true
+    toc-expand: true
+    toc-icon: true
+    toc-color: "#007bff"
+    toc-background: "#f8f9fa"
+    toc-border: true
+    toc-border-color: "#dee2e6"
+    toc-border-radius: 4
+    toc-padding: "1rem"
+    toc-margin: "1rem"
+    toc-font-size: 16
+    toc-hover-color: "#0056b3"
+    toc-active-color: "#0056b3"
+    toc-active-background: "#e9ecef"
+    toc-active-border-color: "#0056b3"
+  pdf:
+    toc: true
+    toc-depth: 3
+    toc-font-size: 10
+    toc-color: "#000000"
+    toc-background: "#ffffff"
 ---
 
 # Proposition de plan (points clés)
@@ -88,71 +115,74 @@ En quoi transforme qui ?
 
 -   Les Métamorphoses d'Ovide : entre tradition mythologique et innovation poétique
 -   Problématique à peaufiner : Comment l'analyse computationnelle renouvelle-t-elle la lecture d'Ovide ? Que révèle l'analyse quantitative des fonctions narratives de Minerve, Apollon et Jupiter ?
--   Focus sur Minerve, Apollon, Jupiter : explicaiton du choix
+-   Mise au point sur Minerve, Apollon, Jupiter : explication du choix
 -   Méthodologie mixte : approche computationnelle (R) et analyse littéraire
 -   Présentation du corpus : critères de sélection et d'encodage
 -   Annonce du plan
 
-## **(I.) Fondations : corpus, données et méthodes**
+## **(I.) Fondations : corpus, méthodes et données**
 
 -   **1. Constitution du corpus numérique**
     -   Numérisation et encodage des *Métamorphoses* : travail de Nadine Rakofsky et dépassement
     -   Identification et extraction des mentions divines : pré travail d'encodage
     -   Critères et limites méthodologiques
--   **2. Minerve, Apollon, Jupiter : profils quantitatifs**
-    -   Statistiques descriptives par divinité : les données initiales et le travail sur les données de l'année dernière
-    -   Répartition chronologique (et thématiquep/r type d'épisode ?) + premières visualisations (graphique de distribution + heatmaps)
--   **3. Méthodologie d'analyse de réseau**
-    -   Théorie des graphes appliquée aux textes
-    -   Construction des réseaux de personnages
+-   **2. Méthodologie d'analyse **
+    -   Théorie des graphes appliquée aux textes & construction des réseaux de personnages
     -   Mesures de centralité et d'influence
+    -   Présentation des résultats avec un outil de navigation dans le texte : édition EVT 
+-   **3. Minerve, Apollon, Jupiter : profils qualitatifs**
+    -   Origine et image de Minerve chez Ovide 
+    -   Origine et figure d’Apollon chez Ovide
+    -   Origine et figure de Jupiter chez Ovide
+
 
 ## **(II.) Exploration des données : schémas et structures**
 
--   **1. Analyse structurelle globale**
-    -   Distribution des divinités choisies dans l'architecture de l'œuvre
+-   **1. Analyse structurelle globale : profils quantitatifs des divinités**
+    -   Statistiques descriptives des divinités choisies dans l'architecture de l'œuvre
     -   Corrélations entre livres, épisodes et interventions divines
-    -   Clustering et typologie des épisodes
+    -   Visualisation des clusters et typologie des épisodes (graphiques de distribution et heatmaps)
 -   **2. Réseaux relationnels et interactions**
     -   Méthodologie d'analyse de réseau avec R
     -   Cartographie des interactions divines/Graphes de co-occurrence et d'interactions
     -   Centralité et influence narrative
--   \[**3. Analyse lexicale et sémantique**
+<!-- -   \[**3. Analyse lexicale et sémantique (préparation **
     -   Champs lexicaux associés à chaque divinité
-    -   Analyse des sentiments et tonalités
-    -   Évolution du vocabulaire dans l'œuvre\pas de travail assez précis en amont, donc peu probable d'être réalisée...]
-
+    -   Analyse des contextes et collocations] -->
+ 
 ## **(III.)Interprétation & innovation ovidienne**
 
--   Nouvelle lecture des hiérarchies divines :
+-   Nouvelle lecture des portraits divins :
     -   Jupiter (- Fréquence et typologie des métamorphoses jupitériennes
         -   Différences entre pouvoir théorique et pratiques narrative)
-    -   Apollon
-    -   Minerve
--   Études d'épisodes
-    -   *Arachné* : Minerve à la loupe numérique
-    -   *Daphné* : déconstruction quantitative d'un mythe
-    -   *Europe* : Jupiter entre données et interprétation (à fixer ave ccertitude selon les articles de la biblio)
--   Synthèse : vers une poétique computationnelle d'Ovide
-    - ? Ici l'édition numérique avec EVT ?
-    -   Ce que les données révèlent du génie ovidien
-    -   Limites et apports de l'approche numérique
+    -   Apollon (//)
+    -   Minerve (//)
+-   Études d'épisodes : entre données et interprétations
+    -   *Arachné* : Minerve 
+    -   *Daphné* : Apollon
+    -   *Europe* : Jupiter 
+(à fixer avec certitude selon les articles de la biblio)
+-   Synthèse 
+    -   Ce que les données révèlent des divinités
+    -   Apports, limites et perspectives de l'approche numérique
 
 ## Conclusion
 
 -   Synthèse des résultats quantitatifs et qualitatifs
--   Hiérarchies confirmées et révélations inattendues
+-   Confirmation des profils des divinités et précisions/apports de l'approche numérique
 -   Apports méthodologiques : reproductibilité et nouvelles perspectives
--   Limites de l'approche computationnelle en littérature antique
--   Perspectives pour l'étude numérique des textes classiques
+<!-- [-   Limites de l'approche computationnelle en littérature antique
+-   Perspectives --> 
 
 ## *Annexes*
 
--   Annexe 1 : Corpus des mentions des divinités par livre
+-   Annexe 1 : description de l'entrepôt GitHub (//Readme)
 
--   Annexe 2 : Code R principal et visualisations
+-   Annexe 2 : Corpus des mentions des divinités par livre
 
--   Annexe 3 : Carte.s de réseau détaillée.s
+-   Annexe 3 : Code R principal et visualisations
+
+-   Annexe 4 : Visualisation.s de réseau détaillée.s
 
 -   Bibliographie
 
