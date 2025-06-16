@@ -239,7 +239,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="103">contentique cibis nullo cogente creatis</l>
 						<l n="104">arbuteos fetus montanaque fraga legebant</l>
 						<l n="105">cornaque et in duris haerentia mora rubetis</l>
-						<l n="106">et quae deciderant patula <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> arbore glandes.</l>
+						<l n="106">et quae deciderant patula <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> arbore glandes.</l>
 						<l n="107">Ver erat aeternum, placidique tepentibus auris</l>
 						<l n="108">mulcebant zephyri natos sine semine flores.</l>
 						<l n="109">Mox etiam fruges tellus inarata ferebat,</l>
@@ -247,9 +247,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="111">flumina iam lactis, iam flumina nectaris ibant,</l>
 						<l n="112">flavaque de viridi stillabant ilice mella.</l>
 						<l n="113">Postquam, Saturno tenebrosa in Tartara misso,</l>
-						<l n="114">sub <persName ref="IUP" role="narrative" ana="NA">Iove</persName> mundus erat, subiit argentea proles,</l>
+						<l n="114">sub <persName ref="IUP" type="narrative" ana="NA">Iove</persName> mundus erat, subiit argentea proles,</l>
 						<l n="115">auro deterior, fulvo pretiosior aere.</l>
-						<l n="116"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> antiqui contraxit tempora veris</l>
+						<l n="116"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> antiqui contraxit tempora veris</l>
 						<l n="117">perque hiemes aestusque et inaequalis autumnos</l>
 						<l n="118">et breve ver spatiis exegit quattuor annum.</l>
 						<l n="119">Tum primum siccis aer fervoribus ustus</l>
@@ -288,7 +288,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="151">Neve foret terris securior arduus aether,</l>
 						<l n="152">adfectasse ferunt regnum caeleste Gigantas</l>
 						<l n="153">altaque congestos struxisse ad sidera montes.</l>
-						<l n="154">Tum <persName ref="IUP" role="narrative" ana="NA">pater omnipotens</persName> misso perfregit Olympum</l>
+						<l n="154">Tum <persName ref="IUP" type="narrative" ana="NA">pater omnipotens</persName> misso perfregit Olympum</l>
 						<l n="155">fulmine et excussit subiectae Pelion Ossae.</l>
 						<l n="156">Obruta mole sua cum corpora dira iacerent,</l>
 						<l n="157">perfusam multo natorum sanguine Terram</l>
@@ -298,10 +298,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="161">contemptrix superum saevaeque avidissima caedis</l>
 						<l n="162">et violenta fuit: scires e sanguine natos.</l>
 						<milestone ed="Magnus" n="Lycaon." unit="tale"/>
-						<l n="163">Quae <persName ref="IUP" role="narrative" ana="NA">pater</persName> ut summa vidit <persName ref="IUP" role="narrative" ana="NA">Saturnius</persName> arce,</l>
+						<l n="163">Quae <persName ref="IUP" type="narrative" ana="NA">pater</persName> ut summa vidit <persName ref="IUP" type="narrative" ana="NA">Saturnius</persName> arce,</l>
 						<l n="164">ingemit et, facto nondum vulgata recenti,</l>
 						<l n="165">foeda Lycaoniae referens convivia mensae,</l>
-						<l n="166">ingentes animo et dignas <persName ref="IUP" role="narrative" ana="NA">Iove</persName> concipit iras,</l>
+						<l n="166">ingentes animo et dignas <persName ref="IUP" type="narrative" ana="NA">Iove</persName> concipit iras,</l>
 						<l n="167">conciliumque vocat: tenuit mora nulla vocatos.</l>
 						<l n="168">Est via sublimis, caelo manifesta sereno:</l>
 						<l n="169">lactea nomen habet, candore notabilis ipso.</l>
@@ -344,17 +344,17 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="202">attonitum tanto subitae terrore ruinae</l>
 						<l n="203">humanum genus est totusque perhorruit orbis:</l>
 						<l n="204">nec tibi grata minus pietas, Auguste, tuorum est,</l>
-						<l n="205">quam fuit illa <persName ref="IUP" role="narrative" ana="NA"> </persName>Iovi. Qui postquam voce manuque</l>
+						<l n="205">quam fuit illa <persName ref="IUP" type="narrative" ana="NA"> </persName>Iovi. Qui postquam voce manuque</l>
 						<l n="206">murmura conpressit, tenuere silentia cuncti.</l>
 						<l n="207">Substitit ut clamor pressus gravitate regentis,</l>
-						<l n="208"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> hoc iterum sermone silentia rupit:</l>
+						<l n="208"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> hoc iterum sermone silentia rupit:</l>
 					</sp>
 					<sp who="Iuppiter" ana="narr">
 						<l n="209">«Ille quidem poenas, curam hanc dimittite, solvit.</l>
 						<l n="210">Quod tamen admissum, quae sit vindicta, docebo.</l>
 						<l n="211">Contigerat nostras infamia temporis aures;</l>
 						<l n="212">quam cupiens falsam summo delabor Olympo</l>
-						<l n="213">et <persName ref="IUP" role="metamorphosis" ana="auto">deus</persName> humana lustro sub imagine terras.</l>
+						<l n="213">et <persName ref="IUP" type="metamorphosis" ana="auto">deus</persName> humana lustro sub imagine terras.</l>
 						<l n="214">Longa mora est, quantum noxae sit ubique repertum,</l>
 						<l n="215">enumerare: minor fuit ipsa infamia vero.</l>
 						<l n="216">Maenala transieram latebris horrenda ferarum</l>
@@ -429,7 +429,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="271">concipit Iris aquas alimentaque nubibus adfert.</l>
 						<l n="272">Sternuntur segetes et deplorata coloni</l>
 						<l n="273">vota iacent, longique perit labor inritus anni.</l>
-						<l n="274">Nec caelo contenta suo est <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> ira, sed illum</l>
+						<l n="274">Nec caelo contenta suo est <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> ira, sed illum</l>
 						<l n="275">caeruleus frater iuvat auxiliaribus undis.</l>
 						<l n="276">Convocat hic amnes. Qui postquam tecta tyranni</l>
 						<l n="277">intravere sui,</l>
@@ -490,7 +490,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="321">fatidicamque Themin, quae tunc oracla tenebat.</l>
 						<l n="322">Non illo melior quisquam nec amantior aequi</l>
 						<l n="323">vir fuit aut illa metuentior ulla deorum.</l>
-						<l n="324"><persName ref="IUP" role="metamorphosis" ana="act">Iuppiter</persName> ut liquidis stagnare paludibus orbem</l>
+						<l n="324"><persName ref="IUP" type="metamorphosis" ana="act">Iuppiter</persName> ut liquidis stagnare paludibus orbem</l>
 						<l n="325">et superesse virum de tot modo milibus unum,</l>
 						<l n="326">et superesse videt de tot modo milibus unam,</l>
 						<l n="327">innocuos ambo, cultores numinis ambo,</l>
@@ -504,7 +504,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="335">iam revocare dato. Cava bucina sumitur illi,</l>
 						<l n="336">tortilis, in latum quae turbine crescit ab imo,</l>
 						<l n="337">bucina, quae medio concepit ubi aera ponto,</l>
-						<l n="338">litora voce replet sub utroque iacentia <persName ref="APO" role="narrative" ana="NA">Phoebo</persName>.</l>
+						<l n="338">litora voce replet sub utroque iacentia <persName ref="APO" type="narrative" ana="NA">Phoebo</persName>.</l>
 						<l n="339">Tunc quoque, ut ora dei madida rorantia barba</l>
 						<l n="340">contigit et cecinit iussos inflata receptus,</l>
 						<l n="341">omnibus audita est telluris et aequoris undis,</l>
@@ -649,11 +649,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="448">Hic iuvenum quicumque manu pedibusve rotave</l>
 						<l n="449">vicerat, aesculeae capiebat frondis honorem:</l>
 						<l n="450">nondum laurus erat, longoque decentia crine</l>
-						<l n="451">tempora cingebat de qualibet arbore <persName ref="APO" role="narrative" ana="NA">Phoebus</persName>.</l>
+						<l n="451">tempora cingebat de qualibet arbore <persName ref="APO" type="narrative" ana="NA">Phoebus</persName>.</l>
 						<milestone ed="Magnus" n="Daphne." unit="tale"/>
-						<l n="452">Primus amor <persName ref="APO" role="narrative" ana="NA">Phoebi</persName> Daphne Peneia, quem non</l>
+						<l n="452">Primus amor <persName ref="APO" type="narrative" ana="NA">Phoebi</persName> Daphne Peneia, quem non</l>
 						<l n="453">fors ignara dedit, sed saeva Cupidinis ira.</l>
-						<l n="454"><persName ref="APO" role="narrative" ana="NA">Delius</persName> hunc, nuper victa serpente superbus,</l>
+						<l n="454"><persName ref="APO" type="narrative" ana="NA">Delius</persName> hunc, nuper victa serpente superbus,</l>
 						<l n="455">viderat adducto flectentem cornua nervo</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
@@ -680,7 +680,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="463">Filius huic Veneris</l>
 					</sp>
 					<sp who="Cupido" ana="pers">
-						<l n="463">«figat tuus omnia, <persName ref="APO" role="narrative" ana="NA">Phoebe</persName>,</l>
+						<l n="463">«figat tuus omnia, <persName ref="APO" type="narrative" ana="NA">Phoebe</persName>,</l>
 						<l n="464">te meus arcus:»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
@@ -698,7 +698,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="470">Quod facit, auratum est et cuspide fulget acuta;</l>
 						<l n="471">quod fugat, obtusum est et habet sub harundine plumbum.</l>
 						<l n="472">Hoc deus in nympha Peneide fixit, at illo</l>
-						<l n="473">laesit <persName ref="APO" role="narrative" ana="NA">Apollineas</persName> traiecta per ossa medullas.</l>
+						<l n="473">laesit <persName ref="APO" type="narrative" ana="NA">Apollineas</persName> traiecta per ossa medullas.</l>
 						<l n="474">Protinus alter amat, fugit altera nomen amantis</l>
 						<l n="475">silvarum tenebris captivarumque ferarum</l>
 						<l n="476">exuviis gaudens innuptaeque aemula Phoebes.</l>
@@ -734,7 +734,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="488">Ille quidem obsequitur, sed te decor iste quod optas</l>
 						<l n="489">esse vetat. Votoque tuo tua forma repugnat:</l>
-						<l n="490"><persName ref="APO" role="narrative" ana="NA">Phoebus</persName> amat visaeque cupit conubia Daphnes,</l>
+						<l n="490"><persName ref="APO" type="narrative" ana="NA">Phoebus</persName> amat visaeque cupit conubia Daphnes,</l>
 						<l n="491">quodque cupit, sperat, suaque illum oracula fallunt.</l>
 						<l n="492">Utque leves stipulae demptis adolentur aristis,</l>
 						<l n="493">ut facibus saepes ardent, quas forte viator</l>
@@ -769,7 +769,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="514">horridus observo. Nescis, temeraria, nescis</l>
 						<l n="515">quem fugias, ideoque fugis. Mihi Delphica tellus</l>
 						<l n="516">et Claros et Tenedos Patareaque regia servit,</l>
-						<l n="517"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> est genitor; per me quod eritque fuitque</l>
+						<l n="517"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> est genitor; per me quod eritque fuitque</l>
 						<l n="518">estque patet; per me concordant carmina nervis.</l>
 						<l n="519">Certa quidem nostra est, nostra tamen una sagitta</l>
 						<l n="520">certior, in vacuo quae vulnera pectore fecit.</l>
@@ -785,7 +785,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="528">obviaque adversas vibrabant flamina vestes,</l>
 						<l n="529">et levis inpulsos retro dabat aura capillos,</l>
 						<l n="530">auctaque forma fuga est. Sed enim non sustinet ultra</l>
-						<l n="531">perdere blanditias <persName ref="APO" role="narrative" ana="NA">iuvenis deus</persName>, utque monebat</l>
+						<l n="531">perdere blanditias <persName ref="APO" type="narrative" ana="NA">iuvenis deus</persName>, utque monebat</l>
 						<l n="532">ipse Amor, admisso sequitur vestigia passu.</l>
 						<l n="533">Ut canis in vacuo leporem cum Gallicus arvo</l>
 						<l n="534">vidit, et hic praedam pedibus petit, ille salutem:</l>
@@ -816,11 +816,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="549">in frondem crines, in ramos bracchia crescunt,</l>
 						<l n="550">pes modo tam velox pigris radicibus haeret,</l>
 						<l n="551">ora cacumen habet; remanet nitor unus in illa.</l>
-						<l n="552">Hanc quoque <persName ref="APO" role="metamorphosis" ana="NA">Phoebus</persName> amat, positaque in stipite dextra</l>
+						<l n="552">Hanc quoque <persName ref="APO" type="metamorphosis" ana="NA">Phoebus</persName> amat, positaque in stipite dextra</l>
 						<l n="553">sentit adhuc trepidare novo sub cortice pectus</l>
 						<l n="554">conplexusque suis ramos, ut membra, lacertis</l>
 						<l n="555">oscula dat ligno: refugit tamen oscula lignum.</l>
-						<l n="556">Cui <persName ref="APO" role="narrative" ana="NA">deus</persName></l>
+						<l n="556">Cui <persName ref="APO" type="narrative" ana="NA">deus</persName></l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="556">«at quoniam coniunx mea non potes esse,</l>
@@ -863,11 +863,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="584">luget ut amissam. Nescit, vitane fruatur,</l>
 						<l n="585">an sit apud manes; sed quam non invenit usquam.</l>
 						<l n="586">esse putat nusquam atque animo peiora veretur.</l>
-						<l n="587">Viderat a patrio redeuntem <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> illam</l>
+						<l n="587">Viderat a patrio redeuntem <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> illam</l>
 						<l n="588">flumine et</l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
-						<l n="588">«o virgo <persName ref="IUP" role="narrative" ana="NA">Iove</persName> digna tuoque beatum</l>
+						<l n="588">«o virgo <persName ref="IUP" type="narrative" ana="NA">Iove</persName> digna tuoque beatum</l>
 						<l n="589">nescio quem factura toro, pete»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
@@ -913,7 +913,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="611">Bos quoque formosa est. Speciem Saturnia vaccae,</l>
 						<l n="612">quamquam invita, probat, nec non et cuius et unde</l>
 						<l n="613">quove sit armento, veri quasi nescia quaerit.</l>
-						<l n="614"><persName ref="IUP" role="narrative" ana="act">Iuppiter</persName> e terra genitam mentitur, ut auctor</l>
+						<l n="614"><persName ref="IUP" type="narrative" ana="act">Iuppiter</persName> e terra genitam mentitur, ut auctor</l>
 						<l n="615">desinat inquiri. Petit hanc Saturnia munus.</l>
 						<l n="616">Quid faciat? crudele suos addicere amores,</l>
 						<l n="617">non dare suspectum est. Pudor est qui suadeat illinc,</l>
@@ -921,7 +921,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="619">sed leve si munus sociae generisque torique</l>
 						<l n="620">vacca negaretur, poterat non vacca videri.</l>
 						<l n="621">Paelice donata non protinus exuit omnem</l>
-						<l n="622">diva metum timuitque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> et fuit anxia furti,</l>
+						<l n="622">diva metum timuitque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> et fuit anxia furti,</l>
 						<l n="623">donec Arestoridae servandam tradidit Argo.</l>
 						<l n="624">Centum luminibus cinctum caput Argus habebat:</l>
 						<l n="625">inde suis vicibus capiebant bina quietem,</l>
@@ -986,7 +986,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="669">Pleias enixa est, letoque det imperat Argum.</l>
 						<l n="670">Parva mora est alas pedibus virgamque potenti</l>
 						<l n="671">somniferam sumpsisse manu tegimenque capillis.</l>
-						<l n="672">Haec ubi disposuit, patria <persName ref="IUP" role="narrative" ana="NA">Iove</persName> natus ab arce</l>
+						<l n="672">Haec ubi disposuit, patria <persName ref="IUP" type="narrative" ana="NA">Iove</persName> natus ab arce</l>
 						<l n="673">desilit in terras. Illic tegimenque removit</l>
 						<l n="674">et posuit pennas, tantummodo virga retenta est.</l>
 						<l n="675">Hac agit, ut pastor, per devia rura capellas,</l>
@@ -1077,7 +1077,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="729">procubuit genibus resupinoque ardua collo,</l>
 						<l n="730">quos potuit solos, tollens ad sidera vultus</l>
 						<l n="731">et gemitu et lacrimis et luctisono mugitu</l>
-						<l n="732">cum <persName ref="IUP" role="narrative" ana="NA">Iove</persName> visa queri finemque orare malorum.</l>
+						<l n="732">cum <persName ref="IUP" type="narrative" ana="NA">Iove</persName> visa queri finemque orare malorum.</l>
 						<l n="733">Coniugis ille suae conplexus colla lacertis,</l>
 						<l n="734">finiat ut poenas tandem, rogat</l>
 					</sp>
@@ -1112,10 +1112,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="Magnus" n="Phaethon." unit="tale"/>
 						<l n="746">Nunc dea linigera colitur celeberrima turba,</l>
 						<l n="747">nunc Epaphus magni genitus de semine tandem</l>
-						<l n="748">creditur esse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>, perque urbes iuncta parenti</l>
+						<l n="748">creditur esse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>, perque urbes iuncta parenti</l>
 						<l n="749">templa tenet. Fuit huic animis aequalis et annis</l>
-						<l n="750"><persName ref="APO" role="narrative" ana="NA">Sole satus</persName> Phaethon. Quem quondam magna loquentem</l>
-						<l n="751">nec sibi cedentem <persName ref="APO" role="narrative" ana="NA">Phoebo</persName>que parente superbum</l>
+						<l n="750"><persName ref="APO" type="narrative" ana="NA">Sole satus</persName> Phaethon. Quem quondam magna loquentem</l>
+						<l n="751">nec sibi cedentem <persName ref="APO" type="narrative" ana="NA">Phoebo</persName>que parente superbum</l>
 						<l n="752">non tulit Inachides,</l>
 					</sp>
 					<sp who="Epaphus" ana="pers">
@@ -1169,7 +1169,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="767">«radiis insigne coruscis,</l>
 						<l n="768">nate, tibi iuro, quod nos auditque videtque,</l>
 						<l n="769">hoc te, quem spectas, hoc te, qui temperat orbem,</l>
-						<l n="770"><persName ref="APO" role="narrative" ana="NA">Sole satum</persName>. Si ficta loquor, neget ipse videndum</l>
+						<l n="770"><persName ref="APO" type="narrative" ana="NA">Sole satum</persName>. Si ficta loquor, neget ipse videndum</l>
 						<l n="771">se mihi, sitque oculis lux ista novissima nostris.</l>
 						<l n="772">Nec longus patrios labor est tibi nosse penates:</l>
 						<l n="773">unde oritur, domus est terrae contermina nostrae.</l>
@@ -1185,7 +1185,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<div type="textpart" subtype="book" n="2">
 					<milestone ed="More" n="Phaethon AND PHOEBUS" unit="tale"/>
 					<sp who="Ovid" ana="narr">
-						<l n="1">Regia <persName ref="APO" role="narrative" ana="NA">Solis</persName> erat sublimibus alta columnis,</l>
+						<l n="1">Regia <persName ref="APO" type="narrative" ana="NA">Solis</persName> erat sublimibus alta columnis,</l>
 						<l n="2">clara micante auro flammasque imitante pyropo:</l>
 						<l n="3">cuius ebur nitidum fastigia summa tegebat,</l>
 						<l n="4">argenti bifores radiabant lumine valvae.</l>
@@ -1205,10 +1205,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="18">signaque sex foribus dextris totidemque sinistris.</l>
 						<l n="19">Quo simul acclivi Clymeneia limite proles</l>
 						<l n="20">venit et intravit dubitati tecta parentis,</l>
-						<l n="21">protinus ad <persName ref="APO" role="narrative" ana="NA">patrios</persName> sua fert vestigia vultus</l>
+						<l n="21">protinus ad <persName ref="APO" type="narrative" ana="NA">patrios</persName> sua fert vestigia vultus</l>
 						<l n="22">consistitque procul: neque enim propiora ferebat</l>
 						<l n="23">lumina. Purpurea velatus veste sedebat</l>
-						<l n="24">in solio <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> claris lucente smaragdis.</l>
+						<l n="24">in solio <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> claris lucente smaragdis.</l>
 						<l n="25">A dextra laevaque Dies et Mensis et Annus</l>
 						<l n="26">Saeculaque et positae spatiis aequalibus Horae</l>
 						<l n="27">Verque novum stabat cinctum florente corona,</l>
@@ -1216,7 +1216,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="29">stabat et Autumnus, calcatis sordidus uvis,</l>
 						<l n="30">et glacialis Hiems, canos hirsuta capillos.</l>
 						<l n="31">Inde loco medius rerum novitate paventem</l>
-						<l n="32"><persName ref="APO" role="narrative" ana="NA">Sol</persName> oculis iuvenem, quibus adspicit omnia, vidit</l>
+						<l n="32"><persName ref="APO" type="narrative" ana="NA">Sol</persName> oculis iuvenem, quibus adspicit omnia, vidit</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="33">«quae»</l>
@@ -1232,16 +1232,16 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="33">«arce petisti,</l>
-						<l n="34">progenies, Phaethon, haud infitianda <persName ref="APO" role="narrative" ana="NA">parenti</persName>?»</l>
+						<l n="34">progenies, Phaethon, haud infitianda <persName ref="APO" type="narrative" ana="NA">parenti</persName>?»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="35">Ille refert</l>
 					</sp>
 					<sp who="Phaethon" ana="pers">
 						<l n="35">«o lux inmensi publica mundi,</l>
-						<l n="36"><persName ref="APO" role="narrative" ana="NA">Phoebe pater</persName>, si das usum mihi nominis huius</l>
+						<l n="36"><persName ref="APO" type="narrative" ana="NA">Phoebe pater</persName>, si das usum mihi nominis huius</l>
 						<l n="37">nec falsa Clymene culpam sub imagine celat,</l>
-						<l n="38">pignera da, <persName ref="APO" role="narrative" ana="NA">genitor</persName>, per quae tua vera propago</l>
+						<l n="38">pignera da, <persName ref="APO" type="narrative" ana="NA">genitor</persName>, per quae tua vera propago</l>
 						<l n="39">credar, et hunc animis errorem detrahe nostris.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
@@ -1265,7 +1265,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="47">Vix bene desierat, currus rogat ille paternos</l>
 						<l n="48">inque diem alipedum ius et moderamen equorum.</l>
-						<l n="49">Paenituit iurasse <persName ref="APO" role="narrative" ana="NA">patrem</persName>. Qui terque quaterque</l>
+						<l n="49">Paenituit iurasse <persName ref="APO" type="narrative" ana="NA">patrem</persName>. Qui terque quaterque</l>
 						<l n="50">concutiens inlustre caput</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
@@ -1284,9 +1284,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="57">Plus etiam, quam quod superis contingere possit,</l>
 						<l n="58">nescius adfectas. Placeat sibi quisque licebit,</l>
 						<l n="59">non tamen ignifero quisquam consistere in axe</l>
-						<l n="60">me valet excepto. Vasti quoque <persName ref="IUP" role="narrative" ana="NA">rector Olympi</persName>,</l>
+						<l n="60">me valet excepto. Vasti quoque <persName ref="IUP" type="narrative" ana="NA">rector Olympi</persName>,</l>
 						<l n="61">qui fera terribili iaculatur fulmina dextra,</l>
-						<l n="62">non agat hos currus: et quid <persName ref="IUP" role="narrative" ana="NA">Iove</persName> maius habemus?</l>
+						<l n="62">non agat hos currus: et quid <persName ref="IUP" type="narrative" ana="NA">Iove</persName> maius habemus?</l>
 						<l n="63">Ardua prima via est et qua vix mane recentes</l>
 						<l n="64">enitantur equi: medio est altissima caelo,</l>
 						<l n="65">unde mare et terras ipsi mihi saepe videre</l>
@@ -1316,7 +1316,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="89">nate, cave, dum resque sinit, tua corrige vota.</l>
 						<l n="90">Scilicet ut nostro genitum te sanguine credas,</l>
 						<l n="91">pignera certa petis? do pignera certa timendo</l>
-						<l n="92">et patrio <persName ref="APO" role="narrative" ana="NA">pater</persName> esse metu probor. Adspice vultus</l>
+						<l n="92">et patrio <persName ref="APO" type="narrative" ana="NA">pater</persName> esse metu probor. Adspice vultus</l>
 						<l n="93">ecce meos; utinamque oculos in pectora posses</l>
 						<l n="94">inserere et patrias intus deprendere curas!</l>
 						<l n="95">Denique quidquid habet dives, circumspice, mundus,</l>
@@ -1336,7 +1336,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="107">Aureus axis erat, temo aureus, aurea summae</l>
 						<l n="108">curvatura rotae, radiorum argenteus ordo;</l>
 						<l n="109">per iuga chrysolithi positaeque ex ordine gemmae</l>
-						<l n="110">clara repercusso reddebant lumina <persName ref="APO" role="narrative" ana="NA">Phoebo</persName>.</l>
+						<l n="110">clara repercusso reddebant lumina <persName ref="APO" type="narrative" ana="NA">Phoebo</persName>.</l>
 						<l n="111">Dumque ea magnanimus Phaethon miratur opusque</l>
 						<l n="112">perspicit, ecce vigil nitido patefecit ab ortu</l>
 						<l n="113">purpureas Aurora fores et plena rosarum</l>
@@ -1348,13 +1348,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="119">Iussa deae celeres peragunt, ignemque vomentes,</l>
 						<l n="120">ambrosiae suco saturos, praesepibus altis</l>
 						<l n="121">quadrupedes ducunt adduntque sonantia frena.</l>
-						<l n="122">Tum <persName ref="APO" role="narrative" ana="NA">pater</persName> ora sui sacro medicamine nati</l>
+						<l n="122">Tum <persName ref="APO" type="narrative" ana="NA">pater</persName> ora sui sacro medicamine nati</l>
 						<l n="123">contigit et rapidae fecit patientia flammae</l>
 						<l n="124">imposuitque comae radios, praesagaque luctus</l>
 						<l n="125">pectore sollicito repetens suspiria dixit:</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
-						<l n="126">«Si potes his saltem monitis parere <persName ref="APO" role="narrative" ana="NA">parentis</persName>,</l>
+						<l n="126">«Si potes his saltem monitis parere <persName ref="APO" type="narrative" ana="NA">parentis</persName>,</l>
 						<l n="127">parce, puer, stimulis et fortius utere loris:</l>
 						<l n="128">sponte sua properant; labor est inhibere volentes.</l>
 						<l n="129">Nec tibi directos placeat via quinque per arcus:</l>
@@ -1382,9 +1382,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="150">Occupat ille levem iuvenali corpore currum,</l>
 						<l n="151">statque super manibusque datas contingere habenas</l>
-						<l n="152">gaudet et invito grates agit inde <persName ref="APO" role="narrative" ana="NA">parenti</persName>.</l>
+						<l n="152">gaudet et invito grates agit inde <persName ref="APO" type="narrative" ana="NA">parenti</persName>.</l>
 						<l n="153">Interea volucres Pyrois et Eous et Aethon,</l>
-						<l n="154"><persName ref="APO" role="narrative" ana="NA">Solis</persName> equi, quartusque Phlegon, hinnitibus auras</l>
+						<l n="154"><persName ref="APO" type="narrative" ana="NA">Solis</persName> equi, quartusque Phlegon, hinnitibus auras</l>
 						<l n="155">flammiferis implent pedibusque repagula pulsant.</l>
 						<l n="156">Quae postquam Tethys, fatorum ignara nepotis</l>
 						<l n="157">reppulit, et facta est inmensi copia caeli,</l>
@@ -1392,7 +1392,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="159">obstantes scindunt nebulas pennisque levati</l>
 						<l n="160">praetereunt ortos isdem de partibus Euros.</l>
 						<l n="161">Sed leve pondus erat, nec quod cognoscere possent</l>
-						<l n="162"><persName ref="APO" role="narrative" ana="NA">Solis</persName> equi, solitaque iugum gravitate carebat;</l>
+						<l n="162"><persName ref="APO" type="narrative" ana="NA">Solis</persName> equi, solitaque iugum gravitate carebat;</l>
 						<l n="163">utque labant curvae iusto sine pondere naves</l>
 						<l n="164">perque mare instabiles nimia levitate feruntur,</l>
 						<l n="165">sic onere adsueto vacuus dat in aera saltus</l>
@@ -1412,7 +1412,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="179">infelix Phaethon penitus penitusque iacentes,</l>
 						<l n="180">palluit et subito genua intremuere timore,</l>
 						<l n="181">suntque oculis tenebrae per tantum lumen obortae.</l>
-						<l n="182">Et iam mallet equos numquam tetigisse <persName ref="APO" role="metamorphosis" ana="NA">paternos</persName>,</l>
+						<l n="182">Et iam mallet equos numquam tetigisse <persName ref="APO" type="metamorphosis" ana="NA">paternos</persName>,</l>
 						<l n="183">iam cognosse genus piget et valuisse rogando,</l>
 						<l n="184">iam Meropis dici cupiens ita fertur, ut acta</l>
 						<l n="185">praecipiti pinus borea, cui victa remisit</l>
@@ -1543,7 +1543,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="301">Dixerat haec Tellus: neque enim tolerare vaporem</l>
 						<l n="302">ulterius potuit nec dicere plura: suumque</l>
 						<l n="303">rettulit os in se propioraque manibus antra.</l>
-						<l n="304">At <persName ref="IUP" role="narrative" ana="NA">pater omnipotens</persName>, superos testatus et ipsum,</l>
+						<l n="304">At <persName ref="IUP" type="narrative" ana="NA">pater omnipotens</persName>, superos testatus et ipsum,</l>
 						<l n="305">qui dederat currus, nisi opem ferat, omnia fato</l>
 						<l n="306">interitura gravi, summam petit arduus arcem,</l>
 						<l n="307">unde solet nubes latis inducere terris,</l>
@@ -1566,9 +1566,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="324">excipit Eridanus fumantiaque abluit ora.</l>
 						<l n="325">Naides Hesperiae trifida fumantia flamma</l>
 						<l n="326">corpora dant tumulo, signant quoque carmine saxum:</l>
-						<l n="327">HIC SITUS EST PHAETHON, CURRUS AURIGA <persName ref="APO" role="narrative" ana="NA">PATERNI</persName>:</l>
+						<l n="327">HIC SITUS EST PHAETHON, CURRUS AURIGA <persName ref="APO" type="narrative" ana="NA">PATERNI</persName>:</l>
 						<l n="328">QUEM SI NON TENUIT, MAGNIS TAMEN EXCIDIT AUSIS.</l>
-						<l n="329">Nam <persName ref="APO" role="narrative" ana="NA">pater</persName> obductos, luctu miserabilis aegro</l>
+						<l n="329">Nam <persName ref="APO" type="narrative" ana="NA">pater</persName> obductos, luctu miserabilis aegro</l>
 						<l n="330">condiderat vultus: et, si modo credimus, unum</l>
 						<l n="331">isse diem sine sole ferunt: incendia lumen</l>
 						<l n="332">praebebant aliquisque malo fuit usus in illo.</l>
@@ -1626,11 +1626,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="374">dissimulant plumae, collumque a pectore longe</l>
 						<l n="375">porrigitur, digitosque ligat iunctura rubentes,</l>
 						<l n="376">penna latus velat, tenet os sine acumine rostrum.</l>
-						<l n="377">Fit nova Cycnus avis, nec se caeloque <persName ref="IUP" role="narrative" ana="NA">Iovi</persName>que</l>
+						<l n="377">Fit nova Cycnus avis, nec se caeloque <persName ref="IUP" type="narrative" ana="NA">Iovi</persName>que</l>
 						<l n="378">credit, ut iniuste missi memor ignis ab illo:</l>
 						<l n="379">stagna petit patulosque lacus, ignemque perosus</l>
 						<l n="380">quae colat elegit contraria flumina flammis.</l>
-						<l n="381">Squalidus interea <persName ref="APO" role="narrative" ana="NA">genitor Phaethontis</persName> et expers</l>
+						<l n="381">Squalidus interea <persName ref="APO" type="narrative" ana="NA">genitor Phaethontis</persName> et expers</l>
 						<l n="382">ipse sui decoris, qualis, cum deficit orbem,</l>
 						<l n="383">esse solet, lucemque odit seque ipse diemque,</l>
 						<l n="384">datque animum in luctus; et luctibus adicit iram</l>
@@ -1654,15 +1654,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="393">non meruisse necem, qui non bene rexerit illos.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="394">Talia dicentem circumstant omnia <persName ref="APO" role="narrative" ana="NA">Solem</persName></l>
+						<l n="394">Talia dicentem circumstant omnia <persName ref="APO" type="narrative" ana="NA">Solem</persName></l>
 						<l n="395">numina, neve velit tenebras inducere rebus,</l>
 						<l n="396">supplice voce rogant: missos quoque Iuppiter ignes</l>
 						<l n="397">excusat precibusque minas regaliter addit.</l>
 						<l n="398">Conligit amentes et adhuc terrore paventes</l>
-						<l n="399"><persName ref="APO" role="narrative" ana="NA">Phoebus</persName> equos stimuloque dolens et verbere saevit:</l>
+						<l n="399"><persName ref="APO" type="narrative" ana="NA">Phoebus</persName> equos stimuloque dolens et verbere saevit:</l>
 						<l n="400">saevit enim, natumque obiectat et imputat illis.</l>
 						<milestone ed="Magnus" n="Callisto." unit="tale"/>
-						<l n="401"> At <persName ref="IUP" role="narrative" ana="NA">pater omnipotens</persName> ingentia moenia caeli</l>
+						<l n="401"> At <persName ref="IUP" type="narrative" ana="NA">pater omnipotens</persName> ingentia moenia caeli</l>
 						<l n="402">circuit et ne quid labefactum viribus ignis</l>
 						<l n="403">corruat explorat. Quae postquam firma suique</l>
 						<l n="404">roboris esse videt terras hominumque labores</l>
@@ -1683,7 +1683,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="419">Exuit hic umero pharetram lentosque retendit</l>
 						<l n="420">arcus, inque solo, quod texerat herba, iacebat</l>
 						<l n="421">et pictam posita pharetram cervice premebat.</l>
-						<l n="422"><persName ref="IUP" role="narrative" ana="auto">Iuppiter</persName> ut vidit fessam et custode vacantem,</l>
+						<l n="422"><persName ref="IUP" type="narrative" ana="auto">Iuppiter</persName> ut vidit fessam et custode vacantem,</l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
 						<l n="423">«hoc certe furtum coniunx mea nesciet»</l>
@@ -1713,7 +1713,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="428"> dixit</l>
 					</sp>
 					<sp who="Callisto" ana="pers">
-						<l n="429">«audiat ipse licet maius <persName ref="IUP" role="narrative" ana="NA">Iove</persName>.»</l>
+						<l n="429">«audiat ipse licet maius <persName ref="IUP" type="narrative" ana="NA">Iove</persName>.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="429"> Ridet et audit,</l>
@@ -1724,14 +1724,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="434">Illa quidem contra, quantum modo femina possit</l>
 						<l n="435">(adspiceres utinam, Saturnia: mitior esses !),</l>
 						<l n="436">illa quidem pugnat: sed quem superare puella,</l>
-						<l n="437">quisve <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> poterat? — Superum petit aethera victor</l>
-						<l n="438"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName>: huic odio nemus est et conscia silva.</l>
+						<l n="437">quisve <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> poterat? — Superum petit aethera victor</l>
+						<l n="438"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName>: huic odio nemus est et conscia silva.</l>
 						<l n="439">Unde pedem referens paene est oblita pharetram</l>
 						<l n="440">tollere cum telis et quem suspenderat arcum.</l>
 						<l n="441">Ecce, suo comitata choro Dictynna per altum</l>
 						<l n="442">Maenalon ingrediens et caede superba ferarum</l>
 						<l n="443">adspicit hanc visamque vocat: clamata refugit,</l>
-						<l n="444">et timuit primo, ne <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> esset in illa.</l>
+						<l n="444">et timuit primo, ne <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> esset in illa.</l>
 						<l n="445">Sed postquam pariter nymphas incedere vidit,</l>
 						<l n="446">sensit abesse dolos numerumque accessit ad harum.</l>
 						<l n="447">Heu quam difficile est crimen non prodere vultu!</l>
@@ -1788,9 +1788,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Iuno" ana="pers">
 						<l n="472">«ut fecunda fores, fieretque iniuria partu</l>
-						<l n="473">nota, <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>que mei testatum dedecus esset.</l>
+						<l n="473">nota, <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>que mei testatum dedecus esset.</l>
 						<l n="474">Haud impune feres: adimam tibi nempe figuram,</l>
-						<l n="475">qua tibi, quaque places nostro, importuna, <persName ref="IUP" role="narrative" ana="NA">marito</persName>.»</l>
+						<l n="475">qua tibi, quaque places nostro, importuna, <persName ref="IUP" type="narrative" ana="NA">marito</persName>.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="476">Dixit et adversa prensis a fronte capillis</l>
@@ -1798,14 +1798,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="478">bracchia coeperunt nigris horrescere villis</l>
 						<l n="479">curvarique manus et aduncos crescere in ungues</l>
 						<l n="480">officioque pedum fungi, laudataque quondam</l>
-						<l n="481">ora <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> lato fieri deformia rictu.</l>
+						<l n="481">ora <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> lato fieri deformia rictu.</l>
 						<l n="482">Neve preces animos et verba precantia flectant</l>
 						<l n="483">posse loqui eripitur; vox iracunda minaxque</l>
 						<l n="484">plenaque terroris rauco de gutture fertur.</l>
 						<l n="485">Mens antiqua tamen facta quoque mansit in ursa,</l>
 						<l n="486">adsiduoque suos gemitu testata dolores</l>
 						<l n="487">qualescumque manus ad caelum et sidera tollit</l>
-						<l n="488">ingratumque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>, nequeat cum dicere, sentit.</l>
+						<l n="488">ingratumque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>, nequeat cum dicere, sentit.</l>
 						<l n="489">A quotiens, sola non ausa quiescere silva,</l>
 						<l n="490">ante domum quondamque suis erravit in agris!</l>
 						<l n="491">A quotiens per saxa canum latratibus acta est</l>
@@ -1822,7 +1822,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="502">inmotosque oculos in se sine fine tenentem</l>
 						<l n="503">nescius extimuit propiusque accedere aventi</l>
 						<l n="504">vulnifico fuerat fixurus pectora telo.</l>
-						<l n="505">Arcuit <persName ref="IUP" role="metamorphosis" ana="act">omnipotens</persName> pariterque ipsosque nefasque</l>
+						<l n="505">Arcuit <persName ref="IUP" type="metamorphosis" ana="act">omnipotens</persName> pariterque ipsosque nefasque</l>
 						<l n="506">sustulit, et celeri raptos per inania vento</l>
 						<l n="507">imposuit caelo vicinaque sidera fecit.</l>
 						<l n="508">Intumuit Iuno, postquam inter sidera paelex</l>
@@ -1865,9 +1865,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="540">Lingua fuit damno; lingua faciente loquaci</l>
 						<l n="541">qui color albus erat, nunc est contrarius albo.</l>
 						<l n="542">Pulchrior in tota, quam Larisaea Coronis,</l>
-						<l n="543">non fuit Haemonia: placuit tibi, <persName ref="APO" role="narrative" ana="NA">Delphice</persName>, certe,</l>
+						<l n="543">non fuit Haemonia: placuit tibi, <persName ref="APO" type="narrative" ana="NA">Delphice</persName>, certe,</l>
 						<l n="544">dum vel casta fuit vel inobservata. Sed ales</l>
-						<l n="545">sensit adulterium <persName ref="APO" role="narrative" ana="NA">Phoebeius</persName>, utque latentem</l>
+						<l n="545">sensit adulterium <persName ref="APO" type="narrative" ana="NA">Phoebeius</persName>, utque latentem</l>
 						<l n="546">detegeret culpam, non exorabilis index,</l>
 						<l n="547">ad dominum tendebat iter. Quem garrula motis</l>
 						<l n="548">consequitur pennis, scitetur ut omnia, cornix,</l>
@@ -1886,7 +1886,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Cornix" ana="narr">
 						<l n="552">Nam tempore quodam</l>
-						<l n="553"><persName ref="MIN" role="narrative" ana="NA">Pallas</persName> Erichthonium, prolem sine matre creatam,</l>
+						<l n="553"><persName ref="MIN" type="narrative" ana="NA">Pallas</persName> Erichthonium, prolem sine matre creatam,</l>
 						<l n="554">clauserat Actaeo texta de vimine cista</l>
 						<l n="555">virginibusque tribus gemino de Cecrope natis</l>
 						<l n="556">et legem dederat, sua ne secreta viderent.</l>
@@ -1896,13 +1896,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="560">Aglauros nodosque manu diducit, et intus</l>
 						<l n="561">infantemque vident adporrectumque draconem.</l>
 						<l n="562">Acta deae refero. Pro quo mihi gratia talis</l>
-						<l n="563">redditur, ut dicar tutela pulsa <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="563">redditur, ut dicar tutela pulsa <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="564">et ponar post noctis avem. Mea poena volucres</l>
 						<l n="565">admonuisse potest ne voce pericula quaerant.</l>
 					</sp>
 					<sp who="Cornix" ana="pers">
 						<l n="566">At, puto, non ultro nec quicquam tale rogantem</l>
-						<l n="567">me petiit? ipsa licet hoc a <persName ref="MIN" role="narrative" ana="NA">Pallade</persName> quaeras:</l>
+						<l n="567">me petiit? ipsa licet hoc a <persName ref="MIN" type="narrative" ana="NA">Pallade</persName> quaeras:</l>
 						<l n="568">quamvis irata est, non hoc irata negabit.</l>
 					</sp>
 					<sp who="Cornix" ana="narr">
@@ -1927,7 +1927,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="576">vim parat et sequitur. Fugio densumque relinquo</l>
 						<l n="577">litus et in molli nequiquam lassor harena.</l>
 						<l n="578">Inde deos hominesque voco; nec contigit ullum</l>
-						<l n="579">vox mea mortalem: mota est pro virgine <persName ref="MIN" role="metamorphosis" ana="act">virgo</persName></l>
+						<l n="579">vox mea mortalem: mota est pro virgine <persName ref="MIN" type="metamorphosis" ana="act">virgo</persName></l>
 						<l n="580">auxiliumque tulit. Tendebam bracchia caelo:</l>
 						<l n="581">bracchia coeperunt levibus nigrescere pennis.</l>
 						<l n="582">Reicere ex umeris vestem molibar: at illa</l>
@@ -1936,7 +1936,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="585">sed neque iam palmas nec pectora nuda gerebam.</l>
 						<l n="586">Currebam: nec, ut ante, pedes retinebat harena,</l>
 						<l n="587">sed summa tollebar humo. Mox alta per auras</l>
-						<l n="588">evehor et data sum comes inculpata <persName ref="MIN" role="metamorphosis" ana="act">Minervae</persName>.</l>
+						<l n="588">evehor et data sum comes inculpata <persName ref="MIN" type="metamorphosis" ana="act">Minervae</persName>.</l>
 					</sp>
 					<sp who="Cornix" ana="pers">
 						<l n="589">Quid tamen hoc prodest, si diro facta volucris</l>
@@ -1971,7 +1971,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="598">Nec coeptum dimittit iter, dominoque iacentem</l>
 						<l n="599">cum iuvene Haemonio vidisse Coronida narrat.</l>
 						<l n="600">Laurea delapsa est audito crimine amanti,</l>
-						<l n="601">et pariter vultusque <persName ref="APO" role="narrative" ana="NA">deo</persName> plectrumque colorque</l>
+						<l n="601">et pariter vultusque <persName ref="APO" type="narrative" ana="NA">deo</persName> plectrumque colorque</l>
 						<l n="602">excidit. Utque animus tumida fervebat ab ira,</l>
 						<l n="603">arma adsueta rapit flexumque a cornibus arcum</l>
 						<l n="604">tendit et illa suo totiens cum pectore iuncta</l>
@@ -1981,13 +1981,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="608">et dixit:</l>
 					</sp>
 					<sp who="Coronis" ana="pers">
-						<l n="608">«Potui poenas tibi, <persName ref="APO" role="narrative" ana="NA">Phoebe</persName>, dedisse,</l>
+						<l n="608">«Potui poenas tibi, <persName ref="APO" type="narrative" ana="NA">Phoebe</persName>, dedisse,</l>
 						<l n="609">sed peperisse prius: duo nunc moriemur in una.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="610">Hactenus, et pariter vitam cum sanguine fudit.</l>
 						<l n="611">Corpus inane animae frigus letale secutum est.</l>
-						<l n="612">Paenitet heu sero poenae crudelis <persName ref="APO" role="narrative" ana="NA">amantem</persName>,</l>
+						<l n="612">Paenitet heu sero poenae crudelis <persName ref="APO" type="narrative" ana="NA">amantem</persName>,</l>
 						<l n="613">seque, quod audierit, quod sic exarserit, odit;</l>
 						<l n="614">odit avem, per quam crimen causamque dolendi</l>
 						<l n="615">scire coactus erat, nec non arcumque manumque</l>
@@ -2003,7 +2003,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="625">tempora discussit claro cava malleus ictu.</l>
 						<l n="626">Ut tamen ingratos in pectora fudit odores</l>
 						<l n="627">et dedit amplexus iniustaque iusta peregit,</l>
-						<l n="628">non tulit in cineres labi sua <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> eosdem</l>
+						<l n="628">non tulit in cineres labi sua <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> eosdem</l>
 						<l n="629">semina, sed natum flammis uteroque parentis</l>
 						<l n="630">eripuit geminique tulit Chironis in antrum;</l>
 						<l n="631">sperantemque sibi non falsae praemia linguae</l>
@@ -2037,7 +2037,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="643">«tibi se mortalia saepe</l>
 						<l n="644">corpora debebunt; animas tibi reddere ademptas</l>
 						<l n="645">fas erit; idque semel dis indignantibus ausus</l>
-						<l n="646">posse dare <persName ref="IUP" role="narrative" ana="act">hoc</persName> iterum flamma prohibebere avita</l>
+						<l n="646">posse dare <persName ref="IUP" type="narrative" ana="act">hoc</persName> iterum flamma prohibebere avita</l>
 						<l n="647">eque deo corpus fies exsangue, deusque,</l>
 						<l n="648">qui modo corpus eras, et bis tua fata novabis.</l>
 						<l n="649">Tu quoque, care pater, nunc inmortalis et aevis</l>
@@ -2082,8 +2082,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="675">et vox et facies nomen quoque monstra dedere.</l>
 						<milestone ed="Magnus" n="Battus." unit="tale"/>
 						<l n="676">Flebat opemque tuam frustra Philyreius heros,</l>
-						<l n="677"><persName ref="APO" role="narrative" ana="NA">Delphice</persName>, poscebat. Nam nec rescindere magni</l>
-						<l n="678">iussa <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> poteras, nec, si rescindere posses,</l>
+						<l n="677"><persName ref="APO" type="narrative" ana="NA">Delphice</persName>, poscebat. Nam nec rescindere magni</l>
+						<l n="678">iussa <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> poteras, nec, si rescindere posses,</l>
 						<l n="679">tunc aderas: Elin Messeniaque arva colebas.</l>
 						<milestone ed="More" n="BATTUS AND MERCURY" unit="tale"/>
 						<l n="680">Illud erat tempus, quo te pastoria pellis</l>
@@ -2117,7 +2117,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="696">«Tutus eas: lapis iste prius tua furta loquetur»,</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="697">et lapidem ostendit. Simulat <persName ref="IUP" role="narrative" ana="NA">Iove</persName> natus abire,</l>
+						<l n="697">et lapidem ostendit. Simulat <persName ref="IUP" type="narrative" ana="NA">Iove</persName> natus abire,</l>
 						<l n="698">mox redit, et versa pariter cum voce figura</l>
 					</sp>
 					<sp who="Mercurius" ana="pers">
@@ -2157,10 +2157,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="707">inque nihil merito vetus est infamia saxo.</l>
 						<milestone ed="Magnus" n="Aglauros. Invidia." unit="tale"/>
 						<l n="708">Hinc se sustulerat paribus caducifer alis,</l>
-						<l n="709">Munychiosque volans agros gratamque <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="709">Munychiosque volans agros gratamque <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="710">despectabat humum cultique arbusta Lycei.</l>
 						<l n="711">Illa forte die castae de more puellae</l>
-						<l n="712">vertice supposito festas in <persName ref="MIN" role="narrative" ana="NA">Palladis</persName> arces</l>
+						<l n="712">vertice supposito festas in <persName ref="MIN" type="narrative" ana="NA">Palladis</persName> arces</l>
 						<l n="713">pura coronatis portabant sacra canistris.</l>
 						<l n="714">Inde revertentes deus adspicit ales iterque</l>
 						<l n="715">non agit in rectum, sed in orbem curvat eundem.</l>
@@ -2174,7 +2174,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="723">Lucifer, et quanto quam Lucifer aurea Phoebe,</l>
 						<l n="724">tanto virginibus praestantior omnibus Herse</l>
 						<l n="725">ibat, eratque decus pompae comitumque suarum.</l>
-						<l n="726">Obstipuit forma <persName ref="IUP" role="narrative" ana="NA">Iove</persName> natus, et aethere pendens</l>
+						<l n="726">Obstipuit forma <persName ref="IUP" type="narrative" ana="NA">Iove</persName> natus, et aethere pendens</l>
 						<l n="727">non secus exarsit, quam cum Balearica plumbum</l>
 						<l n="728">funda iacit: volat illud et incandescit eundo</l>
 						<l n="729">et quos non habuit, sub nubibus invenit ignes.</l>
@@ -2202,10 +2202,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="748">Adspicit hunc oculis isdem, quibus abdita nuper</l>
-						<l n="749">viderat Aglauros flavae secreta <persName ref="MIN" role="narrative" ana="NA">Minervae</persName>,</l>
+						<l n="749">viderat Aglauros flavae secreta <persName ref="MIN" type="narrative" ana="NA">Minervae</persName>,</l>
 						<l n="750">proque ministerio magni sibi ponderis aurum</l>
 						<l n="751">postulat: interea tectis excedere cogit.</l>
-						<l n="752">Vertit ad hanc torvi <persName ref="MIN" role="narrative" ana="NA">dea bellica</persName> luminis orbem</l>
+						<l n="752">Vertit ad hanc torvi <persName ref="MIN" type="narrative" ana="NA">dea bellica</persName> luminis orbem</l>
 						<l n="753">et tanto penitus traxit suspiria motu,</l>
 						<l n="754">ut pariter pectus positamque in pectore forti</l>
 						<l n="755">aegida concuteret. Subit, hanc arcana profana</l>
@@ -2218,7 +2218,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="762">abdita, sole carens, non ulli pervia vento,</l>
 						<l n="763">tristis et ignavi plenissima frigoris, et quae</l>
 						<l n="764">igne vacet semper, caligine semper abundet.</l>
-						<l n="765">Huc ubi pervenit <persName ref="MIN" role="narrative" ana="NA">belli metuenda virago</persName>,</l>
+						<l n="765">Huc ubi pervenit <persName ref="MIN" type="narrative" ana="NA">belli metuenda virago</persName>,</l>
 						<l n="766">constitit ante domum (neque enim succedere tectis</l>
 						<l n="767">fas habet) et postes extrema cuspide pulsat.</l>
 						<l n="768">Concussae patuere fores. Videt intus edentem</l>
@@ -2226,7 +2226,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="770">Invidiam, visaque oculos avertit. At illa</l>
 						<l n="771">surgit humo pigre semesarumque relinquit</l>
 						<l n="772">corpora serpentum passuque incedit inerti;</l>
-						<l n="773">utque <persName ref="MIN" role="narrative" ana="NA">deam</persName> vidit formaque armisque decoram,</l>
+						<l n="773">utque <persName ref="MIN" type="narrative" ana="NA">deam</persName> vidit formaque armisque decoram,</l>
 						<l n="774">ingemuit vultumque ima ad suspiria duxit.</l>
 						<l n="775">Pallor in ore sedet, macies in corpore toto,</l>
 						<l n="776">nusquam recta acies, livent rubigine dentes,</l>
@@ -2236,7 +2236,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="780">sed videt ingratos intabescitque videndo</l>
 						<l n="781">successus hominum, carpitque et carpitur una,</l>
 						<l n="782">suppliciumque suum est. Quamvis tamen oderat illam,</l>
-						<l n="783">talibus adfata est breviter <persName ref="MIN" role="narrative" ana="act">Tritonia</persName> dictis:</l>
+						<l n="783">talibus adfata est breviter <persName ref="MIN" type="narrative" ana="act">Tritonia</persName> dictis:</l>
 					</sp>
 					<sp who="Minerva" ana="pers" corresp="MIN">
 						<l n="784">«Infice tabe tua natarum Cecropis unam.</l>
@@ -2246,13 +2246,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="785"> Haud plura locuta</l>
 						<l n="786">fugit et impressa tellurem reppulit hasta.</l>
 						<l n="787">Illa deam obliquo fugientem lumine cernens</l>
-						<l n="788">murmura parva dedit, successurumque <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="788">murmura parva dedit, successurumque <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="789">indoluit, baculumque capit, quod spinea totum</l>
 						<l n="790">vincula cingebant, adopertaque nubibus atris,</l>
 						<l n="791">quacumque ingreditur, florentia proterit arva</l>
 						<l n="792">exuritque herbas et summa cacumina carpit,</l>
 						<l n="793">adflatuque suo populos urbesque domosque</l>
-						<l n="794">polluit. Et tandem <persName ref="MIN" role="narrative" ana="NA">Tritonida</persName> conspicit arcem</l>
+						<l n="794">polluit. Et tandem <persName ref="MIN" type="narrative" ana="NA">Tritonida</persName> conspicit arcem</l>
 						<l n="795">ingeniis opibusque et festa pace virentem,</l>
 						<l n="796">vixque tenet lacrimas, quia nil lacrimabile cernit.</l>
 						<l n="797">Sed postquam thalamos intravit Cecrope natae,</l>
@@ -2317,9 +2317,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="832">Nec lapis albus erat: sua mens infecerat illam.</l>
 						<milestone ed="Magnus" n="Europa." unit="tale"/>
 						<l n="833">Has ubi verborum poenas mentisque profanae</l>
-						<l n="834">cepit Atlantiades, dictas a <persName ref="MIN" role="narrative" ana="NA">Pallade</persName> terras</l>
+						<l n="834">cepit Atlantiades, dictas a <persName ref="MIN" type="narrative" ana="NA">Pallade</persName> terras</l>
 						<l n="835">linquit et ingreditur iactatis aethera pennis.</l>
-						<l n="836">Sevocat <persName ref="IUP" role="narrative" ana="NA">hunc genitor</persName>. Nec causam fassus amoris</l>
+						<l n="836">Sevocat <persName ref="IUP" type="narrative" ana="NA">hunc genitor</persName>. Nec causam fassus amoris</l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
 						<l n="837">«fide minister»</l>
@@ -2342,7 +2342,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="846">Non bene conveniunt nec in una sede morantur</l>
 						<milestone ed="More" n="EUROPA AND JUPITER" unit="tale"/>
 						<l n="847">maiestas et amor: sceptri gravitate relicta</l>
-						<l n="848"><persName ref="IUP" role="narrative" ana="auto">ille pater rectorque deum</persName>, cui dextra trisulcis</l>
+						<l n="848"><persName ref="IUP" type="narrative" ana="auto">ille pater rectorque deum</persName>, cui dextra trisulcis</l>
 						<l n="849">ignibus armata est, qui nutu concutit orbem,</l>
 						<l n="850">induitur faciem tauri mixtusque iuvencis</l>
 						<l n="851">mugit et in teneris formosus obambulat herbis.</l>
@@ -2375,21 +2375,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<div type="textpart" subtype="book" n="3">
 					<milestone ed="Magnus" n="Cadmus." unit="tale"/>
 					<sp who="Ovid" ana="narr">
-						<l n="1">Iamque <persName ref="IUP" role="metamorphosis" ana="auto">deus</persName> posita fallacis imagine tauri</l>
+						<l n="1">Iamque <persName ref="IUP" type="metamorphosis" ana="auto">deus</persName> posita fallacis imagine tauri</l>
 						<l n="2">se confessus erat Dictaeaque rura tenebat,</l>
 						<l n="3">cum pater ignarus Cadmo perquirere raptam</l>
 						<l n="4">imperat et poenam, si non invenerit, addit</l>
 						<l n="5">exilium, facto pius et sceleratus eodem.</l>
 						<l n="6">Orbe pererrato (quis enim deprendere possit</l>
-						<l n="7">furta <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>?) profugus patriamque iramque parentis</l>
-						<l n="8">vitat Agenorides <persName ref="APO" role="narrative" ana="NA">Phoebi</persName>que oracula supplex</l>
+						<l n="7">furta <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>?) profugus patriamque iramque parentis</l>
+						<l n="8">vitat Agenorides <persName ref="APO" type="narrative" ana="NA">Phoebi</persName>que oracula supplex</l>
 						<l n="9">consulit et, quae sit tellus habitanda, requirit.</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="10">«Bos tibi»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="10"><persName ref="APO" role="narrative" ana="NA">Phoebus</persName> ait</l>
+						<l n="10"><persName ref="APO" type="narrative" ana="NA">Phoebus</persName> ait</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="10">«solis occurret in arvis,</l>
@@ -2402,7 +2402,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="15">incustoditam lente videt ire iuvencam</l>
 						<l n="16">nullum servitii signum cervice gerentem.</l>
 						<l n="17">Subsequitur pressoque legit vestigia gressu,</l>
-						<l n="18">auctoremque viae <persName ref="APO" role="narrative" ana="NA">Phoebum</persName> taciturnus adorat.</l>
+						<l n="18">auctoremque viae <persName ref="APO" type="narrative" ana="NA">Phoebum</persName> taciturnus adorat.</l>
 						<l n="19">Iam vada Cephisi Panopesque evaserat arva:</l>
 						<l n="20">bos stetit et tollens speciosam cornibus altis</l>
 						<l n="21">ad caelum frontem mugitibus impulit auras,</l>
@@ -2410,7 +2410,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="23">procubuit teneraque latus submisit in herba.</l>
 						<l n="24">Cadmus agit grates peregrinaeque oscula terrae</l>
 						<l n="25">figit et ignotos montes agrosque salutat.</l>
-						<l n="26">Sacra <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> facturus erat. Iubet ire ministros</l>
+						<l n="26">Sacra <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> facturus erat. Iubet ire ministros</l>
 						<l n="27">et petere e vivis libandas fontibus undas.</l>
 						<l n="28">Silva vetus stabat, nulla violata securi,</l>
 						<l n="29">et specus in medio, virgis ac vimine densus,</l>
@@ -2496,8 +2496,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="98">serpentem spectas? et tu spectabere serpens.»</l>
 						<l n="99">Ille diu pavidus pariter cum mente colorem</l>
 						<l n="100">perdiderat, gelidoque comae terrore rigebant.</l>
-						<l n="101">Ecce <persName ref="MIN" role="narrative" ana="act">viri fautrix</persName>, superas delapsa per auras,</l>
-						<l n="102"><persName ref="MIN" role="narrative" ana="act">Pallas</persName>adest motaeque iubet supponere terrae</l>
+						<l n="101">Ecce <persName ref="MIN" type="narrative" ana="act">viri fautrix</persName>, superas delapsa per auras,</l>
+						<l n="102"><persName ref="MIN" type="narrative" ana="act">Pallas</persName>adest motaeque iubet supponere terrae</l>
 						<l n="103">vipereos dentes, populi incrementa futuri.</l>
 						<l n="104">Paret et, ut presso sulcum patefecit aratro,</l>
 						<l n="105">spargit humi iussos, mortalia semina, dentes.</l>
@@ -2560,7 +2560,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="148">«Lina madent, comites, ferrumque cruore ferarum,</l>
 						<l n="149">fortunamque dies habuit satis. Altera lucem</l>
 						<l n="150">cum croceis invecta rotis Aurora reducet,</l>
-						<l n="151">propositum repetemus opus; nunc <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> utraque</l>
+						<l n="151">propositum repetemus opus; nunc <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> utraque</l>
 						<l n="152">distat idem terra finditque vaporibus arva.</l>
 						<l n="153">Sistite opus praesens nodosaque tollite lina.»</l>
 					</sp>
@@ -2680,12 +2680,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="251">Rumor in ambiguo est: aliis violentior aequo</l>
 						<l n="252">visa dea est, alii laudant dignamque severa</l>
 						<l n="253">virginitate vocant; pars invenit utraque causas.</l>
-						<l n="254">Sola <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> coniunx non tam culpetne probetne</l>
+						<l n="254">Sola <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> coniunx non tam culpetne probetne</l>
 						<l n="255">eloquitur, quam clade domus ab Agenore ductae</l>
 						<l n="256">gaudet et a Tyria conlectum paelice transfert</l>
 						<l n="257">in generis socios odium. Subit ecce priori</l>
 						<l n="258">causa recens, gravidamque dolet de semine magni</l>
-						<l n="259">esse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> Semelen. Dum linguam ad iurgia solvit,</l>
+						<l n="259">esse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> Semelen. Dum linguam ad iurgia solvit,</l>
 					</sp>
 					<sp who="Iuno" ana="pers">
 						<l n="260">«profeci quid enim totiens per iurgia?»</l>
@@ -2696,14 +2696,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Iuno" ana="pers">
 						<l n="261">«ipsa petenda mihi est, ipsam, si maxima Iuno</l>
 						<l n="262">rite vocor, perdam, si me gemmantia dextra</l>
-						<l n="263">sceptra tenere decet, si sum regina <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>que</l>
+						<l n="263">sceptra tenere decet, si sum regina <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>que</l>
 						<l n="264">et soror et coniunx, certe soror. At, puto, furto est</l>
 						<l n="265">contenta, et thalami brevis est iniuria nostri:</l>
 						<l n="266">concipit, id deerat! manifestaque crimina pleno</l>
-						<l n="267">fert utero, et mater, quod <persName ref="IUP" role="narrative" ana="NA">vix mihi</persName> contigit uno</l>
-						<l n="268">de <persName ref="IUP" role="narrative" ana="NA">Iove</persName> vult fieri: tanta est fiducia formae.</l>
+						<l n="267">fert utero, et mater, quod <persName ref="IUP" type="narrative" ana="NA">vix mihi</persName> contigit uno</l>
+						<l n="268">de <persName ref="IUP" type="narrative" ana="NA">Iove</persName> vult fieri: tanta est fiducia formae.</l>
 						<l n="269">Fallat eam faxo; nec sum Saturnia, si non</l>
-						<l n="270">ab <persName ref="IUP" role="narrative" ana="NA">Iove</persName> mersa suo Stygias penetrabit in undas.»</l>
+						<l n="270">ab <persName ref="IUP" type="narrative" ana="NA">Iove</persName> mersa suo Stygias penetrabit in undas.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="271">Surgit ab his solio fulvaque recondita nube</l>
@@ -2713,11 +2713,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="275">membra tulit passu; vocem quoque fecit anilem,</l>
 						<l n="276">ipsaque erat Beroe, Semeles Epidauria nutrix.</l>
 						<l n="277">Ergo ubi captato sermone diuque loquendo</l>
-						<l n="278">ad nomen venere <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>, suspirat et</l>
+						<l n="278">ad nomen venere <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>, suspirat et</l>
 					</sp>
 					<sp who="Iuno" ana="pers">
 						<l n="278">«opto,</l>
-						<l n="279"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> ut sit»</l>
+						<l n="279"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> ut sit»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="279">ait:</l>
@@ -2725,15 +2725,15 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Iuno" ana="pers">
 						<l n="279">«metuo tamen omnia: multi</l>
 						<l n="280">nomine divorum thalamos iniere pudicos.</l>
-						<l n="281">Nec tamen esse <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> satis est: det pignus amoris,</l>
+						<l n="281">Nec tamen esse <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> satis est: det pignus amoris,</l>
 						<l n="282">si modo verus is est, quantusque et qualis ab alta</l>
 						<l n="283">Iunone excipitur, tantus talisque, rogato,</l>
 						<l n="284">det tibi complexus suaque ante insignia sumat.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="285">Talibus ignaram Iuno Cadmeida dictis</l>
-						<l n="286">formarat. Rogat illa <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> sine nomine munus.</l>
-						<l n="287">Cui <persName ref="IUP" role="narrative" ana="NA">deus</persName></l>
+						<l n="286">formarat. Rogat illa <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> sine nomine munus.</l>
+						<l n="287">Cui <persName ref="IUP" type="narrative" ana="NA">deus</persName></l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
 						<l n="287">«elige»</l>
@@ -2761,7 +2761,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="293">da mihi te talem.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="293"> Voluit <persName ref="IUP" role="narrative" ana="auto">deus</persName> ora loquentis</l>
+						<l n="293"> Voluit <persName ref="IUP" type="narrative" ana="auto">deus</persName> ora loquentis</l>
 						<l n="294">opprimere: exierat iam vox properata sub auras.</l>
 						<l n="295">Ingemuit; neque enim non haec optasse, neque ille</l>
 						<l n="296">non iurasse potest. Ergo maestissimus altum</l>
@@ -2785,7 +2785,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="Magnus" n="Tiresias." unit="tale"/>
 						<l n="314">Dumque ea per terras fatali lege geruntur</l>
 						<l n="315">tutaque bis geniti sunt incunabula Bacchi,</l>
-						<l n="316">forte <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> memorant, diffusum nectare, curas</l>
+						<l n="316">forte <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> memorant, diffusum nectare, curas</l>
 						<l n="317">seposuisse graves vacuumque agitasse remissos</l>
 						<l n="318">cum Iunone iocos et</l>
 					</sp>
@@ -2822,10 +2822,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="328"> Percussis anguibus isdem</l>
 						<l n="329">forma prior rediit genetivaque venit imago.</l>
 						<l n="330">Arbiter hic igitur sumptus de lite iocosa</l>
-						<l n="331">dicta <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> firmat. Gravius Saturnia iusto</l>
+						<l n="331">dicta <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> firmat. Gravius Saturnia iusto</l>
 						<l n="332">nec pro materia fertur doluisse, suique</l>
 						<l n="333">iudicis aeterna damnavit lumina nocte.</l>
-						<l n="334">At <persName ref="IUP" role="narrative" ana="NA">pater omnipotens</persName> (neque enim licet inrita cuiquam</l>
+						<l n="334">At <persName ref="IUP" type="narrative" ana="NA">pater omnipotens</persName> (neque enim licet inrita cuiquam</l>
 						<l n="335">facta dei fecisse deo) pro lumine adempto</l>
 						<l n="336">scire futura dedit, poenamque levavit honore.</l>
 						<milestone ed="Magnus" n="Narcissus. Echo." unit="tale"/>
@@ -2859,7 +2859,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="358">garrula non alium, quam nunc habet, oris habebat,</l>
 						<l n="359">reddere de multis ut verba novissima posset.</l>
 						<l n="360">Fecerat hoc Iuno, quia, cum deprendere posset</l>
-						<l n="361">cum <persName ref="IUP" role="narrative" ana="NA">Iove</persName> saepe suo nymphas in monte iacentes,</l>
+						<l n="361">cum <persName ref="IUP" type="narrative" ana="NA">Iove</persName> saepe suo nymphas in monte iacentes,</l>
 						<l n="362">illa deam longo prudens sermone tenebat,</l>
 						<l n="363">dum fugerent nymphae. Postquam Saturnia sensit</l>
 					</sp>
@@ -2988,7 +2988,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="416">adstupet ipse sibi, vultuque inmotus eodem</l>
 						<l n="417">haeret, ut e Pario formatum marmore signum.</l>
 						<l n="418">Spectat humi positus geminum, sua lumina, sidus</l>
-						<l n="419">et dignos Baccho, dignos et <persName ref="APO" role="narrative" ana="NA">Apolline</persName> crines</l>
+						<l n="419">et dignos Baccho, dignos et <persName ref="APO" type="narrative" ana="NA">Apolline</persName> crines</l>
 						<l n="420">impubesque genas et eburnea colla decusque</l>
 						<l n="421">oris et in niveo mixtum candore ruborem,</l>
 						<l n="422">cunctaque miratur, quibus est mirabilis ipse.</l>
@@ -3590,7 +3590,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="1">At non Alcithoe Minyeias orgia censet</l>
 						<l n="2">accipienda dei, sed adhuc temeraria Bacchum</l>
-						<l n="3">progeniem negat esse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>, sociasque sorores</l>
+						<l n="3">progeniem negat esse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>, sociasque sorores</l>
 						<l n="4">inpietatis habet. Festum celebrare sacerdos</l>
 						<l n="5">inmunesque operum famulas dominasque suorum</l>
 						<l n="6">pectora pelle tegi, crinales solvere vittas,</l>
@@ -3630,14 +3630,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="32">iussaque sacra colunt. Solae Minyeides intus</l>
-						<l n="33">intempestiva turbantes festa <persName ref="MIN" role="narrative" ana="NA">Minerva</persName></l>
+						<l n="33">intempestiva turbantes festa <persName ref="MIN" type="narrative" ana="NA">Minerva</persName></l>
 						<l n="34">aut ducunt lanas, aut stamina pollice versant,</l>
 						<l n="35">aut haerent telae famulasque laboribus urgent.</l>
 						<l n="36">E quibus una levi deducens pollice filum</l>
 					</sp>
 					<sp who="Arsippe" ana="pers">
 						<l n="37">«dum cessant aliae commentaque sacra frequentant,</l>
-						<l n="38">nos quoque, quas <persName ref="MIN" role="narrative" ana="NA">Pallas, melior dea</persName>, detinet»</l>
+						<l n="38">nos quoque, quas <persName ref="MIN" type="narrative" ana="NA">Pallas, melior dea</persName>, detinet»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="38">inquit,</l>
@@ -3843,9 +3843,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Leuconoe" ana="narr">
 						<l n="169">«Hunc quoque, siderea qui temperat omnia luce,</l>
-						<l n="170">cepit amor <persName ref="APO" role="narrative" ana="NA">Solem</persName>: <persName ref="APO" role="narrative" ana="NA">Solis</persName> referemus amores.</l>
+						<l n="170">cepit amor <persName ref="APO" type="narrative" ana="NA">Solem</persName>: <persName ref="APO" type="narrative" ana="NA">Solis</persName> referemus amores.</l>
 						<l n="171">Primus adulterium Veneris cum Marte putatur</l>
-						<l n="172"><persName ref="APO" role="narrative" ana="NA">hic</persName> vidisse <persName ref="APO" role="narrative" ana="NA">deus</persName>: videt <persName ref="APO" role="narrative" ana="NA">hic deus</persName> omnia primus.</l>
+						<l n="172"><persName ref="APO" type="narrative" ana="NA">hic</persName> vidisse <persName ref="APO" type="narrative" ana="NA">deus</persName>: videt <persName ref="APO" type="narrative" ana="NA">hic deus</persName> omnia primus.</l>
 						<l n="173">Indoluit facto, Iunonigenaeque marito</l>
 						<l n="174">furta tori furtique locum monstravit. At illi</l>
 						<l n="175">et mens et quod opus fabrilis dextra tenebat</l>
@@ -3888,7 +3888,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="211">quam mater cunctas, tam matrem filia vicit.</l>
 						<l n="212">Rexit Achaemenias urbes pater Orchamus, isque</l>
 						<l n="213">septimus a prisco numeratur origine Belo.</l>
-						<l n="214">Axe sub Hesperio sunt pascua <persName ref="APO" role="narrative" ana="NA">Solis</persName> equorum.</l>
+						<l n="214">Axe sub Hesperio sunt pascua <persName ref="APO" type="narrative" ana="NA">Solis</persName> equorum.</l>
 						<l n="215">Ambrosiam pro gramine habent: ea fessa diurnis</l>
 						<l n="216">membra ministeriis nutrit reparatque labori.</l>
 						<l n="217">Dumque ibi quadrupedes caelestia pabula carpunt,</l>
@@ -3930,10 +3930,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="232">at virgo, quamvis inopino territa visu,</l>
 						<l n="233">victa nitore dei posita vim passa querella est.</l>
 						<l n="234">Invidit Clytie (neque enim moderatus in illa</l>
-						<l n="235"><persName ref="APO" role="narrative" ana="NA">Solis</persName> amor fuerat), stimulataque paelicis ira</l>
+						<l n="235"><persName ref="APO" type="narrative" ana="NA">Solis</persName> amor fuerat), stimulataque paelicis ira</l>
 						<l n="236">vulgat adulterium diffamatumque parenti</l>
 						<l n="237">indicat. Ille ferox inmansuetusque precantem</l>
-						<l n="238">tendentemque manus ad lumina <persName ref="APO" role="narrative" ana="NA">Solis</persName> et</l>
+						<l n="238">tendentemque manus ad lumina <persName ref="APO" type="narrative" ana="NA">Solis</persName> et</l>
 					</sp>
 					<sp who="Leucothoe" ana="pers">
 						<l n="238">«ille</l>
@@ -3967,7 +3967,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="257">indiciumque dolor poterat, non amplius auctor</l>
 						<l n="258">lucis adit venerisque modum sibi fecit in illa.</l>
 						<l n="259">Tabuit ex illo dementer amoribus usa</l>
-						<l n="260">nympha larum inpatiens, et sub <persName ref="IUP" role="narrative" ana="NA">Iove</persName> nocte dieque</l>
+						<l n="260">nympha larum inpatiens, et sub <persName ref="IUP" type="narrative" ana="NA">Iove</persName> nocte dieque</l>
 						<l n="261">sedit humo nuda, nudis incompta capillis,</l>
 						<l n="262">perque novem luces expers undaeque cibique</l>
 						<l n="263">rore mero lacrimisque suis ieiunia pavit</l>
@@ -3977,7 +3977,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="267">luridus exsangues pallor convertit in herbas;</l>
 						<l n="268">est in parte rubor, violaeque simillimus ora</l>
 						<l n="269">flos tegit. Illa suum, quamvis radice tenetur,</l>
-						<l n="270">vertitur ad <persName ref="APO" role="narrative" ana="NA">Solem</persName>, mutataque servat amorem.»</l>
+						<l n="270">vertitur ad <persName ref="APO" type="narrative" ana="NA">Solem</persName>, mutataque servat amorem.»</l>
 					</sp>
 					<milestone ed="Magnus" n="Salmacis." unit="tale"/>
 					<sp who="Ovid" ana="narr">
@@ -4000,7 +4000,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="279">Nec loquor, ut quondam naturae iure novato</l>
 						<l n="280">ambiguus fuerit modo vir, modo femina Sithon.</l>
 						<l n="281">Te quoque, nunc adamas, quondam fidissime parvo,</l>
-						<l n="282">Celmi, <persName ref="IUP" role="narrative" ana="NA">Iovi</persName>, largoque satos Curetas ab imbri</l>
+						<l n="282">Celmi, <persName ref="IUP" type="narrative" ana="NA">Iovi</persName>, largoque satos Curetas ab imbri</l>
 						<l n="283">et Crocon in parvos versum cum Smilace flores</l>
 						<l n="284">praetereo, dulcique animos novitate tenebo.</l>
 					</sp>
@@ -4101,7 +4101,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="346">Tum vero placuit, nudaeque cupidine formae</l>
 						<l n="347">Salmacis exarsit: flagrant quoque lumina nymphae,</l>
 						<l n="348">non aliter quam cum puro nitidissimus orbe</l>
-						<l n="349">opposita speculi referitur imagine <persName ref="APO" role="narrative" ana="NA">Phoebus</persName>.</l>
+						<l n="349">opposita speculi referitur imagine <persName ref="APO" type="narrative" ana="NA">Phoebus</persName>.</l>
 						<l n="350">Vixque moram patitur, vix iam sua gaudia differt,</l>
 						<l n="351">iam cupit amplecti, iam se male continet amens.</l>
 						<l n="352">Ille cavis velox adplauso corpore palmis</l>
@@ -4483,7 +4483,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="607">Solus Abantiades ab origine cretus eadem</l>
 						<l n="608">Acrisius superest, qui moenibus arceat urbis</l>
 						<l n="609">Argolicae contraque deum ferat arma genusque</l>
-						<l n="610">non putet esse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>; neque enim <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> esse putabat</l>
+						<l n="610">non putet esse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>; neque enim <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> esse putabat</l>
 						<l n="611">Persea, quem pluvio Danae conceperat auro.</l>
 						<l n="612">Mox tamen Acrisium (tanta est praesentia veri)</l>
 						<l n="613">tam violasse deum quam non agnosse nepotem</l>
@@ -4506,7 +4506,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="630">evocet Aurorae, currus Aurora diurnos.</l>
 						<l n="631">Hic hominum cunctis ingenti corpore praestans</l>
 						<l n="632">Iapetionides Atlas fuit. Ultima tellus</l>
-						<l n="633">rege sub hoc et pontus erat, qui <persName ref="APO" role="narrative" ana="NA">Solis</persName> anhelis</l>
+						<l n="633">rege sub hoc et pontus erat, qui <persName ref="APO" type="narrative" ana="NA">Solis</persName> anhelis</l>
 						<l n="634">aequora subdit equis et fessos excipit axes.</l>
 						<l n="635">Mille greges illi totidemque armenta per herbas</l>
 						<l n="636">errabant, et humum vicinia nulla premebant.</l>
@@ -4521,7 +4521,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Perseus" ana="pers">
 						<l n="639">«seu gloria tangit</l>
-						<l n="640">te generis magni, generis mihi <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> auctor;</l>
+						<l n="640">te generis magni, generis mihi <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> auctor;</l>
 						<l n="641">sive es mirator rerum, mirabere nostras.</l>
 						<l n="642">Hospitium requiemque peto.»</l>
 					</sp>
@@ -4531,7 +4531,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Themis" ana="narr">
 						<l n="644">«Tempus, Atla, veniet, tua quo spoliabitur auro</l>
-						<l n="645">arbor, et hunc praedae titulum <persName ref="IUP" role="narrative" ana="NA">Iove</persName> natus habebit.»</l>
+						<l n="645">arbor, et hunc praedae titulum <persName ref="IUP" type="narrative" ana="NA">Iove</persName> natus habebit.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="646">Id metuens solidis pomaria clauserat Atlas</l>
@@ -4618,8 +4618,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Perseus" ana="pers">
 						<l n="695">«Lacrimarum longa manere</l>
 						<l n="696">tempora vos poterunt: ad opem brevis hora ferendam est.</l>
-						<l n="697">Hanc ego si peterem Perseus <persName ref="IUP" role="narrative" ana="NA">Iove</persName> natus et illa,</l>
-						<l n="698">quam clausam inplevit fecundo <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> auro,</l>
+						<l n="697">Hanc ego si peterem Perseus <persName ref="IUP" type="narrative" ana="NA">Iove</persName> natus et illa,</l>
+						<l n="698">quam clausam inplevit fecundo <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> auro,</l>
 						<l n="699">Gorgonis anguicomae Perseus superator et alis</l>
 						<l n="700">aerias ausus iactatis ire per auras,</l>
 						<l n="701">praeferrer cunctis certe gener. Addere tantis</l>
@@ -4637,8 +4637,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="711">cum subito iuvenis pedibus tellure repulsa</l>
 						<l n="712">arduus in nubes abiit. Ut in aequore summo</l>
 						<l n="713">umbra viri visa est, visa fera saevit in umbra.</l>
-						<l n="714">Utque <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> praepes, vacuo cum vidit in arvo</l>
-						<l n="715">praebentem <persName ref="APO" role="narrative" ana="NA">Phoebo</persName> liventia terga draconem,</l>
+						<l n="714">Utque <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> praepes, vacuo cum vidit in arvo</l>
+						<l n="715">praebentem <persName ref="APO" type="narrative" ana="NA">Phoebo</persName> liventia terga draconem,</l>
 						<l n="716">occupat aversum, neu saeva retorqueat ora,</l>
 						<l n="717">squamigeris avidos figit cervicibus ungues,</l>
 						<l n="718">sic celeri missus praeceps per inane volatu</l>
@@ -4677,9 +4677,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="751">duritiam tacto capiant ut ab aere, quodque</l>
 						<l n="752">vimen in aequore erat, fiat super aequora saxum.</l>
 						<l n="753">Dis tribus ille focos totidem de caespite ponit,</l>
-						<l n="754">laevum Mercurio, dextrum tibi, <persName ref="MIN" role="narrative" ana="NA">bellica virgo</persName>,</l>
-						<l n="755">ara <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> media est. Mactatur vacca <persName ref="MIN" role="narrative" ana="NA">Minervae</persName>,</l>
-						<l n="756">alipedi vitulus, taurus tibi, <persName ref="IUP" role="narrative" ana="NA">summe deorum</persName>.</l>
+						<l n="754">laevum Mercurio, dextrum tibi, <persName ref="MIN" type="narrative" ana="NA">bellica virgo</persName>,</l>
+						<l n="755">ara <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> media est. Mactatur vacca <persName ref="MIN" type="narrative" ana="NA">Minervae</persName>,</l>
+						<l n="756">alipedi vitulus, taurus tibi, <persName ref="IUP" type="narrative" ana="NA">summe deorum</persName>.</l>
 						<l n="757">protinus Andromedan et tanti praemia facti</l>
 						<l n="758">indotata rapit: taedas Hymenaeus Amorque</l>
 						<l n="759">praecutiunt, largis satiantur odoribus ignes,</l>
@@ -4735,9 +4735,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="796">multorumque fuit spes invidiosa procorum</l>
 						<l n="797">illa: neque in tota conspectior ulla capillis</l>
 						<l n="798">pars fuit. Inveni, qui se vidisse referret.</l>
-						<l n="799">Hanc pelagi rector templo vitiasse <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="799">Hanc pelagi rector templo vitiasse <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="800">dicitur. Aversa est et castos aegide vultus</l>
-						<l n="801"><persName ref="MIN" role="narrative" ana="act">nata Iovis</persName> texit; neve hoc inpune fuisset,</l>
+						<l n="801"><persName ref="MIN" type="narrative" ana="act">nata Iovis</persName> texit; neve hoc inpune fuisset,</l>
 						<l n="802">Gorgoneum crinem turpes mutavit in hydros.</l>
 						<l n="803">Nunc quoque, ut attonitos formidine terreat hostes,</l>
 						<l n="804">pectore in adverso, quos fecit, sustinet angues.»</l>
@@ -4764,7 +4764,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Phineus" ana="pers">
 						<l n="10">«en adsum praereptae coniugis ultor,</l>
 						<l n="11">nec mihi te pennae, nec falsum versus in aurum</l>
-						<l n="12"><persName ref="IUP" role="metamorphosis" ana="auto">Iuppiter</persName> eripiet.»</l>
+						<l n="12"><persName ref="IUP" type="metamorphosis" ana="auto">Iuppiter</persName> eripiet.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="12">Conanti mittere Cepheus</l>
@@ -4811,7 +4811,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="43">cum genero debere mori. Sed limine tecti</l>
 						<l n="44">exierat Cepheus, testatus iusque fidemque</l>
 						<l n="45">hospitiique deos, ea se prohibente moveri.</l>
-						<l n="46"><persName ref="MIN" role="narrative" ana="NA">Bellica Pallas</persName> adest et protegit aegide fratrem</l>
+						<l n="46"><persName ref="MIN" type="narrative" ana="NA">Bellica Pallas</persName> adest et protegit aegide fratrem</l>
 						<l n="47">datque animos. Erat Indus Athis, quem flumine Gange</l>
 						<l n="48">edita Limnaee vitreis peperisse sub undis</l>
 						<l n="49">creditur, egregius forma, quam divite cultu</l>
@@ -5141,7 +5141,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="248">Perseus ait oraque regis</l>
 						<l n="249">ore Medusaeo silicem sine sanguine fecit.</l>
 						<milestone ed="Magnus" n="Hippocrene. Pierides." unit="tale"/>
-						<l n="250">Hactenus aurigenae comitem <persName ref="MIN" role="narrative" ana="NA">Tritonia</persName> fratri</l>
+						<l n="250">Hactenus aurigenae comitem <persName ref="MIN" type="narrative" ana="NA">Tritonia</persName> fratri</l>
 						<l n="251">se dedit: inde cava circumdata nube Seriphon</l>
 						<l n="252">deserit, a dextra Cythno Gyaroque relictis,</l>
 						<l n="253">quaque super pontum via visa brevissima, Thebas</l>
@@ -5159,12 +5159,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Urania" ana="pers">
 						<l n="260">«Quaecumque est causa videndi</l>
-						<l n="261">has tibi, <persName ref="MIN" role="narrative" ana="NA">diva</persName>, domos, animo gratissima nostro es.</l>
+						<l n="261">has tibi, <persName ref="MIN" type="narrative" ana="NA">diva</persName>, domos, animo gratissima nostro es.</l>
 						<l n="262">Vera tamen fama est, et Pegasus huius origo</l>
 						<l n="263">fontis»,</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="263"> et ad latices deduxit <persName ref="MIN" role="narrative" ana="NA">Pallada</persName> sacros.</l>
+						<l n="263"> et ad latices deduxit <persName ref="MIN" type="narrative" ana="NA">Pallada</persName> sacros.</l>
 						<l n="264">Quae mirata diu factas pedis ictibus undas,</l>
 						<l n="265">silvarum lucos circumspicit antiquarum</l>
 						<l n="266">antraque et innumeris distinctas floribus herbas</l>
@@ -5174,7 +5174,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<milestone ed="More" n="THE NINE MUSES AND PYRENAEUS" unit="tale"/>
 					<sp who="musa" ana="pers">
 						<l n="269">«O, nisi te virtus opera ad maiora tulisset,</l>
-						<l n="270">in partem ventura chori <persName ref="MIN" role="narrative" ana="NA">Tritonia</persName> nostri,</l>
+						<l n="270">in partem ventura chori <persName ref="MIN" type="narrative" ana="NA">Tritonia</persName> nostri,</l>
 						<l n="271">vera refers meritoque probas artesque locumque,</l>
 						<l n="272">et gratam sortem, tutae modo simus, habemus.</l>
 						<l n="273">Sed (vetitum est adeo sceleri nihil) omnia terrent</l>
@@ -5243,10 +5243,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="294">Musa loquebatur: pennae sonuere per auras,</l>
 						<l n="295">voxque salutantum ramis veniebat ab altis.</l>
 						<l n="296">Suspicit et linguae quaerit tam certa loquentes</l>
-						<l n="297">unde sonent hominemque putat <persName ref="MIN" role="narrative" ana="NA">Iove nata</persName> locutum:</l>
+						<l n="297">unde sonent hominemque putat <persName ref="MIN" type="narrative" ana="NA">Iove nata</persName> locutum:</l>
 						<l n="298">Ales erat, numeroque novem, sua fata querentes,</l>
 						<l n="299">institerant ramis imitantes omnia picae.</l>
-						<l n="300">Miranti sic orsa <persName ref="MIN" role="narrative" ana="NA">deae</persName> dea:</l>
+						<l n="300">Miranti sic orsa <persName ref="MIN" type="narrative" ana="NA">deae</persName> dea:</l>
 					</sp>
 					<sp who="musa" ana="pers">
 						<l n="300">«Nuper et istae</l>
@@ -5290,10 +5290,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="327">dixit</l>
 					</sp>
 					<sp who="pieride" ana="pers">
-						<l n="327">«fit <persName ref="IUP" role="metamorphosis" ana="auto">Iuppiter</persName>; unde recurvis</l>
+						<l n="327">«fit <persName ref="IUP" type="metamorphosis" ana="auto">Iuppiter</persName>; unde recurvis</l>
 						<l n="328">nunc quoque formatus Libys est cum cornibus Ammon.</l>
-						<l n="329"><persName ref="APO" role="metamorphosis" ana="auto">Delius</persName> in corvo, proles Semeleia capro,</l>
-						<l n="330">fele soror <persName ref="APO" role="narrative" ana="NA">Phoebi</persName>, nivea Saturnia vacca,</l>
+						<l n="329"><persName ref="APO" type="metamorphosis" ana="auto">Delius</persName> in corvo, proles Semeleia capro,</l>
+						<l n="330">fele soror <persName ref="APO" type="narrative" ana="NA">Phoebi</persName>, nivea Saturnia vacca,</l>
 						<l n="331">pisce Venus latuit, Cyllenius ibidis alis.»</l>
 					</sp>
 					<sp who="musa" ana="narr">
@@ -5308,7 +5308,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="335">«Ne dubita, vestrumque mihi refer ordine carmen»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="336"><persName ref="MIN" role="narrative" ana="NA">Pallas</persName> ait nemorisque levi consedit in umbra.</l>
+						<l n="336"><persName ref="MIN" type="narrative" ana="NA">Pallas</persName> ait nemorisque levi consedit in umbra.</l>
 						<l n="337">Musa refert:</l>
 					</sp>
 					<sp who="musa" ana="narr">
@@ -5354,13 +5354,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="366">«illa, quibus superas omnes, cape tela, Cupido,</l>
 						<l n="367">inque dei pectus celeres molire sagittas,</l>
 						<l n="368">cui triplicis cessit fortuna novissima regni.</l>
-						<l n="369">Tu superos ipsumque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> tu numina ponti</l>
+						<l n="369">Tu superos ipsumque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> tu numina ponti</l>
 						<l n="370">victa domas ipsumque, regit qui numina ponti.</l>
 						<l n="371">Tartara quid cessant? cur non matrisque tuumque</l>
 						<l n="372">imperium profers? agitur pars tertia mundi.</l>
 						<l n="373">Et tamen in caelo, quae iam patientia nostra est,</l>
 						<l n="374">spernimur, ac mecum vires minuuntur Amoris.</l>
-						<l n="375"><persName ref="MIN" role="narrative" ana="NA">Pallada</persName> nonne vides iaculatricemque Dianam</l>
+						<l n="375"><persName ref="MIN" type="narrative" ana="NA">Pallada</persName> nonne vides iaculatricemque Dianam</l>
 						<l n="376">abscessisse mihi? Cereris quoque filia virgo,</l>
 						<l n="377">si patiemur, erit: nam spes adfectat easdem.</l>
 						<l n="378">At tu, pro socio, siqua est ea gratia, regno</l>
@@ -5516,7 +5516,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="510">attonitaeque diu similis fuit. Utque dolore</l>
 						<l n="511">pulsa gravi gravis est amentia, curribus oras</l>
 						<l n="512">exit in aetherias. Ibi toto nubila vultu</l>
-						<l n="513">ante <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> passis stetit invidiosa capillis</l>
+						<l n="513">ante <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> passis stetit invidiosa capillis</l>
 					</sp>
 					<sp who="Ceres" ana="pers">
 						<l n="514">«pro»</l>
@@ -5525,7 +5525,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="514">que</l>
 					</sp>
 					<sp who="Ceres" ana="pers">
-						<l n="514">«meo veni supplex tibi, <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName>»</l>
+						<l n="514">«meo veni supplex tibi, <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName>»</l>
 					</sp>
 					<sp who="Calliope" ana="narr">
 						<l n="514">inquit,</l>
@@ -5541,7 +5541,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="522">filia digna tua est, si iam mea filia non est.»</l>
 					</sp>
 					<sp who="Calliope" ana="narr">
-						<l n="523"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> excepit:</l>
+						<l n="523"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> excepit:</l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
 						<l n="523">«Commune est pignus onusque</l>
@@ -5549,7 +5549,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="525">addere vera placet, non hoc iniuria factum,</l>
 						<l n="526">verum amor est; neque erit nobis gener ille pudori,</l>
 						<l n="527">tu modo, diva, velis. Ut desint cetera, quantum est</l>
-						<l n="528">esse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> fratrem! — Quid quod non cetera desunt</l>
+						<l n="528">esse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> fratrem! — Quid quod non cetera desunt</l>
 						<l n="529">nec cedit nisi sorte mihi? sed tanta cupido</l>
 						<l n="530">si tibi discidii est, repetet Proserpina caelum,</l>
 						<l n="531">lege tamen certa, si nullos contigit illic</l>
@@ -5588,7 +5588,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="562">tantaque dos oris linguae deperderet usum,</l>
 						<l n="563">virginei vultus et vox humana remansit.</l>
 						<l n="564">At medius fratrisque sui maestaeque sororis</l>
-						<l n="565"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> ex aequo volventem dividit annum.</l>
+						<l n="565"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> ex aequo volventem dividit annum.</l>
 						<l n="566">Nunc dea, regnorum numen commune duorum,</l>
 						<l n="567">cum matre est totidem, totidem cum coniuge menses.</l>
 						<l n="568">Vertitur extemplo facies et mentis et oris:</l>
@@ -5705,7 +5705,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="642">Hac Arethusa tenus. Geminos dea fertilis angues</l>
 						<l n="643">curribus admovit frenisque coercuit ora</l>
 						<l n="644">et medium caeli terraeque per aera vecta est</l>
-						<l n="645">atque levem currum <persName ref="MIN" role="narrative" ana="NA">Tritonida</persName> misit in urbem</l>
+						<l n="645">atque levem currum <persName ref="MIN" type="narrative" ana="NA">Tritonida</persName> misit in urbem</l>
 						<l n="646">Triptolemo; partimque rudi data semina iussit</l>
 						<l n="647">spargere humo, partim post tempora longa recultae.</l>
 						<l n="648">Iam super Europen sublimis et Asida terram</l>
@@ -5770,7 +5770,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 				<div type="textpart" subtype="book" n="6">
 					<milestone ed="Magnus" n="Pallas et Arachne." unit="tale"/>
 					<sp who="Ovid" ana="narr">
-						<l n="1">Praebuerat dictis <persName ref="MIN" role="narrative" ana="NA">Tritonia</persName> talibus aures</l>
+						<l n="1">Praebuerat dictis <persName ref="MIN" type="narrative" ana="NA">Tritonia</persName> talibus aures</l>
 						<l n="2">carminaque Aonidum iustamque probaverat iram.</l>
 						<l n="3">Tum secum</l>
 					</sp>
@@ -5797,7 +5797,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="20">seu digitis subigebat opus repetitaque longo</l>
 						<l n="21">vellera mollibat nebulas aequantia tractu,</l>
 						<l n="22">sive levi teretem versabat pollice fusum,</l>
-						<l n="23">seu pingebat acu, scires a <persName ref="MIN" role="narrative" ana="NA">Pallade</persName> doctam.</l>
+						<l n="23">seu pingebat acu, scires a <persName ref="MIN" type="narrative" ana="NA">Pallade</persName> doctam.</l>
 						<l n="24">Quod tamen ipsa negat, tantaque offensa magistra</l>
 					</sp>
 					<sp who="Arachne" ana="pers">
@@ -5810,7 +5810,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="25">«mecum: nihil est, quod victa recusem.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="26"><persName ref="MIN" role="metamorphosis" ana="auto">Pallas</persName> anum simulat falsosque in tempora canos</l>
+						<l n="26"><persName ref="MIN" type="metamorphosis" ana="auto">Pallas</persName> anum simulat falsosque in tempora canos</l>
 						<l n="27">addit et infirmos, baculo quos sustinet, artus.</l>
 						<l n="28">Tum sic orsa loqui:</l>
 					</sp>
@@ -5825,7 +5825,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="34">Adspicit hanc torvis inceptaque fila relinquit,</l>
 						<l n="35">vixque manum retinens confessaque vultibus iram</l>
-						<l n="36">talibus obscuram resecuta est <persName ref="MIN" role="narrative" ana="NA">Pallada</persName> dictis:</l>
+						<l n="36">talibus obscuram resecuta est <persName ref="MIN" type="narrative" ana="NA">Pallada</persName> dictis:</l>
 					</sp>
 					<sp who="Arachne" ana="pers">
 						<l n="37">«Mentis inops longaque venis confecta senecta.</l>
@@ -5836,21 +5836,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="42">Cur non ipsa venit? cur haec certamina vitat?»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="43">Tum <persName ref="MIN" role="narrative" ana="auto">dea</persName></l>
+						<l n="43">Tum <persName ref="MIN" type="narrative" ana="auto">dea</persName></l>
 					</sp>
 					<sp who="Minerva" ana="pers" corresp="MIN">
 						<l n="43">«venit»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="43">ait, formamque removit anilem</l>
-						<l n="44"><persName ref="MIN" role="narrative" ana="NA">Palladaque</persName> exhibuit. Venerantur <persName ref="MIN" role="narrative" ana="NA">numina</persName> nymphae</l>
+						<l n="44"><persName ref="MIN" type="narrative" ana="NA">Palladaque</persName> exhibuit. Venerantur <persName ref="MIN" type="narrative" ana="NA">numina</persName> nymphae</l>
 						<l n="45">Mygdonidesque nurus: sola est non territa virgo.</l>
 						<l n="46">Sed tamen erubuit, subitusque invita notavit</l>
 						<l n="47">ora rubor rursusque evanuit, ut solet aer</l>
 						<l n="48">purpureus fieri, cum primum aurora movetur,</l>
 						<l n="49">et breve post tempus candescere solis ab ortu.</l>
 						<l n="50">Perstat in incepto stolidaeque cupidine palmae</l>
-						<l n="51">in sua fata ruit: neque enim <persName ref="MIN" role="narrative" ana="NA">Iove nata</persName> recusat,</l>
+						<l n="51">in sua fata ruit: neque enim <persName ref="MIN" type="narrative" ana="NA">Iove nata</persName> recusat,</l>
 						<l n="52">nec monet ulterius, nec iam certamina differt.</l>
 						<l n="53">Haud mora, constituunt diversis partibus ambae</l>
 						<l n="54">et gracili geminas intendunt stamine telas</l>
@@ -5871,9 +5871,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="69">et vetus in tela deducitur argumentum.</l>
 						<l n="70">Cecropia <persName ref="MIN" ana="act">Pallas</persName> scopulum Mavortis in arce</l>
 						<l n="71">pingit et antiquam de terrae nomine litem.</l>
-						<l n="72">Bis sex caelestes medio <persName ref="IUP" role="narrative" ana="NA">Iove</persName> sedibus altis</l>
+						<l n="72">Bis sex caelestes medio <persName ref="IUP" type="narrative" ana="NA">Iove</persName> sedibus altis</l>
 						<l n="73">augusta gravitate sedent. Sua quemque deorum</l>
-						<l n="74">inscribit facies: <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> est regalis imago.</l>
+						<l n="74">inscribit facies: <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> est regalis imago.</l>
 						<l n="75">Stare deum pelagi longoque ferire tridente</l>
 						<l n="76">aspera saxa facit, medioque e vulnere saxi</l>
 						<l n="77">exsiluisse fretum, quo pignore vindicet urbem;</l>
@@ -5893,7 +5893,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="91">pars habet: hanc Iuno victam certamine iussit</l>
 						<l n="92">esse gruem populisque suis indicere bella.</l>
 						<l n="93">Pinxit et Antigonen ausam contendere quondam</l>
-						<l n="94">cum magni consorte <persName ref="IUP" role="narrative" ana="NA">Iovis</persName>, quam regia Iuno</l>
+						<l n="94">cum magni consorte <persName ref="IUP" type="narrative" ana="NA">Iovis</persName>, quam regia Iuno</l>
 						<l n="95">in volucrem vertit; nec profuit Ilion illi</l>
 						<l n="96">Laomedonve pater, sumptis quin candida pennis</l>
 						<l n="97">ipsa sibi plaudat crepitante ciconia rostro.</l>
@@ -5910,7 +5910,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="108">Fecit et Asterien aquila luctante teneri,</l>
 						<l n="109">fecit olorinis Ledam recubare sub alis;</l>
 						<l n="110">addidit, ut satyri celatus imagine pulchram</l>
-						<l n="111"><persName ref="IUP" role="metamorphosis" ana="auto">Iuppiter</persName> implerit gemino Nycteida fetu,</l>
+						<l n="111"><persName ref="IUP" type="metamorphosis" ana="auto">Iuppiter</persName> implerit gemino Nycteida fetu,</l>
 						<l n="112">Amphitryon fuerit, cum te, Tirynthia, cepit,</l>
 						<l n="113">aureus ut Danaen, Asopida luserit ignis,</l>
 						<l n="114">Mnemosynen pastor, varius Deoida serpens.</l>
@@ -5921,20 +5921,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="119">sensit equum, sensit volucrem crinita colubris</l>
 						<l n="120">mater equi volucris, sensit delphina Melantho.</l>
 						<l n="121">Omnibus his faciemque suam faciemque locorum</l>
-						<l n="122">reddidit. Est illic agrestis imagine <persName ref="APO" role="metamorphosis" ana="auto">Phoebus</persName>,</l> 
+						<l n="122">reddidit. Est illic agrestis imagine <persName ref="APO" type="metamorphosis" ana="auto">Phoebus</persName>,</l> 
 						<l n="123">utque modo accipitris pennas, modo terga leonis</l>
 						<l n="124">gesserit, ut pastor Macareida luserit Issen;</l>
 						<l n="125">Liber ut Erigonen falsa deceperit uva,</l>
 						<l n="126">ut Saturnus equo geminum Chirona crearit.</l>
 						<l n="127">Ultima pars telae, tenui circumdata limbo,</l>
 						<l n="128">nexilibus flores hederis habet intertextos.</l>
-						<l n="129">Non illud <persName ref="MIN" role="narrative" ana="NA">Pallas</persName>, non illud carpere Livor</l>
-						<l n="130">possit opus. Doluit successu <persName ref="MIN" role="narrative" ana="NA">flava virago</persName></l>
+						<l n="129">Non illud <persName ref="MIN" type="narrative" ana="NA">Pallas</persName>, non illud carpere Livor</l>
+						<l n="130">possit opus. Doluit successu <persName ref="MIN" type="narrative" ana="NA">flava virago</persName></l>
 						<l n="131">et rupit pictas, caelestia crimina, vestes.</l>
 						<l n="132">Utque Cytoriaco radium de monte tenebat,</l>
 						<l n="133">ter quater Idmoniae frontem percussit Arachnes.</l>
 						<l n="134">Non tulit infelix laqueoque animosa ligavit</l>
-						<l n="135">guttura. Pendentem <persName ref="MIN" role="narrative" ana="act">Pallas</persName> miserata levavit</l>
+						<l n="135">guttura. Pendentem <persName ref="MIN" type="narrative" ana="act">Pallas</persName> miserata levavit</l>
 						<l n="136">atque ita</l>
 					</sp>
 					<sp who="Minerva" ana="pers" corresp="MIN">
@@ -6000,7 +6000,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="173">cui licuit soli superorum tangere mensas,</l>
 						<l n="174">Pleiadum soror est genetrix mea, maximus Atlas</l>
 						<l n="175">est avus, aetherium qui fert cervicibus axem;</l>
-						<l n="176"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> alter avus <persName ref="IUP" role="narrative" ana="NA">socero</persName> quoque glorior illo.</l>
+						<l n="176"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> alter avus <persName ref="IUP" type="narrative" ana="NA">socero</persName> quoque glorior illo.</l>
 						<l n="177">Me gentes metuunt Phrygiae, me regia Cadmi</l>
 						<l n="178">sub domina est, fidibusque mei commissa mariti</l>
 						<l n="179">moenia cum populis a meque viroque reguntur.</l>
@@ -6065,7 +6065,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="215">«desine!»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="215"><persName ref="APO" role="narrative" ana="NA">Phoebus</persName> ait:</l>
+						<l n="215"><persName ref="APO" type="narrative" ana="NA">Phoebus</persName> ait:</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="215">«poenae mora longa querella est.»</l>
@@ -6258,7 +6258,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="334">orantem accepit, tum cum levis insula nabat.</l>
 					</sp>
 					<sp who="Lycian-guide" ana="narr">
-						<l n="335">Illic incumbens cum <persName ref="MIN" role="narrative" ana="NA">Palladis</persName> arbore palmae</l>
+						<l n="335">Illic incumbens cum <persName ref="MIN" type="narrative" ana="NA">Palladis</persName> arbore palmae</l>
 						<l n="336">edidit invita geminos Latona noverca.</l>
 						<l n="337">Hinc quoque Iunonem fugisse puerpera fertur</l>
 						<l n="338">inque suo portasse sinu, duo numina, natos.</l>
@@ -6325,7 +6325,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="382">Sic ubi nescio quis Lycia de gente virorum</l>
 						<l n="383">rettulit exitium, satyri reminiscitur alter,</l>
-						<l n="384">quem <persName ref="MIN" role="narrative" ana="NA">Tritoniaca</persName> Latous harundine victum</l>
+						<l n="384">quem <persName ref="MIN" type="narrative" ana="NA">Tritoniaca</persName> Latous harundine victum</l>
 						<l n="385">adfecit poena.</l>
 					</sp>
 					<sp who="Marsyas" ana="pers">
@@ -6456,7 +6456,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="483">Vincitur ambarum genitor prece. Gaudet agitque</l>
 						<l n="484">illa patri grates et successisse duabus</l>
 						<l n="485">id putat infelix, quod erit lugubre duabus.</l>
-						<l n="486">Iam labor exiguus <persName ref="APO" role="narrative" ana="NA">Phoebo</persName> restabat, equique</l>
+						<l n="486">Iam labor exiguus <persName ref="APO" type="narrative" ana="NA">Phoebo</persName> restabat, equique</l>
 						<l n="487">pulsabant pedibus spatium declivis Olympi:</l>
 						<l n="488">regales epulae mensis et Bacchus in auro</l>
 						<l n="489">ponitur; hinc placido dantur sua corpora somno.</l>
@@ -6501,7 +6501,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="514">exsultatque et vix animo sua gaudia differt</l>
 						<l n="515">barbarus et nusquam lumen detorquet ab illa,</l>
 						<l n="516">non aliter, quam cum pedibus praedator obuncis</l>
-						<l n="517">deposuit nido leporem <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> ales in alto:</l>
+						<l n="517">deposuit nido leporem <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> ales in alto:</l>
 						<l n="518">nulla fuga est capto, spectat sua praemia raptor.</l>
 						<l n="519">Iamque iter effectum, iamque in sua litora fessis</l>
 						<l n="520">puppibus exierant, cum rex Pandione natam</l>
@@ -7157,7 +7157,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="321">lascivitque fuga lactantiaque ubera quaerit.</l>
 						<l n="322">Obstipuere satae Pelia: promissaque postquam</l>
 						<l n="323">exhibuere fidem, tum vero impensius instant.</l>
-						<l n="324">Ter iuga <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> equis in Hibero flumine mersis</l>
+						<l n="324">Ter iuga <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> equis in Hibero flumine mersis</l>
 						<l n="325">dempserat et quarta radiantia nocte micabant</l>
 						<l n="326">sidera, cum rapido fallax Aeetias igni</l>
 						<l n="327">imponit purum laticem et sine viribus herbas.</l>
@@ -7217,7 +7217,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="364">gesserunt tum cum discederet Herculis agmen</l>
 						<l n="365">Phoebeamque Rhodon et Ialysios Telchinas,</l>
 						<l n="366">quorum oculos ipso vitiantes omnia visu</l>
-						<l n="367"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> exosus fraternis subdidit undis.</l>
+						<l n="367"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> exosus fraternis subdidit undis.</l>
 						<l n="368">Transit et antiquae Cartheia moenia Ceae,</l>
 						<l n="369">qua pater Alcidamas placidam de corpore natae</l>
 						<l n="370">miraturus erat nasci potuisse columbam.</l>
@@ -7245,7 +7245,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="386">Dextera Cyllene est, in qua cum matre Menephron</l>
 						<l n="387">concubiturus erat saevarum more ferarum</l>
 						<l n="388">Cephison procul hinc deflentem fata nepotis</l>
-						<l n="389">respicit, in tumidam phocen ab <persName ref="APO" role="metamorphosis" ana="act">Apolline</persName> versi,</l>
+						<l n="389">respicit, in tumidam phocen ab <persName ref="APO" type="metamorphosis" ana="act">Apolline</persName> versi,</l>
 						<l n="390">Eumelique domum lugentis in aere natum.</l>
 						<l n="391">Tandem vipereis Ephyren Pirenida pennis</l>
 						<l n="392">contigit. Hic aevo veteres mortalia primo</l>
@@ -7256,7 +7256,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="397">ultaque se male mater Iasonis effugit arma.</l>
 						<milestone ed="More" n="MEDEA AND AEGEUS" unit="tale"/>
 						<l n="398">Hinc Titaniacis ablata draconibus intrat</l>
-						<l n="399"><persName ref="MIN" role="narrative" ana="NA">Palladias</persName> arces, quae te, iustissima Phene,</l>
+						<l n="399"><persName ref="MIN" type="narrative" ana="NA">Palladias</persName> arces, quae te, iustissima Phene,</l>
 						<l n="400">teque, senex Peripha, pariter videre volantes</l>
 						<l n="401">innixamque novis neptem Polypemonis alis.</l>
 						<l n="402">Excipit hanc Aegeus, facto dammandus in uno;</l>
@@ -7509,7 +7509,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Aeacus" ana="pers">
 						<l n="587">Templa vides contra gradibus sublimia longis:</l>
-						<l n="588"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> illa tenet.</l>
+						<l n="588"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> illa tenet.</l>
 					</sp>
 					<sp who="Aeacus" ana="narr">
 						<l n="588">Quis non altaribus illis</l>
@@ -7520,7 +7520,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="593">Admoti quotiens templis, dum vota sacerdos</l>
 						<l n="594">concipit et fundit purum inter cornua vinum,</l>
 						<l n="595">haud exspectato ceciderunt vulnere tauri!</l>
-						<l n="596">Ipse ego sacra <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> pro me patriaque tribusque</l>
+						<l n="596">Ipse ego sacra <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> pro me patriaque tribusque</l>
 						<l n="597">cum facerem natis, mugitus victima diros</l>
 						<l n="598">edidit et subito conlapsa sine ictibus ullis</l>
 						<l n="599">exiguo tinxit subiectos sanguine cultros.</l>
@@ -7567,14 +7567,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Aeacus" ana="narr">
 						<l n="622">Forte fuit iuxta patulis rarissima ramis</l>
-						<l n="623">sacra <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> quercus de semine Dodonaeo:</l>
+						<l n="623">sacra <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> quercus de semine Dodonaeo:</l>
 						<l n="624">hic nos frugilegas adspeximus agmine longo</l>
 						<l n="625">grande onus exiguo formicas ore gerentes</l>
 						<l n="626">rugosoque suum servantes cortice callem.</l>
 						<l n="627">Dum numerum miror,</l>
 					</sp>
 					<sp who="Aeacus" ana="pers">
-						<l n="627">«totidem, <persName ref="IUP" role="narrative" ana="act"> </persName>pater optime»</l>
+						<l n="627">«totidem, <persName ref="IUP" type="narrative" ana="act"> </persName>pater optime»</l>
 					</sp>
 					<sp who="Aeacus" ana="narr">
 						<l n="627">dixi,</l>
@@ -7617,7 +7617,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="649">Egredior, qualesque in imagine somni</l>
 						<l n="650">visus eram vidisse viros, ex ordine tales</l>
 						<l n="651">adspicio noscoque. Adeunt regemque salutant.</l>
-						<l n="652">Vota <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> solvo populisque recentibus urbem</l>
+						<l n="652">Vota <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> solvo populisque recentibus urbem</l>
 						<l n="653">partior et vacuos priscis cultoribus agros,</l>
 						<l n="654">Myrmidonasque voco, nec origine nomina fraudo.</l>
 						<l n="655">Corpora vidisti; mores quos ante gerebant,</l>
@@ -7638,7 +7638,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="661">Talibus atque aliis longum sermonibus illi</l>
 						<l n="662">implevere diem. Lucis pars ultima mensae</l>
-						<l n="663">est data, nox somnis. Iubar aureus extulerat <persName ref="APO" role="narrative" ana="NA">Sol</persName></l>
+						<l n="663">est data, nox somnis. Iubar aureus extulerat <persName ref="APO" type="narrative" ana="NA">Sol</persName></l>
 						<l n="664">(flabat adhuc eurus redituraqua vela tenebat):</l>
 						<l n="665">ad Cephalum Pallante sati, cui grandior aetas,</l>
 						<l n="666">ad regem Cephalus simul et Pallante creati</l>
@@ -7735,7 +7735,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="720">Quaerere quod doleam statuo donisque pudicam</l>
 						<l n="721">sollicitare fidem. Favet huic Aurora timori</l>
 						<l n="722">inmutatque meam (videor sensisse) figuram.</l>
-						<l n="723"><persName ref="MIN" role="narrative" ana="NA">Palladias</persName> ineo non cognoscendus Athenas</l>
+						<l n="723"><persName ref="MIN" type="narrative" ana="NA">Palladias</persName> ineo non cognoscendus Athenas</l>
 						<l n="724">ingrediorque domum. Culpa domus ipsa carebat</l>
 						<l n="725">castaque signa dabat dominoque erat anxia rapto:</l>
 						<l n="726">vix aditus per mille dolos ad Erechthida factus.</l>
@@ -7836,7 +7836,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="790">rettuleram: in medio (mirum) duo marmora campo</l>
 						<l n="791">adspicio: fugere hoc, illud captare putares.</l>
 						<l n="792">Scilicet invictos ambo certamine cursus</l>
-						<l n="793">esse <persName ref="IUP" role="narrative" ana="act">deus</persName> voluit, siquis deus adfuit illis.»</l>
+						<l n="793">esse <persName ref="IUP" type="narrative" ana="act">deus</persName> voluit, siquis deus adfuit illis.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="794">Hactenus, et tacuit.</l>
@@ -7855,7 +7855,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Cephalus" ana="narr">
 						<l n="800">Mutua cura duos et amor socialis habebat;</l>
-						<l n="801">nec <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> illa meo thalamos praeferret amori,</l>
+						<l n="801">nec <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> illa meo thalamos praeferret amori,</l>
 						<l n="802">nec, me quae caperet, non si Venus ipsa veniret,</l>
 						<l n="803">ulla erat: aequales urebant pectora flammae.</l>
 						<l n="804">Sole fere radiis feriente cacumina primis</l>
@@ -8014,7 +8014,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="28">Torserat adductis hastilia lenta lacertis:</l>
 						<l n="29">laudabat virgo iunctam cum viribus artem.</l>
 						<l n="30">Imposito calamo patulos sinuaverat arcus:</l>
-						<l n="31">sic <persName ref="APO" role="narrative" ana="NA">Phoebum</persName> sumptis iurabat stare sagittis.</l>
+						<l n="31">sic <persName ref="APO" type="narrative" ana="NA">Phoebum</persName> sumptis iurabat stare sagittis.</l>
 						<l n="32">Cum vero faciem dempto nudaverat aere</l>
 						<l n="33">purpureusque albi stratis insignia pictis</l>
 						<l n="34">terga premebat equi spumantiaque ora regebat,</l>
@@ -8132,7 +8132,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="119">Hac quoque si prohibes et nos, ingrate, relinquis,</l>
 						<l n="120">non genetrix Europa tibi ea, sed inhospita Syrtis,</l>
 						<l n="121">Armeniae tigres austroque agitata Charybdis.</l>
-						<l n="122">Nec <persName ref="IUP" role="narrative" ana="NA">Iove</persName> tu natus, nec mater imagine tauri</l>
+						<l n="122">Nec <persName ref="IUP" type="narrative" ana="NA">Iove</persName> tu natus, nec mater imagine tauri</l>
 						<l n="123">ducta tua est (generis falsa est ea fabula !): verus</l>
 						<l n="124">et ferus et captus nullius amore iuvencae,</l>
 						<l n="125">qui te progenuit, taurus fuit. Exige poenas,</l>
@@ -8311,9 +8311,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="247">Primus et ex uno duo ferrea bracchia nodo</l>
 						<l n="248">vinxit, ut aequali spatio distantibus illis</l>
 						<l n="249">altera pars staret, pars altera duceret orbem.</l>
-						<l n="250">Daedalus invidit sacraque ex arce <persName ref="MIN" role="metamorphosis" ana="NA">Minervae</persName></l>
+						<l n="250">Daedalus invidit sacraque ex arce <persName ref="MIN" type="metamorphosis" ana="NA">Minervae</persName></l>
 						<l n="251">praecipitem misit, lapsum mentitus. At illum</l>
-						<l n="252">quae favet ingeniis excepit <persName ref="MIN" role="metamorphosis" ana="act">Pallas</persName>avemque</l>
+						<l n="252">quae favet ingeniis excepit <persName ref="MIN" type="metamorphosis" ana="act">Pallas</persName>avemque</l>
 						<l n="253">reddidit et medio velavit in aere pennis.</l>
 						<l n="254">Sed vigor ingenii quondam velocis in alas</l>
 						<l n="255">inque pedes abiit: nomen quod et ante remansit.</l>
@@ -8327,8 +8327,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="262">mitis habebatur,iam lamentabile Athenae</l>
 						<milestone ed="More" n="ATALANTA AND MELEAGER" unit="tale"/>
 						<l n="263">pendere desierant Thesea laude tributum.</l>
-						<l n="264">Templa coronantur, <persName ref="MIN" role="narrative" ana="NA">bellatricemque Minervam</persName></l>
-						<l n="265">cum <persName ref="IUP" role="narrative" ana="NA">Iove</persName> disque vocant aliis, quos sanguine voto</l>
+						<l n="264">Templa coronantur, <persName ref="MIN" type="narrative" ana="NA">bellatricemque Minervam</persName></l>
+						<l n="265">cum <persName ref="IUP" type="narrative" ana="NA">Iove</persName> disque vocant aliis, quos sanguine voto</l>
 						<l n="266">muneribusque datis et acerris turis honorant.</l>
 						<l n="267">Sparserat Argolicas nomen vaga fama per urbes</l>
 						<l n="268">Theseos, et populi, quos dives Achaia cepit,</l>
@@ -8338,7 +8338,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="272">sus erat, infestae famulus vindexque Dianae.</l>
 						<l n="273">Oenea namque ferunt pleni successibus anni</l>
 						<l n="274">primitias frugum Cereri, sua vina Lyaeo,</l>
-						<l n="275">Palladios<persName ref="MIN" role="narrative" ana="NA"> flavae</persName> latices libasse <persName ref="MIN" role="narrative" ana="NA">Minervae</persName>.</l>
+						<l n="275">Palladios<persName ref="MIN" type="narrative" ana="NA"> flavae</persName> latices libasse <persName ref="MIN" type="narrative" ana="NA">Minervae</persName>.</l>
 						<l n="276">Coeptus ab agricolis superos pervenit ad omnes</l>
 						<l n="277">ambitiosus honor; solas sine ture relictas</l>
 						<l n="278">praeteritae cessasse ferunt Latoidos aras.</l>
@@ -8431,7 +8431,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="349">longius it. Auctor teli Pagasaeus Iason.</l>
 					</sp>
 					<sp who="Mopsus" ana="pers">
-						<l n="350">«<persName ref="APO" role="narrative" ana="NA">Phoebe</persName>,»</l>
+						<l n="350">«<persName ref="APO" type="narrative" ana="NA">Phoebe</persName>,»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="350">ait Ampycides</l>
@@ -8441,7 +8441,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="351">da mihi quod petitur certo contingere telo!»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="352">Qua potuit, precibus <persName ref="APO" role="narrative" ana="NA">deus</persName> adnuit: ictus ab illo est,</l>
+						<l n="352">Qua potuit, precibus <persName ref="APO" type="narrative" ana="NA">deus</persName> adnuit: ictus ab illo est,</l>
 						<l n="353">sed sine vulnere, aper; ferrum Diana volanti</l>
 						<l n="354">abstulerat iaculo: lignum sine acumine venit.</l>
 						<l n="355">Ira feri mota est, nec fulmine lenius arsit:</l>
@@ -8898,7 +8898,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="624">misit in arva, suo quondam regnata parenti.</l>
 						<l n="625">Haud procul hinc stagnum est, tellus habitabilis olim,</l>
 						<l n="626">nunc celebres mergis fulicisque palustribus undae.</l>
-						<l n="627"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> huc specie mortali cumque parente</l>
+						<l n="627"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> huc specie mortali cumque parente</l>
 						<l n="628">venit Atlantiades positis caducifer alis.</l>
 						<l n="629">Mille domos adiere locum requiemque petentes,</l>
 						<l n="630">mille domos clausere serae. Tamen una recepit,</l>
@@ -8938,7 +8938,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="664">ponit anus, mensae sed erat pes tertius impar.</l>
 						<l n="665">Testa parem fecit. Quae postquam subdita clivum</l>
 						<l n="666">sustulit, aequatam mentae tersere virentes.</l>
-						<l n="667">Ponitur hic bicolor sincerae baca <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="667">Ponitur hic bicolor sincerae baca <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="668">conditaque in liquida corna autumnalia faece</l>
 						<l n="669">intibaque et radix et lactis massa coacti</l>
 						<l n="670">ovaque non acri leviter versata favilla,</l>
@@ -9292,7 +9292,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Achelous" ana="narr">
 						<l n="13">dixit et Alcides. Alii cessere duobus.</l>
-						<l n="14">Ille <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> socerum dare se famamque laborum</l>
+						<l n="14">Ille <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> socerum dare se famamque laborum</l>
 						<l n="15">et superata suae referebat iussa novercae.</l>
 						<l n="16">Contra ego:</l>
 					</sp>
@@ -9311,9 +9311,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="21">Tantum ne noceat, quod me nec regia Iuno</l>
 						<l n="22">odit et omnis abest iussorum poena laborum.</l>
 						<l n="23">Nam, quo te iactas, Alcmena nate, creatum,</l>
-						<l n="24"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> aut falsus pater est, aut crimine verus.</l>
+						<l n="24"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> aut falsus pater est, aut crimine verus.</l>
 						<l n="25">Matris adulterio patrem petis. Elige, fictum</l>
-						<l n="26">esse <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> malis, an te per dedecus ortum.»</l>
+						<l n="26">esse <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> malis, an te per dedecus ortum.»</l>
 					</sp>
 					<sp who="Achelous" ana="narr">
 						<l n="27">Talia dicentem iamdudum lumine torvo</l>
@@ -9485,7 +9485,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="134">Longa fuit medii mora temporis, actaque magni</l>
 						<l n="135">Herculis inplerant terras odiumque novercae.</l>
 						<l n="136">Victor ab Oechalia Cenaeo sacra parabat</l>
-						<l n="137">vota <persName ref="IUP" role="narrative" ana="NA">Iovi</persName>, cum Fama loquax praecessit ad aures,</l>
+						<l n="137">vota <persName ref="IUP" type="narrative" ana="NA">Iovi</persName>, cum Fama loquax praecessit ad aures,</l>
 						<l n="138">Deianira, tuas, quae veris addere falsa</l>
 						<l n="139">gaudet et e minimo sua per mendacia crescit,</l>
 						<l n="140">Amphitryoniaden Ioles ardore teneri.</l>
@@ -9615,7 +9615,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="226">Nunc quoque in Euboico scopulus brevis eminet alto</l>
 						<l n="227">gurgite et humanae servat vestigia formae;</l>
 						<l n="228">quem, quasi sensurum, nautae calcare verentur</l>
-						<l n="229">appellantque Lichan.—At tu, <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> inclita proles,</l>
+						<l n="229">appellantque Lichan.—At tu, <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> inclita proles,</l>
 						<l n="230">arboribus caesis, quas ardua gesserat Oete,</l>
 						<l n="231">inque pyram structis, arcum pharetramque capacem</l>
 						<l n="232">regnaque visuras iterum Troiana sagittas</l>
@@ -9629,13 +9629,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="239">Iamque valens et in omne latus diffusa sonabat</l>
 						<l n="240">securosque artus contemptoremque petebat</l>
 						<l n="241">flamma suum; timuere dei pro vindice terrae.</l>
-						<l n="242">Quos ita (sensit enim) laeto <persName ref="IUP" role="narrative" ana="NA">Saturnius</persName> ore</l>
-						<l n="243"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> adloquitur:</l>
+						<l n="242">Quos ita (sensit enim) laeto <persName ref="IUP" type="narrative" ana="NA">Saturnius</persName> ore</l>
+						<l n="243"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> adloquitur:</l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
 						<l n="243">«Nostra est timor iste voluptas,</l>
 						<l n="244">o superi, totoque libens mihi pectore grator,</l>
-						<l n="245">quod memoris populi dicor <persName ref="IUP" role="narrative" ana="NA">rectorque paterque</persName>,</l>
+						<l n="245">quod memoris populi dicor <persName ref="IUP" type="narrative" ana="NA">rectorque paterque</persName>,</l>
 						<l n="246">et mea progenies vestro quoque tuta favore est.</l>
 						<l n="247">Nam quamquam ipsius datis hoc inmanibus actis,</l>
 						<l n="248">obligor ipse tamen. Sed enim ne pectora vano</l>
@@ -9654,18 +9654,18 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="P" unit="para"/>
 						<l n="259">Adsensere dei: coniunx quoque regia visa est</l>
 						<l n="260">cetera non duro, duro tamen ultima vultu</l>
-						<l n="261">dicta tulisse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> seque indoluisse notatam.</l>
+						<l n="261">dicta tulisse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> seque indoluisse notatam.</l>
 						<milestone ed="P" unit="para"/>
 						<l n="262">Interea quodcumque fuit populabile flammae</l>
 						<l n="263">Mulciber abstulerat, nec cognoscenda remansit</l>
 						<l n="264">Herculis effigies; nec quicquam ab imagine ductum</l>
-						<l n="265">matris habet, tantumque <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> vestigia servat.</l>
+						<l n="265">matris habet, tantumque <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> vestigia servat.</l>
 						<l n="266">Utque novus serpens posita cum pelle senecta</l>
 						<l n="267">luxuriare solet squamaque nitere recenti,</l>
 						<l n="268">sic, ubi mortales Tirynthius exuit artus,</l>
 						<l n="269">parte sui meliore viget maiorque videri</l>
 						<l n="270">coepit et augusta fieri gravitate verendus.</l>
-						<l n="271">Quem <persName ref="IUP" role="metamorphosis" ana="act">pater omnipotens</persName> inter cava nubila raptum</l>
+						<l n="271">Quem <persName ref="IUP" type="metamorphosis" ana="act">pater omnipotens</persName> inter cava nubila raptum</l>
 						<l n="272">quadriiugo curru radiantibus intulit astris.</l>
 						<milestone n="273" unit="card"/>
 						<milestone ed="Magnus" n="Alcmene et Galanthis." unit="tale"/>
@@ -9691,7 +9691,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="286">Herculis et decimum premeretur sidere signum,</l>
 						<l n="287">tendebat gravitas uterum mihi, quodque ferebam,</l>
 						<l n="288">tantum erat, ut posses auctorem dicere tecti</l>
-						<l n="289">ponderis esse <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>. Nec iam tolerare labores</l>
+						<l n="289">ponderis esse <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>. Nec iam tolerare labores</l>
 						<l n="290">ulterius poteram: quin nunc quoque frigidus artus,</l>
 						<l n="291">dum loquor, horror habet, parsque est meminisse doloris.</l>
 						<l n="292">Septem ego per noctes, totidem cruciata diebus,</l>
@@ -9705,7 +9705,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="300">sustinuit partus. Tacita quoque carmina voce</l>
 						<l n="301">dixit, et inceptos tenuerunt carmina partus.</l>
 						<l n="302">Nitor et ingrato facio convicia demens</l>
-						<l n="303">vana <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> cupioque mori moturaque duros</l>
+						<l n="303">vana <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> cupioque mori moturaque duros</l>
 						<l n="304">verba queror silices. Matres Cadmeides adsunt</l>
 						<l n="305">votaque suscipiunt exhortanturque dolentem.</l>
 						<l n="306">Una ministrarum, media de plebe, Galanthis,</l>
@@ -9848,7 +9848,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="404">dixit</l>
 					</sp>
 					<sp who="Themis" ana="pers">
-						<l n="404">«Capaneusque nisi ab <persName ref="IUP" role="narrative" ana="NA">Iove</persName> vinci</l>
+						<l n="404">«Capaneusque nisi ab <persName ref="IUP" type="narrative" ana="NA">Iove</persName> vinci</l>
 						<l n="405">haud poterit, fientque pares in vulnere fratres,</l>
 						<l n="406">subductaque suos manes tellure videbit</l>
 						<l n="407">vivus adhuc vates; ultusque parente parentem</l>
@@ -9858,9 +9858,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="411">donec eum coniunx fatale poposcerit aurum,</l>
 						<l n="412">cognatumque latus Phegeius hauserit ensis.</l>
 						<l n="413">Tum demum magno petet hos Acheloia supplex</l>
-						<l n="414">ab <persName ref="IUP" role="narrative" ana="NA">Iove</persName> Callirhoe natis infantibus annos</l>
+						<l n="414">ab <persName ref="IUP" type="narrative" ana="NA">Iove</persName> Callirhoe natis infantibus annos</l>
 						<l n="415">neve necem sinat esse diu victoris inultam,</l>
-						<l n="416"><persName ref="IUP" role="metamorphosis" ana="act">Iuppiter</persName> his motus privignae dona nurusque</l>
+						<l n="416"><persName ref="IUP" type="metamorphosis" ana="act">Iuppiter</persName> his motus privignae dona nurusque</l>
 						<l n="417">praecipiet facietque viros inpubibus annis.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
@@ -9876,7 +9876,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="424">poscit Erichthonio. Venerem quoque cura futuri</l>
 						<l n="425">tangit et Anchisae renovare paciscitur annos.</l>
 						<l n="426">Cui studeat, deus omnis habet, crescitque favore</l>
-						<l n="427">turbida seditio, donec sua <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> ora</l>
+						<l n="427">turbida seditio, donec sua <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> ora</l>
 						<l n="428">solvit et</l>
 					</sp>
 					<sp who="Iuppiter" ana="pers">
@@ -9898,12 +9898,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="438">pondera despicitur nec quo prius ordine regnat.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="439">Dicta <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> movere deos, nec sustinet ullus,</l>
+						<l n="439">Dicta <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> movere deos, nec sustinet ullus,</l>
 						<l n="440">cum videat fessos Rhadamanthon et Aeacon annis</l>
 						<l n="441">et Minoa, queri. Qui, dum fuit integer aevi,</l>
 						<l n="442">terruerat magnas ipso quoque nomine gentes.</l>
 						<l n="443">Tunc erat invalidus Deionidenque iuventae</l>
-						<l n="444">robore Miletum <persName ref="APO" role="narrative" ana="NA">Phoebo</persName>que parente superbum</l>
+						<l n="444">robore Miletum <persName ref="APO" type="narrative" ana="NA">Phoebo</persName>que parente superbum</l>
 						<l n="445">pertimuit credensque suis insurgere regnis,</l>
 						<l n="446">haud tamen est patriis arcere penatibus ausus.</l>
 						<l n="447">Sponte fugis, Milete, tua, celerique carina</l>
@@ -10271,7 +10271,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="733">Sic et aves coeunt, interque animalia cuncta</l>
 						<l n="734">femina femineo conrepta cupidine nulla est.</l>
 						<l n="735">Vellem nulla forem! Ne non tamen omnia Crete</l>
-						<l n="736">monstra ferat, taurum dilexit filia <persName ref="APO" role="narrative" ana="NA">Solis</persName>,</l>
+						<l n="736">monstra ferat, taurum dilexit filia <persName ref="APO" type="narrative" ana="NA">Solis</persName>,</l>
 						<l n="737">femina nempe marem: meus est furiosior illo,</l>
 						<l n="738">si verum profitemur, amor! Tamen illa secuta est</l>
 						<l n="739">spem Veneris, tamen illa dolis et imagine vaccae</l>
@@ -10512,7 +10512,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="129">cervus et arborea frigus ducebat ab umbra.</l>
 						<l n="130">Hunc puer imprudens iaculo Cyparissus acuto</l>
 						<l n="131">fixit; et ut saevo morientem vulnere vidit,</l>
-						<l n="132">velle mori statuit. Quae non solacia <persName ref="APO" role="narrative" ana="act">Phoebus</persName></l>
+						<l n="132">velle mori statuit. Quae non solacia <persName ref="APO" type="narrative" ana="act">Phoebus</persName></l>
 						<l n="133">dixit et ut leviter pro materiaque doleret,</l>
 						<l n="134">admonuit! Gemit ille tamen munusque supremum</l>
 						<l n="135">hoc petit a superis, ut tempore lugeat omni.</l>
@@ -10521,7 +10521,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="138">et modo qui nivea pendebant fronte capilli,</l>
 						<l n="139">horrida caesaries fieri sumptoque rigore</l>
 						<l n="140">sidereum gracili spectare cacumine caelum.</l>
-						<l n="141">Ingemuit tristisque <persName ref="APO" role="narrative" ana="act">deus</persName></l>
+						<l n="141">Ingemuit tristisque <persName ref="APO" type="narrative" ana="act">deus</persName></l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="141">«lugebere nobis</l>
@@ -10538,8 +10538,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="147">concordare modos, hoc vocem carmine movit:</l>
 					</sp>
 					<sp who="Orpheus" ana="pers">
-						<l n="148">«Ab <persName ref="IUP" role="narrative" ana="NA">Iove</persName>, Musa parens, (cedunt <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> omnia regno!)</l>
-						<l n="149">carmina nostra move! <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> est mihi saepe potestas</l>
+						<l n="148">«Ab <persName ref="IUP" type="narrative" ana="NA">Iove</persName>, Musa parens, (cedunt <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> omnia regno!)</l>
+						<l n="149">carmina nostra move! <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> est mihi saepe potestas</l>
 						<l n="150">dicta prius: cecini plectro graviore Gigantas</l>
 						<l n="151">sparsaque Phlegraeis victricia fulmina campis:</l>
 						<l n="152">nunc opus est leviore lyra, puerosque canamus</l>
@@ -10547,17 +10547,17 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="154">ignibus attonitas meruisse libidine poenam.</l>
 					</sp>
 					<sp who="Orpheus" ana="narr">
-						<l n="155"><persName ref="IUP" role="narrative" ana="NA">Rex superum</persName> Phrygii quondam Ganymedis amore</l>
-						<l n="156">arsit, et inventum est aliquid, quod <persName ref="IUP" role="narrative" ana="auto">Iuppiter</persName> esse,</l>
+						<l n="155"><persName ref="IUP" type="narrative" ana="NA">Rex superum</persName> Phrygii quondam Ganymedis amore</l>
+						<l n="156">arsit, et inventum est aliquid, quod <persName ref="IUP" type="narrative" ana="auto">Iuppiter</persName> esse,</l>
 						<l n="157">quam quod erat, mallet. Nulla tamen alite verti</l>
 						<l n="158">dignatur, nisi quae posset sua fulmina ferre.</l>
 						<l n="159">Nec mora, percusso mendacibus aere pennis</l>
 						<l n="160">abripit Iliaden; qui nunc quoque pocula miscet</l>
-						<l n="161">invitaque <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> nectar Iunone ministrat.</l>
+						<l n="161">invitaque <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> nectar Iunone ministrat.</l>
 					</sp>
 					<milestone ed="More" n="HYACINTHUS" unit="tale"/>
 					<sp who="Orpheus" ana="pers">
-						<l n="162">Te quoque, Amyclide, posuisset in aethere <persName ref="APO" role="narrative" ana="NA">Phoebus</persName>,</l>
+						<l n="162">Te quoque, Amyclide, posuisset in aethere <persName ref="APO" type="narrative" ana="NA">Phoebus</persName>,</l>
 						<l n="163">tristia si spatium ponendi fata dedissent.</l>
 						<l n="164">Qua licet, aeternus tamen es: quotiensque repellit</l>
 						<l n="165">ver hiemem piscique aries succedit aquoso,</l>
@@ -10575,7 +10575,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="175">noctis erat spatioque pari distabat utrimque:</l>
 						<l n="176">corpora veste levant et suco pinguis olivi</l>
 						<l n="177">splendescunt latique ineunt certamina disci.</l>
-						<l n="178">Quem prius aerias libratum <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> in auras</l>
+						<l n="178">Quem prius aerias libratum <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> in auras</l>
 						<l n="179">misit et oppositas disiecit pondere nubes.</l>
 						<l n="180">Reccidit in solidam longo post tempore terram</l>
 						<l n="181">pondus et exhibuit iunctam cum viribus artem.</l>
@@ -10583,7 +10583,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="183">tollere Taenarides orbem properabat. At illum</l>
 						<l n="184">dura repercusso subiecit verbere tellus</l>
 						<l n="185">in vultus, Hyacinthe, tuos. Expalluit aeque</l>
-						<l n="186">quam puer ipse <persName ref="APO" role="narrative" ana="NA">deus</persName> conlapsosque excipit artus,</l>
+						<l n="186">quam puer ipse <persName ref="APO" type="narrative" ana="NA">deus</persName> conlapsosque excipit artus,</l>
 						<l n="187">et modo te refovet, modo tristia vulnera siccat,</l>
 						<l n="188">nunc animam admotis fugientem sustinet herbis.</l>
 						<l n="189">Nil prosunt artes: erat inmedicabile vulnus.</l>
@@ -10598,7 +10598,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="196">«Laberis, Oebalide, prima fraudate iuventa,»</l>
 					</sp>
 					<sp who="Orpheus" ana="narr">
-						<l n="197"><persName ref="APO" role="narrative" ana="act">Phoebus</persName> ait</l>
+						<l n="197"><persName ref="APO" type="narrative" ana="act">Phoebus</persName> ait</l>
 					</sp>
 					<sp who="Phoebus" ana="pers">
 						<l n="197">«videoque tuum, mea crimina, vulnus.</l>
@@ -10615,12 +10615,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="208">addat in hunc florem folioque legatur eodem.»</l>
 					</sp>
 					<sp who="Orpheus" ana="narr">
-						<l n="209">Talia dum vero memorantur <persName ref="APO" role="narrative" ana="act">Apollinis</persName> ore,</l>
+						<l n="209">Talia dum vero memorantur <persName ref="APO" type="narrative" ana="act">Apollinis</persName> ore,</l>
 						<l n="210">ecce cruor, qui fusus humo signaverat herbas,</l>
 						<l n="211">desinit esse cruor, Tyrioque nitentior ostro</l>
 						<l n="212">flos oritur formamque capit quam lilia, si non</l>
 						<l n="213">purpureus color his, argenteus esset in illis.</l>
-						<l n="214">Non satis hoc <persName ref="APO" role="metamorphosis" ana="act">Phoebo</persName> est (is enim fuit auctor honoris):</l>
+						<l n="214">Non satis hoc <persName ref="APO" type="metamorphosis" ana="act">Phoebo</persName> est (is enim fuit auctor honoris):</l>
 						<l n="215">ipse suos gemitus foliis inscribit, et AI AI</l>
 						<l n="216">flos habet inscriptum, funestaque littera dicta est.</l>
 						<l n="217">Nec genuisse pudet Sparten Hyacinthon, honorque</l>
@@ -10634,7 +10634,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="221">an genuisse velit Propoetidas, abnuat aeque</l>
 						<l n="222">atque illos, gemino quondam quibus aspera cornu</l>
 						<l n="223">frons erat: unde etiam nomen traxere Cerastae.</l>
-						<l n="224">Ante fores horum stabat <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> Hospitis ara;</l>
+						<l n="224">Ante fores horum stabat <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> Hospitis ara;</l>
 						<l n="225">ignarus sceleris quam siquis sanguine tinctam</l>
 						<l n="226">advena vidisset, mactatos crederet illic</l>
 						<l n="227">lactantes vitulos Amathusiacasque bidentes:</l>
@@ -11561,7 +11561,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="38">divulsere boves, ad vatis fata recurrunt</l>
 						<l n="39">Tendentemque manus et in illo tempore primum</l>
 						<l n="40">inrita dicentem nec quicquam voce moventem</l>
-						<l n="41">sacrilegae perimunt. Perque os, pro <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName>! illud</l>
+						<l n="41">sacrilegae perimunt. Perque os, pro <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName>! illud</l>
 						<l n="42">auditum saxis intellectumque ferarum</l>
 						<l n="43">sensibus in ventos anima exhalata recessit.</l>
 						<milestone ed="P" unit="para"/>
@@ -11580,7 +11580,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="55">et Methymnaeae potiuntur litore Lesbi.</l>
 						<l n="56">Hic ferus expositum peregrinis anguis harenis</l>
 						<l n="57">os petit et sparsos stillanti rore capillos.</l>
-						<l n="58">Tandem <persName ref="APO" role="narrative" ana="act">Phoebus</persName> adest morsusque inferre parantem</l>
+						<l n="58">Tandem <persName ref="APO" type="narrative" ana="act">Phoebus</persName> adest morsusque inferre parantem</l>
 						<l n="59">arcet et in lapidem rictus serpentis apertos</l>
 						<l n="60">congelat et patulos, ut erant, indurat hiatus.</l>
 						<milestone ed="P" unit="para"/>
@@ -11717,7 +11717,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="152">Sardibus hinc, illinc parvis finitur Hypaepis.</l>
 						<l n="153">Pan ibi dum teneris iactat sua carmina nymphis</l>
 						<l n="154">et leve cerata modulatur harundine carmen,</l>
-						<l n="155">ausus <persName ref="APO" role="narrative" ana="NA">Apollineos</persName> prae se contemnere cantus,</l>
+						<l n="155">ausus <persName ref="APO" type="narrative" ana="NA">Apollineos</persName> prae se contemnere cantus,</l>
 						<l n="156">iudice sub Tmolo certamen venit ad impar.</l>
 						<milestone ed="P" unit="para"/>
 						<l n="157">Monte suo senior iudex consedit et aures</l>
@@ -11738,7 +11738,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="161">Calamis agrestibus insonat ille</l>
 						<l n="162">barbaricoque Midan (aderat nam forte canenti)</l>
 						<l n="163">carmine delenit. Post hunc sacer ora retorsit</l>
-						<l n="164">Tmolus ad os <persName ref="APO" role="narrative" ana="NA">Phoebi</persName>: vultum sua silva secuta est.</l>
+						<l n="164">Tmolus ad os <persName ref="APO" type="narrative" ana="NA">Phoebi</persName>: vultum sua silva secuta est.</l>
 						<l n="165">Ille caput flavum lauro Parnaside vinctus</l>
 						<l n="166">verrit humum Tyrio saturata murice palla,</l>
 						<l n="167">instrictamque fidem gemmis et dentibus Indis</l>
@@ -11749,7 +11749,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="P" unit="para"/>
 						<l n="172">Iudicium sanctique placet sententia montis</l>
 						<l n="173">omnibus, arguitur tamen atque iniusta vocatur</l>
-						<l n="174">unius sermone Midae; nec <persName ref="APO" role="narrative" ana="act">Delius</persName> aures</l>  
+						<l n="174">unius sermone Midae; nec <persName ref="APO" type="narrative" ana="act">Delius</persName> aures</l>  
 						<l n="175">humanam stolidas patitur retinere figuram,</l>
 						<l n="176">sed trahit in spatium villisque albentibus implet</l>
 						<l n="177">instabilesque imas facit et dat posse moveri,</l>
@@ -11804,7 +11804,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="216">Nec pars militiae, Telamon, sine honore recessit,</l>
 						<l n="217">Hesioneque data potitur. Nam coniuge Peleus</l>
 						<l n="218">clarus erat diva: nec avi magis ille superbus</l>
-						<l n="219">nomine, quam soceri, siquidem <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> esse nepoti</l>
+						<l n="219">nomine, quam soceri, siquidem <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> esse nepoti</l>
 						<l n="220">contigit haud uni, coniunx dea contigit uni.</l>
 						<milestone n="221" unit="card"/>
 						<milestone ed="Magnus" n="Peleus et Thetis." unit="tale"/>
@@ -11823,9 +11823,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="223">acta patris vincet maiorque vocabitur illo.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="224">Ergo, ne quicquam mundus <persName ref="IUP" role="narrative" ana="NA">Iove</persName> maius haberet,</l>
+						<l n="224">Ergo, ne quicquam mundus <persName ref="IUP" type="narrative" ana="NA">Iove</persName> maius haberet,</l>
 						<l n="225">quamvis haud tepidos sub pectore senserat ignes,</l>
-						<l n="226"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> aequoreae Thetidis conubia fugit</l>
+						<l n="226"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> aequoreae Thetidis conubia fugit</l>
 						<l n="227">in suaque Aeaciden succedere vota nepotem</l>
 						<l n="228">iussit et amplexus in virginis ire marinae.</l>
 						<milestone ed="P" unit="para"/>
@@ -11915,7 +11915,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="283">«Mediae quoque commoda plebi</l>
 						<l n="284">nostra patent, Peleu, nec inhospita regna tenemus.</l>
 						<l n="285">Adicis huic animo momento potentia, clarum</l>
-						<l n="286">nomen avumque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>. Ne tempora perde precando!</l>
+						<l n="286">nomen avumque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>. Ne tempora perde precando!</l>
 						<l n="287">Quod petis, omne feres tuaque haec pro parte vocato,</l>
 						<l n="288">qualiacumque vides! Utinam meliora videres!»</l>
 					</sp>
@@ -11940,21 +11940,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="P" unit="para"/>
 						<l n="301">Nata erat huic Chione. Quae dotatissima forma</l>
 						<l n="302">mille procos habuit, bis septem nubilis annis.</l>
-						<l n="303">Forte revertentes <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> Maiaque creatus,</l>
+						<l n="303">Forte revertentes <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> Maiaque creatus,</l>
 						<l n="304">ille suis Delphis, hic vertice Cylleneo,</l>
 						<l n="305">videre hanc pariter, pariter traxere calorem.</l>
-						<l n="306">Spem veneris differt in tempora noctis <persName ref="APO" role="narrative" ana="NA">Apollo</persName>,</l>
+						<l n="306">Spem veneris differt in tempora noctis <persName ref="APO" type="narrative" ana="NA">Apollo</persName>,</l>
 						<l n="307">non fert ille moras virgaque movente soporem</l>
 						<l n="308">virginis os tangit: tactu iacet illa potenti</l>
 						<l n="309">vimque dei patitur. Nox caelum sparserat astris:</l>
-						<l n="310"><persName ref="APO" role="metamorphosis" ana="auto">Phoebus</persName> anum simulat praereptaque gaudia sumit.</l>
+						<l n="310"><persName ref="APO" type="metamorphosis" ana="auto">Phoebus</persName> anum simulat praereptaque gaudia sumit.</l>
 						<milestone ed="P" unit="para"/>
 						<l n="311">Ut sua maturus complevit tempora venter,</l>
 						<l n="312">alipedis de stirpe dei versuta propago</l>
 						<l n="313">nascitur, Autolycus, furtum ingeniosus ad omne,</l>
 						<l n="314">candida de nigris et de candentibus atra</l>
 						<l n="315">qui facere adsuerat, patriae non degener artis;</l>
-						<l n="316">nascitur e <persName ref="APO" role="narrative" ana="NA">Phoebo</persName> (namque est enixa gemellos)</l>
+						<l n="316">nascitur e <persName ref="APO" type="narrative" ana="NA">Phoebo</persName> (namque est enixa gemellos)</l>
 						<l n="317">carmine vocali clarus citharaque Philammon.</l>
 						<l n="318">Quid peperisse duos et dis placuisse duobus</l>
 						<l n="319">et forti genitore et progenitore Tonanti</l>
@@ -11990,7 +11990,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="336">qua via nulla, ruit. Iam tum mihi currere visus</l>
 						<l n="337">plus homine est, alasque pedes sumpsisse putares.</l>
 						<l n="338">Effugit ergo omnes veloxque cupidine leti</l>
-						<l n="339">vertice Parnasi potitur. Miseratus <persName ref="APO" role="narrative" ana="act">Apollo</persName>,</l>
+						<l n="339">vertice Parnasi potitur. Miseratus <persName ref="APO" type="narrative" ana="act">Apollo</persName>,</l>
 						<l n="340">cum se Daedalion saxo misisset ab alto,</l>
 						<l n="341">fecit avem et subitis pendentem sustulit alis</l>
 						<l n="342">oraque adunca dedit, curvos dedit unguibus hamos,</l>
@@ -12020,7 +12020,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Onetor" ana="narr">
 						<l n="352">«Fessos ad litora curva iuvencos</l>
-						<l n="353">adpuleram, medio cum <persName ref="APO" role="narrative" ana="NA">Sol</persName> altissimus orbe</l>
+						<l n="353">adpuleram, medio cum <persName ref="APO" type="narrative" ana="NA">Sol</persName> altissimus orbe</l>
 						<l n="354">tantum respiceret, quantum superesse videret;</l>
 						<l n="355">parsque boum fulvis genua inclinarat harenis</l>
 						<l n="356">latarumque iacens campos spectabat aquarum,</l>
@@ -12336,7 +12336,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="592">Est prope Cimmerios longo spelunca recessu,</l>
 						<l n="593">mons cavus, ignavi domus et penetralia Somni:</l>
 						<l n="594">quo numquam radiis oriens mediusve cadensve</l>
-						<l n="595"><persName ref="APO" role="narrative" ana="NA">Phoebus</persName> adire potest. Nebulae caligine mixtae</l>
+						<l n="595"><persName ref="APO" type="narrative" ana="NA">Phoebus</persName> adire potest. Nebulae caligine mixtae</l>
 						<l n="596">exhalantur humo dubiaeque crepuscula lucis.</l>
 						<l n="597">Non vigil ales ibi cristati cantibus oris</l>
 						<l n="598">evocat auroram, nec voce silentia rumpunt</l>
@@ -12587,7 +12587,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="someone" ana="narr">
 						<l n="754">sunt si descendere ad ipsum</l>
 						<l n="755">ordine perpetuo quaeris, sunt huius origo</l>
-						<l n="756">Ilus et Assaracus raptusque <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> Ganymedes</l>
+						<l n="756">Ilus et Assaracus raptusque <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> Ganymedes</l>
 						<l n="757">Laomedonque senex Priamusque novissima Troiae</l>
 						<l n="758">tempora sortitus. Frater fuit Hectoris iste:</l>
 						<l n="759">qui nisi sensisset prima nova fata iuventa,</l>
@@ -12652,7 +12652,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="8">Nec dilata foret vindicta, nisi aequora saevi</l>
 						<l n="9">invia fecissent venti Boeotaque tellus</l>
 						<l n="10">Aulide piscosa puppes tenuisset ituras.</l>
-						<l n="11">Hic patrio de more <persName ref="IUP" role="narrative" ana="NA">Iovi</persName> cum sacra parassent,</l>
+						<l n="11">Hic patrio de more <persName ref="IUP" type="narrative" ana="NA">Iovi</persName> cum sacra parassent,</l>
 						<l n="12">ut vetus accensis incanduit ignibus ara,</l>
 						<l n="13">serpere caeruleum Danai videre draconem</l>
 						<l n="14">in platanum, coeptis quae stabat proxima sacris.</l>
@@ -12706,7 +12706,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="48">Nulla quies intus nullaque silentia parte,</l>
 						<l n="49">nec tamen est clamor, sed parvae murmura vocis,</l>
 						<l n="50">qualia de pelagi, siquis procul audiat, undis</l>
-						<l n="51">esse solent, qualemve sonum, cum <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> atras</l>
+						<l n="51">esse solent, qualemve sonum, cum <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> atras</l>
 						<l n="52">increpuit nubes, extrema tonitrua reddunt.</l>
 						<l n="53">Atria turba tenet: veniunt, leve vulgus, euntque</l>
 						<l n="54">mixtaque cum veris passim commenta vagantur</l>
@@ -12861,7 +12861,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="148">Dumque vigil Phrygios servat custodia muros</l>
 						<l n="149">et vigil Argolicas servat custodia fossas,</l>
 						<l n="150">festa dies aderat, qua Cygni victor Achilles</l>
-						<l n="151"><persName ref="MIN" role="narrative" ana="NA">Pallada</persName> mactatae placabat sanguine vaccae.</l>
+						<l n="151"><persName ref="MIN" type="narrative" ana="NA">Pallada</persName> mactatae placabat sanguine vaccae.</l>
 						<l n="152">Cuius ut inposuit prosecta calentibus aris</l>
 						<l n="153">et dis acceptus penetravit in aethera nidor,</l>
 						<l n="154">sacra tulere suam, pars est data cetera mensis.</l>
@@ -13209,7 +13209,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="357">annosam pinum magno molimine temptat;</l>
 						<l n="358">quod quia non potuit, praefractam misit in hostem.</l>
 						<l n="359">Sed procul a telo Theseus veniente recessit</l>
-						<l n="360"><persName ref="MIN" role="narrative" ana="NA">Pallados</persName> admonitu: credi sic ipse volebat.</l>
+						<l n="360"><persName ref="MIN" type="narrative" ana="NA">Pallados</persName> admonitu: credi sic ipse volebat.</l>
 						<l n="361">Non tamen arbor iners cecidit; nam Crantoris alti</l>
 						<l n="362">abscidit iugulo pectusque umerumque sinistrum.</l>
 						<l n="363">Armiger ille tui fuerat genitoris, Achille,</l>
@@ -13611,7 +13611,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="5">intendensque manus</l>
 					</sp>
 					<sp who="Ajax" ana="arg">
-						<l n="5">«agimus, pro <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName>!»</l>
+						<l n="5">«agimus, pro <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName>!»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="5"> inquit</l>
@@ -13641,7 +13641,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="25">Aeacus huic pater est, qui iura silentibus illic</l>
 						<l n="26">reddit, ubi Aeoliden saxum grave Sisyphon urget.</l>
 						<l n="27">Aeacon agnoscit summus prolemque fatetur</l>
-						<l n="28"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> esse suam: sic a <persName ref="IUP" role="narrative" ana="NA">Iove</persName> tertius Aiax.</l>
+						<l n="28"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> esse suam: sic a <persName ref="IUP" type="narrative" ana="NA">Iove</persName> tertius Aiax.</l>
 						<l n="29">Nec tamen haec series in causam prosit, Achivi,</l>
 						<l n="30">si mihi cum magno non est communis Achille:</l>
 						<l n="31">frater erat, fraterna peto! Quid sanguine cretus</l>
@@ -13707,7 +13707,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="88">sustinui, sortemque meam vovistis, Achivi,</l>
 						<l n="89">et vestrae valuere preces! Si quaeritis huius</l>
 						<l n="90">fortunam pugnae, non sum superatus ab illo.</l>
-						<l n="91">Ecce ferunt Troes ferrumque ignesque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>que</l>
+						<l n="91">Ecce ferunt Troes ferrumque ignesque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>que</l>
 						<l n="92">in Danaas classes: ubi nunc facundus Ulixes?</l>
 						<l n="93">Nempe ego mille meo protexi pectore puppes,</l>
 						<l n="94">spem vestri reditus: date pro tot navibus arma!</l>
@@ -13774,10 +13774,10 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="P" unit="para"/>
 						<l n="140">Nam genus et proavos et quae non fecimus ipsi,</l>
 						<l n="141">vix ea nostra voco; sed enim quia rettulit Aiax</l>
-						<l n="142">esse <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> pronepos, nostri quoque sanguinis auctor</l>
-						<l n="143"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> est, totidemque gradus distamus ab illo.</l>
+						<l n="142">esse <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> pronepos, nostri quoque sanguinis auctor</l>
+						<l n="143"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> est, totidemque gradus distamus ab illo.</l>
 						<l n="144">Nam mihi Laertes pater est, Arcesius illi,</l>
-						<l n="145"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> huic, neque in his quisquam damnatus et exsul.</l>
+						<l n="145"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> huic, neque in his quisquam damnatus et exsul.</l>
 						<l n="146">Est quoque per matrem Cyllenius addita nobis</l>
 						<l n="147">altera nobilitas: deus est in utroque parente.</l>
 						<l n="148">Sed neque materno quod sum generosior ortu,</l>
@@ -13819,7 +13819,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="171">Ergo opera illius mea sunt: ego Telephon hasta</l>
 						<l n="172">pugnantem domui, victum orantemque refeci;</l>
 						<l n="173">quod Thebae cecidere, meum est, me credite Lesbon,</l>
-						<l n="174">me Tenedon Chrysenque et Cillan, <persName ref="APO" role="narrative" ana="NA">Apollinis</persName> urbes,</l>
+						<l n="174">me Tenedon Chrysenque et Cillan, <persName ref="APO" type="narrative" ana="NA">Apollinis</persName> urbes,</l>
 						<l n="175">et Scyrum cepisse, mea concussa putate</l>
 						<l n="176">procubuisse solo Lyrnesia moenia dextra,</l>
 						<l n="177">utque alias taceam, qui saevum perdere posset</l>
@@ -13865,7 +13865,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="214">mente ferant placida, doceo, quo simus alendi</l>
 						<l n="215">armandique modo, mittor, quo postulat usus.</l>
 						<milestone ed="P" unit="para"/>
-						<l n="216">Ecce <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> monitu, deceptus imagine somni,</l>
+						<l n="216">Ecce <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> monitu, deceptus imagine somni,</l>
 						<l n="217">rex iubet incepti curam dimittere belli.</l>
 						<l n="218">Ille potest auctore suam defendere vocem:</l>
 						<l n="219">non sinat hoc Aiax delendaque Pergama poscat,</l>
@@ -13945,7 +13945,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="267">sanguinis in socios et habet sine vulnere corpus!</l>
 						<milestone ed="P" unit="para"/>
 						<l n="268">Quid tamen hoc refert, si se pro classe Pelasga</l>
-						<l n="269">arma tulisse refert contra Troasque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>que?</l>
+						<l n="269">arma tulisse refert contra Troasque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>que?</l>
 						<l n="270">Confiteorque, tulit (neque enim benefacta maligne</l>
 						<l n="271">detractare meum est), sed ne communia solus</l>
 						<l n="272">occupet atque aliquem vobis quoque reddat honorem,</l>
@@ -14020,7 +14020,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="334">tamque tuis potiar (faveat Fortuna!) sagittis,</l>
 						<l n="335">quam sum Dardanio, quem cepi, vate potitus,</l>
 						<l n="336">quam responsa deum Troianaque fata retexi,</l>
-						<l n="337">quam rapui Phrygiae signum penetrale <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="337">quam rapui Phrygiae signum penetrale <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="338">hostibus e mediis. Et se mihi comparat Aiax?</l>
 						<milestone ed="P" unit="para"/>
 						<l n="339">Nempe capi Troiam prohibebant fata sine illo:</l>
@@ -14072,11 +14072,11 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="381">huic date!»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
-						<l n="381">— et ostendit signum fatale <persName ref="MIN" role="narrative" ana="NA">Minervae</persName>.</l>
+						<l n="381">— et ostendit signum fatale <persName ref="MIN" type="narrative" ana="NA">Minervae</persName>.</l>
 						<milestone ed="P" unit="para"/>
 						<l n="382">Mota manus procerum est, et quid facundia posset,</l>
 						<l n="383">re patuit, fortisque viri tulit arma disertus.</l>
-						<l n="384">Hectora qui solus, qui ferrum ignesque <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>que</l>
+						<l n="384">Hectora qui solus, qui ferrum ignesque <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>que</l>
 						<l n="385">sustinuit totiens, unam non sustinet iram,</l>
 						<l n="386">invictumque virum vicit dolor: arripit ensem</l>
 						<l n="387">et</l>
@@ -14120,8 +14120,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 							Hellespontus.</del></l></note>
 						<milestone ed="P" unit="para"/>
 						<l n="408">Ilion ardebat, neque adhuc consederat ignis,</l>
-						<l n="409">exiguumque senis Priami <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> ara cruorem</l>
-						<l n="410">combiberat tracta atque comis antistita <persName ref="APO" role="narrative" ana="NA">Phoebi</persName></l>
+						<l n="409">exiguumque senis Priami <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> ara cruorem</l>
+						<l n="410">combiberat tracta atque comis antistita <persName ref="APO" type="narrative" ana="NA">Phoebi</persName></l>
 						<l n="411">non profecturas tendebat ad aethera palmas.</l>
 						<l n="412">Dardanidas matres patriorum signa deorum,</l>
 						<l n="413">dum licet, amplexas succensaque templa tenentes</l>
@@ -14259,7 +14259,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="498">a ferro tutam: cecidisti et femina ferro,</l>
 						<l n="499">totque tuos idem fratres, te perdidit idem,</l>
 						<l n="500">exitium Troiae nostrique orbator, Achilles.</l>
-						<l n="501">At postquam cecidit Paridis <persName ref="APO" role="narrative" ana="NA">Phoebi</persName>que sagittis,</l>
+						<l n="501">At postquam cecidit Paridis <persName ref="APO" type="narrative" ana="NA">Phoebi</persName>que sagittis,</l>
 					</sp>
 					<sp who="Hecuba" ana="pers">
 						<l n="502">«nunc certe»,</l>
@@ -14374,7 +14374,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="571">tum quoque Sithonios ululavit maesta per agros.</l>
 						<l n="572">illius Troasque suos hostesque Pelasgos,</l>
 						<l n="573">illius fortuna deos quoque moverat omnes,</l>
-						<l n="574">sic omnes, ut et ipsa <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> coniunxque sororque</l>
+						<l n="574">sic omnes, ut et ipsa <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> coniunxque sororque</l>
 						<l n="575">eventus Hecubam meruisse negaverit illos.</l>
 						<milestone n="576" unit="card"/>
 						<milestone ed="Magnus" n="Memnon." unit="tale"/>
@@ -14389,7 +14389,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="583">At non impositos supremis ignibus artus</l>
 						<l n="584">sustinuit spectare parens, sed crine soluto,</l>
 						<l n="585">sicut erat, magni genibus procumbere non est</l>
-						<l n="586">dedignata <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> lacrimisque has addere voces:</l>
+						<l n="586">dedignata <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> lacrimisque has addere voces:</l>
 					</sp>
 					<milestone ed="P" unit="para"/>
 					<sp who="Aurora" ana="pers">
@@ -14405,12 +14405,12 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="596">pro patruo tulit arma suo primisque sub annis</l>
 						<l n="597">occidit a forti, sic vos voluistis, Achille.</l>
 						<l n="598">Da, precor, huic aliquem, solacia mortis, honorem,</l>
-						<l n="599"><persName ref="IUP" role="narrative" ana="NA">summe deum rector</persName>, maternaque vulnera leni.»</l>
+						<l n="599"><persName ref="IUP" type="narrative" ana="NA">summe deum rector</persName>, maternaque vulnera leni.»</l>
 					</sp>
 
 					<milestone ed="P" unit="para"/>
 					<sp who="Ovid" ana="narr">
-						<l n="600"><persName ref="IUP" role="narrative" ana="act">Iuppiter</persName> adnuerat, cum Memnonis arduus alto</l>
+						<l n="600"><persName ref="IUP" type="narrative" ana="act">Iuppiter</persName> adnuerat, cum Memnonis arduus alto</l>
 						<l n="601">corruit igne rogus nigrique volumine fumi</l>
 						<l n="602">infecere diem (veluti cum flumina natas</l>
 						<l n="603">exhalant nebulas, nec sol admittitur infra);</l>
@@ -14444,9 +14444,9 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="628">fertur ab Antandro scelerataque limina Thracum</l>
 						<l n="629">et Polydoreo manantem sanguine terram</l>
 						<l n="630">linquit et utilibus ventis aestuque secundo</l>
-						<l n="631">intrat <persName ref="APO" role="narrative" ana="NA">Apollineam</persName> sociis comitantibus urbem.</l>
+						<l n="631">intrat <persName ref="APO" type="narrative" ana="NA">Apollineam</persName> sociis comitantibus urbem.</l>
 						<milestone ed="P" unit="para"/>
-						<l n="632">Hunc Anius, quo rege homines, antistite <persName ref="APO" role="narrative" ana="NA">Phoebus</persName></l>
+						<l n="632">Hunc Anius, quo rege homines, antistite <persName ref="APO" type="narrative" ana="NA">Phoebus</persName></l>
 						<l n="633">rite colebatur, temploque domoque recepit</l>
 						<l n="634">urbemque ostendit delubraque nota duasque</l>
 						<l n="635">Latona quondam stirpes pariente retentas.</l>
@@ -14458,7 +14458,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="640">Tum pius Anchises:</l>
 					</sp>
 					<sp who="Anchises" ana="pers">
-						<l n="640">«O <persName ref="APO" role="narrative" ana="NA">Phoebi</persName> lecte sacerdos,</l>
+						<l n="640">«O <persName ref="APO" type="narrative" ana="NA">Phoebi</persName> lecte sacerdos,</l>
 						<l n="641">fallor, an et natum, cum primum haec moenia vidi,</l>
 						<l n="642">bisque duas natas, quantum reminiscor, habebas?»</l>
 					</sp>
@@ -14479,7 +14479,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="650">Delius augurium dedit huic, dedit altera Liber</l>
 						<l n="651">femineae stirpi voto maiora fideque</l>
 						<l n="652">munera: nam tactu natarum cuncta mearum</l>
-						<l n="653">in segetem laticemque meri canaeque <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="653">in segetem laticemque meri canaeque <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="654">transformabantur, divesque erat usus in illis.</l>
 						<l n="655">Hoc ubi cognovit Troiae populator Atrides,</l>
 						<l n="656">ne non ex aliqua vestram sensisse procellam</l>
@@ -14512,7 +14512,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Ovid" ana="narr">
 						<l n="675">Talibus atque aliis postquam convivia dictis</l>
 						<l n="676">implerunt, mensa somnum petiere remota,</l>
-						<l n="677">cumque die surgunt adeuntque oracula <persName ref="APO" role="narrative" ana="NA">Phoebi</persName>:</l>
+						<l n="677">cumque die surgunt adeuntque oracula <persName ref="APO" type="narrative" ana="NA">Phoebi</persName>:</l>
 						<l n="678">qui petere antiquam matrem cognataque iussit</l>
 						<l n="679">litora; prosequitur rex et dat munus ituris,</l>
 						<l n="680">Anchisae sceptrum, chlamydem pharetramque nepoti,</l>
@@ -14547,7 +14547,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="P" unit="para"/>
 						<l n="705">Inde recordati Teucros a sanguine Teucri</l>
 						<l n="706">ducere principium, Cretam tenuere locique</l>
-						<l n="707">ferre diu nequiere <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>, centumque relictis</l>
+						<l n="707">ferre diu nequiere <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>, centumque relictis</l>
 						<l n="708">urbibus Ausonios optant contingere portus:</l>
 						<l n="709">saevit hiems iactatque viros, Strophadumque receptos</l>
 						<l n="710">portubus infidis exterruit ales Aello.</l>
@@ -14555,7 +14555,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="712">Neritiasque domus, regnum fallacis Ulixis,</l>
 						<l n="713">praeter erant vecti: certatam lite deorum</l>
 						<l n="714">Ambraciam versique vident sub imagine saxum</l>
-						<l n="715">iudicis, Actiaco quae nunc ab <persName ref="APO" role="narrative" ana="NA">Apolline</persName> nota est,</l>
+						<l n="715">iudicis, Actiaco quae nunc ab <persName ref="APO" type="narrative" ana="NA">Apolline</persName> nota est,</l>
 						<l n="716">vocalemque sua terram Dodonida quercu</l>
 						<l n="717">Chaoniosque sinus, ubi nati rege Molosso</l>
 						<l n="718">inpia subiectis fugere incendia pennis.</l>
@@ -14745,8 +14745,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="840">Certe ego me novi liquidaeque in imagine vidi</l>
 						<l n="841">nuper aquae, placuitque mihi mea forma videnti.</l>
 						<l n="842">Adspice, sim quantus! Non est hoc corpore maior</l>
-						<l n="843"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> in caelo: nam vos narrare soletis,</l>
-						<l n="844">nescio quem regnare <persName ref="IUP" role="narrative" ana="NA">Iovem</persName>. Coma plurima torvos</l>
+						<l n="843"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> in caelo: nam vos narrare soletis,</l>
+						<l n="844">nescio quem regnare <persName ref="IUP" type="narrative" ana="NA">Iovem</persName>. Coma plurima torvos</l>
 						<l n="845">prominet in vultus umerosque, ut lucus, obumbrat.</l>
 						<l n="846">Nec mea quod rigidis horrent densissima saetis</l>
 						<l n="847">corpora, turpe puta turpis sine frondibus arbor,</l>
@@ -14762,7 +14762,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="854">Adde, quod in vestro genitor meus aequore regnat:</l>
 						<l n="855">hunc tibi do socerum; tantum miserere precesque</l>
 						<l n="856">supplicis exaudi! tibi enim succumbimus uni.</l>
-						<l n="857">Quique <persName ref="IUP" role="narrative" ana="NA">Iovem</persName> et caelum sperno et penetrabile fulmen,</l>
+						<l n="857">Quique <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> et caelum sperno et penetrabile fulmen,</l>
 						<l n="858">Nerei, te veneror: tua fulmine saevior ira est. —</l>
 						<l n="859">Atque ego contemptus essem patientior huius,</l>
 						<l n="860">si fugeres omnes; sed cur Cyclope repulso</l>
@@ -14965,7 +14965,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="7">Ausoniae Siculaeque tenet confinia terrae.</l>
 						<l n="8">Inde manu magna Tyrrhena per aequora raptus</l>
 						<l n="9">herbiferos adiit colles atque atria Glaucus</l>
-						<l n="10"><persName ref="APO" role="narrative" ana="NA">Sole</persName> satae Circes, variarum plena ferarum.</l>
+						<l n="10"><persName ref="APO" type="narrative" ana="NA">Sole</persName> satae Circes, variarum plena ferarum.</l>
 						<milestone ed="P" unit="para"/>
 						<l n="11">Quam simul adspexit, dicta acceptaque salute,</l>
 					</sp>
@@ -15003,7 +15003,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="30">Dignus eras ultro (poteras certeque) rogari,</l>
 						<l n="31">et, si spem dederis, mihi crede, rogaberis ultro.</l>
 						<l n="32">Neu dubites adsitque tuae fiducia formae:</l>
-						<l n="33">en ego, cum dea sim, nitidi cum filia <persName ref="APO" role="narrative" ana="NA">Solis</persName>,</l>
+						<l n="33">en ego, cum dea sim, nitidi cum filia <persName ref="APO" type="narrative" ana="NA">Solis</persName>,</l>
 						<l n="34">gramine cum tantum, tantum quoque carmine possim,</l>
 						<l n="35">ut tua sim, voveo; spernentem sperne, sequenti</l>
 						<l n="36">redde vices unoque duas ulciscere facto!»</l>
@@ -15045,7 +15045,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="51">Parvus erat gurges, curvos sinuatus in arcus,</l>
 						<l n="52">grata quies Scyllae; quo se referebat ab aestu</l>
 						<l n="53">et maris et caeli, medio cum plurimus orbe</l>
-						<l n="54"><persName ref="APO" role="narrative" ana="NA">Sol</persName> erat et minimas a vertice fecerat umbras.</l>
+						<l n="54"><persName ref="APO" type="narrative" ana="NA">Sol</persName> erat et minimas a vertice fecerat umbras.</l>
 						<l n="55">Hunc dea praevitiat portentificisque venenis</l>
 						<l n="56">inquinat, hic pressos latices radice nocenti</l>
 						<l n="57">spargit et obscurum verborum ambage novorum</l>
@@ -15088,7 +15088,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="88">Sirenum scopulos, orbataque praeside pinus</l>
 						<l n="89">Inarimen Prochytenque legit sterilique locatas</l>
 						<l n="90">colle Pithecusas, habitantum nomine dictas.</l>
-						<l n="91">Quippe <persName ref="IUP" role="narrative" ana="NA">deum genitor</persName>, fraudem et periuria quondam</l>
+						<l n="91">Quippe <persName ref="IUP" type="narrative" ana="NA">deum genitor</persName>, fraudem et periuria quondam</l>
 						<l n="92">Cercopum exosus gentisque admissa dolosae,</l>
 						<l n="93">in deforme viros animal mutavit, ut idem</l>
 						<l n="94">dissimiles homini possent similesque videri,</l>
@@ -15164,7 +15164,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="130">«nec sacri turis honore</l>
 						<l n="131">humanum dignare caput; neu nescius erres,</l>
 						<l n="132">lux aeterna mihi carituraque fine dabatur,</l>
-						<l n="133">si mea virginitas <persName ref="APO" role="narrative" ana="act">Phoebo</persName> patuisset amanti.</l>
+						<l n="133">si mea virginitas <persName ref="APO" type="narrative" ana="act">Phoebo</persName> patuisset amanti.</l>
 					</sp>
 					<sp who="Sibyl" ana="narr">
 						<l n="134">Dum tamen hanc sperat dum praecorrumpere donis</l>
@@ -15186,7 +15186,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="138">tot mihi natales contingere vana rogavi;</l>
 						<l n="139">excidit, ut peterem iuvenes quoque protinus annos.</l>
 						<l n="140">Hos tamen ille mihi dabat aeternamque iuventam,</l>
-						<l n="141">si venerem paterer: contempto munere <persName ref="APO" role="narrative" ana="act">Phoebi</persName></l>
+						<l n="141">si venerem paterer: contempto munere <persName ref="APO" type="narrative" ana="act">Phoebi</persName></l>
 						<l n="142">innuba permaneo; sed iam felicior aetas</l>
 						<l n="143">terga dedit, tremuloque gradu venit aegra senectus,</l>
 						<l n="144">quae patienda diu est (nam iam mihi saecula septem</l>
@@ -15197,7 +15197,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="147">Tempus erit, cum de tanto me corpore parvam</l>
 						<l n="148">longa dies faciet consumptaque membra senecta</l>
 						<l n="149">ad minimum redigentur onus: nec amata videbor</l>
-						<l n="150">nec placuisse deo; <persName ref="APO" role="narrative" ana="act">Phoebus</persName> quoque forsitan ipse</l>
+						<l n="150">nec placuisse deo; <persName ref="APO" type="narrative" ana="act">Phoebus</persName> quoque forsitan ipse</l>
 						<l n="151">vel non cognoscet vel dilexisse negabit:</l>
 						<l n="152">usque adeo mutata ferar, nullique videnda,</l>
 						<l n="153">voce tamen noscar; vocem mihi fata relinquent.»</l>
@@ -15477,7 +15477,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="344">acris equi, laevaque hastilia bina ferebat,</l>
 						<l n="345">poeniceam fulvo chlamydem contractus ab auro.</l>
 						<milestone ed="P" unit="para"/>
-						<l n="346">Venerat in silvas et filia <persName ref="APO" role="narrative" ana="NA">Solis</persName> easdem,</l>
+						<l n="346">Venerat in silvas et filia <persName ref="APO" type="narrative" ana="NA">Solis</persName> easdem,</l>
 						<l n="347">utque novas legeret fecundis collibus herbas,</l>
 						<l n="348">nomine dicta suo Circaea reliquerat arva.</l>
 						<l n="349">Quae simul ac iuvenem, virgultis abdita, vidit,</l>
@@ -15525,7 +15525,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Circe" ana="pers">
 						<l n="373">«quae mea ceperunt, perque hanc, pulcherrime, formam,</l>
 						<l n="374">quae facit, ut supplex tibi sim dea, consule nostris</l>
-						<l n="375">ignibus et socerum, qui pervidet omnia, <persName ref="APO" role="narrative" ana="NA">Solem</persName></l>
+						<l n="375">ignibus et socerum, qui pervidet omnia, <persName ref="APO" type="narrative" ana="NA">Solem</persName></l>
 						<l n="376">accipe, nec durus Titanida despice Circen!»</l>
 					</sp>
 					<milestone ed="P" unit="para"/>
@@ -15605,7 +15605,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="414">cuius ab attactu variarum monstra ferarum</l>
 						<l n="415">in iuvenes veniunt: nulli sua mansit imago.</l>
 						<milestone ed="P" unit="para"/>
-						<l n="416">Sparserat occiduus Tartessia litora <persName ref="APO" role="narrative" ana="NA">Phoebus</persName>,</l>
+						<l n="416">Sparserat occiduus Tartessia litora <persName ref="APO" type="narrative" ana="NA">Phoebus</persName>,</l>
 						<l n="417">et frustra coniunx oculis animoque Canentis</l>
 						<l n="418">exspectatus erat: famuli populusque per omnes</l>
 						<l n="419">discurrunt silvas atque obvia lumina portant;</l>
@@ -15680,7 +15680,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="472">perpetimur Danai cumulumque Capherea cladis.</l>
 						<l n="473">Neve morer referens tristes ex ordine casus,</l>
 						<l n="474">Graecia tum potuit Priamo quoque flenda videri.</l>
-						<l n="475">Me tamen armiferae servatum cura <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="475">Me tamen armiferae servatum cura <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="476">fluctibus eripuit, patriis sed rursus ab agris</l>
 						<l n="477">pellor, et antiquo memores de vulnere poenas</l>
 						<l n="478">exigit alma Venus, tantosque per alta labores</l>
@@ -16246,7 +16246,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<milestone ed="P" unit="para"/>
 					<sp who="Old Man" ana="narr">
-						<l n="12">«Dives ab Oceano bubus <persName ref="IUP" role="narrative" ana="NA">Iove</persName> natus Hiberis</l>
+						<l n="12">«Dives ab Oceano bubus <persName ref="IUP" type="narrative" ana="NA">Iove</persName> natus Hiberis</l>
 						<l n="13">litora felici tenuisse Lacinia cursu</l>
 						<l n="14">fertur et, armento teneras errante per herbas,</l>
 						<l n="15">ipse domum magni nec inhospita tecta Crotonis</l>
@@ -16282,7 +16282,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="27">visa refert, pugnatque diu sententia secum:</l>
 						<l n="28">numen abire iubet, prohibent discedere leges,</l>
 						<l n="29">poenaque mors posita est patriam mutare volenti.</l>
-						<l n="30">Candidus Oceano nitidum caput abdiderat <persName ref="APO" role="narrative" ana="NA">Sol</persName>,</l>
+						<l n="30">Candidus Oceano nitidum caput abdiderat <persName ref="APO" type="narrative" ana="NA">Sol</persName>,</l>
 						<l n="31">et caput extulerat densissima sidereum Nox:</l>
 						<l n="32">visus adesse idem deus est eademque monere</l>
 						<l n="33">et, nisi paruerit, plura et graviora minari.</l>
@@ -16341,7 +16341,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="67">dictaque mirantum magni primordia mundi</l>
 						<l n="68">et rerum causas et, quid natura, docebat,</l>
 						<l n="69">quid deus, unde nives, quae fulminis esset origo,</l>
-						<l n="70"><persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> an venti discussa nube tonarent,</l>
+						<l n="70"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> an venti discussa nube tonarent,</l>
 						<l n="71">quid quateret terras, qua sidera lege mearent —</l>
 						<l n="72">et quodcumque latet; primusque animalia mensis</l>
 						<l n="73">arguit imponi, primus quoque talibus ora</l>
@@ -16474,8 +16474,8 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="188">Nec color est idem caelo, cum lassa quiete</l>
 						<l n="189">cuncta iacent media, cumque albo Lucifer exit</l>
 						<l n="190">clarus equo rursusque alius, cum praevia lucis</l>
-						<l n="191">tradendum <persName ref="APO" role="narrative" ana="NA">Phoebo</persName> Pallantias inficit orbem.</l>
-						<l n="192">Ipse <persName ref="APO" role="narrative" ana="NA">dei</persName> clipeus, terra cum tollitur ima,</l>
+						<l n="191">tradendum <persName ref="APO" type="narrative" ana="NA">Phoebo</persName> Pallantias inficit orbem.</l>
+						<l n="192">Ipse <persName ref="APO" type="narrative" ana="NA">dei</persName> clipeus, terra cum tollitur ima,</l>
 						<l n="193">mane rubet, terraque, rubet cum conditur ima,</l>
 						<l n="194">candidus in summo est, melior natura quod illic</l>
 						<l n="195">aetheris est terraeque procul contagia fugit.</l>
@@ -16680,7 +16680,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="383">melliferarum apium sine membris corpora nasci</l>
 						<l n="384">et serosque pedes serasque adsumere pennas?</l>
 						<l n="385">Iunonis volucrem, quae cauda sidera portat,</l>
-						<l n="386">armigerumque <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> Cythereiadasque columbas</l>
+						<l n="386">armigerumque <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> Cythereiadasque columbas</l>
 						<l n="387">et genus omne avium mediis e partibus ovi,</l>
 						<l n="388">ni sciret fieri, quis nasci posse putaret?</l>
 						<l n="389">Sunt qui, cum clauso putrefacta est spina sepulcro,</l>
@@ -16715,7 +16715,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="416">Sic et curalium quo primum contigit auras</l>
 						<l n="417">tempore, durescit: mollis fuit herba sub undis.</l>
 						<milestone ed="P" unit="para"/>
-						<l n="418">Desinet ante dies et in alto <persName ref="APO" role="narrative" ana="NA">Phoebus</persName> anhelos</l>
+						<l n="418">Desinet ante dies et in alto <persName ref="APO" type="narrative" ana="NA">Phoebus</persName> anhelos</l>
 						<l n="419">aequore tinget equos, quam consequar omnia verbis</l>
 						<l n="420">in species translata novas: sic tempora verti</l>
 						<l n="421">cernimus atque illas adsumere robora gentes,</l>
@@ -16900,7 +16900,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="547">Non tamen Egeriae luctus aliena levare</l>
 						<l n="548">damna valent, montisque iacens radicibus imis</l>
 						<l n="549">liquitur in lacrimas, donec pietate dolentis</l>
-						<l n="550">mota soror <persName ref="APO" role="narrative" ana="NA">Phoebi</persName> gelidum de corpore fontem</l>
+						<l n="550">mota soror <persName ref="APO" type="narrative" ana="NA">Phoebi</persName> gelidum de corpore fontem</l>
 						<l n="551">fecit et aeternas artus tenuavit in undas.</l>
 						<milestone n="552" unit="card"/>
 						<milestone ed="Magnus" n="Tages. Cipus." unit="tale"/>
@@ -17049,7 +17049,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="628">Funeribus fessi postquam mortalia cernunt</l>
 						<l n="629">temptamenta nihil, nihil artes posse medentum,</l>
 						<l n="630">auxilium caeleste petunt mediamque tenentes</l>
-						<l n="631">orbis humum Delphos adeunt, oracula <persName ref="APO" role="narrative" ana="NA">Phoebi</persName>,</l>
+						<l n="631">orbis humum Delphos adeunt, oracula <persName ref="APO" type="narrative" ana="NA">Phoebi</persName>,</l>
 						<l n="632">utque salutifera miseris succurrere rebus</l>
 						<l n="633">sorte velit tantaeque urbis mala finiat, orant:</l>
 						<l n="634">et locus et laurus et, quas habet ipse, pharetras</l>
@@ -17059,14 +17059,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<milestone ed="P" unit="para"/>
 					<sp who="Apollo" ana="pers">
 						<l n="637">«Quod petis hinc, propiore loco, Romane, petisses,</l>
-						<l n="638">et pete nunc propiore loco! nec <persName ref="APO" role="narrative" ana="NA">Apolline</persName> vobis,</l>
-						<l n="639">qui minuat luctus, opus est, sed <persName ref="APO" role="narrative" ana="NA">Apolline</persName> nato.</l>
+						<l n="638">et pete nunc propiore loco! nec <persName ref="APO" type="narrative" ana="NA">Apolline</persName> vobis,</l>
+						<l n="639">qui minuat luctus, opus est, sed <persName ref="APO" type="narrative" ana="NA">Apolline</persName> nato.</l>
 						<l n="640">Ite bonis avibus prolemque accersite nostram!»</l>
 					</sp>
 					<milestone ed="P" unit="para"/>
 					<sp who="Ovid" ana="narr">
 						<l n="641">Iussa dei prudens postquam accepere senatus,</l>
-						<l n="642">quam colat, explorant, iuvenis <persName ref="APO" role="narrative" ana="NA">Phoebeius</persName> urbem,</l>
+						<l n="642">quam colat, explorant, iuvenis <persName ref="APO" type="narrative" ana="NA">Phoebeius</persName> urbem,</l>
 						<l n="643">quique petant ventis Epidauria litora mittunt.</l>
 						<l n="644">Quae simul incurva missi tetigere carina,</l>
 						<l n="645">concilium Graiosque patres adiere, darentque,</l>
@@ -17153,7 +17153,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="706">evincitque fretum Siculique angusta Pelori</l>
 						<l n="707">Hippotadaeque domos regis Temesesque metalla,</l>
 						<l n="708">Leucosiamque petit tepidique rosaria Paesti.</l>
-						<l n="709">Inde legit Capreas promunturiumque <persName ref="MIN" role="narrative" ana="NA">Minervae</persName></l>
+						<l n="709">Inde legit Capreas promunturiumque <persName ref="MIN" type="narrative" ana="NA">Minervae</persName></l>
 						<l n="710">et Surrentino generosos palmite colles</l>
 						<l n="711">Herculeamque urbem Stabiasque et in otia natam</l>
 						<l n="712">Parthenopen et ab hac Cumaeae templa Sibyllae.</l>
@@ -17330,21 +17330,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="855">sic magni cedit titulis Agamemnonis Atreus,</l>
 						<l n="856">Aegea sic Theseus, sic Pelea vicit Achilles;</l>
 						<l n="857">denique, ut exemplis ipsos aequantibus utar,</l>
-						<l n="858">sic et Saturnus minor est <persName ref="IUP" role="narrative" ana="NA">Iove</persName>: <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> arces</l>
+						<l n="858">sic et Saturnus minor est <persName ref="IUP" type="narrative" ana="NA">Iove</persName>: <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> arces</l>
 						<l n="859">temperat aetherias et mundi regna triformis,</l>
 						<l n="860">terra sub Augusto est; pater est et rector uterque.</l>
 						<l n="861">Di, precor, Aeneae comites, quibus ensis et ignis</l>
 						<l n="862">cesserunt, dique Indigetes genitorque Quirine</l>
 						<l n="863">urbis et invicti genitor Gradive Quirini,</l>
 						<l n="864">Vestaque Caesareos inter sacrata penates,</l>
-						<l n="865">et cum Caesarea tu, <persName ref="APO" role="narrative" ana="NA">Phoebe</persName> domestice, Vesta,</l>
-						<l n="866">quique tenes altus Tarpeias <persName ref="IUP" role="narrative" ana="NA">Iuppiter</persName> arces,</l>
+						<l n="865">et cum Caesarea tu, <persName ref="APO" type="narrative" ana="NA">Phoebe</persName> domestice, Vesta,</l>
+						<l n="866">quique tenes altus Tarpeias <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> arces,</l>
 						<l n="867">quosque alios vati fas appellare piumque est:</l>
 						<l n="868">tarda sit illa dies et nostro serior aevo,</l>
 						<l n="869">qua caput Augustum, quem temperat, orbe relicto</l>
 						<l n="870">accedat caelo faveatque precantibus absens!</l>
 						<milestone ed="P" unit="para"/>
-						<l n="871">Iamque opus exegi, quod nec <persName ref="IUP" role="narrative" ana="NA">Iovis</persName> ira nec ignis</l>
+						<l n="871">Iamque opus exegi, quod nec <persName ref="IUP" type="narrative" ana="NA">Iovis</persName> ira nec ignis</l>
 						<l n="872">nec poterit ferrum nec edax abolere vetustas.</l>
 						<l n="873">Cum volet, illa dies, quae nil nisi corporis huius</l>
 						<l n="874">ius habet, incerti spatium mihi finiat aevi:</l>
