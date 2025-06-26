@@ -344,7 +344,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="202">attonitum tanto subitae terrore ruinae</l>
 						<l n="203">humanum genus est totusque perhorruit orbis:</l>
 						<l n="204">nec tibi grata minus pietas, Auguste, tuorum est,</l>
-						<l n="205">quam fuit illa <persName ref="IUP" type="narrative" ana="NA"> </persName>Iovi. Qui postquam voce manuque</l>
+						<l n="205">quam fuit illa <persName ref="IUP" type="narrative" ana="NA">Iovi</persName>. Qui postquam voce manuque</l>
 						<l n="206">murmura conpressit, tenuere silentia cuncti.</l>
 						<l n="207">Substitit ut clamor pressus gravitate regentis,</l>
 						<l n="208"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> hoc iterum sermone silentia rupit:</l>
@@ -7541,7 +7541,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="614">Attonitus tanto miserarum turbine rerum,</l>
 					</sp>
 					<sp who="Aeacus" ana="pers">
-						<l n="615">«Iuppiter o!»</l>
+						<l n="615">«<persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> o!»</l>
 					</sp>
 					<sp who="Aeacus" ana="narr">
 						<l n="615">dixi</l>
