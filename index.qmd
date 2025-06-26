@@ -67,7 +67,7 @@ format:
     toc-background: "#ffffff"
 ---
 
-# Proposition de plan (points clés)
+<!-- # Proposition de plan (points clés) -->
 
 ```{=html}
 <!--## Plan du M1 

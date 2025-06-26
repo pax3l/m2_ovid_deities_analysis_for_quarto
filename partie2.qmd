@@ -1,5 +1,5 @@
 ---
-title: "| Partie 2 : Analyse des réseaux de personnages"
+title: "Partie 2 : Exploration des données : schémas et structures"
 author: "Axelle Penture"
 editor: visual
 bibliography: 

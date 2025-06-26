@@ -1,38 +1,48 @@
 /* Justification du texte pour HTML */
-p {
+/*p {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
     margin-bottom: 1.5em;
 }
+*/
+/* Ajout d'une marge à gauche pour le contenu principal */
+body {
+    margin-right: 25px;
+}
 
-/* Pour les listes */
+/* Sections et sous-sections */
+h1, h2, h3 {
+    margin-right: 25px;
+}
+
+/* Listes */
 ul, ol {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
 }
 
-/* Pour les notes de bas de page */
+/* Notes de bas de page */
 .footnotes {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
 }
 
-/* Pour les blocs de citation */
+/* Blocs de citation */
 blockquote {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
 }
 
-/* Pour les tableaux */
+/* Tableaux */
 table {
     width: 100%;
 }
 
-/* Pour les paragraphes dans les tableaux */
+/* Paragraphes dans les tableaux */
 td p {
     text-align: justify;
     text-justify: inter-word;

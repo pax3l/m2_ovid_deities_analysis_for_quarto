@@ -1,5 +1,5 @@
 ---
-title: "| Partie 3 : Analyse des réseaux de personnages"
+title: "Partie 3 : Interprétation & analyse"
 author: "Axelle Penture"
 editor: visual
 bibliography: 

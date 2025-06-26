@@ -27,9 +27,9 @@ bibliography:
 -->
 
 
-# Constitution du corpus 
+## Constitution du corpus 
 
-## Corpus matériel et numérique : travail de Nadine Rakofsky et dépassement
+### Corpus matériel et numérique : travail de Nadine Rakofsky et dépassement
 
 Le travail numérique que je réalise requiert une vérification du  travail avec un corpus manuscrit. À la question du choix des éditions des *Métamorphoses*, je réponds donc avec les trois ouvrages de la collection des Belles Lettres publiés entre 1965 et 1966, dont le texte fut établi par Georges Lafaye. Ils ont été ma référence de vérification pour l’encodage et mon support d’analyse littéraire pour le présent travail. 
 
@@ -38,31 +38,31 @@ Son fichier prend pour point de départ celui de la [Perseus Digital Library](ht
 
 L’édition présente un encodage de la structure simple, à savoir le découpage des livres et la séparation des épisodes narratifs au sein des livres. Nadine Rakofsky, dans le cadre de ses recherches, y a ajouté le balisage des personnages en tant que narrateur ou personnage de l’action tout au long des quinze livres. Sa base de travail s’est avérée parfaite pour le présent travail, car son encodage permet une analyse de la prise de parole des divinités choisies. De plus, venir enrichir un fichier s’inscrit dans l’esprit de ma recherche qui, bien qu’elle s’intéresse uniquement à trois divinités ici, a pour perspective d’ouvrir la voie à une analyse d’un ensemble plus exhaustif des divinités dans les Métamorphoses. Ce texte fait lui-même l’objet d’enrichissements antérieurs à celui de Nadine Rakofsky, en vue d’une amélioration de l’édition numérique proposée sur [Scaife Viewer](https://scaife.perseus.org/). 
 
-## Identification et extraction des mentions divines : pré travail d'encodage 
+### Identification et extraction des mentions divines : pré travail d'encodage 
 
 Avant d’entrer dans le fichier et de modifier le cœur du texte, il me faut déterminer ce que je vais encoder, et comment. Le choix des divinités a été présenté en introduction : je m’attache ici à expliquer quelles mentions de divinités sont encodées et sous quelle forme dois-je pouvoir les appeler dans le fichier XML avec mes scripts R. 
 
 Les mentions des divinités, dans un sens large, se déploient, comme celles des personnages, entre la mention directe et explicite de leur prénom, à celle plus subtile d’un pronom de rappel ou adjectif, dont le sens dépend du contexte dans lequel il est employé. Entre ces deux extrémités se situent diverses périphrases, fréquemment liées à la généalogie (fils de Saturne), ou bien mentionnant simplement la nature du personnage évoqué précédemment (le dieu). Cependant, les *Métamorphoses* sont une œuvre longue, et très riche en personnages, avec environ 270 recensés dans l’index nominum de l’édition Budé. La longueur globale du récit et les enchâssements des épisodes appellent à une clarification constante pour être compris du lecteur, ce qui passe nécessairement par l’emploi régulier de qualificatifs clairs quant aux personnages évoqués. Partant de ce constat et dans le souci pratique du cadre d’un travail de mémoire, j’ai donc fait le choix d’encoder uniquement les mentions de noms propres des divinités et les périphrases les désignants, récurrentes ou non. Les occurrences des noms propres, peu importe leur cas, sont déjà répertoriées par l’édition physique des *Métamorphoses*, dans l’*Index nominum*. Les mentions des périphrases ont été relevées par la lecture suivie du texte, et ont fait l’objet d’une vérification par recherche de mots-clés dans le texte après un premier encodage. 
 
-Pour ce qui est du balisage en lui-même, j’ai d’abord cherché à créer une nouvelle balise qui marquerait de façon explicite la recherche des divinités, sobrement intitulé <deityRole>. Cependant, le processus de création d’une balise est relativement long pour des résultats atteignables avec celles déjà existantes. Je me suis donc finalement tournée vers les possibilités offertes par la balise `<persname>`, qui propose un ensemble d’attributs tout à fait approprié pour mes identifications. Comme elle n’avait pas été utilisée par Nadine Rakofsky, son emploi simplifiait également mon script R pour la future analyse des données.
+Pour ce qui est du balisage en lui-même, j’ai d’abord cherché à créer une nouvelle balise qui marquerait de façon explicite la recherche des divinités, sobrement intitulé `<deityRole>`. Cependant, le processus de création d’une balise est relativement long pour des résultats atteignables avec celles déjà existantes. Je me suis donc finalement tournée vers les possibilités offertes par la balise `<persName>`, qui propose un ensemble d’attributs tout à fait approprié pour mes identifications. Comme elle n’avait pas été utilisée par Nadine Rakofsky, son emploi simplifiait également mon script R pour la future analyse des données.
 
 J’associe à cette balise trois attributs. Le premier attribut, `ref`,  permet d’identifier la divinité dont il est question dans le passage. Les divinités sont identifiées par les trois premières lettres de leur nom latin : « MIN » pour Minerve, « APO » pour Apollon et « IUP » pour Jupiter. Il est aisé de poursuivre cette liste pour n’importe quelle autre divinité. Ensuite, l’attribut `type` qui, selon la définition des [TEI Guidelines](https://www.tei-c.org/release/doc/tei-p5-doc/fr/html/ref-persName.html), « caractérise l'élément en utilisant n'importe quel système ou typologie de classification approprié ». Ici, il y a deux catégories possibles pour cet attribut : soit le passage dans lequel la mention de la divinité apparaît correspond à un passage direct de métamorphose, tel qu’ils ont été établi dans [le découpage réalisé l’an dernier](https://docs.google.com/spreadsheets/d/1n_TWKsEPywmv3aVzptd-_cRNn-tIxXZQ3tHtt0w_TJE/edit?gid=2010180086#gid=2010180086). Les passages correspondants portent l’étiquette ‘metamorphosis’. Tous les autres passages sont par défaut des passages narratifs, donc étiquetés ‘narrative’. Enfin, l’attribut `ana` permet de faire la distinction du rôle tenu par la divinité dans l’action qui se joue autour. L’année précédente, le travail de thèse de Gilles Tronchet [@tronchet_metamorphose_1997]qui distinguait les épisodes et les métamorphoses, retravaillé par moi-même avec la nomination et la délimitation des vers des acteurs, a permis de mettre en évidence les rôles des personnages impliqués des métamorphoses, distinguant les acteurs et les objets. Aussi, cet attribut peut accueillir quatre informations :
 
-* ‘act’, qui désigne le rôle d’acteur de la métamorphose qui se joue; 
-* ‘obj’, qui désigne le rôle d’objet de la métamorphose qui se joue;
-* ‘auto’, qui désigne le cas où la divinité est à la actrice et objet d’une métamorphose, c’est-à-dire qu’elle se transforme elle-même, ce qui est cas courant chez les dieux; 
-* ‘NA’, désigne les cas où le nom de la divinité est employé à des fins qui ne correspondent à aucun des cas cités précédemment.
+* `act`, qui désigne le rôle d’acteur de la métamorphose qui se joue; 
+* `obj`, qui désigne le rôle d’objet de la métamorphose qui se joue;
+* `auto`, qui désigne le cas où la divinité est à la actrice et objet d’une métamorphose, c’est-à-dire qu’elle se transforme elle-même, ce qui est cas courant chez les dieux; 
+* `NA`, désigne les cas où le nom de la divinité est employé à des fins qui ne correspondent à aucun des cas cités précédemment.
 
-Avec ces trois attributs, j’ai balisé 337 occurrences avec la balise `<persname>` sur l’ensemble des quinze livres des Métamorphoses.
+Avec ces trois attributs, j’ai balisé 337 occurrences avec la balise `<persName>` sur l’ensemble des quinze livres des Métamorphoses.
 
-## Critères et limites méthodologiques
+### Critères et limites méthodologiques
 
 Le choix des critères a reposé sur mes questions directrices, mais aussi sur mon travail précédent. Dans la mesure où la délimitation des épisodes, des espaces de métamorphoses, des acteurs et des objets, pour ne citer que ces éléments, ont été réalisé l'année précédente, j’avais à ma disposition beaucoup d’éléments pour penser à un encodage plus direct dans le texte en vue d’une visualisation globale. Il s’agissait ici de croiser ces éléments déjà connus avec ceux, plus propres à la question du travail de mémoire, des mentions de divinités. 
 
 Le choix restreint des mentions de noms propres et périphrases, mais surtout de l’exclusion des pronoms de rappel et des pronoms adjectifs est principalement dû aux contraintes de temps. La recherche de cohérence et de clarté évoquée précédemment, le travail préalable sur les épisodes ainsi que l’existence préalable d’index des noms propres réduisaient la quantité d’oubli majeur potentiel. De plus, une partie de ma réflexion cherche à proposer une méthode de travail sur le texte, qui a pour vocation de s’étendre à d’autres divinités et à préciser les filtres de lecture à appliquer autant aux éléments choisis qu’à l’ensemble du texte. 
 
 Avant même de commencer à encoder le texte, grâce à un coup d'œil aux données et de par les critères choisis, je m’attends à rencontrer des mentions d’acteurs hors des épisodes à proprement parler de métamorphoses. Le problème est résolu dès qu’il est possible d’établir un lien logique clair entre la mention de la divinité, qu’elle soit antérieure ou postérieure, et l’épisode. Le lien logique est manifeste, que ce soit par l’emploi d’un pronom de rappel, d’un pronom adjectif, ou par la logique narrative de l’épisode.  
-Un cas simple pour illustrer cette situation est celui de Jupiter lorsqu’il transforme les fourmis d’Égine en hommes à la demande d'Éaque, au livre VII. La métamorphose est spécifiquement décrite dans les vers 639 à 642. Jupiter est mentionné depuis le début du passage narratif, que l’on considère qu’il commence au vers 453, (selon le fichier numérique), au vers 518 (selon le découpage de Gilles Tronchet) ou au vers 614 (selon le découpage des épisodes de Georges Lafaye). Il est interpellé dans des contextes qui n’appellent pas de performance de sa part, et ces mentions sont dans ce cas rattachés à une fonction narrative. Ce n’est que sa mention au vers 627, dans une prière très précise d’Éaque concernant les fourmis (« *Totidem, pater optime, » dixit,/ « Tu mihi da ciues et inania moenia supple.* »)[^note1] que la périphrase *pater optime* est encodée comme mention d’un acteur de la métamorphose qui se joue par la suite. À l’inverse, une de ses mentions précédentes, à savoir « *Iuppiter o!* » au vers 615, est elle encodée avec une analyse ‘NA’, car son invocation ici n’appelle ni ne provoque aucune métamorphose. 
+Un cas simple pour illustrer cette situation est celui de Jupiter lorsqu’il transforme les fourmis d’Égine en hommes à la demande d'Éaque, au livre VII. La métamorphose est spécifiquement décrite dans les vers 639 à 642. Jupiter est mentionné depuis le début du passage narratif, que l’on considère qu’il commence au vers 453, (selon le fichier numérique), au vers 518 (selon le découpage de Gilles Tronchet) ou au vers 614 (selon le découpage des épisodes de Georges Lafaye). Il est interpellé dans des contextes qui n’appellent pas de performance de sa part, et ces mentions sont dans ce cas rattachés à une fonction narrative. Ce n’est que sa mention au vers 627, dans une prière très précise d’Éaque concernant les fourmis (« *Totidem, pater optime, » dixit,/ « Tu mihi da ciues et inania moenia supple.* »)[^note1] que la périphrase *pater optime* est encodée comme mention d’un acteur de la métamorphose qui se joue par la suite. À l’inverse, une de ses mentions précédentes, à savoir « *Iuppiter o!* » au vers 615, est elle encodée avec une analyse `NA`, car son invocation ici n’appelle ni ne provoque aucune métamorphose. 
 
 Ces décisions voient naître des difficultés et surtout créent des limites dans le processus de travail. La première difficulté réside dans la polymorphie des personnages divins : Minerve, Apollon et Jupiter peuvent apparaître sous forme d’allégorie, de divinité active, ou être nommés par leurs épithètes. L’encodage vise donc à homogénéiser les occurrences pour chaque entité tout en préservant les niveaux d’interprétation. Le choix des mentions encodées apporte une limite d’exhaustivité à un tel balayage du texte. 
 Une seconde difficulté est celle du remplacement des mentions dans le contexte narratif. Comme évoqué dans l’exemple ci-dessus, les délimitations des épisodes sont différentes entre l'édition numérique, l’édition de Georges Lafaye et le travail de Gilles Tronchet, qui servent toutes des objectifs différents. Ainsi, replacer la mention dans un contexte narratif large, à l’échelle de l’épisode ou du sous-épisode est complexe entre éditions différentes. Le choix du contexte avec l’attribut `type` s’est avéré le plus simple, bien qu’il restreigne la remise en contexte de la mention. 
@@ -70,8 +70,8 @@ Une seconde difficulté est celle du remplacement des mentions dans le contexte 
 [^note1]: Ajoute la traduction de Marie Cosnay.
 
 
-# Méthodologies d'analyses 
-## Analyse de répartition et approches quantitatives en humanités numériques
+## Méthodologies d'analyses 
+### Analyse de répartition et approches quantitatives en humanités numériques
 
 L’analyse de répartition constitue une méthode exploratoire et descriptive, visant à cartographier la présence, la fonction et l’évolution d’entités (ici, Minerve, Jupiter, Apollon) dans un corpus. Historiquement développée en linguistique de corpus, elle s’étend aujourd’hui aux humanités numériques pour suivre non seulement où apparaissent les entités, mais aussi comment et en quelles proportions.
 
@@ -81,7 +81,7 @@ Les trois dimensions d'investigation sont les suivantes :
 *   Le contexte narratif, à travers l’attribut TEI `type`, qui replace la mention dans un contexte soit narratif soit de métamorphose.
 *   La valeur interprétative, à travers `ana`, qui permet de préciser le degré d’analyse interprétative (‘act’, ‘obj’, ‘auto’ ou ‘NA’).
 
-La méthode s'appuie sur un encodage XML-TEI conforme aux standards @consortium_tei_nodate, reposant sur le marquage <persName …> avec les trois attributs clés décrits en amont :
+La méthode s'appuie sur un encodage XML-TEI conforme aux standards @consortium_tei_nodate, reposant sur le marquage `<persName>` avec les trois attributs clés décrits en amont :
 
 *   `ref`, qui pointe vers une fiche unique dans la personography ; 
 *   `type`, qui décrit le cadre au sein de l’épisode ; 
@@ -101,7 +101,6 @@ Ce format permet de générer une base de données pour chaque occurrence, struc
 
 * le type d'intervention, soit la valeur ‘ana’.
 
-
 Cette systématisation ouvre la voie à des analyses croisées fines (par exemple le rôle vs segment narratif), complexe si ce n’est impossible sans encodage standardisé.
 
 ## Visualisation des répartitions : outils, formats et éclairages
@@ -116,7 +115,7 @@ Enfin, des matrices de co-occurrence croisant les annotations `ana` (fonction) e
 
 L’ensemble de ces visualisations vise à constituer, pour chaque divinité, une carte narrative articulant position dans le récit, fonction, et contexte d’intervention. Ce dispositif relève d’une approche de *data storytelling* narratif, telle que définie par Segel et Heer (@segel_narrative_2010), qui associe rigueur quantitative et lecture interprétative. Il permet ainsi d’explorer la trajectoire des dieux et déesses dans le poème non seulement comme présence textuelle, mais aussi comme entité signifiante à part entière dans l’économie du récit ovidien.
 
-## Perspectives critiques et transdisciplinaires
+### Perspectives critiques et transdisciplinaires
 
 L’analyse de répartition, sans recourir à une modélisation en graphe, permet de caractériser quantitativement la présence narrative. Elle s’inscrit pleinement dans les approches macroscopiques des humanités numériques (@moretti_graphs_2007, p. 53)[^note2] (@jockers_macroana_2_2013). Elle entre en dialogue avec :
 
@@ -126,12 +125,11 @@ L’analyse de répartition, sans recourir à une modélisation en graphe, perme
 
 * l’édition critique augmentée (@babeu_rome_2011; @driscoll_digital_2016), où l’encodage TEI dynamise la critique textuelle.
 
-
 Cette méthode est particulièrement pertinente lorsque l’encodage des interactions est incomplet : elle valorise les attributs descriptifs (`ref`, `type`, `ana`), qui sont disponibles même en absence de liens explicites.
 
 [^note2]: “What do literary maps do ... First, they are a good way to prepare a text for analysis. You choose a unit-walks, lawsuits, luxury goods, whatever-find its occurrences, place them in space ... or in other words: you reduce the text to a few elements, and abstract them from the narrative fl.ow, and construct a new, artificial object like the maps that I have been discussing. And with a little luck, these maps will be more than the sum of their parts: they will possess 'emerging' qualities, which were not visible at the lower level.” @moretti_graphs_2007 p.53 
 
-## Cadre technique et reproductibilité 
+### Cadre technique et reproductibilité 
 
 L’exploitation des données encodées en XML-TEI repose sur un pipeline structuré, conçu pour extraire, analyser et visualiser les occurrences de divinités dans les Métamorphoses d’Ovide selon des critères narratifs et interprétatifs. Ce processus garantit la traçabilité des opérations et la reproductibilité scientifique de l’étude.
 La première étape consiste à parser les fichiers XML à l’aide de la fonction `read_xml()` du package xml2 en environnement R. Combinée aux outils de la suite tidyverse, cette lecture permet d’extraire de manière ciblée les balises `<persName>` comportant les  attributs structurants que `ref`, `type` et `ana`. Chaque balise est associée à son unité narrative de référence, qu’il s’agisse d’un livre, d’un épisode ou d’un segment temporel grâce à la numérotation interne. 
@@ -149,7 +147,7 @@ Ces visualisations, loin d’être purement descriptives, constituent un support
 
 Ce pipeline analytique est entièrement consigné dans [un fichier R Markdown](…), documentant chaque étape du traitement : lecture, extraction, nettoyage, structuration, visualisation, interprétation. Cette approche garantit la transparence méthodologique et la répétabilité des résultats, conformément aux standards des humanités numériques. Les scritps d’analyse R sont archivés dans [le dépôt de données Git Hub](https://github.com/pax3l/m2_ovid_deities_analysis_for_quarto) en vue de toute reproductibilité, amélioration et observation sous un encodage mis à jour.
 
-## Navigation dans le texte et ancrage des données : l’édition électronique (EVT) 
+### Navigation dans le texte et ancrage des données : l’édition électronique (EVT) 
 <!--(lien encore non présent!)-->
 Afin d’ancrer les données issues de l’analyse computationnelle dans le texte littéraire lui-même, une édition électronique enrichie a été créée avec l’outil EVT (Edition Visualization Technology). Il s’agit d’une interface web qui permet de consulter le texte encodé (au format TEI-XML), avec un système de navigation par entités et références croisées.
 
@@ -167,7 +165,7 @@ Cette édition vise une double finalité : offrir un outil d’analyse au cherch
 Enfin, cette interface est reliée au dépôt GitHub du projet, qui documente l’ensemble des choix techniques et théoriques. Cette transparence vise la reproductibilité scientifique du travail et encourage une approche collaborative de la recherche en humanités numériques.
 transition : Ces méthodes permettent de dresser des profils quantitatifs des divinités analysées et de comprendre les schémas narratifs dans lesquels elles s’insèrent. L’étude des réseaux et de leur structure ouvre alors sur une interprétation qualitative et littéraire, qui sera développée dans les sections suivantes.
 
-# Minerve, Apollon, Jupiter : premiers portraits
+## Minerve, Apollon, Jupiter : premiers portraits
 
 L'analyse moderne des représentations divines en littérature est parcellaire et prend comme base de travail des corpus inégaux. Elle est très souvent recoupée avec l’analyse des rites, des représentations visuelles, souvent statuaires, qui sont au cœur de la pratique des grecs et des romains dans leur rapport aux divinités. Les caractéristiques et attributs de ces divinités se transmettent de façon toujours déclinées mais très similaires depuis la Grèce archaïque jusqu’à la Rome classique. Dans le contexte de l'Empire romain, les divinités occupent une place à la fois symbolique, morale et culturelle. Elles incarnent des principes abstraits, des forces naturelles ou bien des idéaux civiques, tout en restant des figures mythologiques au cœur du récit poétique et philosophique. Les auteurs latins oscillent entre un traitement narratif traditionnel, comme Virgile dans l’*Énéïde* et Ovide lui-même, et une réflexion philosophique sur la nature divine. Ces divinités incarnent des valeurs motrices ou disruptives de la société romaine — sagesse, justice, vengeance, guerre — et justifient ainsi l’ordre du monde, en expliquant des situations politiques ou interrogeant la condition humaine. D’autres auteurs, tels que Cicéron dans le *De Natura Deorum*, ont une approche bien plus critique et rationaliste, et invitent à une lecture plus philosophique de leur existence. Le paysage littéraire confère donc aux divinités une double facette qui témoigne d’une transition dans la population, entre appropriation du patrimoine religieux, hérité de la Grèce antique, et outil d’expression culturel et intellectuel. Cette phase de transition invite à examiner leurs diverses représentations et les différences notables entre les auteurs. Les différentes époques construisent divers portraits des divinités, dont les auteurs se sont fait porteurs de la tradition pour leurs successeurs. Nous ne cherchons pas ici à construire un portrait exhaustif comparé entre les auteurs des figures de divinités, axe de lecture qui manque quelque peu de littérature. Il s'agit plutôt ici de dresser un portrait non exhaustif soulignant les caractéristiques principales des figures divines chez des auteurs classiques, afin d’avoir un point de départ et de comparaison avec les éléments apportés par l’analyse numérique.
 
@@ -175,7 +173,7 @@ Bien que chaque auteur maintienne un rapport personnel au passage de la Républi
 
 Nous nous intéressons donc aux auteurs contemporains d’Ovide, qui participent à l’établissement de l’image des divinités dans la littérature latine de l’époque classique. Parmi eux, Virgile, inspiration presque explicite pour nombreux évènements des Métamorphoses. Nous observons aussi les textes de ces contemporains évidents, tels que Tite-Live, Horace, et Sénèque l’Ancien, malgré un genre littéraire de prédilection différent. Nous n’oublions pas les contemporains également liés par le style élégiaque, comme Horace et Tibulle, ce dernier attestant d’une relation directe avec Ovide dans les textes. L’établissement des portraits est réalisé grâce à des recherches des patronymes latins les plus courants dans les bases de données de la Perseus Digital Library, à travers le nouvel environnement de lecture [Scaife Viewer](https://scaife.perseus.org/).  
 
-## Minerve, stratège fière, protectrice des arts et des techniques
+### Minerve, stratège fière, protectrice des arts et des techniques
 
 Elle est désignée dans le Dictionnaire des noms des divinités de Michel Mathieu-Colas (@mathieu-colas_dictionnaire_nodate), sous son avatar le plus simple comme la « déesse de la pensée, des lettres et des arts; protectrice des corporations et des métiers ». Sa variante grec, Athéna, y ajoute « des sciences ». Ses occurrences ne sont pas très nombreuses chez les contemporains d’Ovide. Elle semble régulièrement mentionnée parmi d’autres divinités, en description de lieux lui rendant hommage, ou invoquée dans un appel à la protection des arts, aux lettres, à la raison. Dans l’Hymne homérique à Athéna, c’est son caractère de protectrice de la ville, et ses capacités guerrières qui sont soulignées, avec un parallèle à Arès. Chez Virgile, elle est invoqué à travers les caractéristiques précédemment évoquées dans le passage qui mène à la construction des armes d’Énée par Vulcain, d’abord simplement pour évoquer les travaux manuels des femmes (*cui tolerare colo uitam tenuique Minerua/impositum,* […], 8, 409-410)[^note1.2], puis pour insister sur son caractère guerrier à travers le rappel de son histoire avec la Gorgone (*aegidaque horriferam, turbatae Palladis arma,/certatim squamis serpentum auroque polibant/conexosque anguis ipsamque in pectore diuae/Gorgona, desecto uertentem lumina collo.*)[^note3]. Les autres auteurs élégiaques la mentionnent peu, et de façon peu significative. Tite-Live la mentionne dans au moins 20 passages différents du *Ab urbe condita*, souvent à côté d’une mention de Jupiter. Elle y est présentée comme la déesse des nombres (*eum clavum, quia rarae per ea tempora litterae erant, notam numeri annorum fuisse ferunt eoque Minervae templo dicatam legem, quia numerus Minervae sit.*)[^note4], mais le plus souvent associée à la triade capitoline, avec Jupiter et Junon, et dans le cadre de mentions à des rites, des offrandes ou des sacrifices, notamment à l'évocation des Quinquatries  au livre XXVII. La déesse, dans un ensemble de mentions qui prennent peu le temps de la description, se présente comme gardienne des techniques, des sujets de pensée, et accessoirement renfort de la stratégie guerrière. 
 
@@ -183,13 +181,13 @@ Elle est désignée dans le Dictionnaire des noms des divinités de Michel Mathi
 [^note3]: trad. à placer L'*Énéide*, ?
 [^note4]: trad. de Scaife *Ab urbe condita* 7.3.6
 
-## Apollon, amoureux transit des arts et des mortels
+### Apollon, amoureux transit des arts et des mortels
 
 Le même dictionnaire(@mathieu-colas_dictionnaire_nodate) nous livre une description d’Apollon comme le « dieu de la lumière de la beauté et des arts ». Ses variations Phoebus et Phébus le lient plus explicitement au Soleil. On retrouve directement des mentions du Soleil, Hélios, dans des récits de toute nature, cosmogoniques (*Théogonie*) ou encore pastoraux (*Les Bucoliques*), mais aussi dans des cadres épiques, des contextes de guerre ou de conflits. Apollon y est alors associé à la Pythie, sa dévouée prêtresse au temple de Delphes, connue pour ses oracles décisifs mais souvent sibyllins. Tite-Live, dans un contexte plus historique, le mentionne surtout ce cadre, ou en tous cas dans un contexte religieux ou rituel (*itaque inde consules, ne criminationi locus esset, in prata Flaminia, ubi nunc aedes Apollinis est — iam Apollinare appellabant — , avocavere senatum*)[^note5]. Les auteurs élégiaques le nomment, sans trop de surprise, surtout dans des appels à la protection, à la consécration des arts et à l’inspiration, à côté des Muses. Son rôle est principalement celui d’une divinité protectrice et d’un oracle de référence.
 
 [^note5]: *Ab urbe condita*, III, 63.7
 
-## Jupiter, amant invétéré, père des dieux et des hommes 
+### Jupiter, amant invétéré, père des dieux et des hommes 
 
 Jupiter, dans sa forme latine la plus simple, est décrit par Mathieu-Colas (@mathieu-colas_dictionnaire_nodate) comme le « dieu du Ciel, de la lumière, de la foudre, père et souverain des dieux ». Chez Ovide, il prend ses racines dans le Zeus de l'*Énéide* de Virgile et celui de l'Iliade et l’Odyssée d’Homère, mêlant un autoritarisme solennel et une puissance capricieuse, tantôt bienveillante tantôt destructrice. Le contexte littéraire mais surtout politique d’Ovide lui fait prendre une position plus importante, puisqu’il fait de Jupiter le pendant divin d’Auguste, ce qui est explicitement lisible au livre XV (858–860) : 
 
@@ -201,3 +199,18 @@ Jupiter a fait l’objet d’une analyse très récente dans les œuvres princip
 
 [^note6]: *Métamorphoses* 15, 858–860, trad. de @bakhouche_larchitecture_2019 : « Jupiter règne dans le ciel, la terre obéit à Auguste:  tous deux sont les pères et les souverains de leur empire ».
 [^note7]: Les moyens qu’Ovide emploie pour traiter du souverain de l’Olympe incarnent consciemment les thèmes contrastés et les niveaux de style du poème. placer la citation en notes. *trad. personnelle*
+
+Cette première partie a permis d'établir les fondations méthodologiques nécessaires à une analyse numérique des divinités dans les Métamorphoses d'Ovide. En nous appuyant sur le travail d'encodage XML-TEI préalablement réalisé par Nadine Rakofsky, nous avons développé un protocole d'analyse original qui conjugue rigueur philologique et outils numériques.
+
+L'encodage de 338 occurrences à travers les quinze livres, organisé autour de trois attributs structurants (ref, type, ana), constitue désormais une base de données exploitable pour l'analyse quantitative. Cette systématisation permet de dépasser les approches traditionnelles, souvent fragmentaires, de l'étude des divinités ovidiennes. Les choix méthodologiques opérés — limitation aux noms propres et périphrases, distinction entre contexte narratif et métamorphique, typologie des rôles actantiels — offrent un cadre d'analyse reproductible et extensible à d'autres figures divines.
+
+Les premiers portraits établis révèlent déjà des spécificités intéressantes : Minerve apparaît comme une figure stratégique, protectrice des arts et des techniques ; Apollon se dessine en divinité des arts et un oracle de référence ; Jupiter s'impose comme la figure paternelle ambivalente, oscillant entre autorité souveraine et vulnérabilité conjugale. Ces caractérisations, issues des sources antiques et de la critique moderne, constituent notre socle interprétatif.
+
+L'infrastructure technique mise en place — pipeline d'extraction R, visualisations dynamiques, édition électronique EVT — garantit non seulement la reproductibilité scientifique de notre démarche, mais ouvre également des perspectives de recherche collaborative. Cette approche méthodologique représente un apport significatif aux études ovidiennes, en proposant une alternative aux lectures parcellaires traditionnelles.
+
+Les fondations étant posées, il convient désormais de mettre à l'épreuve notre dispositif d'analyse. Les données encodées vont révéler leurs potentialités heuristiques à travers l'exploration systématique des répartitions, des fréquences et des contextes d'apparition de nos trois divinités.
+
+La partie suivante procédera d'abord à une analyse structurelle globale, en établissant les profils quantitatifs de Minerve, Apollon et Jupiter dans l'architecture des *Métamorphoses*. Cette exploration révélera les logiques de distribution narrative, les corrélations entre interventions divines et segments textuels, ainsi que les schémas récurrents qui structurent le récit ovidien grâce à des visualisations spécialisées (graphiques de distribution, heatmaps).
+
+<!--Dans un second temps, l'étude des réseaux relationnels et des interactions permettra de cartographier les dynamiques entre divinités et personnages, d'analyser les co-occurrences et de mesurer la centralité narrative de chaque figure divine. Cette méthodologie d'analyse de réseau, mise en œuvre avec R, constituera la base empirique nécessaire pour comprendre les configurations narratives complexes de l'œuvre.-->
+L'enjeu de cette exploration des données est double : valider empiriquement les portraits divins esquissés et identifier les structures quantitatives qui orienteront l'interprétation littéraire. Les résultats obtenus alimenteront directement la troisième partie, consacrée à la relecture critique des portraits divins et à l'analyse approfondie d'épisodes emblématiques, où données et interprétations dialogueront pour révéler ce que l'approche numérique apporte à la compréhension des *Métamorphoses*.
