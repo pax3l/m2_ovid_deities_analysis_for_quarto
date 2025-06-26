@@ -1,0 +1,40 @@
+/* Justification du texte pour HTML */
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    margin-bottom: 1.5em;
+}
+
+/* Pour les listes */
+ul, ol {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* Pour les notes de bas de page */
+.footnotes {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* Pour les blocs de citation */
+blockquote {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
+
+/* Pour les tableaux */
+table {
+    width: 100%;
+}
+
+/* Pour les paragraphes dans les tableaux */
+td p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}

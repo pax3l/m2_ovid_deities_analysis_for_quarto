@@ -1,4 +1,11 @@
 ---
-title: "partie2"
+title: "| Partie 2 : Analyse des réseaux de personnages"
+author: "Axelle Penture"
 editor: visual
+bibliography: 
+  - ./bibliographie/bib_memoire_m2_v3.bib
+  - ./bibliographie/oeuvres_antiques.bib
+  - ./bibliographie/ouvrages_articles_scientifiques.bib
+  - ./bibliographie/textes_ovide.bib
+  - ./bibliographie/outils_numeriques.bib
 ---

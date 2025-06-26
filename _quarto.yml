@@ -12,7 +12,6 @@ book:
     - partie3.qmd
     - conclusion.qmd
 
-bibliography: m2_biblio_mémoire_vtest.bib
 csl: chicago-annotated-bibliography.csl # ou autre à voir dans le dépôt GitHub
 execute:
   freeze: auto
@@ -22,6 +21,7 @@ format:
     toc: true
     comments:
       hypothesis: true
+    css: styles.css
   docx: default
   jats: default
   agu-pdf: default
@@ -29,3 +29,30 @@ format:
     toc: true
     number-sections: true
     latex-engine: xelatex
+    include-in-header:
+      text: |
+        \usepackage{ragged2e}
+        \usepackage{setspace}
+        \setlength{\parindent}{1em}
+        \setlength{\parskip}{0.5em}
+        \setlength{\textwidth}{\paperwidth}
+        \addtolength{\textwidth}{-2in}
+        \setlength{\oddsidemargin}{0in}
+        \setlength{\evensidemargin}{0in}
+        \setlength{\textheight}{\paperheight}
+        \addtolength{\textheight}{-2in}
+        \setlength{\topmargin}{0in}
+        \setlength{\headheight}{0in}
+        \setlength{\headsep}{0in}
+        \setlength{\footskip}{0.5in}
+        \setlength{\parindent}{15pt}
+        \setlength{\parskip}{0pt}
+        \setlength{\emergencystretch}{3em}
+        \setlength{\hbadness}{10000}
+        \setlength{\hfuzz}{10pt}
+        \setlength{\tolerance}{10000}
+        \setlength{\pretolerance}{10000}
+        \setlength{\doublehyphendemerits}{10000}
+        \setlength{\finalhyphendemerits}{10000}
+        \raggedbottom
+        \raggedright

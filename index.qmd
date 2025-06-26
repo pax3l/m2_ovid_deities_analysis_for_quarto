@@ -29,7 +29,12 @@ key-points:
   - none
   - none
 date: last-modified
-bibliography: references.bib #for now only a test version, to curate
+bibliography: 
+  - ./bibliographie/bib_memoire_m2_v3.bib
+  - ./bibliographie/oeuvres_antiques.bib
+  - ./bibliographie/ouvrages_articles_scientifiques.bib
+  - ./bibliographie/textes_ovide.bib
+  - ./bibliographie/outils_numeriques.bib
 citation:
   container-title: None
 number-sections: true
