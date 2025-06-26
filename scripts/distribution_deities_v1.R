@@ -1,7 +1,7 @@
 # ---+
 # Distribution des mentions de MIN, APO et IUP dans les Métamorphoses
 # Axelle Penture
-# Version 2.0 - 26.06.2025
+# Version 1.0 - 14.06.2025
 # ---+
 
 #Installation des paquets
@@ -50,15 +50,13 @@ afficher_resultats <- function(repartition, titre = "RÉPARTITION") {
   )
 }
 
-# Fonctions principales
-
-# Fonction pour extraire les données persName avec leurs attributs
+# Extraire les données persName avec leurs attributs
 extrait_persname <- function(ovid_deities) {
   # Recherche de tous les éléments persName avec l'espace de noms TEI
   pers_nodes <- xml_find_all(ovid_deities, ".//tei:persName", ns = tei_ns)
   
   # Extraire les informations de livre pour chaque persName
-  livres <- sapply(pers_nodes, function(node) {
+  livres <- sapply(pers_nodes, function(node) { # l'objet est créé ici
     livre_parent <- xml_find_first(node, "ancestor::tei:div[@type='textpart' and @subtype='book']", ns = tei_ns)
     if (!is.na(livre_parent)) {
       as.numeric(xml_attr(livre_parent, "n"))
@@ -67,115 +65,26 @@ extrait_persname <- function(ovid_deities) {
     }
   })
   
-  # Créer le dataframe avec toutes les informations
+  # Dataframe avec toutes les informations
   data <- data.frame(
     texte = xml_text(pers_nodes),
     ref = xml_attr(pers_nodes, "ref"),
     type = xml_attr(pers_nodes, "type"),
     ana = xml_attr(pers_nodes, "ana"),
-    livre = livres,
+    livre = livres, # donc l'objet existe ici
     stringsAsFactors = FALSE
   )
   
   return(data)
 }
-
-# Fonction pour analyser la répartition selon l'attribut ref
-ana_repartition <- function(data, attribut = "ref", inclure_na = FALSE, filtrer = NULL) {
-  if (!attribut %in% c("ref", "type", "ana")) {
-    stop("L'attribut doit être 'ref', 'type' ou 'ana'")
-  }
-  
-  # Filtrage des NA si demandé
-  if (!inclure_na) {
-    data <- data[!is.na(data[[attribut]]), ]
-  }
-  
-  # Création du tableau de répartition
-  repartition <- data %>%
-    group_by(!!sym("livre"), !!sym(attribut)) %>%
-    summarise(count = n(), .groups = "drop") %>%
-    arrange(!!sym("livre"), !!sym(attribut))
-  
-  # Filtrer les résultats si un attribut spécifique est demandé
-  if (!is.null(filtrer)) {
-    repartition <- repartition %>%
-      filter(!!sym(attribut) == filtrer)
-  }
-  
-  return(repartition)
-}
-
-# Fonction pour afficher les résultats
-afficher_resultats <- function(repartition, titre) {
-  cat("\n===", titre, "===\n")
-  print(repartition)
-}
-
-# Fonction pour visualiser la répartition
-ggplot2::theme_set(ggplot2::theme_minimal())
-
-vis_repartition_type <- function(repartition, attribut) {
-  couleurs <- c("#FF9A5C", "#CC7A93") 
-  p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut))) +
-    geom_col(position = "fill") +
-    scale_fill_manual(values = couleurs) +
-    labs(title = paste("Répartition des", attribut, "par livres"),
-         x = "Livre",
-         y = "Proportion",
-         fill = attribut) +
-    theme(
-      axis.title.x = element_text(size = 12),
-      axis.title.y = element_text(size = 12),
-      plot.title = element_text(size = 14, face = "bold"),
-      legend.title = element_text(size = 12)
-    )
-  
-  return(p)
-}
-
-# Visualiser la répartition des rôles par livres
-vis_repartition_type(repartition_generale_type, "type")
-
-# Fonction pour résumer les données
-resume_general <- function(data) {
-  cat("\n=== RÉSUMÉ GÉNÉRAL ===\n")
-  cat("Nombre total d'occurrences:", nrow(data), "\n")
-  cat("\n=== ATTRIBUTS ===\n")
-  cat("Attribut 'ref' - valeurs uniques:", length(unique(data$ref[!is.na(data$ref)])), "\n")
-  cat("Attribut 'type' - valeurs uniques:", length(unique(data$type[!is.na(data$type)])), "\n")
-  cat("Attribut 'ana' - valeurs uniques:", length(unique(data$ana[!is.na(data$ana)])), "\n")
-}
-resume_general((ovid_deities))
-
-# Fonction pour extraire les résultats d'un attribut spécifique
-extraire_resultats_attribut <- function(data, attribut, valeur) {
-  return(data[data[[attribut]] == valeur, ])
-}
-
-# Extraire les données
 resultats1 <- extrait_persname(ovid_deities)
-head(resultats1)
-
-# Vérifier que le dataframe contient les colonnes nécessaires
-print("Vérification des colonnes du dataframe:")
-print(colnames(resultats1))
+head(resultats1) 
 
 # Analyser la répartition générale pour tous les attributs
-if (exists("resultats1") && is.data.frame(resultats1)) {
-  print("Analyse de la répartition...")
-  repartition_generale <- ana_repartition(resultats1, attribut = "ref")
-  repartition_generale_type <- ana_repartition(resultats1, attribut = "type")
-  repartition_generale_ana <- ana_repartition(resultats1, attribut = "ana")
-  afficher_resultats(repartition_generale, "RÉPARTITION GÉNÉRALE")
-} else {
-  stop("Le dataframe resultats1 n'existe pas ou n'est pas un dataframe")
-}
-afficher_resultats(repartition_generale_type, "RÉPARTITION PAR TYPE")
-afficher_resultats(repartition_generale_ana, "RÉPARTITION PAR ANA")
-
-# Visualiser les répartitions
-vis_repartition_type(repartition_generale_type, "type")
+repartition_generale <- ana_repartition(resultats1, attribut = "ref") # mais n'est pas lu ici
+repartition_generale_type <- ana_repartition(resultats1, attribut = "type") #idem 
+repartition_generale_ana <- ana_repartition(resultats1, attribut = "ana") #idem
+afficher_resultats(repartition_generale, "RÉPARTITION GÉNÉRALE")
 
 # Extraire les résultats pour MIN
 resultats_min <- extraire_resultats_attribut(resultats1, "ref", "MIN")
@@ -315,7 +224,7 @@ vis_repartition_type(repartition_generale, "type")
 # ! Problem while computing aesthetics.
 # ℹ Error occurred in the 1st layer.
 #Caused by error:
- # ! object 'role' not found
+ # ! object 'type' not found
 
 # Visualiser la répartition des analyses
 vis_repartition_ana <- function(repartition) {

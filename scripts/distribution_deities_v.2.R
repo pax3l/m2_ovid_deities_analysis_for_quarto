@@ -1,7 +1,7 @@
 # ---+
 # Distribution des mentions de MIN, APO et IUP dans les Métamorphoses
 # Axelle Penture
-# Version 2.0 - 26.06.2025
+# Version 1.0 - 14.06.2025
 # ---+
 
 #Installation des paquets
@@ -93,9 +93,9 @@ ana_repartition <- function(data, attribut = "ref", inclure_na = FALSE, filtrer 
   
   # Création du tableau de répartition
   repartition <- data %>%
-    group_by(!!sym("livre"), !!sym(attribut)) %>%
+    group_by({{ livre }}, {{ attribut }}) %>%
     summarise(count = n(), .groups = "drop") %>%
-    arrange(!!sym("livre"), !!sym(attribut))
+    arrange(livre, !!sym(attribut))
   
   # Filtrer les résultats si un attribut spécifique est demandé
   if (!is.null(filtrer)) {
@@ -157,20 +157,13 @@ extraire_resultats_attribut <- function(data, attribut, valeur) {
 resultats1 <- extrait_persname(ovid_deities)
 head(resultats1)
 
-# Vérifier que le dataframe contient les colonnes nécessaires
-print("Vérification des colonnes du dataframe:")
-print(colnames(resultats1))
+# Analyser et afficher les répartitions
+repartition_generale <- ana_repartition(resultats1, attribut = "ref")
+repartition_generale_type <- ana_repartition(resultats1, attribut = "type")
+repartition_generale_ana <- ana_repartition(resultats1, attribut = "ana")
 
-# Analyser la répartition générale pour tous les attributs
-if (exists("resultats1") && is.data.frame(resultats1)) {
-  print("Analyse de la répartition...")
-  repartition_generale <- ana_repartition(resultats1, attribut = "ref")
-  repartition_generale_type <- ana_repartition(resultats1, attribut = "type")
-  repartition_generale_ana <- ana_repartition(resultats1, attribut = "ana")
-  afficher_resultats(repartition_generale, "RÉPARTITION GÉNÉRALE")
-} else {
-  stop("Le dataframe resultats1 n'existe pas ou n'est pas un dataframe")
-}
+# Afficher les résultats
+afficher_resultats(repartition_generale, "RÉPARTITION GÉNÉRALE")
 afficher_resultats(repartition_generale_type, "RÉPARTITION PAR TYPE")
 afficher_resultats(repartition_generale_ana, "RÉPARTITION PAR ANA")
 
