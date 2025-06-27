@@ -70,7 +70,6 @@ create_co_occurrence_heatmap <- function(data) {
 
 # Fonction pour analyser la distribution des divinités par livre
 create_deity_book_distribution <- function(data) {
-  # Préparation des données
   # On veut ces colonnes :
   # - ref (divinité)
   # - livre
@@ -112,7 +111,6 @@ create_deity_book_distribution <- function(data) {
 
 # Fonction pour analyser les rôles par divinité
 create_role_by_deity <- function(data) {
-  # Préparation des données
   # On veut ces colonnes :
   # - ref (divinité)
   # - ana (rôle)
