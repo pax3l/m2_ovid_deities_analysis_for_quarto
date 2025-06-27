@@ -14,6 +14,12 @@ author:
     #roles: [Directeur de recherche]
     #affiliations:
       #- Paris Nanterre Université 
+  #- name: Bénédicte Delignon
+    #orcid: 
+    #corresponding: false
+    #roles: [Jury]
+    #affiliations:
+      #- Paris Nanterre Université 
 keywords:
   - Ovide
   - Les Métamorphoses

@@ -123,7 +123,7 @@ L’analyse de répartition, sans recourir à une modélisation en graphe, perme
 
 * l’étude de l’usage des noms propres dans les corpus ;
 
-* l’édition critique augmentée (@babeu_rome_2011; @driscoll_digital_2016), où l’encodage TEI dynamise la critique textuelle.
+* l’édition critique augmentée (@babeu_alison_rome_2011; @driscoll_digital_2016), où l’encodage TEI dynamise la critique textuelle.
 
 Cette méthode est particulièrement pertinente lorsque l’encodage des interactions est incomplet : elle valorise les attributs descriptifs (`ref`, `type`, `ana`), qui sont disponibles même en absence de liens explicites.
 

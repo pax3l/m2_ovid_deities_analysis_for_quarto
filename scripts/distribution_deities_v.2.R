@@ -304,11 +304,6 @@ vis_repartition_type <- function(repartition, attribut) {
   return(p)
 }
 vis_repartition_type(repartition_generale, "type")
-# Error in `geom_col()`:
-# ! Problem while computing aesthetics.
-# ℹ Error occurred in the 1st layer.
-#Caused by error:
- # ! object 'role' not found
 
 # Visualiser la répartition des analyses
 vis_repartition_ana <- function(repartition) {
@@ -337,9 +332,10 @@ vis_repartition_ana <- function(repartition) {
   return(p)
 }
 vis_repartition_ana(repartition_generale, "ana") 
+
 # Error in vis_repartition_ana(repartition_generale, "ana") : 
 # unused argument ("ana")
 
 # Autres essais 
-# vis_repartition_type(repartition_generale_type)  # ne trouve pas l'objet
-# vis_repartition_ana(repartition_generale_ana)  # idem
+vis_repartition_type(repartition_generale_type)  # ne trouve pas l'objet
+vis_repartition_ana(repartition_generale_ana)  # idem

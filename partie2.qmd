@@ -9,3 +9,227 @@ bibliography:
   - ./bibliographie/textes_ovide.bib
   - ./bibliographie/outils_numeriques.bib
 ---
+
+# Partie 2 : Exploration des données : schémas et structures
+
+L'encodage systématique des 338 occurrences divines établi en première partie constitue désormais le socle d'une exploration quantitative approfondie. Cette phase d'investigation empirique vise à révéler les logiques structurelles qui gouvernent la présence de Minerve, Apollon et Jupiter dans l'économie narrative des Métamorphoses. L'analyse procède selon deux axes complémentaires : d'une part, l'établissement de profils quantitatifs globaux qui éclairent la répartition des divinités dans l'architecture de l'œuvre ; d'autre part, l'exploration des dynamiques relationnelles et interactionnelles qui articulent les interventions divines.
+
+Cette exploration des données s'appuie sur les méthodes d'analyse développées précédemment, en mobilisant les potentialités heuristiques de la visualisation quantitative. Les résultats obtenus permettront de valider empiriquement les portraits divins esquissés, tout en révélant des structures narratives inédites qui orienteront l'interprétation littéraire de la troisième partie.
+
+## 1. Analyse structurelle globale : profils quantitatifs des divinités
+
+### 1.1 Statistiques descriptives des divinités dans l'architecture de l'œuvre
+
+L'analyse des fréquences d'apparition constitue le point d'entrée privilégié pour caractériser la présence narrative de chaque divinité. La répartition des 338 occurrences encodées révèle d'emblée des déséquilibres significatifs entre les trois figures étudiées.
+
+```         
+# Chargement des données et calcul des statistiques descriptives générales
+# Répartition globale des occurrences par divinité (ref)
+# Statistiques de base : moyenne, médiane, écart-type par livre
+```
+
+**\[Espace pour interprétation des statistiques générales\]**
+
+La distribution par livre offre un premier éclairage sur les stratégies narratives ovidiennes. Certains livres concentrent massivement les interventions divines, tandis que d'autres semblent privilégier une économie plus discrète du merveilleux.
+
+```         
+# Calcul de la répartition par livre pour chaque divinité
+# Identification des livres à forte/faible densité divine
+# Création du tableau de synthèse des fréquences
+```
+
+**\[Espace pour analyse de la répartition par livre - identification des pics et creux\]**
+
+L'examen des contextes d'apparition, grâce à l'attribut `type`, permet de distinguer les interventions selon leur cadre narratif. La distinction entre passages narratifs et épisodes de métamorphose proprement dits révèle des préférences fonctionnelles distinctes pour chaque divinité.
+
+```         
+# Analyse croisée divinité/type de contexte
+# Calcul des proportions narratif vs métamorphose
+# Tests de significativité des associations
+```
+
+**\[Espace pour interprétation des préférences contextuelles\]**
+
+### 1.2 Corrélations entre livres, épisodes et interventions divines
+
+L'architecture des Métamorphoses, organisée en quinze livres aux thématiques et tonalités variées, invite à examiner les corrélations potentielles entre segments narratifs et profils d'intervention divine. Cette analyse révèle les logiques de composition qui président à la distribution des figures mythologiques.
+
+```         
+# Calcul des corrélations entre présence divine et position dans l'œuvre
+# Analyse des regroupements thématiques par livre
+# Identification des patterns de co-occurrence inter-divinités
+```
+
+**\[Espace pour analyse des corrélations structurelles\]**
+
+L'étude des rôles actantiels, encodés via l'attribut `ana`, précise la nature des interventions divines. La distinction entre acteurs (`act`), objets (`obj`), transformations autonomes (`auto`) et mentions neutres (`NA`) dessine des profils fonctionnels contrastés.
+
+```         
+# Répartition des rôles actantiels par divinité
+# Analyse des combinaisons type/ana les plus fréquentes
+# Calcul des indices de spécialisation fonctionnelle
+```
+
+**\[Espace pour interprétation des profils actantiels\]**
+
+### 1.3 Visualisation des clusters et typologie des épisodes
+
+La représentation graphique des données permet de révéler des structures latentes qui échappent à l'analyse tabulaire. Les techniques de visualisation mobilisées éclairent différents aspects de la présence divine : distribution temporelle, concentration épisodique, et patterns fonctionnels.
+
+#### Graphiques de distribution : cartographie de la présence divine
+
+Les graphiques de densité révèlent la distribution des divinités dans le flux narratif des Métamorphoses. Cette représentation linéaire met en évidence les zones de concentration, les silences narratifs, et les transitions entre différents régimes de présence divine.
+
+```         
+# Création des graphiques de densité par livre et par divinité
+# Superposition des courbes pour comparaison inter-divinités
+# Identification des pics de densité et des zones de silence
+```
+
+**\[Espace pour interprétation des patterns de distribution temporelle\]**
+
+Les diagrammes en barres empilées permettent de comparer les profils fonctionnels des trois divinités. La répartition des rôles actantiels révèle des spécialisations narratives qui confirment ou nuancent les portraits traditionnels.
+
+```         
+# Création des barres empilées pour les rôles actantiels
+# Diagrammes circulaires pour la répartition type/ana
+# Graphiques comparatifs inter-divinités
+```
+
+**\[Espace pour analyse comparative des profils fonctionnels\]**
+
+#### Heatmaps : matrices de co-occurrence et configurations sémantiques
+
+Les cartes de chaleur (heatmaps) visualisent les relations entre différentes dimensions de l'analyse : livres/divinités, rôles/contextes, ou encore co-occurrences inter-divinités. Ces représentations révèlent des associations récurrentes qui orientent l'interprétation.
+
+```         
+# Création des matrices de co-occurrence
+# Heatmap livre/divinité pour identifier les affinités thématiques
+# Heatmap type/ana pour révéler les configurations fonctionnelles dominantes
+```
+
+**\[Espace pour interprétation des matrices de co-occurrence\]**
+
+La représentation en treemap permet de hiérarchiser les combinaisons les plus fréquentes, en révélant l'importance relative des différentes configurations narratives.
+
+```         
+# Treemap des combinaisons divinité/rôle/contexte
+# Identification des configurations dominantes et marginales
+# Analyse des patterns récurrents
+```
+
+**\[Espace pour analyse des hiérarchies fonctionnelles\]**
+
+## 2. Réseaux relationnels et interactions
+
+### 2.1 Méthodologie d'analyse de réseau avec R
+
+L'approche par les réseaux permet d'appréhender les Métamorphoses comme un système d'interactions complexes, où les divinités évoluent au sein d'un tissu relationnel dense. Cette méthodologie, empruntée à la théorie des graphes, révèle des structures relationnelles qui ne sont pas immédiatement visibles dans une lecture linéaire.
+
+La construction des réseaux s'appuie sur l'identification des co-occurrences entre personnages divins au sein des épisodes narratifs. Deux divinités sont considérées comme connectées lorsqu'elles interviennent dans un même segment narratif, qu'il s'agisse d'une interaction directe ou d'une présence simultanée dans l'action.
+
+```         
+# Installation et chargement des packages de réseau (igraph, tidygraph, ggraph)
+# Construction de la matrice d'adjacence basée sur les co-occurrences
+# Création du graphe non-dirigé des interactions divines
+```
+
+**\[Espace pour description de la méthodologie de construction des réseaux\]**
+
+Les métriques de réseau permettent de caractériser quantitativement la position de chaque divinité dans l'écosystème narratif. Trois mesures principales sont mobilisées : le degré (nombre de connexions directes), la centralité de proximité (facilité d'accès aux autres nœuds), et la centralité d'intermédiarité (position de pont entre différentes parties du réseau).
+
+```         
+# Calcul des métriques de centralité pour chaque divinité
+# Identification des nœuds centraux et périphériques
+# Analyse de la structure globale du réseau (densité, modularité)
+```
+
+**\[Espace pour interprétation des métriques de réseau\]**
+
+### 2.2 Cartographie des interactions divines
+
+#### Graphes de co-occurrence : la sociabilité divine
+
+Les graphes de co-occurrence révèlent l'intensité des relations entre divinités, mesurée par la fréquence de leurs apparitions conjointes. Cette approche quantitative de la sociabilité divine complète l'analyse qualitative traditionnelle en révélant des affinités narratives inattendues.
+
+```         
+# Création du graphe pondéré par la fréquence des co-occurrences
+# Visualisation avec ggraph : taille des nœuds proportionnelle au degré
+# Épaisseur des arêtes proportionnelle à la fréquence d'interaction
+```
+
+**\[Espace pour interprétation des patterns de co-occurrence\]**
+
+L'analyse des communautés au sein du réseau permet d'identifier des groupes de divinités partageant des affinités narratives. Ces clusters révèlent des logiques thématiques ou fonctionnelles qui structurent l'univers divin ovidien.
+
+```         
+# Détection des communautés avec l'algorithme de Louvain
+# Visualisation des clusters avec des codes couleur
+# Analyse de la cohésion interne et des ponts inter-communautés
+```
+
+**\[Espace pour analyse des communautés divines\]**
+
+#### Réseaux par livre : évolution des configurations relationnelles
+
+L'examen des réseaux livre par livre révèle l'évolution des configurations relationnelles au fil de l'œuvre. Certains livres privilégient des interactions denses entre un nombre restreint de divinités, tandis que d'autres déploient un réseau plus diffus.
+
+```         
+# Création des sous-réseaux par livre
+# Calcul des métriques d'évolution (densité, centralisation)
+# Identification des livres à forte/faible connectivité divine
+```
+
+**\[Espace pour analyse de l'évolution des réseaux\]**
+
+### 2.3 Centralité et influence narrative
+
+#### Mesures de centralité : hiérarchies et positions structurelles
+
+Les mesures de centralité permettent de hiérarchiser les divinités selon leur importance structurelle dans le réseau narratif. Cette approche quantitative révèle des rapports de force qui peuvent différer des hiérarchies mythologiques traditionnelles.
+
+```         
+# Calcul détaillé des différentes mesures de centralité
+# Classement des divinités selon chaque métrique
+# Analyse des écarts entre centralité mythologique et centralité narrative
+```
+
+**\[Espace pour interprétation des hiérarchies de centralité\]**
+
+La centralité de degré identifie les divinités les plus connectées, révélant leur capacité à intervenir dans des contextes narratifs variés. La centralité d'intermédiarité met en évidence les figures qui assurent la cohésion du réseau en servant de pont entre différents sous-ensembles.
+
+```         
+# Visualisation des centralités avec des graphiques en radar
+# Identification des profils de centralité distinctifs
+# Analyse des rôles structurels (hubs, bridges, périphérie)
+```
+
+**\[Espace pour analyse des rôles structurels\]**
+
+#### Influence narrative et pouvoir dramaturgique
+
+L'influence narrative ne se limite pas à la fréquence d'apparition, mais englobe la capacité d'une divinité à déclencher, orienter ou résoluder l'action. L'analyse croisée des métriques de réseau et des rôles actantiels révèle les mécanismes du pouvoir dramaturgique.
+
+```         
+# Croisement centralité/rôles actantiels
+# Identification des divinités à fort pouvoir dramaturgique
+# Analyse des corrélations entre position structurelle et influence narrative
+```
+
+**\[Espace pour interprétation de l'influence dramaturgique\]**
+
+Les divinités centrales dans le réseau ne sont pas nécessairement celles qui exercent le plus d'influence sur le cours de l'action. Cette dissociation révèle des stratégies narratives subtiles, où certaines figures occupent une position structurelle forte sans pour autant exercer un pouvoir dramaturgique proportionnel.
+
+```         
+# Analyse des dissociations centralité/influence
+# Identification des divinités "effacées" mais structurellement importantes
+# Cartographie des différents types d'influence narrative
+```
+
+**\[Espace pour analyse des dissociations structurelles\]**
+
+------------------------------------------------------------------------
+
+Cette exploration quantitative des données révèle des structures narratives complexes qui échappent à l'analyse traditionnelle. Les profils statistiques des trois divinités confirment certaines intuitions critiques tout en révélant des nuances inattendues. Les réseaux d'interactions dessinent une cartographie relationnelle qui renouvelle la compréhension de l'univers divin ovidien.
+
+Les résultats obtenus constituent désormais le socle empirique nécessaire à l'interprétation littéraire. La troisième partie procédera à la relecture critique des portraits divins, en articulant ces données quantitatives avec l'analyse philologique traditionnelle. Cette synthèse permettra de mesurer l'apport heuristique de l'approche numérique et d'identifier les nouvelles perspectives qu'elle ouvre pour l'étude des Métamorphoses.
