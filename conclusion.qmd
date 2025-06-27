@@ -3,41 +3,10 @@ title: "Conclusion"
 author: "Axelle Penture"
 editor: visual
 bibliography: 
-  - ./bibliographie/bib_memoire_m2_v3.bib
+  - ./bibliographie/bib_memoire_m2_v4.bib
   - ./bibliographie/oeuvres_antiques.bib
   - ./bibliographie/ouvrages_articles_scientifiques.bib
   - ./bibliographie/textes_ovide.bib
   - ./bibliographie/outils_numeriques.bib
 ---
 
-# Conclusion
-
-# Bibliographie
-
-## Éditions des *Métamorphoses* d'Ovide
-
-```{=html}
-<!-- Liste des éditions d'Ovide -->
-<!-- Cette liste sera générée automatiquement à partir du fichier bibliographie/textes_ovide.bib -->
-```
-
-## Oeuvres antiques
-
-```{=html}
-<!-- Liste des œuvres antiques -->
-<!-- Cette liste sera générée automatiquement à partir du fichier bibliographie/oeuvres_antiques.bib -->
-```
-
-## Outils numériques
-
-```{=html}
-<!-- Liste des outils numériques -->
-<!-- Cette liste sera générée automatiquement à partir du fichier bibliographie/outils_numériques.bib -->
-```
-
-## Ouvrages et articles scientifiques
-
-```{=html}
-<!-- Liste des ouvrages et articles scientifiques -->
-<!-- Cette liste sera générée automatiquement à partir du fichier bibliographie/ouvrages_articles_scientifiques.bib -->
-```

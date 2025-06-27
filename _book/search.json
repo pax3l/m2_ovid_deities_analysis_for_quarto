@@ -64,7 +64,7 @@
     "href": "conclusion.html",
     "title": "5  Conclusion",
     "section": "",
-    "text": "6 Conclusion",
+    "text": "6 Bibliographie\n[…]",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -73,8 +73,8 @@
     "objectID": "conclusion.html#éditions-des-métamorphoses-dovide",
     "href": "conclusion.html#éditions-des-métamorphoses-dovide",
     "title": "5  Conclusion",
-    "section": "7.1 Éditions des Métamorphoses d’Ovide",
-    "text": "7.1 Éditions des Métamorphoses d’Ovide",
+    "section": "6.1 Éditions des Métamorphoses d’Ovide",
+    "text": "6.1 Éditions des Métamorphoses d’Ovide",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -83,8 +83,8 @@
     "objectID": "conclusion.html#oeuvres-antiques",
     "href": "conclusion.html#oeuvres-antiques",
     "title": "5  Conclusion",
-    "section": "7.2 Oeuvres antiques",
-    "text": "7.2 Oeuvres antiques",
+    "section": "6.2 Oeuvres antiques",
+    "text": "6.2 Oeuvres antiques",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -93,8 +93,8 @@
     "objectID": "conclusion.html#outils-numériques",
     "href": "conclusion.html#outils-numériques",
     "title": "5  Conclusion",
-    "section": "7.3 Outils numériques",
-    "text": "7.3 Outils numériques",
+    "section": "6.3 Outils numériques",
+    "text": "6.3 Outils numériques",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]
@@ -103,8 +103,48 @@
     "objectID": "conclusion.html#ouvrages-et-articles-scientifiques",
     "href": "conclusion.html#ouvrages-et-articles-scientifiques",
     "title": "5  Conclusion",
-    "section": "7.4 Ouvrages et articles scientifiques",
-    "text": "7.4 Ouvrages et articles scientifiques",
+    "section": "6.4 Ouvrages et articles scientifiques",
+    "text": "6.4 Ouvrages et articles scientifiques\n\n\n\nAttaching package: 'dplyr'\nThe following objects are masked from 'package:stats':\n\n    filter, lag\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\nignoring entry 'ripoll_helene_2012' (line 25) because :\n    A bibentry of bibtype 'Article' has to specify the field: journal\nignoring entry 'tronchet_metamorphose_1997' (line 46) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nignoring entry 'frontisi-ducroux_invention_2009' (line 62) because :\n    A bibentry of bibtype 'Article' has to specify the field: journal\nignoring entry 'fay_a_nodate' (line 80) because :\n    A bibentry of bibtype 'Article' has to specify the fields: journal, year\nErreur lors de la lecture de ./bibliographie/ouvrages_articles_scientifiques.bib : character string is not in a standard unambiguous format\nignoring entry 'noauthor_lysias_nodate' (line 2) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nignoring entry 'noauthor_lysias_nodate-1' (line 9) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nignoring entry 'noauthor_lysias_nodate-2' (line 16) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nErreur lors de la lecture de ./bibliographie/bib_memoire_m2_v3.bib : character string is not in a standard unambiguous format\n12 34 56 78 910 11\n\n\n\n\n\n\n\n\n\n\nLibrary, The Perseus Digital. “Scaife Viewer.” https://scaife.perseus.org/reader/urn:cts:latinLit:phi0630.phi001.perseus-lat1/, 2025Version en ligne.\n\n\nOvide, Georges Lafaye. Les Métamorphoses. Tome i : Livres i-v. Vol. 1. 28. Les Belles Lettres, 2021.\n\n\n———. Les Métamorphoses. Tome II : Livres VI-x. Vol. 2. 47. Les Belles Lettres, 2024.\n\n\nOvide, Georges Lafaye, Henri Le Bonniec. Les Métamorphoses. Tome III : Livres XI-XV. Vol. 3. 58. Les Belles Lettres, 2021.\n\n\nOvide, Marie Cosnay, Pierre Judet de la Combe. Les Métamorphoses. Éditions de l’Ogre, 2017.\n\n\nOvide, Olivier Sers. Les Métamorphoses. Les Belles Lettres, 2022.\n\n\nPenture, Axelle. “Analyse Des Divinités Dans Les Métamorphoses d’ovide.” https://github.com/pax3l/m2_ovid_deities_analysis_for_quarto, 2025Dernière mise à jour : 1970-01-01.\n\n\nTitus Livius, Gaston Baillet, Jean Bayet. Histoire Romaine. Tome III : Livre III. Les Belles Lettres, 2003.\n\n\nTitus Livius, Paul Jal. Histoire Romaine. Tome XVII : Livre XXVII. Les Belles Lettres, 2003.\n\n\nTitus Livius, Raymond Bloch, Jean Bayet. Histoire Romaine. Tome VII : Livre VII. Les Belles Lettres, 2003.\n\n\nVirgile, Jacques Perret. Énéide. Tome II : Livres v-VII. Les Belles Lettres, 2018.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "conclusion.html#footnotes",
+    "href": "conclusion.html#footnotes",
+    "title": "5  Conclusion",
+    "section": "",
+    "text": "Ovide, Les Métamorphoses. Tome i .↩︎\nOvide, Les Métamorphoses. Tome II .↩︎\nOvide, Les Métamorphoses. Tome III .↩︎\nOvide, Les Métamorphoses, 2022.↩︎\nOvide, Les Métamorphoses, 2017.↩︎\nVirgile, Énéide. Tome II .↩︎\nTitus Livius, Histoire Romaine. Tome VII .↩︎\nTitus Livius, Histoire Romaine. Tome XVII .↩︎\nTitus Livius, Histoire Romaine. Tome III .↩︎\nPenture, “Analyse Des Divinités Dans Les Métamorphoses d’ovide”.↩︎\nLibrary, “Scaife Viewer”.↩︎",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "conclusion.html#œuvres-antiques",
+    "href": "conclusion.html#œuvres-antiques",
+    "title": "5  Conclusion",
+    "section": "6.2 Œuvres antiques",
+    "text": "6.2 Œuvres antiques\n\n  Œuvres antiques",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "conclusion.html#outils-numériques-1",
+    "href": "conclusion.html#outils-numériques-1",
+    "title": "5  Conclusion",
+    "section": "6.5 Outils numériques",
+    "text": "6.5 Outils numériques",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
+    ]
+  },
+  {
+    "objectID": "conclusion.html#ouvrages-et-articles-scientifiques-1",
+    "href": "conclusion.html#ouvrages-et-articles-scientifiques-1",
+    "title": "5  Conclusion",
+    "section": "6.6 Ouvrages et articles scientifiques",
+    "text": "6.6 Ouvrages et articles scientifiques\n\n\nignoring entry 'ripoll_helene_2012' (line 25) because :\n    A bibentry of bibtype 'Article' has to specify the field: journal\nignoring entry 'tronchet_metamorphose_1997' (line 46) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nignoring entry 'frontisi-ducroux_invention_2009' (line 62) because :\n    A bibentry of bibtype 'Article' has to specify the field: journal\nignoring entry 'fay_a_nodate' (line 80) because :\n    A bibentry of bibtype 'Article' has to specify the fields: journal, year\nErreur lors de la lecture de ./bibliographie/ouvrages_articles_scientifiques.bib : character string is not in a standard unambiguous format\nignoring entry 'noauthor_lysias_nodate' (line 2) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nignoring entry 'noauthor_lysias_nodate-1' (line 9) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nignoring entry 'noauthor_lysias_nodate-2' (line 16) because :\n    'bibtype' has to be one of Article, Book, Booklet, InBook, InCollection, InProceedings, Manual, MastersThesis, Misc, PhdThesis, Proceedings, TechReport, Unpublished\nErreur lors de la lecture de ./bibliographie/bib_memoire_m2_v3.bib : character string is not in a standard unambiguous format\n1213 1415 1617 1819 2021 22\n\n\n\n\n\n\n\n\n\n\nLibrary, The Perseus Digital. “Scaife Viewer.” https://scaife.perseus.org/reader/urn:cts:latinLit:phi0630.phi001.perseus-lat1/, 2025Version en ligne.\n\n\nOvide, Georges Lafaye. Les Métamorphoses. Tome i : Livres i-v. Vol. 1. 28. Les Belles Lettres, 2021.\n\n\n———. Les Métamorphoses. Tome II : Livres VI-x. Vol. 2. 47. Les Belles Lettres, 2024.\n\n\nOvide, Georges Lafaye, Henri Le Bonniec. Les Métamorphoses. Tome III : Livres XI-XV. Vol. 3. 58. Les Belles Lettres, 2021.\n\n\nOvide, Marie Cosnay, Pierre Judet de la Combe. Les Métamorphoses. Éditions de l’Ogre, 2017.\n\n\nOvide, Olivier Sers. Les Métamorphoses. Les Belles Lettres, 2022.\n\n\nPenture, Axelle. “Analyse Des Divinités Dans Les Métamorphoses d’ovide.” https://github.com/pax3l/m2_ovid_deities_analysis_for_quarto, 2025Dernière mise à jour : 1970-01-01.\n\n\nTitus Livius, Gaston Baillet, Jean Bayet. Histoire Romaine. Tome III : Livre III. Les Belles Lettres, 2003.\n\n\nTitus Livius, Paul Jal. Histoire Romaine. Tome XVII : Livre XXVII. Les Belles Lettres, 2003.\n\n\nTitus Livius, Raymond Bloch, Jean Bayet. Histoire Romaine. Tome VII : Livre VII. Les Belles Lettres, 2003.\n\n\nVirgile, Jacques Perret. Énéide. Tome II : Livres v-VII. Les Belles Lettres, 2018.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Conclusion</span>"
     ]

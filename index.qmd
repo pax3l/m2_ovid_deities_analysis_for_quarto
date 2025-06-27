@@ -30,7 +30,7 @@ key-points:
   - none
 date: last-modified
 bibliography: 
-  - ./bibliographie/bib_memoire_m2_v3.bib
+  - ./bibliographie/bib_memoire_m2_v4.bib
   - ./bibliographie/oeuvres_antiques.bib
   - ./bibliographie/ouvrages_articles_scientifiques.bib
   - ./bibliographie/textes_ovide.bib

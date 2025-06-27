@@ -1,0 +1,12 @@
+---
+title: "Bibliographie"
+format: html
+bibliography: 
+  - ./bibliographie/textes_ovide.bib
+  - ./bibliographie/oeuvres_antiques.bib
+  - ./bibliographie/outils_numeriques.bib
+  - ./bibliographie/bib_memoire_m2_v4.bib
+nocite: |
+  @*
+---
+
