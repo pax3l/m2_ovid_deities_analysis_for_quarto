@@ -4,11 +4,19 @@
 # Version 2.0 - 26.06.2025
 # ---+
 
-#Installation des paquets
-install.packages("xml2")
-install.packages("dplyr")
-install.packages("tidyr")
-install.packages("ggplot2")
+#Pré-instalalltion 
+if (!requireNamespace("xml2", quietly = TRUE)) {
+  install.packages("xml2", repos = "https://cran.rstudio.com")
+}
+if (!requireNamespace("tidyr", quietly = TRUE)) {
+  install.packages("tidyr", repos = "https://cran.rstudio.com")
+}
+if (!requireNamespace("dplyr", quietly = TRUE)) {
+  install.packages("dplyr", repos = "https://cran.rstudio.com")
+}
+if (!requireNamespace("ggplot2", quietly = TRUE)) {
+  install.packages("ggplot2", repos = "https://cran.rstudio.com")
+}
 
 # Chargement des librairies
 library(xml2)
@@ -22,36 +30,81 @@ ovid_deities <- read_xml(
 )
 ovid_deities
 
+
 # Vérifier l'espace de noms
 # Définir l'espace de noms TEI
 tei_ns <- c(tei = "http://www.tei-c.org/ns/1.0")
 
-# Vérifier la structure XML avec l'espace de noms TEI, et le nombre de 
-print(xml_find_all(ovid_deities, ".//tei:persName", ns = tei_ns) %>% length())  
-# Correspond au nombre d'occurrences total en recherche manuelle
+# Toute la vérification pour essayer de trouver 'livre'
+# Vérifier la structure XML avec l'espace de noms TEI
+print("=== Structure du document XML ===")
+cat("Nombre total de persName:", xml_find_all(ovid_deities, ".//tei:persName", ns = tei_ns) %>% length(), "\n")
+
+# Vérifier la structure des livres
+print("\n=== Structure des livres ===")
+print("Livres trouvés avec premier XPath:")
+print(xml_find_all(ovid_deities, "//tei:div[@type='textpart' and @subtype='book']", ns = tei_ns))
+print("Livres trouvés avec second XPath:")
+print(xml_find_all(ovid_deities, "//tei:div[@type='book']", ns = tei_ns))
+
+# Vérifier les attributs des livres
+print("\n=== Vérification des attributs ===")
+livres_nodes <- xml_find_all(ovid_deities, "//tei:div[@type='textpart' and @subtype='book']", ns = tei_ns)
+if (length(livres_nodes) > 0) {
+  print("Attributs du premier livre:")
+  print(xml_attrs(livres_nodes[[1]]))
+} else {
+  print("Aucun livre trouvé avec le premier XPath")
+}
+
+# Vérifier la hiérarchie XML
+print("\n=== Hiérarchie XML ===")
+print("Structure du premier persName:")
+first_pers <- xml_find_first(ovid_deities, ".//tei:persName", ns = tei_ns)
+if (!is.null(first_pers)) {
+  print("Recherche du livre parent avec le premier XPath:")
+  print(xml_find_first(first_pers, ".//ancestor::tei:div[@type='textpart' and @subtype='book']", ns = tei_ns))
+  print("Recherche du livre parent avec le second XPath:")
+  print(xml_find_first(first_pers, ".//ancestor::tei:div[@type='book']", ns = tei_ns))
+} else {
+  print("Aucun persName trouvé")
+}
+# Fin vérification...
 
 # Afficher les résultats
-afficher_resultats <- function(repartition, titre = "RÉPARTITION") {
+afficher_resultats <- function(repartition, titre = "RÉPARTITION", attribut = "ref") {
   cat("\n=== ", titre, " ===\n")
   
   # Nombre total de mentions
   total_mentions <- sum(repartition$count)
   cat("Total mentions:", total_mentions, "\n")
   
-  # Afficher la répartition par livre
-  cat("\nRépartition par livre:\n")
+  # Afficher la répartition avec pourcentage
+  repartition_avec_pourcentage <- repartition %>%
+    mutate(pourcentage = round(count/total_mentions*100, 1)) %>%
+    rename(Attribut = !!sym(attribut))
+  
+  # Afficher en format markdown pour le .qmd
+  cat("\n| Livre | Attribut | Nombre | Pourcentage |\n")
+  cat("|-------|----------|--------|------------|\n")
+  
+  for (i in 1:nrow(repartition_avec_pourcentage)) {
+    row <- repartition_avec_pourcentage[i, ]
+    cat(sprintf("| %s | %s | %d | %.1f%% |\n", 
+               row[["livre"]], 
+               row$Attribut, 
+               row$count, 
+               row$pourcentage))
+  }
+  
+  # Afficher la répartition brute
+  cat("\nRépartition brute:\n")
   print(repartition)
   
-  # Afficher la répartition avec pourcentage
-  print(repartition %>%
-    mutate(pourcentage = round(count/total_mentions*100, 1)) %>%
-    select(livre, attribut, count, pourcentage) %>%
-    rename(Attribut = !!sym(attribut))
-  )
+  return(repartition_avec_pourcentage)
 }
 
 # Fonctions principales
-
 # Fonction pour extraire les données persName avec leurs attributs
 extrait_persname <- function(ovid_deities) {
   # Recherche de tous les éléments persName avec l'espace de noms TEI
@@ -59,11 +112,24 @@ extrait_persname <- function(ovid_deities) {
   
   # Extraire les informations de livre pour chaque persName
   livres <- sapply(pers_nodes, function(node) {
+    # Encore : recherche du livre parent avec plusieurs options XPath
     livre_parent <- xml_find_first(node, "ancestor::tei:div[@type='textpart' and @subtype='book']", ns = tei_ns)
-    if (!is.na(livre_parent)) {
-      as.numeric(xml_attr(livre_parent, "n"))
+    if (!is.null(livre_parent)) {
+      # Vérifier si l'attribut n existe
+      livre_num <- xml_attr(livre_parent, "n")
+      if (!is.null(livre_num)) {
+        as.numeric(livre_num)
+      } else {
+        NA
+      }
     } else {
-      NA
+      # Autre chemin possible 
+      livre_parent2 <- xml_find_first(node, "ancestor::tei:div[@type='book']", ns = tei_ns)
+      if (!is.null(livre_parent2)) {
+        as.numeric(xml_attr(livre_parent2, "n"))
+      } else {
+        NA
+      }
     }
   })
   
@@ -77,13 +143,31 @@ extrait_persname <- function(ovid_deities) {
     stringsAsFactors = FALSE
   )
   
+  # Afficher les colonnes du dataframe
+  print("\n=== Vérification des colonnes du dataframe ===")
+  print(colnames(data))
+  print("\nNombre de lignes avec livre NA:")
+  print(sum(is.na(data$livre)))
+  
+  # Vérifier les valeurs uniques de livre
+  print("\nValeurs uniques de livre:")
+  print(unique(data$livre))
+  
   return(data)
 }
+
+resultats1 <- extrait_persname(ovid_deities)
+head(resultats1)
 
 # Fonction pour analyser la répartition selon l'attribut ref
 ana_repartition <- function(data, attribut = "ref", inclure_na = FALSE, filtrer = NULL) {
   if (!attribut %in% c("ref", "type", "ana")) {
     stop("L'attribut doit être 'ref', 'type' ou 'ana'")
+  }
+  
+  # Vérifier que le dataframe contient les colonnes nécessaires
+  if (!"livre" %in% colnames(data)) {
+    stop("Le dataframe ne contient pas la colonne 'livre'")
   }
   
   # Filtrage des NA si demandé
@@ -93,9 +177,13 @@ ana_repartition <- function(data, attribut = "ref", inclure_na = FALSE, filtrer 
   
   # Création du tableau de répartition
   repartition <- data %>%
-    group_by(!!sym("livre"), !!sym(attribut)) %>%
+    group_by(across(all_of("livre")), across(all_of(attribut))) %>%
     summarise(count = n(), .groups = "drop") %>%
-    arrange(!!sym("livre"), !!sym(attribut))
+    arrange(livre)
+  
+  # Vérifier les colonnes du résultat
+  print("\n=== Vérification des colonnes du résultat ===")
+  print(colnames(repartition))
   
   # Filtrer les résultats si un attribut spécifique est demandé
   if (!is.null(filtrer)) {
@@ -117,7 +205,7 @@ ggplot2::theme_set(ggplot2::theme_minimal())
 
 vis_repartition_type <- function(repartition, attribut) {
   couleurs <- c("#FF9A5C", "#CC7A93") 
-  p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut))) +
+  p <- ggplot(repartition, aes(x = livre, y = count, fill = {{ attribut }})) +
     geom_col(position = "fill") +
     scale_fill_manual(values = couleurs) +
     labs(title = paste("Répartition des", attribut, "par livres"),
@@ -131,35 +219,27 @@ vis_repartition_type <- function(repartition, attribut) {
       legend.title = element_text(size = 12)
     )
   
+  # Sauvegarder le graphique en format PNG pour le .qmd
+  png_filename <- paste0("repartition_", attribut, ".png")
+  ggsave(png_filename, p, width = 10, height = 6, units = "in", path = "images", create.dir = TRUE)
+  
   return(p)
 }
-
-# Visualiser la répartition des rôles par livres
-vis_repartition_type(repartition_generale_type, "type")
 
 # Fonction pour résumer les données
 resume_general <- function(data) {
   cat("\n=== RÉSUMÉ GÉNÉRAL ===\n")
   cat("Nombre total d'occurrences:", nrow(data), "\n")
-  cat("\n=== ATTRIBUTS ===\n")
-  cat("Attribut 'ref' - valeurs uniques:", length(unique(data$ref[!is.na(data$ref)])), "\n")
-  cat("Attribut 'type' - valeurs uniques:", length(unique(data$type[!is.na(data$type)])), "\n")
-  cat("Attribut 'ana' - valeurs uniques:", length(unique(data$ana[!is.na(data$ana)])), "\n")
+  cat("\n=== DIVINITÉS ===\n")
+  cat("\nOccurrences des valeurs de 'ref':\n")
+  print(table(data$ref))
 }
-resume_general((ovid_deities))
+resume_general(resultats1)
 
 # Fonction pour extraire les résultats d'un attribut spécifique
 extraire_resultats_attribut <- function(data, attribut, valeur) {
   return(data[data[[attribut]] == valeur, ])
 }
-
-# Extraire les données
-resultats1 <- extrait_persname(ovid_deities)
-head(resultats1)
-
-# Vérifier que le dataframe contient les colonnes nécessaires
-print("Vérification des colonnes du dataframe:")
-print(colnames(resultats1))
 
 # Analyser la répartition générale pour tous les attributs
 if (exists("resultats1") && is.data.frame(resultats1)) {
@@ -171,11 +251,11 @@ if (exists("resultats1") && is.data.frame(resultats1)) {
 } else {
   stop("Le dataframe resultats1 n'existe pas ou n'est pas un dataframe")
 }
-afficher_resultats(repartition_generale_type, "RÉPARTITION PAR TYPE")
-afficher_resultats(repartition_generale_ana, "RÉPARTITION PAR ANA")
+afficher_resultats(repartition_generale_type, "RÉPARTITION PAR 'TYPE'")
+afficher_resultats(repartition_generale_ana, "RÉPARTITION PAR 'ANA'")
 
-# Visualiser les répartitions
-vis_repartition_type(repartition_generale_type, "type")
+# Visualiser les répartitions 
+print(vis_repartition_type(repartition_generale_type, "type"))
 
 # Extraire les résultats pour MIN
 resultats_min <- extraire_resultats_attribut(resultats1, "ref", "MIN")
@@ -214,7 +294,7 @@ ana_repartition <- function(data, attribut = "ref", inclure_na = FALSE, filtrer 
   
   return(repartition)
 }
-ana_repartition(resultats1, attribut="ref")
+ana_repartition(resultats1, attribut="ref") # Problème de l'objet 'livre' non trouvé...
 
 # Extraire les résultats pour un attribut spécifique
 extraire_resultats_attribut <- function(data, attribut, valeur) {
@@ -247,23 +327,19 @@ resume_general <- function(data) {
   cat("=== RÉSUMÉ GÉNÉRAL ===\n")
   cat("Nombre total de persName:", nrow(data), "\n")
   cat("Nombre de livres:", length(unique(data$livre[!is.na(data$livre)])), "\n")
-  cat("Répartition par livre:\n")
+  cat("Répartition des divinités par livre:\n")
   print(table(data$livre, useNA = "ifany"))
   
-  cat("\n=== ATTRIBUTS ===\n")
-  cat("Attribut 'ref' - valeurs uniques:", length(unique(data$ref[!is.na(data$ref)])), "\n")
-  cat("Attribut 'type' - valeurs uniques:", length(unique(data$type[!is.na(data$type)])), "\n")
-  cat("Attribut 'ana' - valeurs uniques:", length(unique(data$ana[!is.na(data$ana)])), "\n")
 }
 resume_general(resultats1)
 
 # Visualiser la répartition pour les divinités par livres
 vis_repartition <- function(repartition, attribut) {
-  couleurs <- c("#FF1493", "#9370DB", "#0000FF")   
+  couleurs <- c("#FF1493", "#0000FF", "#9370DB")   
   p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut))) +
     geom_col(position = "dodge", color = "black", size = 0.2) +  
     labs(
-      title = paste("Répartition des divinités par livre selon", attribut),
+      title = paste("Répartition des divinités par livre selon l'attribut :", attribut),
       x = "Livre",
       y = "Nombre d'occurrences"
     ) +
@@ -284,6 +360,10 @@ vis_repartition <- function(repartition, attribut) {
   return(p)
 }
 vis_repartition(repartition_generale, "ref")
+print(vis_repartition(repartition_generale, "ref"))
+plot_par_type <- vis_repartition(repartition_generale, "ref")
+ggsave("plots/rep_ref_par_livre.png", plot = plot_par_type, width = 10, height = 6)
+
 
 # Visualiser la répartition des rôles par livres
 vis_repartition_type <- function(repartition, attribut) {
@@ -315,7 +395,8 @@ vis_repartition_type(repartition_generale, "type")
 # ! Problem while computing aesthetics.
 # ℹ Error occurred in the 1st layer.
 #Caused by error:
- # ! object 'role' not found
+ # ! object 'type' not found
+# ça non plus je ne comprends pas pourquoi pas. j'ai fait une erreur initiale en mettant 'role' à la place de 'type', mais j'ai tout remplacé en chercher/remplacer. 
 
 # Visualiser la répartition des analyses
 vis_repartition_ana <- function(repartition) {
