@@ -21,9 +21,9 @@ bibliography:
     -   Mesures de centralité et d'influence
     -   Présentation des résultats avec un outil de navigation dans le texte : édition EVT 
 -   **3. Minerve, Apollon, Jupiter : portraits établis**
-    -   Origine et figure de Minerve chez Ovide 
-    -   Origine et figure d’Apollon chez Ovide
-    -   Origine et figure de Jupiter chez Ovide
+    -   Origine et figure de Minerve  
+    -   Origine et figure d’Apollon 
+    -   Origine et figure de Jupiter 
 -->
 
 

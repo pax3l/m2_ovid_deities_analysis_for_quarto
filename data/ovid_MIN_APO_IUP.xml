@@ -318,7 +318,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="180">caesariem, cum qua terram, mare, sidera movit.</l>
 						<l n="181">Talibus inde modis ora indignantia solvit:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="182">«Non ego pro mundi regno magis anxius illa</l>
 						<l n="183">tempestate fui, qua centum quisque parabat</l>
 						<l n="184">inicere anguipedum captivo bracchia caelo.</l>
@@ -866,21 +866,21 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="587">Viderat a patrio redeuntem <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> illam</l>
 						<l n="588">flumine et</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="588">«o virgo <persName ref="IUP" type="narrative" ana="NA">Iove</persName> digna tuoque beatum</l>
 						<l n="589">nescio quem factura toro, pete»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="589">dixerat</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="589">«umbras</l>
 						<l n="590">altorum nemorum»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="590">(et nemorum monstraverat umbras),</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="591">«dum calet et medio sol est altissimus orbe.</l>
 						<l n="592">Quodsi sola times latebras intrare ferarum,</l>
 						<l n="593">praeside tuta deo nemorum secreta subibis,</l>
@@ -1081,20 +1081,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="733">Coniugis ille suae conplexus colla lacertis,</l>
 						<l n="734">finiat ut poenas tandem, rogat</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="734">«in»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="734">que</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="734">«futurum</l>
 						<l n="735">pone metus»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="735">inquit;</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="735">«numquam tibi causa doloris</l>
 						<l n="736">haec erit:»</l>
 					</sp>
@@ -1685,20 +1685,20 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="421">et pictam posita pharetram cervice premebat.</l>
 						<l n="422"><persName ref="IUP" type="narrative" ana="auto">Iuppiter</persName> ut vidit fessam et custode vacantem,</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="423">«hoc certe furtum coniunx mea nesciet»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="423">inquit,</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="424">«aut si rescierit sunt o sunt iurgia tanti.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="425">Protinus induitur faciem cultumque Dianae</l>
 						<l n="426">atque ait:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="426">«O comitum, virgo, pars una mearum,</l>
 						<l n="427">in quibus es venata iugis?»</l>
 					</sp>
@@ -2321,13 +2321,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="835">linquit et ingreditur iactatis aethera pennis.</l>
 						<l n="836">Sevocat <persName ref="IUP" type="narrative" ana="NA">hunc genitor</persName>. Nec causam fassus amoris</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="837">«fide minister»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="837">ait</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="837">«iussorum, nate, meorum,</l>
 						<l n="838">pelle moram solitoque celer delabere cursu,</l>
 						<l n="839">quaeque tuam matrem tellus a parte sinistra</l>
@@ -2735,13 +2735,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="286">formarat. Rogat illa <persName ref="IUP" type="narrative" ana="NA">Iovem</persName> sine nomine munus.</l>
 						<l n="287">Cui <persName ref="IUP" type="narrative" ana="NA">deus</persName></l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="287">«elige»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="287">ait:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="287">«nullam patiere repulsam.</l>
 						<l n="288">Quoque magis credas, Stygii quoque conscia sunto</l>
 						<l n="289">numina torrentis: timor et deus ille deorum est»</l>
@@ -2789,14 +2789,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="317">seposuisse graves vacuumque agitasse remissos</l>
 						<l n="318">cum Iunone iocos et</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="318">«maior vestra profecto est,</l>
 						<l n="319">quam quae contingit maribus»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="319">dixisse</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="319">«voluptas.»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
@@ -5543,7 +5543,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Calliope" ana="narr">
 						<l n="523"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> excepit:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="523">«Commune est pignus onusque</l>
 						<l n="524">nata mihi tecum. Sed si modo nomina rebus</l>
 						<l n="525">addere vera placet, non hoc iniuria factum,</l>
@@ -8977,7 +8977,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					<sp who="Lelex" ana="narr">
 						<l n="693">dixerunt;</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="693">«vobis inmunibus huius</l>
 						<l n="694">esse mali dabitur. Modo vestra relinquite tecta</l>
 						<l n="695">ac nostros comitate gradus et in ardua montis</l>
@@ -8996,7 +8996,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="705">caelataeque fores adopertaque marmore tellus.</l>
 						<l n="706">Talia tum placido Saturnius edidit ore:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="707">«Dicite, iuste senex et femina coniuge iusto</l>
 						<l n="708">digna, quid optetis.»</l>
 					</sp>
@@ -9632,7 +9632,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="242">Quos ita (sensit enim) laeto <persName ref="IUP" type="narrative" ana="NA">Saturnius</persName> ore</l>
 						<l n="243"><persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> adloquitur:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="243">«Nostra est timor iste voluptas,</l>
 						<l n="244">o superi, totoque libens mihi pectore grator,</l>
 						<l n="245">quod memoris populi dicor <persName ref="IUP" type="narrative" ana="NA">rectorque paterque</persName>,</l>
@@ -9879,13 +9879,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="427">turbida seditio, donec sua <persName ref="IUP" type="narrative" ana="NA">Iuppiter</persName> ora</l>
 						<l n="428">solvit et</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="428">«o nostri siqua est reverentia,»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="428">dixit</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="429">«quo ruitis? Tantumne aliquis sibi posse videtur,</l>
 						<l n="430">fata quoque ut superet? Fatis Iolaus in annos,</l>
 						<l n="431">quos egit, rediit, fatis iuvenescere debent</l>
@@ -11202,13 +11202,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="563">laude pedum formaene bono praestantior esset.</l>
 						<l n="564">Scitanti deus huic de coniuge</l>
 					</sp>
-					<sp who="Apollo" ana="pers">
+					<sp who="Apollo" ana="pers" corresp="APO">
 						<l n="564">«coniuge»</l>
 					</sp>
 					<sp who="Venus" ana="narr">
 						<l n="564">dixit</l>
 					</sp>
-					<sp who="Apollo" ana="pers">
+					<sp who="Apollo" ana="pers" corresp="APO">
 						<l n="565">«nil opus est, Atalanta, tibi: fuge coniugis usum!</l>
 						<l n="566">nec tamen effugies teque ipsa viva carebis.»</l>
 					</sp>
@@ -13558,14 +13558,14 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="600">rara per ignotos spargentem cernit Achivos</l>
 						<l n="601">tela Parim fassusque deum:</l>
 					</sp>
-					<sp who="Apollo" ana="pers">
+					<sp who="Apollo" ana="pers" corresp="APO">
 						<l n="601">«Quid spicula perdis</l>
 						<l n="602">sanguine plebis?»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="602"> ait.</l>
 					</sp>
-					<sp who="Apollo" ana="pers">
+					<sp who="Apollo" ana="pers" corresp="APO">
 						<l n="602">«Siqua est tibi cura tuorum,</l>
 						<l n="603">vertere in Aeaciden caesosque ulciscere fratres!»</l>
 					</sp>
@@ -15849,13 +15849,13 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="593">immotos tenuit placatoque adnuit ore;</l>
 						<l n="594">tum pater</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="594">«estis»</l>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="594">ait</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="594">«caelesti numine digni,</l>
 						<l n="595">quaeque petis, pro quoque petis: cape, nata, quod optas!»</l>
 					</sp>
@@ -16162,7 +16162,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="812">Tu mihi concilio quondam praesente deorum</l>
 						<l n="813">(nam memoro memorique animo pia verba notavi)</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="814">«unus erit, quem tu tolles in caerula caeli»</l>
 					</sp>
 					<sp who="Mars" ana="pers">
@@ -17057,7 +17057,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="636">hanc adyto vocem pavefactaque pectora movit:</l>
 					</sp>
 					<milestone ed="P" unit="para"/>
-					<sp who="Apollo" ana="pers">
+					<sp who="Apollo" ana="pers" corresp="APO">
 						<l n="637">«Quod petis hinc, propiore loco, Romane, petisses,</l>
 						<l n="638">et pete nunc propiore loco! nec <persName ref="APO" type="narrative" ana="NA">Apolline</persName> vobis,</l>
 						<l n="639">qui minuat luctus, opus est, sed <persName ref="APO" type="narrative" ana="NA">Apolline</persName> nato.</l>
@@ -17274,7 +17274,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<milestone ed="P" unit="para"/>
 						<l n="807">Talibus hanc genitor:</l>
 					</sp>
-					<sp who="Iuppiter" ana="pers">
+					<sp who="Iuppiter" ana="pers" corresp="IUP">
 						<l n="807">«Sola insuperabile fatum,</l>
 						<l n="808">nata, movere paras? Intres licet ipsa sororum</l>
 						<l n="809">tecta trium: cernes illic molimine vasto</l>
