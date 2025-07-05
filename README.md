@@ -1,4 +1,4 @@
-# Le rôle des divinités dans les *Métamorphoses* d’Ovide : étude descas de Minerve, Apollon et Jupiter — Mémoire M2 Humanités Classiques et Numériques
+# Le rôle des divinités dans les *Métamorphoses* d’Ovide : étude descas de Minerve, Apollon et Jupiter — Mémoire M2 Humanités classiques et humanités numériques
 
 Bienvenue dans ce dépôt dédié au mémoire de Master 2 consacré à l’analyse des interventions divines dans les *Métamorphoses* d’Ovide, dans une perspective d’encodage XML-TEI et d’analyse quantitative avec R.
 
