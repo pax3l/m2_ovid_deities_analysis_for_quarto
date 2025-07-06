@@ -70,7 +70,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 		</profileDesc>
 
 		<revisionDesc>
-			<change who="apenture" when="2024-08-12"> Added the element deityRole to encode the presence of deities in Book I to XV. Attributes descripted in the ODD document mentionned in TEI element.</change>
+			<change who="apenture" when="2024-08-12"> Added the element persName to encode the presence of deities in Book I to XV. Attributes descripted in the GitHub deposit: https://github.com/pax3l/m2_ovid_deities_analysis_for_quarto/blob/main/README.md.</change>
 			<change who="nrakofsky" when="2022-01-12">Added "ana = arg" tags for argumentative
 				speeches</change>
 			<change who="nrakofsky" when="2022-01-12">Added "sp who" and "ana" tags in Books XI to
@@ -305,7 +305,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 						<l n="167">conciliumque vocat: tenuit mora nulla vocatos.</l>
 						<l n="168">Est via sublimis, caelo manifesta sereno:</l>
 						<l n="169">lactea nomen habet, candore notabilis ipso.</l>
-						<l n="170">Hac iter est superis ad magni tecta Tonantis</l>
+						<l n="170">Hac iter est superis ad <persName ref="IUP" type="narrative" ana="NA">magni</persName> tecta <persName ref="IUP" type="narrative" ana="NA">Tonantis</persName></l>
 						<l n="171">regalemque domum. Dextra laevaque deorum</l>
 						<l n="172">atria nobilium valvis celebrantur apertis</l>
 						<l n="173">(plebs habitat diversa locis): hac parte potentes</l>
@@ -1774,7 +1774,7 @@ schematypens="http://purl.oclc.org/dsdl/schematron"?>
 					</sp>
 					<sp who="Ovid" ana="narr">
 						<l n="465">Cynthia; deque suo iussit secedere coetu.</l>
-						<l n="466">Senserat hoc olim magni matrona Tonantis</l>
+						<l n="466">Senserat hoc olim <persName ref="IUP" type="narrative" ana="NA">magni</persName> matrona <persName ref="IUP" type="narrative" ana="NA">Tonantis</persName></l>
 						<l n="467">distuleratque graves in idonea tempora poenas.</l>
 						<l n="468">Causa morae nulla est, et iam puer Arcas (id ipsum</l>
 						<l n="469">indoluit Iuno) fuerat de paelice natus.</l>
