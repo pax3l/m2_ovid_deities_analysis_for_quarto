@@ -347,7 +347,8 @@ type_croise_all <- ggplot(repartition_relative_all, aes(x = livre, y = freq_rela
     legend.title = element_blank(),
     plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
     strip.text = element_text(face = "bold"),
-    axis.text.x = element_text(angle = 45, hjust = 1)
+    axis.text.x = element_text(angle = 45, hjust = 1), 
+    plot.background = element_rect(color = "black", size = 0.5)
   )
 
 print(type_croise_all)

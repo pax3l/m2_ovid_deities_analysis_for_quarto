@@ -1,235 +1,698 @@
 ---
-title: "Partie 2 : Exploration des données : schémas et structures"
+title: "2. Exploration des données : schémas et structures"
 author: "Axelle Penture"
 editor: visual
-bibliography: 
-  - ./bibliographie/bib_memoire_m2_v4.bib
-  - ./bibliographie/oeuvres_antiques.bib
-  - ./bibliographie/ouvrages_articles_scientifiques.bib
-  - ./bibliographie/textes_ovide.bib
-  - ./bibliographie/outils_numeriques.bib
+bibliography: ./bibliographie/bib_memoire_m2_v5.bib
 ---
 
-# Partie 2 : Exploration des données : schémas et structures
+L'encodage systématique des 338 occurrences divines en première partie constitue désormais les fondations pour une exploration quantitative approfondie. Cette phase d'investigation vise à révéler les logiques structurelles qui gouvernent la présence de Minerve, Apollon et Jupiter dans le déroulé narratif des *Métamorphoses*. L'analyse procède selon deux axes complémentaires : d'une part, l'établissement de profils quantitatifs globaux, qui éclairent l'articulation des interventions divines dans l'architecture de l'œuvre, et d'autre part, l'exploration des spécificités divines à la lumière d'une analyse des réseaux narratifs et d'une analyse lexicale superficielle. Cette exploration des données s'appuie sur les méthodes d'analyse expliquées précédemment, en exploitant les potentialités heuristiques de la visualisation quantitative. Les résultats obtenus permettront de valider empiriquement les portraits divins esquissés, tout en révélant des structures narratives qui orienteront l'interprétation littéraire de la troisième partie.
 
-L'encodage systématique des 338 occurrences divines établi en première partie constitue désormais le socle d'une exploration quantitative approfondie. Cette phase d'investigation empirique vise à révéler les logiques structurelles qui gouvernent la présence de Minerve, Apollon et Jupiter dans l'économie narrative des Métamorphoses. L'analyse procède selon deux axes complémentaires : d'une part, l'établissement de profils quantitatifs globaux qui éclairent la répartition des divinités dans l'architecture de l'œuvre ; d'autre part, l'exploration des dynamiques relationnelles et interactionnelles qui articulent les interventions divines.
+La méthodoologie dans la préparation et la réalisaiton du code s'est voulue efficace par sa simplicité. Ce qu'il résulte de la construction des fichiers `.R` qui permettent les visualisations du présent travail est une méthode qui a choisi la création d'objets précis employés par des fonctions qui exploitent chaque fois un objet particulier. L'ensemble du code dont sont tirées les tableaux et les figures et qui n'est pas reproduit ici pour des raisons de confort de lecture, est disponible en intégralité sur [le dépôt GitHub du mémoire](https://github.com/pax3l/m2_ovid_deities_analysis_for_quarto).
 
-Cette exploration des données s'appuie sur les méthodes d'analyse développées précédemment, en mobilisant les potentialités heuristiques de la visualisation quantitative. Les résultats obtenus permettront de valider empiriquement les portraits divins esquissés, tout en révélant des structures narratives inédites qui orienteront l'interprétation littéraire de la troisième partie.
+## 2.1. Analyse structurelle globale : profils quantitatifs des divinités
 
-## 1. Analyse structurelle globale : profils quantitatifs des divinités
+### 2.1.1. Statistiques descriptives des divinités dans l'architecture de l'œuvre
 
-### 1.1 Statistiques descriptives des divinités dans l'architecture de l'œuvre
+Les statistiques descriptives constituent un ensemble de méthodes qui permettent de résumer, organiser et représenter un ensemble de données de façon intelligible. Elles s’emploient généralement en amont de toute analyse exploratoire préliminaire afin d’observer des tendances, des variations, des fréquences ou des répartitions dans les données, ce qui est précisement notre objectif ici. Ces outils ne visent pas à expliquer exhaustivement ni à prédire des apparitions ou des rôles, mais à fournir une lecture synthétique des phénomènes étudiés, souvent sous forme de tableaux, de diagrammes illustrant des mesures (moyennes, médianes, écarts-types, etc).
 
-L'analyse des fréquences d'apparition constitue le point d'entrée privilégié pour caractériser la présence narrative de chaque divinité. La répartition des 338 occurrences encodées révèle d'emblée des déséquilibres significatifs entre les trois figures étudiées.
+Dans le contexte de ce travail d'analyse numérique, et plus largement dans le cadre des humanités numériques, l’usage des statistiques descriptives est de plus en plus répandu pour mettre en lumière des régularités dans des corpus textuels, visuels, historiques ou culturels. Que ce soit pour observer la répartition des noms propres dans un texte antique, la fréquence d’apparition de motifs stylistiques dans une œuvre littéraire, ou encore la distribution temporelle de correspondances dans une base de données épistolaire, les statistiques descriptives permettent d’objectiver des phénomènes longtemps réservés à l’intuition ou à une lecture experte; elles offrent un moyen de croiser une approche quantitative et une interprétation herméneutique. Un exemple typique d’application serait, dans notre cas, l’analyse de la fréquence d’apparition d’une divinité dans les *Métamorphoses* d’Ovide : grâce aux statistiques descriptives, on peut visualiser dans quels livres ou à quelles positions une figure comme Minerve ou Apollon est la plus présente, ce qui permet de formuler des hypothèses sur la structure narrative ou la portée symbolique du récit.
 
-```         
-# Chargement des données et calcul des statistiques descriptives générales
-# Répartition globale des occurrences par divinité (ref)
-# Statistiques de base : moyenne, médiane, écart-type par livre
+Pour effectuer ce type d’analyse, le language R travaillé dans l'environnement RStudio sont des outils particulièrement adaptés. [R](@R-core) est un langage de programmation spécialisé en statistique et visualisation de données. Il est libre, open-source et largement adopté par la communauté des humanités numériques. [RStudio](@RStudio) quant à lui est un environnement de développement intégré (IDE) qui facilite la rédaction, l’exécution et l’organisation de scripts R. Il permet de gérer des projets, d’exporter facilement des visualisations et d’intégrer ses analyses dans des documents reproductibles comme les fichiers `.rmd` ou `.qmd`. Le présent travail est produit dans un fichier au format Quarto, qui permet la combinaison de texte au format Markdown et la reproduction d'algorithmes et des visualisations qui en découlent depuis des fichiers `.R` .
+
+Pour une exploitation guidée et optimale, les fichiers `.R` nécessitent l'installation de paquets (*packages*) qui sont des ensembles structurés de fonctions, de données et de documentation, conçus pour étendre les capacités de base du langage. Chaque package répond à un besoin ou à un champ d’application particulier, allant des statistiques classiques à l’analyse de texte, en passant par la visualisation de données ou encore l’apprentissage automatique. Un certain nombre de paquets sont disponibles dès le téléchargement du langage, mais la richesse de l’écosystème repose sur des milliers de packages additionnels, accessibles via le [CRAN](https://cran.r-project.org/) (Comprehensive R Archive Network) ou des dépôts GitHub. En statistiques descriptives, plusieurs packages tiennent un rôle fondamental dans le traitement et la manipulation des données en automatisant les calculs de résumés statistiques, en facilitant les manipulations de tableaux de données, ou en produisant des visualisations graphiques. Parmi ceux qui serviront le plus à notre étude, on retrouve, en plus du nécessaire package `xml2` pour la lecture de nos données:
+
+-   **`dplyr`** : Ce *package* du *`tidyverse`* fournit une grammaire intuitive pour la manipulation de données tabulaires. Il simplifie l’utilisation de fonctions essentielles comme `filter()`, `select()`, `summarise()` ou `group_by()`, permettant d’effectuer rapidement des regroupements, moyennes, médianes, fréquences et autres mesures de tendance ou de dispersion.
+
+-   **`ggplot2`** : Également membre du *tidyverse*, ce package propose une approche déclarative et modulaire de la visualisation de données. Il permet de représenter efficacement la distribution des variables par histogrammes, courbes de densité, boîtes à moustaches (*boxplots*), nuages de points, etc., qui sont deséléments fondamentaux de toute analyse descriptive.
+
+-   **`readr`** et **`tidyr`** : Bien qu’indirectement liés aux statistiques, ces deux *packages* facilitent respectivement l’import de données (en .csv, .tsv, etc.) et leur mise en forme (*reshaping*, *tidying*).
+
+L’utilisation conjointe de ces packages dans une logique de traitement reproductible, via un carnet `.qmd`, permet de garantir la transparence méthodologique, la traçabilité des résultats, ainsi qu’une visualisation interprétable des phénomènes observés, notamment en humanités numériques où les corpus peuvent être aussi hétérogènes que massifs. Dans une perspective méthodologique, ce croisement entre les données et l'interprétation s’inscrit dans une approche exploratoire, souvent associée aux *digital scholarship* et aux démarches de *distant reading*[@moretti_conjectures_2000]. Il ne s’agit plus de lire un texte ligne à ligne, mais de le lire à distance, à travers des agrégats et des tendances, qui ouvrent de nouveaux champs d’interprétation.
+
+L'analyse des fréquences d'apparition constitue le point d'entrée privilégié pour caractériser la présence narrative de chaque divinité. La répartition des 338 occurrences encodées révèle d'emblée des déséquilibres significatifs entre les trois figures étudiées. Cette analyse ne saurait être exhaustive de part son caractère quantitif restreint tant au niveau des divinités choisies (uniquement au nombre de trois), qu'au niveau des types de mentions relevées.
+
+```{r}
+#| label: Chargement des données 
+#| echo: false
+#| message: false 
+#| warning: false
+#| include: false 
+
+# Installation du package rmarkdown si nécessaire
+if (!requireNamespace("rmarkdown", quietly = TRUE)) {
+  install.packages("rmarkdown")
+}
+
+if (!requireNamespace("kableExtra", quietly = TRUE)) {
+  install.packages("kableExtra")
+}
+
+library(rmarkdown)
+library(knitr)
+library(kableExtra)
+
+# Chargement du script
+source("scripts/data_deities.R")
+
+# Chargement des données
+ovid_deities <- read_xml(
+  "https://raw.githubusercontent.com/pax3l/m2_ovid_deities_analysis_for_quarto/refs/heads/main/data/ovid_MIN_APO_IUP.xml"
+)
 ```
 
-**\[Espace pour interprétation des statistiques générales\]**
+```{r}
+#| label: Statistiques générales
+#| echo: false
+#| message: false 
+#| warning: false
 
-La distribution par livre offre un premier éclairage sur les stratégies narratives ovidiennes. Certains livres concentrent massivement les interventions divines, tandis que d'autres semblent privilégier une économie plus discrète du merveilleux.
+# Impression des résultats généraux
+knitr::kable(head(resultats1), caption = "Aperçu des données encodées", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
 
-```         
-# Calcul de la répartition par livre pour chaque divinité
-# Identification des livres à forte/faible densité divine
-# Création du tableau de synthèse des fréquences
+# Pour mise en page horizontale
+freq_table <- table(data$livre, useNA = "ifany")
+freq_vector <- as.vector(freq_table)
+names(freq_vector) <- names(freq_table)
+freq_df <- as.data.frame(t(freq_vector))
+
+# Affichage
+kbl(freq_df, caption = "Total des mentions par livre", booktabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"), position = "center")
+
 ```
 
-**\[Espace pour analyse de la répartition par livre - identification des pics et creux\]**
+Le premier tableau `resultats1` présente de façon brute toutes les informations encodées, c'est-à-dire toutes les occurrences encodées avec le texte, la référence de la divinité, le type de récit, l'analyse du rôle et le livre dans lequel on retrouve la mention. Ce tableau servira de base pour les synthèses de données et les représentations visuelles.
 
-L'examen des contextes d'apparition, grâce à l'attribut `type`, permet de distinguer les interventions selon leur cadre narratif. La distinction entre passages narratifs et épisodes de métamorphose proprement dits révèle des préférences fonctionnelles distinctes pour chaque divinité.
+Une simple filtre dans cette base de données permet de voir la répartition chiffrée des apparitions additionnées par livre. Sur les 338 occurrences totales relevées, les livres 1 et 2 concentrent à eux seuls les plus hauts effectifs des mentions (33 et 64 occurrences respectivement), ce qui suggère un rôle particulièrement central des divinités dans les phases initiales du récit. Ce pic d’apparition peut être mis en relation avec la fonction introductive et cosmogonique de ces premiers livres, où les dieux interviennent fréquemment comme agents de transformation, afin de légitimer le principe même de métamorphose qui structure l’ensemble du poème. Le livre 2, en particulier, constitue un sommet narratif avec 64 mentions, qu’on peut associer à une densité d’épisodes mythologiques à forte implication divine, comme ceux consacrés à Phaéton, Callisto ou Actéon.
 
-```         
-# Analyse croisée divinité/type de contexte
-# Calcul des proportions narratif vs métamorphose
-# Tests de significativité des associations
+À l’inverse, un net creux est observable aux livres 8, 14 et particulièrement au livre 12, qui n’enregistre que 4 occurrences. Ces variations esquissent une géographie narrative dans laquelle le rôle des divinités semble progressivement s’effacer, au profit d’un traitement plus humain ou héroïque des récits. Ce mouvement peut être interprété comme une translation de la focale narrative, où les enjeux théogoniques et cosmogoniques initiaux cèdent progressivement la place à des formes d’héroïsation ou de conflits interhumains, notamment dans les livres de la fin, davantage marqués par la guerre et la transformation morale que par l’intervention divine directe. Après ce creux on relève un pic au livre 13 avec 30 occurrences, qui rappelle toutefois que cette tendance n’est pas linéaire, et qu’Ovide joue avec des rythmes de densité divine qui confortent ou contrecarrent les attentes du lecteur.\
+\
+Voici maintenant les statistiques générales autour des divinités.
+
+```{r}
+#| label: Statistiques générales 2 
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: "center"
+
+# Données sommaires de la quantité de mentions des divinités 
+df_ref <- as.data.frame(table(data$ref))
+colnames(df_ref) <- c("ref", "Fréquence")
+
+# Afficher avec kable
+knitr::kable(df_ref, caption = "Total des mentions par des divinités", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
 ```
 
-**\[Espace pour interprétation des préférences contextuelles\]**
+```{r}
+#| label: fig-repartition-ref
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: "center"
+#| fig-cap: "Répartition des divinités par livre selon l'attribut ref"
+#| fig-label: "fig-repartition-ref"
+#| fig-width: 6
+#| fig-height: 3
 
-### 1.2 Corrélations entre livres, épisodes et interventions divines
+# Répartition générale
+print(plot_par_ref)
 
-L'architecture des Métamorphoses, organisée en quinze livres aux thématiques et tonalités variées, invite à examiner les corrélations potentielles entre segments narratifs et profils d'intervention divine. Cette analyse révèle les logiques de composition qui président à la distribution des figures mythologiques.
-
-```         
-# Calcul des corrélations entre présence divine et position dans l'œuvre
-# Analyse des regroupements thématiques par livre
-# Identification des patterns de co-occurrence inter-divinités
 ```
 
-**\[Espace pour analyse des corrélations structurelles\]**
+Sans surprise, il est aisé de dresser un podium des divinités selon leur nombre de mentions, comme le montrent les résultats de le tableau filtré par les fréquences de l'attribut `ref` sur le corpus.
 
-L'étude des rôles actantiels, encodés via l'attribut `ana`, précise la nature des interventions divines. La distinction entre acteurs (`act`), objets (`obj`), transformations autonomes (`auto`) et mentions neutres (`NA`) dessine des profils fonctionnels contrastés.
+L'attention se porte maintenant sur la répartition de ces mentions encodées, ce que vient faire la fonction `ana_repartition`, qui est présente ici directement sous la forme d'un graphique en barres avec @fig-repartition-ref. On y observe la répartition des divinités Apollon (APO), Jupiter (IUP) et Minerve (MIN) selon leur fréquence absolue d’occurrences dans les quinze livres des *Métamorphoses*. Le graphique met en évidence une structuration non uniforme entre les divinités , en accord avec leurs nombre total d'occurrences inégal, leurs rôles potentiels et les tensions narratives qui rythment l’œuvre.\
+\
+On observe d’emblée une forte asymétrie initiale : les livres 1 et 2 concentrent les occurrences les plus élevées pour Jupiter et Apollon, culminant à 20 et 28 mentions respectivement. Ce pic initial, visualisé très nettement dans le graphique par des barres bleues et roses dominantes, correspond aux récits initiateurs du cosmos ovidien, où les dieux masculins exercent un pouvoir absolu, souvent démiurgique ou punitif. Le cas de Minerve, absente au livre 1 et apparaissant subitement 15 fois au livre 2, marque une entrée différée mais significative de la déesse.
 
-```         
-# Répartition des rôles actantiels par divinité
-# Analyse des combinaisons type/ana les plus fréquentes
-# Calcul des indices de spécialisation fonctionnelle
+À partir du livre 4, on observe une redistribution : les barres s’aplanissent légèrement, les écarts se réduisent. Minerve émerge plus régulièrement, et les trois divinités cohabitent dans des proportions plus proches, comme l’indiquent les hauteurs similaires des barres violettes, bleues et roses jusqu'au livre 6. Ce livre en particulier présente un sommet pour Minerve avec 14 occurrences; elle égale presque Apollon et dépasse Jupiter. Ce pic coïncide avec un moment de rééquilibrage narratif, où les conflits entre les mortels et les dieux, illustrés notamment par les épisodes d'Arachné ou encore de Niobé, placent Minerve au centre d’une réflexion sur la justice, l’art et la parole — ce que le graphique souligne par la nette prédominance de la barre violette pour ce livre.
+
+Un basculement s’opère ensuite. D'une focalisaiton divine à une focalisation humaine, les livres 7 à 12 voient une chute générale des occurrences. Minerve devient presque marginale, avec des barres violettes quasi nulles, voire absentes aux livres 9 à 11, tandis que Jupiter et Apollon apparaissent de manière ponctuelle. Au livre 9, Jupiter retrouve un pic notable avec 18 occurrences. Ce moment correspond à des récits comme celui d’Héraclès, où le lien entre humain et divin se fait par héroïsation plus que par intervention divine directe. Le graphique suggère ainsi une forme de retrait divin, où les dieux ne disparaissent pas, mais deviennent des figures secondaires dans des récits centrés sur l’humain ou l’hybride.
+
+Enfin, les livres 13 à 15 montrent une réactivation sélective des puissances divines : Apollon, en particulier, y revient avec une fréquence stable, entre 8 et 10 occurrences, tandis que Jupiter maintient une présence significative mais rtès contrastée, avec près de 20 occurrences au livre 13 pour moins de 3 au livre 14. Quant à Minerve, elle y est quasiment absente (1 ou 2 mentions), comme le montre la quasi-disparition des barres violettes en fin de graphique.
+
+Ce premier croisement entre données statistiques associé à une connaissance des enjeux narratologique de l'oeuvre confirme l'usage différencié des figures divines dans les *Métamorphoses*. Le graphique, en visualisant clairement les pics et creux, confirme que ces fluctuations ne sont pas aléatoires, mais structurent un récit où la transformation ne touche pas seulement les corps, mais les modes d’intervention du divin lui-même.
+
+Avant de se pencher sur les corrélations entre tous les attributs encodés, il s'agit de s'attarder sur les statistiques générales de l'attribut `type`, grâce auquel il est possible d'examiner les contextes d'apparition des divinités selon leur contexte narratif. La distinction entre passages narratifs et épisodes de métamorphose proprement dits pourra révéler des préférences fonctionnelles distinctes pour chaque divinité.
+
+```{r}
+#| label: Coup d'oeil sur 'type' 
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: "center"
+
+# Statistiques générales 
+knitr::kable(head(repartition_type), caption = "Aperçu des données pour l'attribut type", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
+summary_stats <- repartition_type %>%
+  group_by(!!sym(attribut_type)) %>%
+  summarise(
+    mean_count = mean(count),
+    sd_count = sd(count),
+    min_count = min(count),
+    max_count = max(count),
+    median_count = median(count),
+    n_obs = n(),
+    .groups = "drop"
+  )
+
+knitr::kable(summary_stats, caption = "Statistiques descriptives pour l'attribut type", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
 ```
 
-**\[Espace pour interprétation des profils actantiels\]**
+```{r}
+#| label: fig-repartition-type 
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: "center"
+#| fig-cap: "Proportion des contextes narratifs par livre"
+#| fig-label: "fig-repartition-type"
 
-### 1.3 Visualisation des clusters et typologie des épisodes
+# Analyse croisée divinité/type générale
+vis_repartition_type(repartition_type, "type")
 
-La représentation graphique des données permet de révéler des structures latentes qui échappent à l'analyse tabulaire. Les techniques de visualisation mobilisées éclairent différents aspects de la présence divine : distribution temporelle, concentration épisodique, et patterns fonctionnels.
-
-#### Graphiques de distribution : cartographie de la présence divine
-
-Les graphiques de densité révèlent la distribution des divinités dans le flux narratif des Métamorphoses. Cette représentation linéaire met en évidence les zones de concentration, les silences narratifs, et les transitions entre différents régimes de présence divine.
-
-```         
-# Création des graphiques de densité par livre et par divinité
-# Superposition des courbes pour comparaison inter-divinités
-# Identification des pics de densité et des zones de silence
 ```
 
-**\[Espace pour interprétation des patterns de distribution temporelle\]**
+Les statistiques descriptives de l'attribut `type` montrent déjà la forte disparité entre les mentions de divinités dans les moments de métamorphose et les moments narratifs.
 
-Les diagrammes en barres empilées permettent de comparer les profils fonctionnels des trois divinités. La répartition des rôles actantiels révèle des spécialisations narratives qui confirment ou nuancent les portraits traditionnels.
+La valeur `metamorphosis` présente une moyenne de 1,4 occurrence, avec un écart-type de 1,35. Cet écart-type relativement proche de la moyenne révèle une variation modérée, suggérant que le nombre d’occurrences est généralement faible mais avec quelques écarts possibles. La faible moyenne est confirmée visuellement par le tableau, qui présente une quantité flgrante de valeurs `narrative`, jusqu'à être la seule présente dans les quatre derniers livres, ainsi qu'au livre 4.
 
-```         
-# Création des barres empilées pour les rôles actantiels
-# Diagrammes circulaires pour la répartition type/ana
-# Graphiques comparatifs inter-divinités
+La valeur `narrative`, avec une moyenne beaucoup plus élevée à 21,1 occurrences, et un écart-type de 13,3, signale par les chiffres ce qui est clairement compréhesible sur le graphe, à savoir la prépondérance générale de ce type.
+
+La comparaison croisée des deux valeurs de `type` souligne donc des profils très distincts : la valeur `narrative` est largement dominante en termes de fréquence, avec une forte dispersion des occurrences, tandis que la valeur `metamorphosis` est rare et plus stable en nombre. Le nombre restreint d'occurrences\
+de `metamorphosis` sous-entend un emploi plus significatif des mentions de divinité. Dans un cadre de l'amélioration des portraits divins cependant, l'étude de ces passages peuvent éclairer d'autres aspect de la construction des figures divines dans les *Métamorphoses*. Une observation des répartitons de ces valeurs selon la divinité concernée se révèle alors de mise. L'analyse de cette partie se concentre principalement sur les informations que les données présentent et apportent pour la compréhension de la strucutre de l'ensemble à travers le rôle des divinités, et non pas exclusivement sur ce que les données disent des divinités, dont des protraits plus précis seront étoffés grâce aux analyses numériques dans un troisième temps.
+
+```{r}
+#| label: Coup d'oeil sur type par divinités APO
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+
+knitr::kable(summary(repartition_type_apo), caption = "Statistiques des contextes narratifs d'APO", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
 ```
 
-**\[Espace pour analyse comparative des profils fonctionnels\]**
+```{r}
+#| label: fig-repartition-type-apo
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion des contextes narratifs par livre pour APO" 
+#| fig-label: "fig-repartition-type-apo"
 
-#### Heatmaps : matrices de co-occurrence et configurations sémantiques
+vis_repartition_type_apo(repartition_type_apo, "type")
+```
 
-Les cartes de chaleur (heatmaps) visualisent les relations entre différentes dimensions de l'analyse : livres/divinités, rôles/contextes, ou encore co-occurrences inter-divinités. Ces représentations révèlent des associations récurrentes qui orientent l'interprétation.
+En écho à la tendance générale, celle d'Apollon est principalement narrative. Sur l’ensemble des quinze livres, 7 font une place significative aux métamorphoses dans les épisodes où il intervient. Les livres 5 à 7 se démarquent particulièrement, avec une répartition presque équilibrée entre les deux types de contextes. Cela suggère que dans ces deux livres, Apollon est associé à des épisodes où une transformation joue un rôle clé. Cela contraste fortement avec les autres livres, notamment les livres 3, 4, 8, 9, et 13 à 15, où la totalité des mentions se fait dans des cadres purement narratifs.
 
-```         
-# Création des matrices de co-occurrence
-# Heatmap livre/divinité pour identifier les affinités thématiques
+```{r}
+#| label: Coup d'oeil sur type par divinités IUP
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+
+knitr::kable(summary(repartition_type_iup), caption = "Statistiques des contextes narratifs d'IUP", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
+```
+
+```{r}
+#| label: fig-repartition-type-iup
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion des contextes narratifs par livre pour IUP" 
+#| fig-label: "fig-repartition-type-iup"
+
+vis_repartition_type_iup(repartition_type_iup, "type")
+```
+
+La figure de Jupiter, dieu souverain et transformateur par excellence, est présent partout et semble ici très majoritairement mobilisée dans des contextes narratifs sans métamorphose, tout comme Apollon. Dans le cadre d'un contexte de métamorphose, il est cependant moins présent que ce dernier tout au long des épisodes, avec seulement six livres présentant des occurrences dans ce contexte, bien que sa moyenne et donc sa répartition soit plus grande (5.3\<4.179). Les valeurs de Jupiter, cependant, de part le troisième quartile (7), semble être moins réparties dans le cadre de métamorphoses que celles d'Apollon. Le **3**e quartile plus élevé chez Apollon suggère que, dans ses livres les plus importants, il est **p**lus narrativement actif que Jupiter.
+
+```{r}
+#| label: Coup d'oeil sur type par divinités MIN
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+
+knitr::kable(summary(repartition_type_min), caption = "Statistiques des contextes narratifs de MIN", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
+```
+
+```{r}
+#| label: fig-repartition-type-min
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion des contextes narratifs par livre pour MIN" 
+#| fig-label: "fig-repartition-type-min"
+
+vis_repartition_type_min(repartition_type_min, "type")
+```
+
+Minerve est la divinité la moins présente des trois, et sa présence narrative confirme la tendance générale. Elle n'est présente au sein d'un épisode de métamorphose que dans trois livres sur les onze où elle est mentionnée, à savoir le livre 2, 6 et 8, ce dernier contenant notamment son épisode avec Dédale et Icare (vers 183-259). Ses valeurs sont encore plus dispersées que celles d'Apollon, comme le suggère la valeur maximale de 13 comparée à la moyenne de 2.818.\
+
+```{r}
+#| label: fig-type-croise-all 
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Fréquences relatives des entités par type dans chaque livre"
+#| fig-label: "fig-type-croise-all"
+#| fig.width: 7
+#| fig.height: 3
+
+print(type_croise_all)
+```
+
+Les profils des divinités se précisent un peu plus à la lecture de cet attribut et de la répartition de ces valeurs dans les livres : Jupiter, la seule divinité parmi les trois présente dans tous les livres, est pourtant moins sollicité dans des épisodes de métamorphose par rapport à Apollon, dont les apparitions globablement moins réparties semblent plus impactantes de ce point de vue. Quant à Minerve, elle est encore plus épisodique dans ses apparitions, autant dans des contextes narratif que de métamorphose. Toutes les divinités confirment la prépondérance des mentions dans des moments narratifs plutôt que de métamorphose.
+
+### 2.1.2. Visualisation des rôles actanctiels
+
+Il s'agit maintenant de réaliser une étude des rôles actantiels, encodés via l'attribut `ana`, qui précisent la nature des interventions divines. La distinction entre les acteurs (`act`), les objets (`obj`), les transformations autonomes (`auto`) et les mentions narratives simples (`NA`) précise les profils divins qui s'esquissent.
+
+```{r}
+#| label: Corrélations livre/ana
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+
+# Corrélations entre livre et ana de façon générale 
+knitr::kable(head(repartition_ana_na), caption = "Aperçu de la répartition des valeurs de l'attribut ana par livre", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+
+```
+
+La valeurs NA sont ici prépondérentes dans l'ensemble des livres, à l'instar de la valeur `narrative` de l'attribut `type`. Dans la majorité de ces cas, ces deux valeurs se retrouvent ensemble autour d'une même mention. Quant à l'absence des valeurs `obj`, elle s'explique simplement par le choix des entités encodées pour ce travail, qui en tant que divinités ne sont jamais de simples objets de métamorphose, si ce n'est de la leur; ils sont alors encodés avec `auto`.
+
+L' analyse des rôles actanctiels se propose de se concentrer sur les mentions actives des divinités, et non leur présence passive. Les prochaines visualisations filtrent donc la présence des valeurs `NA` pour réaliser une analyse entre les moments de métamorphose d'objet et les moments de métamorphose reflexives. Le tableau de données est présenté directement sous sa représentation graphique avec un diagramme en barres empilées, avec puis sans les valeurs `NA`.
+
+```{r}
+#| label: fig-repartition-ana-na
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: center
+#| fig-cap: "Répartition des valeurs de ana par livre"
+#| fig-label: "fig-repartition-ana-na"
+
+# Corrélations entre livre et ana (toutes données)
+vis_repartition_ana_na(repartition_ana_na, "ana")
+```
+
+```{r}
+#| label: fig-repartition-ana
+#| echo: false
+#| message: false
+#| warning: false
+#| fig-align: center
+#| fig-cap: "Répartition des valeurs de ana par livre \n(NA exclu)"
+#| fig-label: "fig-repartition-ana"
+
+# Corrélations entre livre et ana (sans NA)
+vis_repartition_ana(repartition_ana, "ana")
+```
+
+Dans la fenêtre active des divinités, leur action est soit tournée vers un objet, soit tournée vers eux-même. Le premier graphique, avec les valeurs `NA`, permet de remettre en perspective le second, et de souligner l'absence totale d'action de la triade divine aux livres 12 et 15. Les proportions des valeurs `act` et `auto` sont en générale assez faible, de façon assez similaire aux proportions `narrative`/`metamorphosis`. Une concordance n'est toute fois pas automatique, des mentions de divinité en tant qu'acteur pouvant se croiser avec des moments narratifs.
+
+La @fig-repartition-ana relève uniquement les valeurs de moments d'action. Le rôle d'`act` est prépondérant, avec notamment une fréquence de 100% sur cinq des treize livres présents sur le graphe : aux livres 4, 7, 8, 13 et 14. Au sein des livers où elle partage sa place avec `auto`, la proportion d'`act` maintient tout de même une écrasante majorité, sauf au livre 6, durant lequel se déroule notamment la compétition entre Arachné et Minerve, qui retrace toutes les métamorphoses de Jupiter pour séduire de futures partenaires sexuelles. Le rôle d'`auto` est également le seul présent au livre 5, qui retrace le passage de Minerve chez les Muses et leur récit du concours de chant entre elles et les Piérides. C'est avec le détail des répartions par divinité que se lit mieux ce découpage général.
+
+```{r}
+#| label: fig-repartition-ana-apo
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Répartition des valeurs de ana pour APO \n(NA exclu)"
+#| fig-label: "fig-repartition-ana-apo"
+
+# Corrélations entre livre et ana 
+vis_repartition_ana_par_ref_apo(repartition_ana_ref_apo, "APO")
+```
+
+La @fig-repartition-ana-apo indique que la présence d'Apollon en tant qu'acteur est rarement en demi-mesure : quand il est présent dans un livre, soit c'est uniquement pour transformer quelqu'un, comme aux livres 7, 10 et 14, soit uniquement pour se transformer lui-même, comme aux livres 5 et 6. Seul le livre 11 voit une cohabitation inégale des deux rôles, avec la prépondérance du rôle d'acteur.
+
+```{r}
+#| label: fig-repartition-ana-iup
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Répartition des valeurs de ana pour IUP \n(NA exclu)"
+#| fig-label: "fig-repartition_ana_iup"
+
+# Corrélations entre livre et ana 
+vis_repartition_ana_par_ref_iup(repartition_ana_ref_iup, "IUP")
+
+```
+
+Jupiter est lui aussi rarement en demi-teinte : absoluement acteur aux livers 7, 8 et 13, mais absoluement acteur de sa propre métamorphose aux livres 3, 5, 6 et 10. Ses rôles se chevauchent uniquement dans les premiers livres, où il est au centre des épisodes tels que celui de la transformation de Lycaon. Ses interventions réflexives se concentrent dans les premiers livres; le tableau semble confirmer la tendance d'un basculement vers l'humain ou l'hybride, avec un effacement de sa présence même après le livre 10.\
+
+```{r}
+#| label: fig-repartition_ana_min
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Répartition des valeurs de ana pour MIN \n(NA exclu)"
+#| fig-label: "fig-repartition_ana_min"
+
+# Corrélations entre livre et ana 
+vis_repartition_ana_par_ref_min(repartition_ana_ref_min, "MIN")
+
+```
+
+Minerve, quant à elle, ne semble active que dans la première moitié de l'oeuvre, et de façon écrasante en tant qu'actrice de métamorphose. Son seul acte de métamorphose sur elle-même intervient au livre 6, qui correspond à son passage avec Arachné.
+
+### 2.1.3. Corrélations des attributs
+
+Toutes les représentations graphiques des données présentées jusqu'ici cherche à révéler des structures latentes qui échappent à l'analyse tabulaire. Dans cette partie s'engage une lecture croisée des rôles actanciels attribués aux divinités avec les phases narratives des épisodes dans lesquels elles interviennent. Il s'agit d'en examiner les corrélations potentielles dans l'ensemble des quinze livres.
+
+#### 2.1.3.a. Représentation des rôles divins dans les phases narratives
+
+Les attributs ont précisé une première esquisse des portraits divins au sein de la structure des *Métamorphoses*. Une analyse croisée des apparitions tout comme des moments de silences entre les attributs est nécessaire à l'établissement de concordance concrètes entre les résultats. Cette analyse se poursuit avec des digrammes de barre empilées, qui permettent d'observer en vis-à-vis des attributs différents pour un même divinité.
+
+```{r}
+#| label: fig-ana-par-type-apo
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion des valeurs de ana selon type pour APO"
+#| fig-label: "fig-ana-par-type-apo"
+
+vis_ana_par_type_et_livre(data, ref_value = "APO")
+
+```
+
+La distribution des interventions apolliniennes présente un équilibre entier entre les moments de métamorphose directe et les séquences narratives classiques. Cette répartition suggère qu'Apollon occupe une position privilégiée dans l'architecture transformatrice du recueil, intervenant aussi bien comme agent catalyseur des changements que comme figure narrative traditionnelle. Les occurrences 5, 6, 7, 10 et 11 montrent une alternance cohérente entre les deux modalités d'apparition, ce qui confirme le double statut du dieu : à la fois divinité de la métamorphose et personnage intégré aux développements narratifs participants de l'architecture de l'oeuvre.
+
+```{r}
+#| label: fig-ana-par-type-iup
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion des valeurs de ana selon type pour IUP"
+#| fig-label: "fig-ana-par-type-iup"
+
+vis_ana_par_type_et_livre(data, ref_value = "IUP")
+
+```
+
+L'analyse des interventions de Jupiter révèle quant à elle une domination écrasante des moments de métamorphose directe, particulièrement visible dans les occurrences 1, 2, 7, 9 et 13. Cette concentration massive dans les phases transformatrices souligne le rôle fondamental de Jupiter comme « maître des métamorphoses » dans l'univers des *Métamorphoses*. La relative rareté de ses apparitions dans les séquences narratives simples (comme le souligne les occurrences 3, 5, 6, 10) suggère que le roi des dieux intervient principalement lorsque l'ordre cosmique nécessite une transformation radicale. Cette spécialisation métamorphique confirme son statut de divinité suprême, dont la présence signale invariablement l'imminence d'un changement de forme majeur.
+
+```{r}
+#| label: fig-ana-par-type-min
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion des valeurs de ana selon type pour MIN"
+#| fig-label: "fig-ana-par-type-min"
+
+vis_ana_par_type_et_livre(data, ref_value = "MIN")
+
+
+```
+
+Minerve est davantage est une exception narrative, comme il a été vu plus haut. Elle présente une configuration singulière, avec une représentation plus limitée mais révélatrice. Les occurrences 2, 3, 4, 6 et 8 montrent une prédominance des moments de métamorphose directe, mais avec une présence narrative non négligeable. Cette distribution suggère que Minerve intervient de manière plus ciblée, ses apparitions étant généralement liées à des transformations intellectuelles ou artistiques spécifiques. Sa moindre fréquence d'apparition comparée aux deux autres divinités pourrait refléter son rôle plus spécialisé dans les schmas narartifs d'Ovide.
+
+Cette analyse précise la hiérarchisation des interventions divines : Jupiter domine quantitativement et qualitativement les moments de métamorphose directe, confirmant son statut de *deus ex machina* transformateur. Apollon maintient un équilibre entre présence métamorphique et narrative, reflétant sa nature artistique polyvalente. Minerve, enfin, intervient de manière plus ponctuelle mais significative, ses apparitions étant généralement associées à des transformations d'ordre intellectuel ou créatif. Cette répartition différenciée souligne la spécialisation fonctionnelle de chaque divinité dans l'architecture narrative des *Métamorphoses*, où chaque dieu occupe une niche transformatrice spécifique au service de la cohérence poétique d'ensemble.
+
+#### 2.1.3.b. Heatmaps : matrices de co-occurrence et configurations sémantiques
+
+```{r}
+#| label: fig-ana-par-type-heatmap
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Heatmap des valeurs de ana et type par livre"
+#| fig-label: "fig-ana-par-type-heatmap"
+#| fig-width: 7
+#| fig-height: 5
+
+
 # Heatmap type/ana pour révéler les configurations fonctionnelles dominantes
+heatmap_par_livre
+
 ```
 
-**\[Espace pour interprétation des matrices de co-occurrence\]**
+Cette *heatmap* (ou carte de chaleur) révèle des configurations narratives complexes qui éclairent la distribution fonctionnelle des rôles divins à travers la structure des *Métamorphoses*. L'analyse des intersections entre phases narratives, rôles actanciels et progression temporelle de l'œuvre fait apparaître des patterns significatifs dans les variations des moments de transformations chez Ovide.
 
-La représentation en treemap permet de hiérarchiser les combinaisons les plus fréquentes, en révélant l'importance relative des différentes configurations narratives.
+Les livres 1 à 5 présentent une saturation remarquable des moments de métamorphose directe, avec des proportions atteignant systématiquement 75% à 100% pour le rôle d'`act`. Cette concentration initiale rappelle que la première partie de l'œuvre établit les fondements cosmogoniques et étiologiques du monde transformé, où les divinités interviennent massivement comme agents catalyseurs des changements fondamentaux. La quasi-absence de la catégorie `auto` dans ces livres confirme que la transformation y est principalement hétéronome, imposée par une volonté divine extérieure plutôt que choisie par les personnages eux-mêmes.
 
-```         
-# Treemap des combinaisons divinité/rôle/contexte
-# Identification des configurations dominantes et marginales
-# Analyse des patterns récurrents
-```
+À partir du livre 6, on observe une diversification progressive des configurations narratives. Les livres 6 à 10 montrent une alternance plus équilibrée entre moments de métamorphose et séquences narratives classiques, avec l'émergence notable de la catégorie `auto`, particulièrement notable aux livres 8 et 9. Cette évolution structurelle reflète une sophistication croissante de l'univers des *Métamorphoses*, où la transformation devient progressivement plus nuancée, intégrant des motivations personnelles et des dynamiques psychologiques complexes. La présence accrue de la modalité `NA` dans ces livres médians suggère également une maturation narrative où les divinités peuvent intervenir sans déclencher systématiquement des transformations.
 
-**\[Espace pour analyse des hiérarchies fonctionnelles\]**
+Les livres 11 à 15 manifestent un retour partiel à la concentration métamorphique, avec des proportions élevées pour le rôle d'`act`, notamment aux livres 11, 13 et 15. Cette récurrence finale peut s'interpréter comme une circularité compositionnelle, où Ovide revient aux grandes transformations cosmiques et historiques, préparant la conclusion de son œuvre par un retour aux mécanismes transformateurs fondamentaux. La persistance de configurations narratives diversifiées aux livres 12 et 14 témoigne néanmoins de l'héritage structural des livres médians, créant une synthèse entre densité métamorphique et complexité narrative.
 
-## 2. Réseaux relationnels et interactions
+Cette cartographie thermique révèle une architecture tripartite subtile : une première phase d'établissement métamorphique massif (livres 1-5), une phase de complexification et de diversification narrative (livres 6-10), et une phase de synthèse où concentration transformatrice et sophistication narrative coexistent (livres 11-15). Cette structure souligne la maîtrise compositionnelle d'Ovide, qui articule progression thématique et évolution des modalités d'intervention divine pour créer une œuvre à la fois cohérente dans sa logique transformatrice et dynamique dans son développement narratif.
 
-### 2.1 Méthodologie d'analyse de réseau avec R
+## 2.2. Réseaux narratifs et relation au discours
 
-L'approche par les réseaux permet d'appréhender les Métamorphoses comme un système d'interactions complexes, où les divinités évoluent au sein d'un tissu relationnel dense. Cette méthodologie, empruntée à la théorie des graphes, révèle des structures relationnelles qui ne sont pas immédiatement visibles dans une lecture linéaire.
+Dans son encodage du texte d'Ovide avec la perspective de son axe de travail autour au secret, Nadine Rakofvsky a enrichi le texte d'un niveau de lecture propre au discours. Les *Métamrophsoes* sont en effet un ensemble de récit déroulé principalement par un narrateur, Ovide. Mais parfois, le relais du récit est pris par des personnages, tels que les Muses racontant leur concours contre les Piérides au livre 6, ou encore Achéloüs racontant son combat contre Héraclès au livre 9. Elle considère également les passages de discours direct, avec un label d'analyse différent.\
+\
+Du point de vue numérique, ces passages sont balisés avec `<sp>` auquel sont associés les attributs `who`, qui indique le nom de celui qui parle, et `ana`, qui indique si le *speaker* est narrateur (`narr`) et donc en discours indirect ou indirect libre, ou bien personnage (`pers)`, qui indique du discours direct. J'y ai rajouté pour toutes les occurences de nos divinités Minerva, Apollo et Iuppiter un attribut de correspondance (`corresp`) avec les valeurs de l'attribut `ref` associées, pour toutes les occurrences où ils s'expriment seuls et sont catégorisés comme `narr`.\
+\
+Il a semblé pertinent de réaliser une analyse croisée de ces mentions dans le discours et des balises `<persName>`, afin de confronter la présence des divinités en temps que mentions et en tant qu'interventions discursive directe.
 
-La construction des réseaux s'appuie sur l'identification des co-occurrences entre personnages divins au sein des épisodes narratifs. Deux divinités sont considérées comme connectées lorsqu'elles interviennent dans un même segment narratif, qu'il s'agisse d'une interaction directe ou d'une présence simultanée dans l'action.
+### 2.2.1. Méthodologie d'analyse de réseau avec R
 
-```         
-# Installation et chargement des packages de réseau (igraph, tidygraph, ggraph)
-# Construction de la matrice d'adjacence basée sur les co-occurrences
-# Création du graphe non-dirigé des interactions divines
-```
+L’approche par les réseaux appliquée aux *Métamorphoses* permet d’appréhender le récit non plus comme une simple succession d’épisodes, mais comme un système d’interactions multiples, structuré autour d’un ensemble de présences, d’adresses et d’interventions. En s’appuyant sur les apports de Nadine Rakofvsky, qui a introduit un niveau d’analyse propre au discours dans son balisage du texte, notre objectif a été d’étendre cette réflexion à la dimension divine du récit. À travers un enrichissement des balises de type `<sp>` par l’attribut `corresp`, il a été possible de relier chaque prise de parole identifiée comme provenant d’une divinité — en particulier Minerve, Apollon et Jupiter — à leur présence déjà repérée dans l’attribut `ref`, et ainsi établir des ponts entre leur rôle dans la structure narrative et leur position dans le système énonciatif.
 
-**\[Espace pour description de la méthodologie de construction des réseaux\]**
+L’enjeu de cette visualisation est d'ouvrir une piste d'analyse autour de la distribution des interventions divines, en regard sur le plan de la narration et sur celui du discours direct. En croisant les balises d’énonciation et les identifiants des divinités, l’analyse rend possible une lecture dynamique de la construction des figures divines. Ce changement de perspective ouvre la voie à une lecture systémique de la parole divine dans les *Métamorphoses*, articulant structure narrative et voix énonciative.
 
-Les métriques de réseau permettent de caractériser quantitativement la position de chaque divinité dans l'écosystème narratif. Trois mesures principales sont mobilisées : le degré (nombre de connexions directes), la centralité de proximité (facilité d'accès aux autres nœuds), et la centralité d'intermédiarité (position de pont entre différentes parties du réseau).
-
-```         
-# Calcul des métriques de centralité pour chaque divinité
-# Identification des nœuds centraux et périphériques
-# Analyse de la structure globale du réseau (densité, modularité)
-```
-
-**\[Espace pour interprétation des métriques de réseau\]**
-
-### 2.2 Cartographie des interactions divines
-
-#### Graphes de co-occurrence : la sociabilité divine
-
-Les graphes de co-occurrence révèlent l'intensité des relations entre divinités, mesurée par la fréquence de leurs apparitions conjointes. Cette approche quantitative de la sociabilité divine complète l'analyse qualitative traditionnelle en révélant des affinités narratives inattendues.
-
-```         
-# Création du graphe pondéré par la fréquence des co-occurrences
-# Visualisation avec ggraph : taille des nœuds proportionnelle au degré
-# Épaisseur des arêtes proportionnelle à la fréquence d'interaction
-```
-
-**\[Espace pour interprétation des patterns de co-occurrence\]**
-
-L'analyse des communautés au sein du réseau permet d'identifier des groupes de divinités partageant des affinités narratives. Ces clusters révèlent des logiques thématiques ou fonctionnelles qui structurent l'univers divin ovidien.
-
-```         
-# Détection des communautés avec l'algorithme de Louvain
-# Visualisation des clusters avec des codes couleur
-# Analyse de la cohésion interne et des ponts inter-communautés
-```
-
-**\[Espace pour analyse des communautés divines\]**
-
-#### Réseaux par livre : évolution des configurations relationnelles
-
-L'examen des réseaux livre par livre révèle l'évolution des configurations relationnelles au fil de l'œuvre. Certains livres privilégient des interactions denses entre un nombre restreint de divinités, tandis que d'autres déploient un réseau plus diffus.
-
-```         
-# Création des sous-réseaux par livre
-# Calcul des métriques d'évolution (densité, centralisation)
-# Identification des livres à forte/faible connectivité divine
-```
-
-**\[Espace pour analyse de l'évolution des réseaux\]**
-
-### 2.3 Centralité et influence narrative
-
-#### Mesures de centralité : hiérarchies et positions structurelles
-
-Les mesures de centralité permettent de hiérarchiser les divinités selon leur importance structurelle dans le réseau narratif. Cette approche quantitative révèle des rapports de force qui peuvent différer des hiérarchies mythologiques traditionnelles.
-
-```         
-# Calcul détaillé des différentes mesures de centralité
-# Classement des divinités selon chaque métrique
-# Analyse des écarts entre centralité mythologique et centralité narrative
-```
-
-**\[Espace pour interprétation des hiérarchies de centralité\]**
-
-La centralité de degré identifie les divinités les plus connectées, révélant leur capacité à intervenir dans des contextes narratifs variés. La centralité d'intermédiarité met en évidence les figures qui assurent la cohésion du réseau en servant de pont entre différents sous-ensembles.
-
-```         
-# Visualisation des centralités avec des graphiques en radar
-# Identification des profils de centralité distinctifs
-# Analyse des rôles structurels (hubs, bridges, périphérie)
-```
-
-**\[Espace pour analyse des rôles structurels\]**
-
-#### Influence narrative et pouvoir dramaturgique
-
-L'influence narrative ne se limite pas à la fréquence d'apparition, mais englobe la capacité d'une divinité à déclencher, orienter ou résoluder l'action. L'analyse croisée des métriques de réseau et des rôles actantiels révèle les mécanismes du pouvoir dramaturgique.
-
-```         
-# Croisement centralité/rôles actantiels
-# Identification des divinités à fort pouvoir dramaturgique
-# Analyse des corrélations entre position structurelle et influence narrative
-```
-
-**\[Espace pour interprétation de l'influence dramaturgique\]**
+### 2.2.2. Représentation de la présence narrative des divinités
 
 Les divinités centrales dans le réseau ne sont pas nécessairement celles qui exercent le plus d'influence sur le cours de l'action. Cette dissociation révèle des stratégies narratives subtiles, où certaines figures occupent une position structurelle forte sans pour autant exercer un pouvoir dramaturgique proportionnel.
 
-```         
-# Analyse des dissociations centralité/influence
-# Identification des divinités "effacées" mais structurellement importantes
-# Cartographie des différents types d'influence narrative
+Ces visualisations débutent avec un graphe des fréquences absolues pour les trois divinités.
+
+```{r}
+#| label: fig-ana-discours
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion de la présence divine (action, reflexivité et parole directe)\n Fréquences absolues"
+#| fig-label: "fig-ana-discours"
+
+
+# Graphique croisant les présences narratives/discursives en fréquence absolues
+plot_comp_narr_dis
+
 ```
 
-**\[Espace pour analyse des dissociations structurelles\]**
+En valeur absolue, Jupiter occupe une position dominante avec 44 mentions totales, suivi d'Apollon (20 mentions) et de Minerve (18 mentions). Cette hiérarchie maintient fidèle l'ordre du tryptique cosmologique de ces divinités dans l'univers ovidien : Jupiter, père des dieux et maître de l'ordre cosmique, constitue naturellement le référent divin le plus sollicité, tandis qu'Apollon et Minerve, divinités de second rang mais aux attributions spécialisées, présentent une présence plus circonscrite mais non moins significative.
 
-------------------------------------------------------------------------
+Jupiter présente un profil narratif déséquilibré entre présence actorielle et présence discursive. Cette répartition traduit une conception ovidienne du pouvoir suprême qui s'exerce davantage par la parole performative que par l'action directe. Les 26 mentions de Jupiter en discours direct témoignent de sa fonction de législateur cosmique : ses interventions verbales ont valeur de décret divin et participent de l'autorité narrative du texte. La relative faiblesse de sa présence réflexive suggère qu'Ovide privilégie la représentation directe de la divinité suprême, évitant les évocations indirectes.
 
-Cette exploration quantitative des données révèle des structures narratives complexes qui échappent à l'analyse traditionnelle. Les profils statistiques des trois divinités confirment certaines intuitions critiques tout en révélant des nuances inattendues. Les réseaux d'interactions dessinent une cartographie relationnelle qui renouvelle la compréhension de l'univers divin ovidien.
+La forte présence actorielle d'Apollon correspond à une divinité plus romanesque, directement impliquée dans l'intrigue narrative. Ces implications sollicitent peu d'expression directe de sa part : c'est en effet celui avec le moins de présence discursive directe parmi les trois.
 
-Les résultats obtenus constituent désormais le socle empirique nécessaire à l'interprétation littéraire. La troisième partie procédera à la relecture critique des portraits divins, en articulant ces données quantitatives avec l'analyse philologique traditionnelle. Cette synthèse permettra de mesurer l'apport heuristique de l'approche numérique et d'identifier les nouvelles perspectives qu'elle ouvre pour l'étude des Métamorphoses.
+Minerve offre le profil le plus équilibré des trois divinités, avec une répartition quasi-égale entre présence actorielle et présence discursive. Cette symétrie reflète la double nature de la déesse : divinité guerrière capable d'interventions directes, mais également déesse de la sagesse dont l'autorité s'exerce par la parole. La faiblesse de sa présence réflexive témoigne d'une conception qui privilégie la représentation directe de Minerve, évitant les évocations métonymiques qui caractérisent d'autres divinités, notamment Jupiter.
+
+La faiblesse générale de la présence réflexive pour les trois divinités indique qu'Ovide privilégie la représentation directe du divin, évitant les stratégies d'évocation indirecte qui pourraient diluer l'impact narratif de ces figures centrales. Cette approche témoigne d'une esthétique de la présence divine qui privilégie l'immédiateté et l'efficacité narrative sur la suggestion ou l'allusion. Ces observations quantitatives permettent ainsi de mettre en évidence les modalités différenciées de la présence divine dans les *Métamorphoses*, révélant comment Ovide adapte ses stratégies narratives aux spécificités mythologiques et fonctionnelles de chaque divinité.
+
+```{r}
+#| label: fig-ana-discours-100
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Proportion de la présence divine (action, reflexivité et parole directe)\nFréquences relatives"
+#| fig-label: "fig-ana-discours-100"
+
+
+# Graphique croisant les présences narratives/discursives en fréquence relatives
+plot_comp_narr_dis_100
+
+```
+
+L'analyse proportionnelle révèle cependant des nuances importantes dans les modalités de cette présence. Apollon se caractérise par une forte présence actorielle, confirmant son rôle de divinité interventionniste, directement impliquée dans l'action narrative. Cette prédominance de la fonction actorielle peut s'expliquer par les attributions du dieu : divinité de la prophétie, de la musique et de la médecine, Apollon intervient fréquemment de manière directe dans le destin des mortels, particulièrement dans les récits de métamorphose liés à ses domaines de compétence.
+
+Le scatterplot de la répartition des mentions divines à travers les quinze livres des *Métamorphoses* expose des dynamiques temporelles complexes qui éclairent l'architecture narrative de l'œuvre. Cette cartographie diachronique permet de visualiser autrement les zones de concentration divine et les stratégies de distribution du sacré dans l'oeuvre.
+
+```{r}
+#| label: fig-scatterplot
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Scatterplot des narrations et des paroles directes des divinités"
+#| fig-label: "fig-scatterplot"
+#| fig.height: 5
+#| fig.width: 8
+
+
+# Scatterplot correspondance présence narrative par divinité tout au long des livres 
+scatter_persN_sp
+
+```
+
+La distribution d'Apollon présente un profil remarquablement concentré, avec des pics significatifs dans les livres 1-2, 6, 10-11 et 13-14. Cette répartition suggère une utilisation stratégique de la divinité aux moments charnières de l'œuvre : l'ouverture cosmogonique (livre 1), les grands cycles héroïques (livres 6 et 10-11) et la transition vers l'épopée troyenne (livres 13-14). L'alternance entre mentions narratives et discours direct témoigne d'une conception dramatique du personnage divin, oscillant entre fonction d'agent narratif et de voix divine autoritaire. L'hypothèse d'une structuration autour d'Apollon sans l'œuvre de l'œuvre peut être avancée : Ovide utiliserait Apollon comme marqueur de transitions narratives majeures, sa présence signalant les moments où l'ordre cosmique subit des transformations significatives. La concentration relative de ses interventions directes dans certains livres (notamment 10-11) suggère une fonction de *deus ex machina* ponctuelle plutôt qu'une présence continue.
+
+Jupiter présente la distribution la plus homogène des trois divinités, avec une présence quasi-constante à travers l'ensemble de l'œuvre. Cette répartition uniforme reflète sa fonction de régulateur cosmique : contrairement aux autres divinités, Jupiter ne peut s'absenter durablement du récit sans compromettre la cohérence théologique de l'univers narratif. La prédominance des mentions narratives sur les discours directs dans la plupart des livres suggère une présence atmosphérique de la divinité suprême, qui informe l'action sans nécessairement s'y manifester directement. La concentration notable de discours directs pour Jupiter dans les livres 1-2, 6-7 et 15 correspond aux moments d'établissement de l'ordre cosmique (cosmogonie), de crise théologique majeure (cycle thébain) et de révélation eschatologique (apothéose de César). Cette distribution suggère que les interventions verbales de Jupiter marquent les moments où l'ordre divin doit être réaffirmé ou redéfini.
+
+Minerve présente le profil de distribution le plus irrégulier, avec une absence notable dans plusieurs livres (3, 8, 9, 12) et des concentrations dans les livres 2, 4-6, 13-14. Cette intermittence reflète sa fonction de divinité spécialisée, intervenant principalement dans les récits relevant de ses attributions : arts, artisanat, sagesse guerrière. L'analyse de sa distribution révèle une corrélation entre ses apparitions et les grands cycles narratifs consacrés aux héros culturels avec notamment Persée ou aux récits métapoétiques tels que celui d'Arachné. L'hypothèse d'une fonction « méta-narrative » de Minerve reposerait sur le fait que ses interventions coïncident souvent avec les passages où Ovide réfléchit sur sa propre pratique poétique, la déesse de la sagesse servant de caution divine aux innovations narratives du poète.
+
+Cette analyse distributionnelle permet de formuler plusieurs hypothèses sur l'architecture narrative des *Métamorphoses*. D'abord, l'hypothèse d'une théologie narrative différenciée : chaque divinité assume une fonction structurelle spécifique dans l'économie du récit, Jupiter assurant la continuité cosmologique, Apollon marquant les transitions majeures, et Minerve intervenant dans les moments de réflexivité poétique. Ensuite, l'hypothèse d'une périodisation divine : la variation de densité des mentions divines selon les livres suggère une structuration de l'œuvre en zones de sacralité variable, certains livres étant surdéterminés par la présence divine tandis que d'autres relèvent davantage de la narrativité profane. Enfin, l'hypothèse d'une stratégie de présence compensatoire : l'analyse révèle que les moments de faible présence d'une divinité correspondent souvent à l'intensification de la présence des autres, suggérant une régulation narrative consciente visant à maintenir un niveau constant d'intervention divine dans l'œuvre. Ces dynamiques distributionnelles révèlent ainsi une architecture narrative complexe où la présence divine ne relève pas du hasard mais d'une stratégie compositionnelle sophistiquée, témoignant de la maîtrise technique d'Ovide dans l'orchestration de son univers mythologique.
+
+## 2.3. Analyse lexicale et collocation
+
+### 2.3.1. Processus d'analyse lexicale avec R
+
+L'analyse lexicale constitue un volet parallèle de notre étude sur les divinités dans les *Métamorphoses*. Là où l'analyse quantitative a permis d'identifier les fréquences d'apparition et les modalités de présence des divinités, l'analyse lexicale vise à explorer l'environnement linguistique dans lequel ces figures divines évoluent. Il s'agit de répondre à des questions fondamentales : quels sont les champs lexicaux associés à chaque divinité ? Comment le langage poétique ovidien construit-il l'identité divine ? Quels réseaux sémantiques se dessinent autour d'Apollon, Jupiter et Minerve ?
+
+Cette approche computationnelle permet de dépasser les limites de la lecture traditionnelle en révélant des patterns linguistiques qui échappent à l'analyse manuelle, tout en offrant une vision systématique des associations lexicales à l'échelle de l'œuvre entière. L'analyse lexicale automatisée repose sur des principes établis des humanités numériques. Elle procède par tokenisation (découpage du texte en unités lexicales), lemmatisation (réduction des mots à leur forme canonique) et quantification des associations lexicales. Cette méthode permet de traiter des corpus volumineux avec une exhaustivité impossible à atteindre manuellement, tout en révélant des structures linguistiques latentes.
+
+Le présent code utilise l'environnement R et ses packages spécialisés (`tidytext`, `text2vec`, `widyr`) pour implémenter des algorithmes d'analyse textuelle éprouvés. La démarche combine approches statistiques et visualisation graphique pour rendre intelligibles les données lexicales complexes. La méthode repose sur l'extraction automatique des contextes linguistiques entourant chaque mention divine. Le code identifie précisément les vers contenant les références à nos trois divinités et extrait le texte environnant selon plusieurs fenêtres d'analyse : le vers immédiat, puis une fenêtre élargie incluant le vers précédent et suivant. Cette approche permet de capturer tant les associations lexicales immédiates que les réseaux sémantiques plus larges.
+
+```{r}
+#| label: Données en vue de l'analyse lexicale et collocations
+#| include: false 
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+
+# Charger le script & les données
+source("scripts/lexical_analysis.R")
+ovid_deities <- read_xml("https://raw.githubusercontent.com/pax3l/m2_ovid_deities_analysis_for_quarto/refs/heads/main/data/ovid_MIN_APO_IUP.xml")
+
+```
+
+L'analyse des bigrammes constitue l'un des outils les plus précis de l'arsenal méthodologique. Un bigramme désigne une séquence de deux mots consécutifs dans le texte. Cette approche permet d'identifier les associations lexicales récurrentes et caractéristiques de chaque divinité. Cette analyse permet de révéler des motifs linguistiques récurrents, souvent porteurs de signification narrative ou thématique. Dans le cadre de notre étude, cette méthode vise à identifier les associations lexicales les plus fréquentes autour d'une mention de divinités analysées, afin de mieux cerner les contextes discursifs dans lesquels elles apparaissent.
+
+Sur le plan méthodologique, l’approche par bigramme repose sur une segmentation du texte en séquences de deux mots, suivie d’un comptage de fréquence. Cette opération permet de dépasser la simple occurrence isolée pour s’intéresser aux combinaisons co-textuelles qui donnent sens à la présence des divinités : adjectifs récurrents, verbes d’action, noms communs liés à des attributs, ou expressions figées. En ce sens, les bigrammes constituent une porte d’entrée vers l’analyse de la grammaire du récit entourant les figures divines.
+
+Par exemple, l'analyse des bigrammes associés à Apollon révélera si certaines épithètes (Apollon doré, divin Apollon) ou certains domaines d'action (Apollon prédit, Apollon guérit) dominent statistiquement le corpus. Cette méthode dépasse la simple fréquence lexicale pour révéler les collocations significatives, c'est-à-dire les associations de mots qui apparaissent ensemble plus fréquemment que ne le prédirait le hasard. Cette méthode permet aussi de repérer des régularités propres à certains contextes d’énonciation ou à certaines fonctions actancielles : par exemple, la fréquence du bigramme *Minerva dixit* pourrait signaler une récurrence du rôle d’énonciatrice, tandis qu’un couple comme *ira Iovis* renverrait à une configuration affective stéréotypée. En croisant ces résultats avec les autres niveaux d’analyse (discursif, actanciel, narratif), il devient possible d’enrichir l’interprétation des stratégies d’apparition et de caractérisation des dieux dans le texte.
+
+Le tableau suivant est le produit de l'exécution du code pour les bigrammes les plus fréquents autour des valeurs de l'objet `pers_contextes`, qui s'intéresses aux valeurs de ref dans la base de donnée principale. Il utilise la mesure PMI (Pointwise Mutual Information) pour identifier les bigrammes les plus significatifs, filtrant ainsi le bruit statistique pour ne retenir que les associations lexicales véritablement caractéristiques.
+
+```{r}
+#| label: Bigrammes du vocabulaire en collocatin des mentions divines encodées
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-label: "fig-bigram"
+
+knitr::kable(head(bigram_pmi, 20), caption = "Bigrammes du vocabulaire en collocation d''apolline'", bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
+
+Les bigrammes « *alter avus* », « *avus socero* », « *musa parens* », « *parens cedunt* » et « *parente superbum* » dessinent un réseau lexical centré sur les relations de filiation et de hiérarchie divine. Cette concentration terminologique révèle l'importance accordée par Ovide aux structures généalogiques comme principe organisateur de l'univers mythologique. L'association « *saturnus minor* » confirme cette préoccupation hiérarchique, évoquant les rapports de pouvoir intergénérationnels qui structurent le panthéon. Ces configurations suggèrent que la représentation divine s'articule fondamentalement autour de la légitimité dynastique et de la transmission du pouvoir cosmique.
+
+Les bigrammes « *palladaque exhibuit* », « *exhibuit venerantur* », « *adfuit illis* » et « *adest morsusque* » confirment le champ sémantique de la manifestation divine. Le verbe « *exhibuit* » associé à Pallas suggère une théologie de la révélation où la divinité se manifeste par des signes tangibles. Cette modalité épiphanique trouve son prolongement dans les formules de présence divine (« *adfuit* », « ad*e*st ») qui marquent l'irruption du sacré dans l'espace narratif. L'association « *exhibuit venerantur* » établit explicitement le lien entre révélation divine et réponse cultuelle, soulignant la fonction théologique de ces manifestations.
+
+Ensuite, les bigrammes « *acu scires* », « *addere voces* », « *adire potest* » et « *adnuit ictus* » configurent un vocabulaire de l'action divine spécialisée. L'association « *acu scires* » évoque les métamorphoses artisanales, particulièrement celles liées aux activités textiles divines. « *Addere voces* » indique des interventions divines à travers la communication et la parole, tandis qu'« *adire potest* » marque la capacité d'approche et d'accès propre aux divinités.
+
+Enfin, les bigrammes « *aequo volventem* », « *aequoreae thetidis* », « *aerias libratum* » et « *tertius aiax* » intègrent des références aux éléments cosmiques et aux figures épiques. L'association « *aequoreae thetidis* » évoque spécifiquement la sphère marine divine, tandis qu'« *aerias libratum* » suggère la maîtrise divine des espaces aériens. « *Tertius aiax* » introduit la dimension héroïque et guerrière, confirmant l'interpénétration entre registres divins et épiques dans l'univers ovidien.
+
+Cette liste des bigrammes privilégiés révèle une structuration lexicale cohérente où se conjuguent généalogie divine, épiphanie cultuelle, action transformatrice et cosmologie élémentaire. L'homogénéité des valeurs TF-IDF (6.93) suggère une distribution équilibrée de ces champs sémantiques, témoignant d'une construction lexicale maîtrisée où chaque registre contribue à égalité à la caractérisation du divin. Cette analyse confirme la richesse terminologique d'Ovide dans la représentation des modalités d'intervention divine, articulant tradition épique et innovation métamorphique dans un système lexical intégré.
+
+### 2.3.2. Co-occurrence et nuages de mots par divinités
+
+L'analyse des co-occurrences élargit la perspective en examinant tous les mots qui apparaissent dans un contexte donné, indépendamment de leur position exacte. Cette méthode permet de révéler les champs lexicaux associés à chaque divinité et d'identifier les réseaux sémantiques qui structurent leur représentation poétique. Une spécificité particulièrement importante de notre approche concerne l'utilisation de la fenêtre des vers comme unité d'analyse. Plutôt que de se limiter au vers contenant la mention divine, le code extrait systématiquement le vers précédent et le vers suivant, créant ainsi une fenêtre contextuelle de trois vers.
+
+Cette approche a été pensée pour prendre en compte plusieurs caractrisitiques de l'analyse poétique, à savoir l'inclusion du la réalité de la composition poétique ovidienne, où les effets stylistiques et sémantiques se déploient souvent sur plusieurs vers, mais également la capture des enjambements, fréquents chez Ovide, qui créent des unités sémantiques qui dépassent le cadre du vers unique. Cela permet aussi de révéler des préparations et potentiels échos en capturant les effets d'annonce et de résonance qui caractérisent l'oeuvre.
+
+L’analyse de co-occurrences lexicales consiste à étudier la fréquence avec laquelle deux mots apparaissent ensemble dans une même unité de contexte — une phrase, un paragraphe, un vers ou un segment narratif. Cette approche permet de révéler les associations sémantiques les plus fortes entre termes dans un corpus, en partant du principe que des mots souvent liés syntaxiquement ou sémantiquement co-apparaissent de manière non aléatoire.
+
+Dans R, cette analyse est généralement réalisée à l’aide des packages `tidytext`, `widyr`, ou `quanteda`, qui permettent de construire des matrices de co-occurrence et de calculer des mesures d'association comme le *pairwise correlation* ou le *log-likelihood*. Une fois la matrice constituée, les co-occurrences peuvent être visualisées sous forme de graphes, cartes de chaleur (*heatmaps*), ou de tableaux classés.
+
+Appliquée à notre corpus, cette méthode offre un double intérêt : d’une part, elle permet de détecter les mots qui gravitent le plus fréquemment autour d’une figure divine ou d’un segment narratif spécifique ; d’autre part, elle révèle des structures de sens implicites, où certains groupes lexicaux forment des réseaux thématiques cohérents. Par exemple, la proximité régulière entre les termes liés à la lumière et les mentions d’Apollon souligne une dimension symbolique renforcée par la régularité lexicale du texte source.
+
+Ce travail de recherche de co-occurrences est visualisé dans un nuage de mots, ou *word cloud.* Cette modalité de visualisation lexicale met en évidence les termes les plus fréquents dans un corpus donné. Chaque mot est affiché avec une taille proportionnelle à sa fréquence d’apparition, ce qui permet d’identifier en un coup d’œil les mots dominants d’un texte, ou d’un sous-ensemble du corpus. Dans R, cette visualisation s’effectue facilement à l’aide du package `wordcloud` ou de `ggwordcloud`, après un prétraitement du texte impliquant la tokénisation, la suppression des mots vides (*stopwords*), et éventuellement une lemmatisation. Cette technique est particulièrement utile pour explorer un corpus de manière intuitive avant des analyses plus fines.
+
+Le code génère des visualisations en réseau qui permettent de représenter graphiquement les relations entre les mots. Dans ces graphiques, chaque mot constitue un nœud, et les liens entre les nœuds représentent la force des co-occurrences. Cette représentation révèle visuellement les clusters lexicaux et les mots-pivots qui structurent le vocabulaire associé à chaque divinité. Les réseaux permettent d'identifier notamment les termes centraux qui concentrent le maximum de connexions, des sous-réseaux thématiques qui révèlent des domaines sémantiques spécialisés, mais également des ponts lexicaux qui connectent différents champs sémantiques.
+
+Le code implémente également une approche plus sophistiquée par modélisation vectorielle (`Word2Vec` via l'algorithme `GloVe`). Cette méthode transforme chaque mot en vecteur numérique multidimensionnel, permettant de calculer des distances sémantiques et d'identifier les synonymes contextuels. Cette approche permet de dépasser les simples co-occurrences pour révéler des similitudes sémantiques plus subtiles.
+
+Dans notre étude, le nuage de mots permet de cartographier les univers lexicaux associés à chaque divinité ou à chaque type de segment narratif. Il facilite l’identification de champs thématiques récurrents, comme la guerre, la sagesse ou le destin, et permet de visualiser l’importance relative des différentes thématiques qui traversent les interventions ou les mentions des dieux dans les *Métamorphoses*. Bien qu’il s’agisse d’un outil exploratoire avant tout, il contribue à faire émerger des hypothèses interprétatives appuyées par les régularités textuelles.
+
+```{r}
+#| label: fig-nuage-apo
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Réseau de co-occurrences des termes pour APO"
+#| fig-label: "fig-nuage-apo"
+
+
+plot_word_network("APO", node_color = "#FFB3D9")
+```
+
+Le réseau lexical d'Apollon révèle une structure relativement dispersée mais organisée autour de plusieurs nœuds sémantiques majeurs. Les termes centraux les plus connectés incluent *phoebe* (Phébé), *apollo*, *amor* et *deus*, suggérant une identité divine construite autour de la prophétie apollinienne et des relations amoureuses.
+
+La présence marquée du vocabulaire amoureux (*amor*, *amores*, *referamus*) indique qu'Ovide privilégie la représentation d'Apollon comme divinité amoureuse plutôt que comme dieu de la poésie ou de la médecine. Cette orientation thématique fait écho aux grands récits apolliniens des *Métamorphoses* (Daphné, Coronis, Hyacinthe).
+
+En terme de sous-réseaux, on observe tout d'abord un cluster associé à la prophétie avec les termes *phoebe*, *soror*, et *oracula*. On a également un cluster amoureux : avec *amor*, *amores*, *referamus*, qui constituent un réseau dense autour de la thématique érotique. On relève ensuite un cluster familial, avec la répétition et asociaition de *soror* et son association avec *parente* et *filia* révèlent l'importance des relations familiales divines même à partir d'Apollon. Enfin, on peut parler d'un cluster narratif avec les termes *erat*, *est*, *qui* et *et*, connecteurs narratifs récurrents.
+
+Les termes *deus*, *qui* et *est* fonctionnent comme des ponts lexicaux, connectant les différents sous-réseaux thématiques. Ces connecteurs permettent de lier les aspects prophétiques, amoureux et narratifs de la représentation apollinienne.
+
+```{r}
+#| label: fig-nuage-iup
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Réseau de co-occurrences des termes pour IUP"
+#| fig-label: "fig-nuage-iup"
+
+
+plot_word_network("IUP", node_color = "#A3BFFF" )
+
+```
+
+Le réseau jupitérien présente une densité remarquable avec des interconnexions multiples. Les termes centraux *iupiter*, *deus*, *pater*, *omnipotens* révèlent une construction lexicale fondée sur l'autorité suprême et la paternité divine. La forte connectivité du réseau reflète la position centrale de Jupiter dans l'univers narratif ovidien. Le vocabulaire du pouvoir (*omnipotens*, *rex*, *summa*) et de la parole performative (*dicta*, *inquit*, *ait*) dominent le réseau, confirmant la fonction de Jupiter comme législateur cosmique.
+
+En ce qui concerne les clusters, on souligne celui du pouvoir suprême avec *omnipotens*, *rex*, *summa*, *pater*, qui forment un réseau dense autour de l'autorité jupitérienne. Le cluster de la parole divine est aussi dense avec *dicta*, *inquit*, *ait* et *rogat,* qui constituent un sous-réseau cohérent autour de la fonction discursive. S'ensuit un cluster familial et plus globalement généalogique : les termes *pater*, *iovis*, ou encore *saturnia* révèlent l'importance des relations familiales divines directe et plus larges. Deux derniers clusters sont à relever : un culter temporel (*erat*, *est*, *cum*), qui marque les articulations temporelles du récit et un cluster spatial (*terra*, *mundus*, *caeli*) qui dessine l'espace cosmique des moments d'interventions de Jupiter.
+
+*Deus*, *qui*, *cum* et *est* fonctionnent comme des super-connecteurs, liant l'ensemble des sous-réseaux. La densité de ces connexions révèle la fonction intégratrice de Jupiter dans la structure narrative.
+
+```{r}
+#| label: fig-nuage-min
+#| echo: false 
+#| message: false 
+#| warning: false 
+#| fig-align: "center"
+#| fig-cap: "Réseau de co-occurrences des termes pour MIN"
+#| fig-label: "fig-nuage-min"
+
+plot_word_network("MIN", node_color = "#C8B9F7")
+```
+
+Le réseau de Minerve présente une structure moins dense mais plus spécialisée. Les termes centraux *minerva*, *pallas*, *tritonia* révèlent une identité construite autour des épithètes traditionnelles de la déesse. La présence de *fatibus* et *dictis* (paroles) suggère une fonction de révélation et de conseil.
+
+On distingue quatre principaux clusters de sous-réseaux thématiques. Tout d'abord un cluster onomastique : *minerva*, *pallas*, *tritonia*, *pallados* forment un réseau dense autour de l'identité nominale de Minerve. Se distingue également un cluster de la technique et de l'artisanat, avec *fatibus*, *dictis*, *libasse*, qui évoquent les domaines d'expertise de la déesse. On souligne aussi un cluster narratif avec *est*, e*t*, *in*, qui assurent principalement les connexions syntaxiques, et un cluster qui situe Minerve dans l'espace divin avec *love* et *pallade*. Les termes du cluster narratif fonctionnent comme des connecteurs primaires, mais le réseau présente une moindre densité de ponts que les deux autres divinités, suggérant une représentation plus compartimentée.
+
+Les trois réseaux partagent certaines caractéristiques communes, notamment les connecteurs syntaxiques universels, regroupés sous la forme de cluster narratif, mais aussi une omniprésence des marqueurs temporels et spatiaux. Leurs différences sont également significatives. Outre la densité des interconnexions, qui rappelle la hiérarchie Jupiter-Apollon-Minerve sans cesse confirmée depuis la présence chiffrée dans le texte, le nuage de mot permet de distinguer une véritable spécialisation thématique : Minerve présente la plus forte spécialisation, tandis qu'Apollon affiche la plus grande dispersion thématique. On note que le vocabulaire du pouvoir est exclusif à Jupiter, tandis que celui de l'amour est exclusif à Apollon, et que Minerve concentre la diversité d'épithètes distincts.
+
+La comparaison des réseaux lexicaux souligne une stratégie ovidienne de différenciation fonctionnelle : chaque divinité développe un réseau lexical spécifique correspondant à ses attributions mythologiques. Jupiter accumule le vocabulaire du pouvoir et de la parole performative, Apollon celui de l'amour et de la prophétie, Minerve celui de la sagesse technique et de la diversité nominale. Cette densité différentielle des réseaux suggère une hiérarchisation lexicale qui reflète la hiérarchie cosmologique : Jupiter, par la richesse de ses connexions lexicales, domine linguistiquement l'univers narratif, tandis qu'Apollon et Minerve développent des réseaux plus spécialisés correspondant à leurs fonctions secondaires.
+
+La faible densité du réseau de Minerve pourrait révéler une stratégie de compensation narrative : Ovide compense la moindre présence quantitative de Minerve par une plus grande spécialisation lexicale, créant un effet de concentration sémantique qui renforce l'impact narratif de ses interventions. On peut aussi lire dans ces réseaux une poétique ovidienne de la caractérisation divine qui procède par association lexicale plutôt que par description directe. Chaque divinité est définie moins par ses attributs explicites que par l'environnement lexical qui l'entoure, créant des identités divines émergentes plutôt que prescrites. La faible interconnexion entre les réseaux des trois divinités suggère une conception modulaire de l'univers divin ovidien : chaque divinité opère dans un registre lexical relativement autonome, permettant à Ovide de varier les tonalités narratives selon la divinité mise en scène (registre héroïque pour Jupiter, élégiaque pour Apollon, technique pour Minerve).
+
+Ces observations lexicales confirment et précisent les conclusions de l'analyse quantitative, révélant comment Ovide construit différentiellement ses personnages divins non seulement par leurs actions mais par les champs lexicaux qu'ils activent, créant ainsi une véritable géographie sémantique du divin dans les *Métamorphoses*.
+
+Tout au long de cette partie, l'exploration quantitative des données aura permis de révéler des structures et des dynamiques qui échappent, tout du moins en précision, à l'analyse traditionnelle. Les profils statistiques des trois divinités confirment les profils littéraires esquissés tout en révélant des nuances individuelles et comparatives inattendues. Les réseaux d'interactions dessinent des schémas relationnels qui renouvellent la compréhension de l'univers divin dans les *Métamorphoses*. Les résultats obtenus constituent désormais le socle empirique pour norte prochaine interprétation littéraire. La troisième partie procédera à la relecture critique des portraits divins, en articulant ces données quantitatives avec l'analyse philologique traditionnelle. Cette synthèse permettra de mesurer l'apport heuristique de l'approche numérique et d'identifier les nouvelles perspectives qu'elle ouvre pour l'étude des *Métamorphoses*.

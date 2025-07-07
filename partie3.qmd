@@ -1,197 +1,320 @@
 ---
-title: "Partie 3 : Interprétation & analyse"
+title: "3. Analyse d'épisodes et portraits renouvelés"
 author: "Axelle Penture"
 editor: visual
-bibliography: 
-  - ./bibliographie/bib_memoire_m2_v4.bib
-  - ./bibliographie/oeuvres_antiques.bib
-  - ./bibliographie/ouvrages_articles_scientifiques.bib
-  - ./bibliographie/textes_ovide.bib
-  - ./bibliographie/outils_numeriques.bib
+bibliography: ./bibliographie/bib_memoire_m2_v5.bib
 ---
 
-# Partie 3 : Interprétation & analyse
+L'analyse quantitative menée dans les parties précédentes a permis de rassembler un ensemble de caractéristiques générales sur les interventions divines dans les *Métamorphoses* d'Ovide. Cette approche macroscopique, si elle révèle des tendances structurelles significatives, appelle désormais un examen plus fin qui interroge la singularité des épisodes narratifs et la spécificité des portraits divins qui s'y déploient. Cette troisième partie se propose d'articuler les données quantitatives autour d'une analyse qualitative, pour dégager une compréhension renouvelée du rôle des divinités ovidiennes. Il s'agit de passer du général au particulier, de la statistique à l'herméneutique, sans pour autant abandonner la rigueur méthodologique qui caractérise l'approche. L'enjeu est double : d'une part, valider et enrichir les hypothèses formulées à partir de l'analyse quantitative, et d'autre part, révéler les nuances et les complexités que seule une lecture attentive des épisodes permet de saisir.
 
-L'exploration quantitative des données encodées dans les quinze livres des Métamorphoses révèle des structures narratives et symboliques qui permettent de dépasser les portraits traditionnels de Minerve, Apollon et Jupiter. Cette partie propose une relecture critique de ces figures divines à partir des résultats obtenus, en croisant l'analyse des fréquences, des contextes d'apparition et des rôles actantiels avec l'étude approfondie d'épisodes emblématiques. L'objectif est de mesurer l'écart entre les représentations canoniques et les pratiques narratives ovidiennes, tout en évaluant les apports méthodologiques de l'approche numérique.
+La démarche adoptée s'appuie sur les outils développés dans le corpus numérique pour identifier et extraire des sous-ensembles significatifs, tout en mobilisant les méthodes traditionnelles de l'analyse littéraire. Cette convergence méthodologique vise à renouveler l'approche des *Métamorphoses* en montrant comment les humanités numériques peuvent enrichir, sans se substituer à elle, l'interprétation littéraire.
 
-## 3.1 Relecture des portraits divins : entre théorie et pratique narrative
+## 3.1. Études d'épisodes : entre données et interprétations
 
-### 3.1.1 Jupiter : le souverain ambivalent face aux données
+### 3.1.1. Méthodologie d'extraction et d'analyse ciblée
 
-L'analyse quantitative révèle un Jupiter omniprésent dans l'architecture des Métamorphoses, conformément à son statut de pater omnipotens établi par la tradition. Cependant, l'examen de la répartition de ses interventions et de la typologie de ses métamorphoses nuance considérablement le portrait du souverain incontesté.
+L'analyse quantitative menée précédemment a permis de créer un *data frame* enrichi (`data_plus_ext`) qui constitue désormais la base de l'investigation qualitative. Ce tableau de données, généré par le script `extract_episode.R`, représente une évolution significative du corpus initial, en y intégrant des informations contextuelles essentielles à l'analyse littéraire. La construction de ce *data frame* enrichi repose sur une extraction systématique des éléments de contexte à partir des balises `<persName>` du corpus XML-TEI. Chaque mention divine est désormais associée non seulement à ses attributs initiaux (`ref`, `type`, `ana`), mais également à sa localisation précise dans l'architecture narrative du poème : livre, épisode et vers. Cette enrichissement contextuel s'opère grâce à une fonction d'extraction (`extract_episode()`) qui navigue dans la structure hiérarchique du document XML pour identifier les nœuds ancêtres et descendants pertinents.
 
-**Fréquence et distribution narrative**
+```{r}
+#| label: Chargement des données de extract_episode.R
+#| echo: false
+#| message: false 
+#| warning: false
+#| include: false 
 
-Les données de fréquence confirment la position dominante de Jupiter dans l'économie narrative du poème, avec \[X\] occurrences réparties sur \[X\] livres des quinze que compte l'œuvre. Cette présence massive s'accompagne d'une distribution inégale qui révèle des logiques structurantes méconnues :
+library(knitr)
+library(kableExtra)
+library(formatR)
 
-\[ESPACE POUR VISUALISATION : Graphique de densité des mentions de Jupiter par livre\]
+source("scripts/lexical_analysis.R")
+source("scripts/extract_episode.R")
+```
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+Le processus d'extraction suit une logique en arborescence qui remonte la structure XML depuis chaque balise `<persName>` vers les éléments englobants. Pour chaque mention divine, l'algorithme identifie :
 
-**Typologie des métamorphoses jupitériennes**
+-   Le livre d'appartenance par remontée vers le nœud `<div>` de type `textpart` et sous-type `book`
 
-L'attribut ana permet de distinguer les différents rôles assumés par Jupiter dans les épisodes de métamorphose. Les résultats révèlent une répartition qui questionne le portrait traditionnel du dieu tout-puissant :
+-   L'épisode narratif par recherche du `<milestone>` précédent marquant le début d'un "tale"
 
-\[ESPACE POUR VISUALISATION : Diagramme circulaire des rôles de Jupiter (act/obj/auto/NA)\]
+-   Le vers d'inscription par identification du nœud ancêtre `<l>` immédiat
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+-   Les attributs TEI originaux (`ref`, `type`, `ana`) et le contenu textuel (`mention`)
 
-**Écart entre pouvoir théorique et pratiques narratives**
+Cette approche algorithmique permet de préserver l'intégrité des données quantitatives tout en les situant dans leur contexte narratif spécifique. Le *data frame* `data_plus_ext` qui en résulte contient 338 occurrences correspondant à autant de mentions divines contextualisées, chacune caractérisée par sept variables : `livre`, `episode`, `vers`, `ref`, `type`, `ana`, et `mention`.
 
-L'analyse croisée des attributs type et ana révèle des tensions significatives entre le statut théorique de Jupiter comme rex deorum et ses manifestations narratives concrètes. Si les mentions en contexte narratif (type="narrative") confirment son autorité, les passages de métamorphose (type="metamorphosis") révèlent des dynamiques plus complexes :
+Pour exploiter cette riche base de données, j'ai développé une fonction de requête interactive (`query_data_plus_interactive()`) qui permet de naviguer dynamiquement dans le corpus selon des critères multiples et combinables. Cette interface de recherche offre la possibilité de filtrer les données selon chacune des dimensions disponibles, autorisant ainsi des investigations ciblées sur des sous-ensembles spécifiques du corpus.
 
-\[ESPACE POUR VISUALISATION : Heatmap croisant type et ana pour Jupiter\]
+La fonction opère selon un principe de filtrage progressif : l'utilisateur peut spécifier des critères pour chaque variable, ces critères étant ensuite appliqués successivement au *data frame* pour isoler les observations pertinentes. Cette approche permet de formuler des requêtes complexes combinant plusieurs dimensions d'analyse, comme par exemple l'identification de toutes les mentions de Minerve, toutes les mentiosn d'agent dans un livre spécifique ou encore les mentions d'un épisode de métamorphose situés dans le livre précis.
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+```{r}
+#| label: Algorithme de requête interactive
+#| echo: true
+#| tidy: true
+#| tidy-opts: 
+#|   - list(width.cutoff = 60)
+#| message: true 
+#| warning: false
+#| include: true 
 
-### 3.1.2 Apollon : de l'idéal artistique aux passions destructrices
+# Algorithme de requête interactive dans la base de données 'data_plus_ext'
+# Lancement de la requête interactive
+resultat <- query_data_plus_interactive()
 
-Le portrait traditionnel d'Apollon comme dieu harmonieux des arts et de la beauté se trouve significativement complexifié par l'analyse quantitative. Les données révèlent un personnage marqué par une forte concentration géographique et une spécialisation fonctionnelle qui nuance l'image du dieu équilibré.
+# Sortie attendue à partir d'une extraction simple de la base de donnée pour les occurrences de Minerve comme agent (act).
+min_agent <- data_plus_ext %>% 
+  filter(ref == "MIN", ana == "act")
 
-**Répartition et concentration narrative**
+# Affichage des résultats
+knitr::kable(
+  min_agent, 
+  caption = "Requête des occurrences de Minerve comme actrice de métamorphose", 
+  bookstabs = TRUE) %>%
+    kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-Contrairement à Jupiter, la présence d'Apollon dans les Métamorphoses se caractérise par une distribution concentrée sur certains livres, révélant une logique épisodique plutôt qu'architecturale :
+Cette infrastructure méthodologique constitue le socle de l'approche qualitative. Elle permet de passer d'une vision globale des données à une investigation ciblée d'épisodes spécifiques, tout en conservant la traçabilité et la reproductibilité des analyses. La section suivante illustrera concrètement cette démarche en appliquant ces outils à l'étude détaillée d'épisodes représentatifs. Chaque analyse d'épisode sera donc précédée de sa sélection à partir des attributs les plus interéssants pour l'étude de la présence active et réflexive des divinités.
 
-\[ESPACE POUR VISUALISATION : Graphique de densité des mentions d'Apollon par livre\]
+### 3.1.2. Apollon : Chioné et Daedalion
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+La @fig-repartition-ref nous a révélé la domination écrasante de la présence d'Apollon au livre II, surpassant celle de Jupiter, pour qui il s'agit pourtant du livre où il est également le plus présent. La mise en regard de ces mentions entre leur contexte narratif (@fig-type-croise-all) et le détail des valeurs d'action (@fig-repartition-ana-apo) indique cependant que ces mentions ne sont pas les plus intéressantes pour notre compréhension du rôle actif d'Apollon ici. C'est davantage au livre 11 que l'on observe la présence des deux rôles actifs, à savoir `act` et `auto`, dans un livre qui présente dans @fig-repartition-ref moins d'occurrences, mais cependant la même tendance à dépasser Jupiter.
 
-**Spécialisation des rôles et paradoxes fonctionnels**
+Grâce à la fonction de recherche `query_data_plus_interactive`, je vais chercher directement le ou les épisodes dont il est question dans ce livre.
 
-L'examen de la répartition des rôles d'Apollon révèle des configurations inattendues qui interrogent son statut de divinité protectrice des arts :
+```{r}
+#| label: Algorithme de requête interactive APO
+#| echo: false
+#| message: false 
+#| warning: false
 
-\[ESPACE POUR VISUALISATION : Diagramme en barres empilées des rôles d'Apollon\]
+requete_apo_1 <- data_plus_ext %>% 
+  filter(ref == "APO", ana %in% c("act", "auto"), livre == 11)
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+# Resultats
+knitr::kable(
+  requete_apo_1, 
+  caption = "Requête des occurrences d'Apollon (1)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
 
-### 3.1.3 Minerve : stratégie divine et interventions ponctuelles
+```
 
-L'analyse quantitative de Minerve révèle un profil singulier, caractérisé par une présence mesurée mais stratégiquement positionnée dans l'économie narrative des Métamorphoses. Cette distribution reflète une logique d'intervention qui correspond à son ethos de déesse réfléchie et calculatrice.
+Le tableau des résultats permet d'identifier l'épisode de Pelée chez Céyx (XI, 226-345 selon le corpus numérique). Dans cet épisode, beaucouopde récits s'enchâssent et s'enchainent : Pelée, grâce aux conseils de Protée, conçoit Achille avec Thétis. Son fratricide le contraint à l'exil et il arrive en Thessalie, plus précisemment à Trachis, où Céyx, fils de Lucifer, l'accueille avec bienveillance, alors que Pelée dissimule la véritable raison de son exil. Comme il trouve Céyx dans un état de profonde tristesse, Pelée le questionne, ce qui amène le récit de la mort de Daedalion, son frère. Il remonte pour ce récit à la fille de Daedalion, Chioné, qui par sa beauté avait séduit Mercure et Apollon. Les deux la viole successivement, et elle accouche de deux fils : Autolycus, fils de Mercure, et Philammon, fils d'Apollon. Trop fière de l'ascendance maintenant divine de ses enfants, elle critique la beauté de Diane. La déesse transperce sa langue d'une flèche, et la blessure la vide de son sang. Son père Daedalion est rendu fou par la douleur de sa perte et tente de se jeter du haut du Parnasse. Apollon sauve sa vie en le transformant en épervier, dont la cruauté envers les autres animaux est expliqué par le chagrin infini de Daedalion.\
+\
+Le commentaire de @griffin_commentary_1997 sur le livre XI des *Métamorphoses* évoque plus en détails les différents récit, leurs versions selon les auteurs, et les inspirations homériques et virgiliennes pour les personnages. Les commentaires sur les mentions d'Apollon, notamment aux vers qui nous concernent, se résument à une analyse métrique qui souligne la simultanéité du regard des deux dieux sur Chioné, la place du Parnasse dans le récit, et la symbolique de pitié divine envers la douleur humaine.
 
-**Distribution sélective et positionnement stratégique**
+```{r}
+#| label: Requête APO 2
+#| echo: false
+#| message: false 
+#| warning: false
 
-Les données de fréquence confirment une approche quantitativement modeste mais qualitativement significative :
+requete_apo_2 <- data_plus_ext %>% 
+  filter(ref == "APO", livre == 11, between(vers, 266, 345))
 
-\[ESPACE POUR VISUALISATION : Graphique comparatif des fréquences des trois divinités\]
+knitr::kable(
+  requete_apo_2, 
+  caption = "Requête des occurrences d'Apollon (2)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+Une nouvelle requête nous permet de voir qu'Apollon est présent aussi sous d'autres valeurs dans cet épisode, dans lequel il cumule à la fois le rôle d'acteur de métamorphose et de métamorphe. Il est explicitement nommé cinq fois, de préférece avec son épithète de *Phoebus*. Cette sur-présence du nom est d'autant plus remarquable qu'en comparaison, Mercure n'est désigné clairement qu'une seule fois, et ce à travers son lignage (*Maiaque creatus*). Sur l'ensemble de leur présence réciproque, il semble qu'Apollon a la prévalence. Le vers 303 le voit présent à la coupe penthémimère, le vers suivant le place plus proche mais aussi plus illustre que Mercure avec l'emploi de *ille*/*hic* pour leur désignation respective. La structure du vers 305 est exploité par @griffin_commentary_1997. Apollon délaisse son épithète le plus proche de l'astre solaire lors d'une mention explicite à la nuit au vers 306, dans lequel il se disitngue également par sa place en fin de vers. Son absence d'action immédiate le place en dernière position dans l'ordre de passage dans le lit de Chioné, tout comme dans ce vers. Dès le moment où il entre en action, il est placé en tête. Son action, plus tardive que celle de Mercure, se veut plus signfiicative : il serait motivé par un *spem veneris*, et prend le temps de réfléchir à un stratagème à travers sa métamorphose en une vieille femme au vers 310 (*Phoebus anum simulat*). Un stratagème vain dans la mesure ou Chioné est déjà endormie à cause de l'action plus frontale de Mercure. La mention du vers 316 clôt ses appelations pour cette partie de l'épisode, pusiqu'elle permet de nommer son fils parmi les jumeaux de Chioné, Philammon, qui est connu grâce à l'héritage de son père par *carmine uocali* \[…\] *citharaque* («par les poèmes, la voix et la cithare »)[^partie3-1].
 
-**Spécificité des contextes d'intervention**
+[^partie3-1]: trad. Marie Cosnay
 
-L'analyse croisée révèle des préférences contextuelles qui distinguent Minerve de ses homologues divins :
+Sa dernière mention, la seule qui l'appelle en tant qu'acteur, intervient à la fin du récit de Céyx. Daedalion est dévasté par la douleur et souhaite se jeter du haut du mont Parnasse, qui est aussi le lieu où Apollon et Mercure mirent Chioné enceinte. Comme pour souligner le dernier moment auquel son action intervient, son nom est en toute fin de vers.
 
-\[ESPACE POUR VISUALISATION : Analyse comparative des contextes d'intervention (type) pour les trois divinités\]
+L'Apollon de ce récit est loin de l'oracle ou de la divinité à laquell on offre des sacrifices. Comme le rappelle @griffin_commentary_1997, il s'agit bien ici de pitié divine envers la souffrance mortelle. L'épisode accentue le caractère sensible du dieu, qui porte un désir amoureux, mais aussi la volonté d'une interaction avec Chioné, pusqu'il prend une autre forme pour aller à sa rencontre, à l'opposé du stratagème de Mercure, qui d'un coup de baguette la rend inerte et la met ainsi à sa disposition immédiate. La sensibilité d'Apollon est aussi soulignée au vers 339, avec l'adjectif *miseratus* qui accompagne sa mention en fin de vers, et qui jusitifie son action non sollicitée de transformation, en écho à la compassion qu'il éprouve pour la mort de Chioné, qui est aussi la mère de son enfant.
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+### 3.1.3. Jupiter : Callisto
 
-## 3.2 Études d'épisodes : entre données et interprétations
+Jupiter présente une richesse de mentions qui rend le choix d'un épisode particulier plus difficile que pour les autres divinités. Parmi ses épisodes les plus connus, on retrouve celui d'Europe au livre II, qui le voit se transformer lui-même, mais aussi sa maitresse, illustrant parfaitement son caractère infidèle, et soulignant ses rôles actiels pluriels.\
+Si l'on s'intéresse aux données des représentations, notamment la @fig-repartition-ana-iup et la @fig-ana-par-type-iup, deux livres voient une superposition des valeurs d'actant et de mtamorphose : le premier et le deuxième. Au premier livre, ces superposiitons exitent au sein de moments de métamorphoses, alors que dans le second, ils co-existent dans des moments narratifs. Afin de croiser un maximum de valeurs significatives pour la caractérisation des divinités en action, je réalise la requête pour les deux livres.
 
-L'analyse quantitative globale trouve sa validation et ses limites dans l'examen approfondi d'épisodes emblématiques. Ces études de cas permettent d'articuler les tendances structurelles identifiées avec la richesse sémantique du texte ovidien, révélant comment les données numériques éclairent ou questionnent les interprétations traditionnelles.
+```{r}
+#| label: Algorithme de requête interactive IUP
+#| echo: false
+#| message: false 
+#| warning: false
 
-### 3.2.1 Arachné : Minerve entre pédagogie et violence
+requete_iup_1 <- data_plus_ext %>% 
+  filter(ref == "IUP", ana %in% c("act", "auto"), livre == 1)
 
-L'épisode d'Arachné (Met. VI, 1-145) constitue un laboratoire privilégié pour comprendre les modalités d'intervention de Minerve. L'encodage révèle une progression dramatique qui confirte certains aspects du portrait traditionnel tout en en révélant d'autres.
+# Resultats
+knitr::kable(
+  requete_iup_1, 
+  caption = "Requête des occurrences de Jupiter (1)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-**Analyse de la répartition temporelle**
+Divers épisodes méritent notre attention ici : celui d'abord de Lycaon (I, 163-139), déjà mentionné au cours de ce mémoire, qui concentre un nombre total de mentions intéressant pour une étude linaire, à savoir six, mais avec une seule spécificité actantielle. C'est également le cas pour l'épisode « Io. Argus. Syrinx » (I, 567-745). Une analyse de ces épisodes permettrait de mieux dessiner le rôle structurant de Jupiter dans la narration. Quant à l'épisode du déluge, suivi de l'histoire de DEucalin et Pyrrha, le faible nombre des occurences s'ajoute à l'homogénéité actancielle.\
 
-L'examen des mentions de Minerve dans l'épisode révèle une distribution qui épouse les phases dramatiques du récit :
+```{r}
+#| label: Algorithme de requête interactive IUP (2)
+#| echo: false
+#| message: false 
+#| warning: false
 
-\[ESPACE POUR VISUALISATION : Timeline des mentions de Minerve dans l'épisode d'Arachné\]
+requete_iup_2 <- data_plus_ext %>% 
+  filter(ref == "IUP", ana %in% c("act", "auto"), livre == 2)
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+# Resultats
+knitr::kable(
+  requete_iup_2, 
+  caption = "Requête des occurrences de Jupiter (2)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-**Évolution des rôles actantiels**
+L'épisode d'Ocyrho et Asclépios (II, 633-675) contient une mention exceptionnelle dans notre encodage puisque la seule mention de l'intervention de Jupiter dans cet épisode est un pronom de rappel, ce qui n'est pas représentatif du tableau dressé du dieu. Enfin, l'épisode de l'enlèvement d'Europe (II, 833-875) contient un nombre insuffisant de mentions directe ainsi que de diversité actantielle.
 
-L'analyse de l'attribut ana dans l'épisode révèle une transformation progressive du rôle de Minerve :
+Notre choix se porte donc sur l'épisode de Callisto (II, 401-530) , qui cumule des occurrences dans les deux types de contextes narratifs, `metamorphosis` et `narrative`, ainsi que les deux valeurs de l'attribut `ana` qui nous intéressent particulièrement ici, `act` et `auto`.
 
-\[ESPACE POUR CODE R : Extraction et analyse des rôles de Minerve dans l'épisode d'Arachné\]
+Callisto est une nymphe de Nonacris en Arcadie, et une favorite de la déesse Diane. Elle occupe ses journées à la chasse, au maniement du javelot et à suivre la déesse dans se occupations. Elle attire l'oeil de Jupiter sans le vouloir, alors que ce dernier s'occupe de l'Arcadie. Décidant qu'elle vaut la peine de voir s'abattre les foudres de Junon plus tard, il se transforme en Diane et trompe la confiance de la nymphe pour la violer. Après l'agression, la nymphe retrouve le groupe des nymphes de Diane, et ce qui devient son crime est dévoilé lors d'une baignade. Elle est chassée par le groupe, puis transformée en ourse par Junon, qui lui reproche l'adultère et la connaissance de celui-ci par la naissance d'Arcas. Ce dernier, quinze ans après sa naissance, chasse dans la forêt et tombe sur sa mère changée en ourse, qu'il s'apprête à tuer sans savoir. Jupiter arrête le trait mortel et les transforme tous deux en constellations, la Grande et la Petite Ourse, à la grande rage de Junon.
 
-\[INTERPRÉTATION À DÉVELOPPER : Comment l'évolution des rôles reflète-t-elle la complexité du personnage de Minerve ?\]
+```{r}
+#| label: Requête IUP (3)
+#| echo: false
+#| message: false 
+#| warning: false
 
-### 3.2.2 Daphné : Apollon et l'échec de la séduction divine
+requete_iup_3 <- data_plus_ext %>% 
+  filter(ref == "IUP", livre == 2, between(vers, 401, 530))
 
-L'épisode de Daphné (Met. I, 452-567) offre un cas d'étude particulièrement révélateur des contradictions d'Apollon entre idéal artistique et passion destructrice. L'analyse quantitative permet de mesurer précisément ces tensions.
+knitr::kable(
+  requete_iup_3, 
+  caption = "Requête des occurrences de Jupiter (3)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-**Densité des mentions et intensité dramatique**
+La requête ciblé sur l'épisode révèle un total de onze mentions dans l'épisode, avec des épithètes et adjectifs variés.
 
-La fréquence des mentions d'Apollon dans l'épisode révèle une corrélation entre présence textuelle et tension dramatique :
+La première mention, est purement narrative, comme la grande majorité des mentions dans cet épisode. Elles rythment les différents moments de la narration : le *pater omnipotens* ouvre le récit avec la mise en place de la scène (401-418). *Iuppiter* prend la parole lors de la mise en place du stratagème (422-442) et est nommé comme en écho à l'ablatif *Iove* par la nymphe qui le compare à Diane. Cette comparaison est toute suite réfutée par le *Iovem* qui pose la question de quel dieu pourrait être supérieur à Jupiter. La mention qui la suit de près signale le départ de Jupiter et la réussite du stratagème, ainsi clôt. C'est pourtant l'excate même mention qui ouvre le cycle des conséquences (441-508) qui s'abattent sur Callisto. La première est la perte de confiance, envers les autres et elle-même : elle fuit devant Diane, désignée par l'attribut *Dictynna*, en référence à l'histoire de la nymphe de Britonartis dont l'histoire est racontée par Callimaque dans son hymne à Artémis. Le filet qui aurait dû sauver la nymphe traumatisée se révèle être un piège pour elle, et les eaux ne la sauvent pas de la divinité, mais dévoilent le crime qui a été commis, et précipitent son exil. Les occurrences des vers 473 et 475 renvoient directement à la relation de Jupiter avec Junon (*Iovisque mei* dans le texte et *marito*), comme le souligne le *magni matrona Tonantis* au vers 466, dévoilant son rôle maintenant effacé mais toujours causal de la direction que prend la vie de Callisto. Cette idée est doublé par le sentiment d'ingratitude porté par les deux mentions suivantes, le *Iovi* (v. 481) qui rappelle l'attrait de Jupiter pour le corps humanoïde de la nymphe, et le *Iovem* (v.488), lié directement à l'ingraitude perçue par Callisto face à l'absence de réaction après sa transformation. Ce n'est qu'au vers 505, qui est dans les éditions de Marie Cosnay et de Geroges Lafaye partie prenante de l'épisode d'Arcas, que le dieu *omnipotens* revient enfin et scelle le sort de Callisto par une seconde métamorphose en contellation.
 
-\[ESPACE POUR VISUALISATION : Densité des mentions d'Apollon dans l'épisode de Daphné\]
+Il est intéressant de noter que l'épisode s'ouvre et se clôt par l'insistance sur la toute puissance de Jupiter (*pater omnipotens*/*omnipotens*), alors même que les situations de métamorphoses dans cet épisode dévoilent les stratagèmes qu'il doit déployer pour contourner une importante faiblesse, récurrente dans ses épisodes d'adultère : il ne peut approcher la nymphe qui est l'objet de son désir sous sa propre forme, et doit emprunter celle d'une autre, en l'occurrence ici d'une autre divinité. Cette même nymphe considère Jupiter inférieur à Diane. S'ajoute à cela le fait que, comme tout autre divinité, il ne peut défaire les effets du pouvoir d'une autre divinité et ne peut changer davantage le triste sort de Callisto qu'en la changeant en constellation. Sa soumission à Junon s'encapsule l'attribut *magni* *Tonantis*, qui encadre *matrona* : malgré sa toute puissance et un attribut qui devrait inspirer la terreur, la présence de Junon reste centrale dans la vie de Jupiter.
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+### 3.1.4. Minerve : Arachné
 
-**Analyse des contextes d'intervention**
+Dans la triade divine qui nous occupe, Minerve occupe la troisième place du podium avec 62 mentions. La faible quantité d'occurrences permet de cibler davantage les moments de convergence des actions. Comme pour Apollon et Jupiter, son maximum d'apparition est observable au livre 2 dans la @fig-repartition-ref. La @fig-repartition_ana_min et la @fig-ana-par-type-min pointent cependant pour le livre 6, qui présente un équilibre des deux rôles actanctiels majeurs.
 
-L'examen croisé des attributs type et ana révèle les modalités spécifiques de l'action apollinienne :
+```{r}
+#| label: Algorithme de requête interactive MIN
+#| echo: false
+#| message: false 
+#| warning: false
 
-\[ESPACE POUR CODE R : Analyse des contextes d'intervention d'Apollon dans l'épisode de Daphné\]
+requete_min_1 <- data_plus_ext %>% 
+  filter(ref == "MIN", ana %in% c("act", "auto"), livre == 6)
 
-\[INTERPRÉTATION À DÉVELOPPER : Que révèlent les données sur la nature de l'échec d'Apollon ?\]
+# Resultats
+knitr::kable(
+  requete_min_1, 
+  caption = "Requête des occurrences de Minerve (1)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-### 3.2.3 Europe : Jupiter métamorphe et stratège de la séduction
+Sans surprise, l'épisode d'Arachné (VI, 1-145) ressort explicitement comme point de convergence des mentions actives de Minerve.
 
-L'épisode d'Europe (Met. II, 833-875) illustre parfaitement les stratégies narratives jupitériennes et permet de mesurer l'écart entre pouvoir théorique et pratiques de séduction. L'analyse quantitative révèle des patterns récurrents dans les métamorphoses amoureuses de Jupiter.
+Cet épisode intervient après les récits enchassés des Muses à Minerve au livre V, et ouvre le livre VI avec l'idée que Minerve a tiré une leçon de la correction des Piérides. Arachné, fière tisseuse de Maédonie, refuse le patronage divin qu'on lui prête et défie-même la déesse de l'artisanat qu'est Minerve. Malgré une mise en garde de la déesse sous les traits d'une vieille femme, elle parle sous la colère et réitère sa fierté d'autodidacte. Minerve se révèle alors et le combat tant souhaité se produit. Minerve dépeint le panthéon olympien des divinités principales, avec leurs symboles, et elle n'oublie pas de se représenter avec ses attributs. Elle place aux quatres coins les conséquences de combats entre des mortels qui, comme Arachné, ont osé défier les dieux, combats qui se terminent systématiquement au désavantage des mortels. Elle conclut par un olivier de la paix. Arachné brode les tromperies divines les plus célèbres de Jupiter, Neptune, Apollon et Bacchus. Guidée par la jalousie, Minerve détruit la toile et frappe Arachné. Humiliée, cette dernière se donne la mort. Minerve par pitié la condamme, elle et sa descendance, à la condition d'araignée.
 
-**Modalités de la transformation divine**
+Je réalise le même processus qu'avec les divinités précédentes en demandant toutes les mentions de Minerve dans cet épisode.
 
-L'encodage de l'épisode permet d'analyser précisément les phases de la métamorphose jupitérienne :
+```{r}
+#| label: Requête MIN 2
+#| echo: false
+#| message: false 
+#| warning: false
 
-\[ESPACE POUR VISUALISATION : Analyse séquentielle de la métamorphose de Jupiter en taureau\]
+requete_min_2 <- data_plus_ext %>% 
+  filter(ref == "MIN", livre == 6, between(vers, 1, 145))
 
-\[INTERPRÉTATION DES DONNÉES VISUELLES À DÉVELOPPER\]
+knitr::kable(
+  requete_min_2, 
+  caption = "Requête des occurrences de Minerve (2)", 
+  bookstabs = TRUE) %>%
+  kable_styling(latex_options = c("hold_position", "striped"))
+```
 
-**Comparaison avec d'autres épisodes jupitériens**
+Les douze occurrences de Minerve dans cet épisode présentent presque toutes les combinaisons possibles des attributs `type` et `ana` (à l'exception de l'association `type="metamorphosis"` et `ana="act"`, et celle du même type avec `ana="NA"`).
 
-Les données permettent d'établir des parallèles structurels avec d'autres épisodes de séduction divine :
+Le récit de l'épisode s'ouvre, comme avec celui de Callisto, sur une mention indirecte, *Tritonia.* L'épithète renvoie à un épisode de la vie d'Athéna dans la mythologie grecque, durant lequel elle tua son amie la nymphe Pallas de façon involontaire, alors que celle-ci est éblouie par l'éclat de Jupiter, intervenu dans leur jeu pour protéger sa fille. Après cet évènement, Athéna aurait toujours porté le prénom de la nymphe avant son propre prénom. Pallas Athéna porte alors dans son prénom le souvenir des conséquences potentielles de ses impulsions, et l'évènement qui suit n'échappe pas à la règle. Il est à noter que toutes les mentions nominales de Minerve dans cet épisode sont des déclinaisons de *Pallas*. \
+Celle du vers 23, *Pallade*, la lie directement à son statue de déesse des techniques et de l'artisanat (*a Pallade doctam*). Sa seule présence dans un contexte de métamorphose la concerne directement, puisqu'elle se métamorphose en vieille dame pour prodiguer son avertissement à Arachné (v. 26). Le moment est encore au test de l'arrogance, Minerven ne joue pas encore toutes ses cartes, ce qui renforcé par la mention suivante (v.36), qui s'accompagne de *obscuram*. Au vers 43, c'est la révélation du divin sans cesse appelé au défi par la condition mortelle qui est rappelé avec *dea*, puis *Pallada* au vers suivant. Les deux mentions se font écho sur un dactyle en tête de vers consécutifs (*Tum dea*/*Palladaque*). Sa puissance divine en opposition à la faiblesse mortelle est renforcée par le *numina* au même vers, mais aussi son ascendance rappelée au vers 51. Son lien au *pater omnipotens* assoie sa position et l'ancre davantage dans le panthéon olympien, rappellant la protection de Jupiter, mais également que la défier elle, c'est aussi défier le maitre des dieux. La mention de *Pallas* au vers 70 est accentuée par sa place entre une coupe trihémimère et penthémimère : elle lance la description du travail de broderie de Minerve. Elle ne réapparait nommée explicitement qu'à la fin du tissage d'Arachné, dont la qualité la rend jalouse (*Pallas*, v. 129). Marie Cosnay choisit d'accentuer le caprice de Minerve dans en traduisant la référence du vers suivant *flava virago* par « *mégère* *blonde* », de façon presque caricaturale. Le Gaffiot insiste sur la présence de *vir* dans le mot, qui renvoye alors surtout à un fort caractère, que l'on peut aller jusqu'à qualifier de guerrier. Elle reprend enfin son attribut de Pallas lorsqu'elle tente de corriger son excès de colère meurtrier en transformant Arachné en araignée, sans se départir de sa rancune. Elle boucle ainsi un nouvel épisode d'un cycle de conséquences mortelles face à sa colère.
 
-\[ESPACE POUR CODE R : Analyse comparative des stratégies métamorphiques de Jupiter\]
+L'analyse d'épisodes précis nous a permis deux choses : dans un premier temps, elle met en application directe dans le texte les outils développés dans la partie précédente, qui nous avaient permis de balayer le texte de façon large. Au coeur d'un épisode, entre deux vers, ils permettent également de toucher à un niveau micro de la narration. Nous ne les avons pas exploités ici, mais les emplois des algorithmes de bigrammes et les nuages de mots, à l'échelle d'un livre et d'une épisode, sont autant de portes ouvertes à l'analyse des échos sémantiques. Dans un second temps, nous avons pu dégager au cœur des épisodes concentrants les moments actantiels des divinités qui nous occupent et définir plus précisement leurs portraits actifs et leur place dans la structure de l'oeuvre. Nous nous penchons donc maintenant sur les portraits globaux, que nous pouvons enrichir de nos découvertes réalisées par la combinaison d'une méthode numérique et littéraire.
 
-\[INTERPRÉTATION À DÉVELOPPER : Quels schémas récurrents révèle l'analyse quantitative ?\]
+## 3.2. Relecture des portraits divins : entre théorie et pratique narrative
 
-## 3.3 Synthèse : apports et limites de l'approche numérique
+### 3.2.1. Apollon, de l'idéal artistique aux passions destructrices
+
+L'analyse quantitative des 117 mentions d'Apollon dans les *Métamorphoses* d'Ovide révèle des dimensions inattendues du dieu solaire qui enrichissent notre compréhension de sa représentation littéraire. Si la tradition canonique présente Apollon comme la divinité de la prophétie, de la beauté et des arts, l'exploitation numérique du texte des *Métamorphoses* ovidiennes dévoile un portrait plus complexe et nuancé, où le dieu assume des rôles narratifs et symboliques qui dépassent ses attributions traditionnelles.
+
+Les données numériques ont revélé une répartition particulièrement significative des interventions d'Apollon à travers les quinze livres. Il présente une concentration maximale au livre 2, où il dépasse Jupiter. Cette prééminence quantitative dans le deuxième livre de l'œuvre suggère qu'Apollon occupe une position architecturale privilégiée, fonctionnant comme un point d'ancrage narratif autour duquel s'organisent des moments clés du recueil. Ensuite, la tendance principalement narrative des interventions apolliniennes, avec sept livres accordant une place significative aux métamorphoses dans les épisodes où le dieu intervient, démontre que sa fonction dépasse celle d'un simple agent transformateur. Les livres 5 à 7 se distinguent particulièrement par une répartition presque équilibrée entre contextes narratifs et métamorphiques. Cette distribution présente un certain équilibre entre les moments de métamorphose directe et les séquences narratives classiques. Apollon occupe ainsi une position privilégiée dans l'architecture transformatrice du recueil, intervenant aussi bien comme agent catalyseur des changements que comme figure narrative traditionnelle. Les alternances cohérentes observées dans les livres 5, 6, 7, 10 et 11 confirment le double statut du dieu : à la fois divinité de la métamorphose et personnage intégré aux développements narratifs conventionnels.
+
+L'analyse quantitative a également révelé une forte présence actorielle d'Apollon, confirmant son rôle de divinité interventionniste directement impliquée dans l'action narrative. Cette prédominance de la fonction actorielle s'explique certes par les attributions traditionnelles d'Apollon — dieu de la prophétie, de la beauté —, mais les données numériques révèlent que cette intervention directe s'étend bien au-delà de ses domaines canoniques de compétence. La @fig-repartition-ana-apo indique que la présence du dieu en tant qu'acteur est rarement en demi-mesure : quand il est présent dans un livre, soit il est uniquement acteur (livres 7, 10 et 14), soit uniquement métamorphe (livres 5 et 6). Seul le livre 11 présente une cohabitation inégale des deux rôles, avec la prépondérance du rôle d'acteur, livre duquel se dégager l'épisode traité en analyse approfondie. Cette polarisation suggère un Apollon qui assume pleinement ses responsabilités narratives, sans ambiguïté ni gradation.
+
+Le réseau lexical d'Apollon met quant à lui en exergue une structure relativement dispersée mais organisée autour de plusieurs nœuds sémantiques majeurs. Les termes centraux les plus connectés incluent *phoebe* (Phébé), *apollo*, *amor* et *deus*, suggérant une identité divine construite autour de la prophétie apollinienne et des relations amoureuses. Cette architecture lexicale démontre que l'identité apollinienne dans les *Métamorphoses* se construit sur un équilibre entre fonction prophétique et dimension érotique. La présence marquée du vocabulaire amoureux (*amor*, *amores*, *referamus*) indique qu'Ovide privilégie la représentation d'Apollon en action comme divinité amoureuse. Cette orientation thématique fait écho aux grands récits mettant en scène le dieu dans les *Métamorphoses* (Daphné, Coronis, Hyacinthe) et révèle une hiérarchisation des attributs divins qui privilégie la dimension passionnelle.
+
+L'analyse quantitative de l'épisode de Chioné contient une sur-présence remarquable d'Apollon, explicitement nommé cinq fois, de préférence avec son épithète de *Phoebus*. Cette sur-présence nominale, comparée à l'unique désignation de Mercure, laisse voir une stratégie narrative qui privilégie la caractérisation apollinienne sur la simple fonction actancielle. L'analyse positionnelle des mentions révèle un Apollon caractérisé par la réflexion et la sensibilité plutôt que par l'action immédiate. Sa motivation par un *spem veneris* et sa métamorphose stratégique en vieille femme témoignent d'une approche relationnelle qui contraste avec l'intervention directe et brutale de Mercure. Cette dimension révèle un Apollon soucieux d'interaction, voire de séduction, plutôt que de domination. La mention finale, qualifiée par l'adjectif *miseratus*, souligne la compassion divine et justifie l'action non sollicitée de transformation. Cette sensibilité d'Apollon, révélée par l'analyse numérique des positions et des qualifications, vient préciser le portrait canonique du dieu.
+
+Ce portrait numérique révèle un Apollon qui fonctionne comme un pivot narratif structurant, une divinité interventionniste aux multiples facettes, et un personnage dont la sensibilité et la complexité relationnelle enrichissent notre compréhension de la création ovidienne. Les données quantitatives ne contredisent pas la tradition canonique mais la complètent et la nuancent, révélant des dimensions inattendues qui témoignent de la richesse et de la subtilité de l'écriture d'Ovide. L'Apollon des *Métamorphoses*, tel que le révèle l'analyse numérique, n'est plus seulement le dieu solaire de la tradition, mais une figure littéraire complexe qui incarne une personnalité qui va au dela de son rôle de Soleil, à travers des interventions sensibles et passionées.
+
+### 3.2.2. Jupiter, le souverain ambivalent face aux données
+
+La figure de Jupiter dans les *Métamorphoses* présente un paradoxe fascinant lorsqu'on confronte son statut canonique de divinité suprême aux données quantitatives de sa présence textuelle. Avec 163 mentions totales, Jupiter occupe effectivement une position dominante dans l'œuvre, confirmant son rang de *pater omnipotens* au sein du panthéon olympien. Cette omniprésence numérique, qui le place dans tous les livres de l'œuvre, témoigne d'une conception littéraire où la divinité suprême constitue l'armature théologique indispensable à la cohérence cosmologique du récit.
+
+L'analyse statistique révèle cependant une tension remarquable entre la fréquence des mentions de Jupiter et leur efficacité métamorphique. Si Jupiter demeure le dieu le plus cité en valeur absolue, sa présence dans les contextes de métamorphose proprement dits apparaît paradoxalement circonscrite à seulement six livres, avec une moyenne de répartition (5,3) qui, bien que supérieure à celle d'Apollon (4,179), masque une concentration moins intensive dans les moments transformateurs cruciaux, comme l'indique la valeur du troisième quartile (7) inférieure à celle d'Apollon. Cette distribution suggère que Jupiter fonctionne davantage comme une présence régulatrice diffuse que comme un agent direct de métamorphose. Sa présence traverse l'ensemble de l'œuvre sans nécessairement s'actualiser en interventions transformatrices, révélant une conception ovidienne du pouvoir suprême qui s'exerce moins par l'action directe que par l'autorité immanente. Les données mettent en évidence une caractéristique fondamentale du Jupiter des *Métamorphoses* : la prédominance de sa fonction discursive sur sa fonction actorielle. Avec 26 mentions en discours direct, Jupiter se révèle être avant tout un législateur cosmique dont les interventions verbales ont valeur de décret divin. Cette répartition déséquilibrée entre présence discursive et présence actorielle traduit une esthétique littéraire où la parole performative du dieu suprême constitue le véritable moteur de l'action narrative.
+
+La faiblesse relative de sa présence réflexive confirme qu'Ovide privilégie la représentation directe de la divinité suprême, évitant les évocations indirectes qui dilueraient l'impact de son autorité. Cette stratégie narrative inscrit Jupiter dans une temporalité de l'immédiateté divine, où chaque intervention porte le poids de l'absolu. L'analyse de la distribution des mentions révèle une concentration significative des discours directs dans des moments narratifs stratégiques : les livres 1-2, lors de l'établissement de l'ordre cosmique, 6-7, avec la crise théologique majeure du cycle thébain, et 15 lors de la révélation eschatologique avec l'apothéose de César. Cette répartition dessine une architecture narrative où Jupiter intervient vocalement aux moments charnières de l'histoire cosmique, confirmant son rôle d'organisateur du temps mythique. Les données relèvent aussi un phénomène particulièrement significatif : l'effacement progressif de Jupiter après le livre 10, témoignant d'une évolution narrative vers l'humain ou l'hybride. Cette décroissance quantitative accompagne le basculement thématique de l'œuvre, où les métamorphoses divines cèdent progressivement la place aux transformations humaines. Jupiter, en tant que garant de l'ordre cosmique primordial, voit sa nécessité narrative diminuer à mesure que le récit s'humanise.
+
+L'examen détaillé de l'épisode de Callisto illustre parfaitement l'ambivalence du Jupiter des *Métamorphoses*. L'encadrement de l'épisode par l'épithète *omnipotens* (v. 401 et v. 505) affirme programmatiquement la toute-puissance divine, mais la structure narrative révèle simultanément les contraintes qui pèsent sur cette omnipotence. La nécessité pour Jupiter de recourir au stratagème de l'emprunt d'identité, en se faisant passer pour Diane, dévoile une première limite : l'impossibilité d'approcher directement l'objet de son désir. Cette contrainte narrative, loin de diminuer la divinité, révèle les règles du jeu cosmique ovidien où même la puissance suprême doit composer avec les lois de l'univers qu'elle a établi. Plus révélateur encore, l'impuissance de Jupiter face aux transformations opérées par Junon illustre un principe fondamental de l'univers des *Métamorphoses* : l'irréversibilité des métamorphoses divines. Jupiter ne peut qu'opérer une métamorphose compensatoire (ici avec une catastérisation) sans pouvoir annuler l'œuvre de son épouse. Cette limitation révèle une conception sophistiquée du pouvoir divin où l'omnipotence ne signifie pas l'arbitraire absolu mais l'inscription dans un ordre cosmique cohérent.
+
+L'analyse quantitative des mentions met en évidence une tension fondamentale dans la représentation du maitre des dieux : la coexistence de l'affirmation d'autorité et de la soumission conjugale. L'expression *magni matrona Tonantis* (v. 466) cristallise cette ambivalence, où l'épithète *magni Tonantis*, malgré sa charge terrifiante, trouve en son centre *matrona*, maintenant la présence centrale et contraignante de Junon dans la vie de Jupiter. Cette dialectique s'enrichit de la dimension de l'ingratitude perçue par les victimes des stratagèmes de la divinité. Les mentions *Iovi* (v. 481) et *Iovem* (v. 488) dans l'épisode de Callisto soulignent le décalage entre l'attrait initial de Jupiter pour ses victimes et son absence lors des conséquences dramatiques de ses actes. Cette configuration narrative révèle un Jupiter plus complexe que la figure décrite en première partie, un dieu qui s'inscrit dans une narartion de la responsabilité divine où l'omnipotence ne dispense pas de la culpabilité.
+
+L'enrichissement du portrait de Jupiter par les données quantitatives révèle une figure divine paradoxale, où la toute-puissance canonique se trouve constamment négociée avec les contraintes narratives et cosmologiques. Jupiter demeure certes le régulateur suprême de l'univers ovidien, mais sa grandeur réside moins dans un pouvoir absolu que dans sa capacité à opérer dans un système de règles qu'il a lui-même établi et auxquelles il reste soumis. Cette conception renouvelée du Jupiter des *Métamorphoses*, étayée par l'analyse quantitative, révèle la sophistication de la théologie poétique d'Ovide, où la divinité suprême incarne non pas l'arbitraire du pouvoir mais la complexité d'un ordre cosmique où chaque acte divin s'inscrit dans un réseau de conséquences et de contraintes. La figure de Jupiter dans les *Métamorphoses* émerge ainsi comme celle d'un dieu à la fois omnipotent et limité, législateur et soumis aux lois qu'il promulgue, révélant la profondeur anthropologique d'une œuvre qui interroge les fondements mêmes de l'autorité divine et de l'ordre cosmique.
+
+### 3.2.3. Minerve, stratège divin et interventions passionnées
+
+L'analyse numérique de Minerve dans les *Métamorphoses* dessine une figure divine dont le portrait canonique se trouve substantiellement enrichi, voire reconfiguré, par les données quantitatives. Traditionnellement perçue comme la déesse de la sagesse, de la guerre stratégique et des arts, Minerve dévoile, comme les autres divinités étudiées, une complexité narrative au delà de ses attributions mythologiques classiques.
+
+Les données numériques mettent en évidence une présence paradoxale : quantitativement limitée mais qualitativement décisive. L'absence totale de Minerve au livre 1, suivie de sa soudaine émergence avec quinze occurrences au livre 2, révèle une stratégie narrative d'entrée différée qui contraste avec l'omniprésence immédiate de Jupiter. Cette configuration suggère que Minerve n'intervient pas selon le modèle de la puissance divine absolue, mais selon une logique de spécialisation fonctionnelle qui redéfinit son rôle dans l'économie narrative des *Métamorphoses*.
+
+L'analyse quantitative nous a indiqué que Minerve concentre ses interventions dans la première moitié de l'œuvre, avec un pic remarquable au livre 6 où elle atteint quatorze occurrences, égalant presque Apollon et dépassant Jupiter. Cette concentration temporelle signale une fonction narrative spécifique : celle d'une divinité dont l'action se déploie selon des modalités ciblées plutôt que selon un principe de domination généralisée. Cette configuration est appuyée par la dispersion des valeurs de Minerve, avec une moyenne de 2,818 pour une valeur maximale de 13. La déesse privilégie l'intervention ponctuelle et décisive à la présence continue, redéfinissant et concrétisant ainsi le portrait canonique de la divinité stratège. Plutôt que d'exercer une surveillance constante, Minerve déploie une tactique d'intervention sélective qui maximise l'impact de ses apparitions.
+
+L'analyse des types d'intervention révèle que Minerve ne participe directement à des épisodes de métamorphose que dans trois livres sur les onze où elle est mentionnée (livres 2, 6 et 8). Cette limitation quantitative masque une spécialisation qualitative remarquable : ses interventions métamorphiques concernent principalement des transformations d'ordre intellectuel, artistique ou créatif, redéfinissant ainsi son domaine d'action guerrier à des champs de bataille intellectuels et circonscrits à des champs de compétence artistiques.
+
+Les données de la @fig-ana-discours-100 révèlent chez Minerve le profil le plus équilibré des trois divinités, avec une répartition quasi-égale entre présence actorielle et présence discursive. Cette symétrie quantitative traduit une double nature divine qui enrichit considérablement le portrait traditionnel : Minerve se révèle à la fois divinité d'action directe et divinité de la parole autorisée, dépassant la simple opposition entre guerre et sagesse. La faiblesse de sa présence réflexive témoigne d'une conception qui privilégie la représentation directe de la déesse. Cette configuration numérique suggère que Minerve échappe aux évocations métonymiques qui caractérisent d'autres divinités, s'imposant comme une présence pleine et immédiate dans le récit.
+
+L'épisode d'Arachné au livre 6 constitue un laboratoire exemplaire de cette reconfiguration du portrait de Minerve. Les douze occurrences de la déesse dans cet épisode présentent presque toutes les combinaisons possibles des attributs `type` et `ana`, et révèlent la complexité fonctionnelle de la divinité. L'analyse numérique de cet épisode confirme que Minerve déploie simultanément ses attributions guerrières, artistiques et métamorphiques. L'usage exclusif de l'épithète *Pallas* dans les mentions nominales de cet épisode révèle une stratégie onomastique qui réactive la mémoire mythologique tout en l'inscrivant dans un nouveau contexte narratif. L'analyse quantitative de cette récurrence onomastique confirme que Minerve porte dans son identité même le souvenir des conséquences de ses impulsions, enrichissant son portrait canonique d'une dimension mémorielle et réflexive.
+
+L'enrichissement du portrait de Minerve par l'analyse numérique révèle une divinité qui échappe aux catégories traditionnelles de la mythologie classique. Plutôt que d'incarner une fonction divine généraliste, Minerve se révèle comme une puissance de spécialisation intensive, concentrant ses interventions dans des domaines précis avec une grande efficacité. Cette reconfiguration numérique du portrait canonique suggère que Minerve incarne dans les *Métamorphoses* un modèle alternatif de divinité : une experte qui intervient selon une logique de compétence spécialisée.
+
+## 3.3. Synthèse : apports et limites de l'approche numérique
 
 ### 3.3.1 Ce que les données révèlent des divinités
 
-L'analyse quantitative des mentions divines dans les Métamorphoses révèle des structures narratives et symboliques qui dépassent les portraits traditionnels. Les résultats obtenus permettent d'identifier plusieurs apports significatifs :
+Notre analyse, qui a conjugué les méthodes numériques et l'approche littéraire, nous a révélé des caractères divins plus élaborés et nuancés que ce que les représentations de la première partie nous avaient laissé voir. L'analyse numérique a non seulement recoupé et confirmé les caractéristiques canoniques des divinités classiques, mais elle a aussi apporté des précisions significatives quant à la formation du portrait d'une divinité dans les *Métamorphoses*.
 
-**Confirmation et nuancement des portraits canoniques**
+Jupiter se révèle effectivement omniprésent dans l'œuvre, mais selon des modalités bien plus complexes que ne le suggère sa seule autorité théorique. Les données quantitatives montrent que sa présence textuelle ne se limite pas à des interventions directes, mais s'étend à travers un réseau dense de références qui structure l'ensemble de l'œuvre. Apollon, quant à lui, apparaît moins harmonieux et plus vulnérable que ne l'indique son statut traditionnel de dieu prophète de la beauté. L'analyse numérique révèle des moments de fragilité et d'échec qui nuancent considérablement son image de divinité maîtresse de l'harmonie. Minerve, enfin, révèle une stratégie d'intervention ponctuelle mais remarquablement efficace, qui fait vaciller son ethos de déesse réfléchie et mesurée pour laisser entrevoir une divinité à la fois stratégique et passionnée.
 
-Les données confirment certains aspects des portraits traditionnels tout en révélant des nuances et des contradictions méconnues. Jupiter se révèle effectivement omniprésent, mais selon des modalités plus complexes que ne le suggère sa seule autorité théorique. Apollon apparaît moins harmonieux et plus vulnérable que ne l'indique son statut de dieu des arts. Minerve révèle une stratégie d'intervention mesurée mais efficace qui confirme son ethos de déesse réfléchie.
+L'étude des épisodes clés s'est concentrée sur le fil rouge déployé par les mentions divines au sein d'épisodes particuliers, choisis pour leur concentration d'interventions actives des divinités. Cette approche, bien qu'orientée par nos choix méthodologiques, permet aux données encodées de révéler le texte sous l'angle par lequel nous souhaitons l'analyser. Ces portraits enrichis par une analyse numérique à la fois globale et spécifique ne constituent que des esquisses des analyses approfondies qu'il est possible de réaliser par le croisement systématique des résultats de l'analyse quantitative et d'un regard littéraire critique.
 
-**Révélation de structures narratives cachées**
+L'approche quantitative permet de souligner des logiques de distribution et de structure qui demeurent plus difficilement accessibles à la lecture traditionnelle. Les concentrations, les absences, les corrélations entre contextes et rôles dessinent une architecture narrative qui structure l'œuvre à un niveau macro-textuel, révélant des dynamiques d'ensemble jusqu'alors imperceptibles.
 
-L'approche quantitative révèle des logiques de distribution qui échappent à la lecture traditionnelle. Les concentrations, les absences, les corrélations entre contextes et rôles dessinent une architecture narrative sophistiquée qui structure l'œuvre à un niveau macro-textuel.
+### 3.3.2. Apports méthodologiques de l'approche numérique
 
-**Identification des spécificités ovidiennes**
+La méthodologie employée dans cette étude présente l'avantage considérable de la reproductibilité scientifique. L'encodage XML-TEI standardisé et les scripts d'analyse R, tous disponibles en ligne et accessibles à la lecture ainsi qu'à la modification, permettent une validation rigoureuse des résultats, une amélioration continue des scripts et une extension potentielle à d'autres divinités, voire à d'autres œuvres du corpus latin. Cette approche ouvre ainsi la voie à des études comparatives internes systématiques, impossibles à réaliser avec les méthodes traditionnelles d'analyse littéraire.
 
-La comparaison avec les portraits établis par la critique révèle les spécificités du traitement ovidien des divinités. L'analyse quantitative permet de mesurer précisément les écarts entre tradition et innovation, confirmant le génie de renouvellement d'Ovide.
+Le cheminement méthodologique s'est engagé dans des étapes intéressantes en naviguant entre analyse quantitative et interprétation qualitative. Elle a esquissé la voie vers d'autres étapes en vue de portraits plus complets et concrets. Les visualisations orientent la lecture à différentes échelles temporelles et narratives, tandis que l'analyse d'épisodes spécifiques valide ou questionne les tendances globales identifiées. Cette dialectique fructueuse entre macro et micro-analyse enrichit la compréhension du texte et de ses dynamiques narratives complexes.
 
-### 3.3.2 Apports méthodologiques de l'approche numérique
-
-**Reproductibilité et extensibilité**
-
-La méthodologie développée présente l'avantage de la reproductibilité scientifique. L'encodage XML-TEI standardisé et les scripts d'analyse R permettent une validation des résultats et une extension à d'autres divinités ou d'autres œuvres. Cette approche ouvre la voie à des études comparatives systématiques impossibles avec les méthodes traditionnelles.
-
-**Articulation distant reading / close reading**
-
-Le dispositif méthodologique réussit l'articulation entre analyse quantitative et interprétation qualitative. Les visualisations orientent la lecture fine, tandis que l'analyse d'épisodes valide ou questionne les tendances globales. Cette dialectique entre macro et micro-analyse enrichit considérablement la compréhension du texte.
-
-**Renouvellement des questionnements critiques**
-
-L'approche numérique génère de nouvelles questions critiques en révélant des structures méconnues. Elle invite à repenser les catégories d'analyse traditionnelles et ouvre des pistes de recherche inédites sur l'architecture narrative ovidienne.
+L'approche numérique génère également de nouvelles questions critiques, en révélant des structures méconnues et des patterns narratifs jusqu'alors invisibles. Elle invite à repenser les catégories d'analyse traditionnelles de la littérature antique et ouvre des pistes de recherche sur l'architecture narrative de l'œuvre ovidienne, notamment en ce qui concerne les stratégies de construction des personnages divins.
 
 ### 3.3.3 Limites et perspectives de recherche
 
-**Limites méthodologiques identifiées**
+L'analyse révèle également les limites inhérentes à l'approche adoptée. La restriction aux noms propres et périphrases exclut une partie significative des références divines, comme les allusions indirectes et les métaphores. L'interprétation des attributs `ana` et `type` reste subjective et nécessite une validation collaborative impliquant plusieurs chercheurs pour garantir une plus grande objectivité dans l'encodage. De plus, la granularité de l'analyse pourrait être considérablement affinée par un encodage plus détaillé des contextes narratifs, permettant une compréhension plus fine des nuances de situation. L'exploitation insuffisante de la valeur `obj` de l'attribut `ana` constitue une limite notable : cette valeur n'a eu aucune occurrence dans le cadre de cette étude. Au-delà de souligner l'omnipotence et l'exclusivité du pouvoir divin dans le processus métamorphique, elle demeure invisible dans toute lecture de données. Un emploi à travers un encodage des objets, ou plus largement de tout personnage des *Métamorphoses*, la ferait réapparaître et enrichirait l'analyse.
 
-L'analyse révèle également les limites de l'approche adoptée. La restriction aux noms propres et périphrases exclut une partie significative des références divines. L'interprétation des attributs ana et type reste subjective et mériterait une validation collaborative. La granularité de l'analyse pourrait être affinée par un encodage plus détaillé des contextes narratifs.
+L'absence d'encodage de toutes les données recueillies constitue une autre limite significative. Le tableau de l'année précédente présentant des caractéristiques de métamorphoses (concomitante, constituante, circonstante, résultante, etc.), des types (divine, végétale, objectifiante, animale, etc.), mais aussi le vocabulaire directement lié au déclenchement d'une métamorphose, qui aurait ajouté des couches de lecture particulièrement intéressantes à l'analyse.
 
-**Perspectives d'amélioration**
-
-Les résultats obtenus suggèrent plusieurs pistes d'amélioration : enrichissement de l'encodage avec l'inclusion des pronoms et références indirectes, développement d'analyses de réseau pour cartographier les interactions divines, extension à l'ensemble du panthéon ovidien pour une vision exhaustive des dynamiques divines.
-
-**Ouvertures transdisciplinaires**
-
-L'approche développée ouvre des perspectives de collaboration avec d'autres disciplines : psychologie cognitive pour l'analyse des représentations mentales, sociologie religieuse pour l'étude des pratiques cultuelles, informatique pour le développement d'outils d'analyse plus sophistiqués.
-
-Cette analyse quantitative des divinités ovidiennes démontre la fécondité de l'articulation entre humanités numériques et études littéraires classiques. En révélant des structures cachées tout en confirmant l'intuition critique, elle contribue au renouvellement des études ovidiennes et ouvre des perspectives méthodologiques prometteuses pour l'analyse computationnelle des textes antiques.
+Les perspectives d'amélioration de cette recherche sont nombreuses et prometteuses. Une précision de l'encodage en termes de types de métamorphoses et de mentions divines permettrait une analyse plus fine des mécanismes narratifs. L'amélioration de l'exploration du corpus via l'algorithme de recherche du tableau de données extraites constitue une priorité technique. De plus, l'emploi des nuages de mots à l'échelle des épisodes, accompagné d'une analyse systématique des verbes, offrirait une perspective lexicale complémentaire. Le croisement avec une analyse discursive plus poussée permettrait d'intégrer les dimensions stylistiques et rhétoriques dans l'interprétation des données. L'encodage des objets ouvrirait la voie à la création d'un véritable réseau d'interactions entre les personnages des *Métamorphoses*, révélant les dynamiques relationnelles. Il serait également intéressant de questionner les bigrammes avec d'autres termes, notamment ceux situés dans les moments non-attribués (`NA`) afin de détecter des clusters plus précis dans les moments purement narratifs, permettant une cartographie exhaustive des stratégies narratives ovidiennes. Ces perspectives dessinent un programme de recherche ambitieux qui pourrait considérablement enrichir notre compréhension des mécanismes narratifs et de la construction des personnages divins dans l'œuvre d'Ovide.
