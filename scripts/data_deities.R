@@ -74,6 +74,11 @@ afficher_resultats <- function(repartition, titre) {
   print(repartition)
 }
 
+cadre <- function() {
+  theme_minimal() +
+    theme(panel.border = element_rect(colour = "black", fill = NA, size = 1))
+}
+
 ### Extraire les données <persName> avec attributs
 extrait_persname <- function(ovid_deities) {
   pers_nodes <- xml_find_all(ovid_deities, "//tei:persName", ns = tei_ns)
@@ -96,9 +101,9 @@ print(head(resultats1)) # Vérification et impression
 ### Résumé général des occurrences totales des divinités par "ref"
 
 resume_general_divinite <- function(data) {
-  cat("\n=== RÉSUMÉ GÉNÉRAL ===\n")
-  cat("Nombre total d'occurrences:", nrow(data), "\n")
-  cat("\n=== DIVINITÉS ===\n")
+  #cat("\n=== RÉSUMÉ GÉNÉRAL ===\n")
+  #cat("Nombre total d'occurrences:", nrow(data), "\n")
+  cat("\n=== RÉSUMÉ DIVINITÉS ===\n")
   cat("\nOccurrences des valeurs de 'ref':\n")
   print(table(data$ref))
 }
@@ -108,10 +113,10 @@ print(resume_general_divinite(resultats1)) # en double mais imprimé
 ### Résumé général des divinités par livres
 
 resume_general_par_livre <- function(data) {
-  cat("=== RÉSUMÉ GÉNÉRAL ===\n")
-  cat("Nombre total de persName:", nrow(data), "\n")
-  cat("Nombre de livres:", length(unique(data$livre[!is.na(data$livre)])), "\n")
-  cat("Répartition des divinités par livre:\n")
+  #cat("=== RÉSUMÉ GÉNÉRAL ===\n")
+  #cat("Nombre total de persName:", nrow(data), "\n")
+  #cat("Nombre de livres:", length(unique(data$livre[!is.na(data$livre)])), "\n")
+  #cat("Répartition des divinités par livre:\n")
   print(table(data$livre, useNA = "ifany"))
 }
 resume_general_par_livre(resultats1)
@@ -131,7 +136,7 @@ vis_repartition <- function(repartition, attribut_ref) {
   p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut_ref))) +
     geom_col(position = "dodge", color = "black", size = 0.2) +  
     labs(
-      title = paste("Répartition des divinités par livre\nselon l'attribut :", attribut_ref),
+      # title = paste("Répartition des divinités par livre\nselon l'attribut :", attribut_ref),
       x = "Livre",
       y = "Nombre d'occurrences"
     ) +
@@ -155,8 +160,8 @@ vis_repartition(repartition_ref, "ref")
 print(vis_repartition(repartition_ref, "ref"))
 
 ### Sauvegarde de l'image
-plot_par_type <- vis_repartition(repartition_ref, "ref")
-ggsave("plots/rep_ref_par_livre.png", plot = plot_par_type, width = 10, height = 6)
+plot_par_ref <- vis_repartition(repartition_ref, "ref")
+ggsave("plots/rep_ref_par_livre.png", plot = plot_par_ref, width = 10, height = 6)
 
 ## Analyser les contextes narratifs des divinités dans les livres (attribut "type")
 
@@ -172,7 +177,7 @@ vis_repartition_type <- function(repartition, attribut_type) {
   p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut_type))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = "Proportion des contextes narratifs par livre", 
+      #title = "Proportion des contextes narratifs par livre", 
       x = "Livre",
       y = "Proportion"
     ) +
@@ -211,7 +216,7 @@ vis_repartition_type_apo <- function(repartition, attribut_type_apo) {
   p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut_type_apo))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = "Proportion des contextes narratifs par livre pour APO", 
+      #title = "Proportion des contextes narratifs par livre pour APO", 
       x = "Livre",
       y = "Proportion"
     ) +
@@ -248,7 +253,7 @@ vis_repartition_type_iup <- function(repartition, attribut_type_iup) {
   p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut_type_iup))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = "Proportion des contextes narratifs par livre pour IUP", 
+      #title = "Proportion des contextes narratifs par livre pour IUP", 
       x = "Livre",
       y = "Proportion"
     ) +
@@ -285,7 +290,7 @@ vis_repartition_type_min <- function(repartition, attribut_type_min) {
   p <- ggplot(repartition, aes(x = livre, y = count, fill = !!sym(attribut_type_min))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = "Proportion des contextes narratifs par livre pour MIN", 
+      #title = "Proportion des contextes narratifs par livre pour MIN", 
       x = "Livre",
       y = "Proportion"
     ) +
@@ -307,6 +312,46 @@ vis_repartition_type_min <- function(repartition, attribut_type_min) {
 vis_repartition_type_min(repartition_type_min, "type")
 print(vis_repartition_type_min(repartition_type_min, "type"))
 
+## Comparaison des 3 dans un même graphe (à vior si on place dans le)
+
+repartition_type_min$entite <- "MIN"
+repartition_type_apo$entite <- "APO"
+repartition_type_iup$entite <- "IUP"
+
+repartition_all <- bind_rows(
+  repartition_type_min,
+  repartition_type_apo,
+  repartition_type_iup
+)
+
+repartition_relative_all <- repartition_all %>%
+  group_by(livre, type) %>%
+  mutate(freq_relative = count / sum(count)) %>%
+  ungroup()
+
+couleurs_entites <- c("MIN" = "#9370DB", "APO" = "#FF1493", "IUP" = "#0000FF")
+
+type_croise_all <- ggplot(repartition_relative_all, aes(x = livre, y = freq_relative, color = entite)) +
+  geom_point(size = 3, alpha = 0.9) +
+  geom_line(aes(group = interaction(entite, type)), linewidth = 1, alpha = 0.6) +
+  facet_wrap(~type) +
+  scale_color_manual(values = couleurs_entites) +
+  scale_x_continuous(breaks = 1:15) +
+  labs(
+    #title = "Fréquences relatives des entités par type dans chaque livre",
+    x = "Livre",
+    y = "Fréquence relative"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.title = element_blank(),
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+    strip.text = element_text(face = "bold"),
+    axis.text.x = element_text(angle = 45, hjust = 1)
+  )
+
+print(type_croise_all)
+
 ## Analyser les répartitions des rôles des divinités dans l'ensemble du corpus ("ana" selon livre)
 ### Point de vue global 
 
@@ -319,12 +364,12 @@ repartition_ana_na <- data %>%
 
 vis_repartition_ana_na <- function(repartition, attribut_ana_na) {
   n_livres <- length(unique(repartition$livre))
-  couleurs <- c("act"="#93003A", "obj"="#FFED00", "auto"="#FF7EB6", "NA"="#0000FF")
+  couleurs <- c("act"="#93003A", "obj"="#FFED00", "auto"="#FF7EB6", "NA"="#6482ff")
   
   p <- ggplot(repartition_ana_na, aes(x = factor(livre), y = count, fill = !!sym(attribut_ana_na))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = paste("Répartition des valeurs de ana par livre"),
+     # title = paste("Répartition des valeurs de ana par livre"),
       x = "Livre",
       y = "Proportion",
       fill = "Livre"
@@ -362,12 +407,12 @@ vis_repartition_ana_par_ref_na <- function(df, ref_value) {
     complete(livre, !!sym(attribut_ana_na), fill = list(count = 0)) %>%
     arrange(livre, !!sym(attribut_ana_na))
   
-  couleurs <- c("act" = "#93003A", "obj" = "#FFED00", "auto" = "#FF7EB6", "NA" = "#0000FF")
+  couleurs <- c("act" = "#93003A", "obj" = "#FFED00", "auto" = "#FF7EB6", "NA" = "#6482ff")
   
   p <- ggplot(repartition_na, aes(x = factor(livre), y = count, fill = !!sym(attribut_ana_na))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = paste0("Répartition de 'ana' pour la référence : ", ref_value),
+      # title = paste0("Répartition de ana pour la référence : ", ref_value),
       x = "Livre",
       y = "Proportion"
     ) +
@@ -383,8 +428,6 @@ vis_repartition_ana_par_ref_na <- function(df, ref_value) {
     )
   
   print(p)
-  
-  return(p)
 }
 
 #### APO
@@ -417,7 +460,7 @@ vis_repartition_ana <- function(repartition, attribut_ana) {
   p <- ggplot(repartition_ana, aes(x = factor(livre), y = count, fill = !!sym(attribut_ana))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = paste("Répartition des valeurs de 'ana' par livre"),
+      #title = paste("Répartition des valeurs de ana par livre"),
       x = "Livre",
       y = "Proportion",
       fill = "Livre"
@@ -465,7 +508,7 @@ vis_repartition_ana_par_ref_apo <- function(data, ref) {
   p <- ggplot(repartition_ana_ref_apo, aes(x = factor(livre), y = count, fill = !!sym(attribut_ana))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = paste0("Répartition des valeurs de 'ana' \npar livre pour ", ref, " (sans 'NA')"),
+      #title = paste0("Répartition des valeurs de ana \npar livre pour ", ref, " (sans 'NA')"),
       x = "Livre",
       y = "Proportion"
     ) +
@@ -481,7 +524,6 @@ vis_repartition_ana_par_ref_apo <- function(data, ref) {
     )
   
   print(p)
-  return(p)
 }
 
 vis_repartition_ana_par_ref_apo(repartition_ana_ref_apo, "APO")
@@ -506,7 +548,7 @@ vis_repartition_ana_par_ref_iup <- function(data, ref) {
   p <- ggplot(repartition_ana_ref_iup, aes(x = factor(livre), y = count, fill = !!sym(attribut_ana))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = paste0("Répartition des valeurs de 'ana' \npar livre pour ", ref, " (sans 'NA')"),
+      #title = paste0("Répartition des valeurs de 'ana' \npar livre pour ", ref, " (sans 'NA')"),
       x = "Livre",
       y = "Proportion"
     ) +
@@ -522,7 +564,6 @@ vis_repartition_ana_par_ref_iup <- function(data, ref) {
     )
   
   print(p)
-  return(p)
 }
 
 vis_repartition_ana_par_ref_iup(repartition_ana_ref_iup, "IUP")
@@ -548,7 +589,7 @@ vis_repartition_ana_par_ref_min <- function(data, ref) {
   p <- ggplot(repartition_ana_ref_min, aes(x = factor(livre), y = count, fill = !!sym(attribut_ana))) +
     geom_col(position = "fill", color = "black", size = 0.2) +
     labs(
-      title = paste0("Répartition des valeurs de 'ana' \npar livre pour ", ref, " (sans 'NA')"),
+      #title = paste0("Répartition des valeurs de 'ana' \npar livre pour ", ref, " (sans 'NA')"),
       x = "Livre",
       y = "Proportion"
     ) +
@@ -564,14 +605,13 @@ vis_repartition_ana_par_ref_min <- function(data, ref) {
     )
   
   print(p)
-  return(p)
 }
 
 vis_repartition_ana_par_ref_min(repartition_ana_ref_min, "MIN")
 print(vis_repartition_ana_par_ref_min(repartition_ana_ref_min, "MIN"))
 
 
-## Analyse croisée de la distribution des éléments "ana" et "type" # bloque ici aussi 
+## Analyse croisée de la distribution des éléments "ana" et "type" 
 
 vis_ana_par_type_et_livre <- function(df, ref_value = "MIN", attribut_ana = "ana", save = FALSE, path = "plots/") {
   
@@ -591,7 +631,7 @@ class(df)
     scale_y_continuous(labels = percent_format()) +
     scale_fill_manual(values = couleurs) +
     labs(
-      title = paste("Proportions de l'attribut", attribut_ana, "par type et livre (ref =", ref_value, ")"),
+      #title = paste("Proportions de l'attribut", attribut_ana, "par type et livre (ref =", ref_value, ")"),
       x = "Type",
       y = "Proportion",
       fill = attribut_ana
@@ -600,7 +640,9 @@ class(df)
     theme(
       axis.text.x = element_text(angle = 45, hjust = 1),
       legend.title = element_blank(),
-      plot.title = element_text(hjust = 0.5, face = "bold", size = 14)
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+      scale_x_discrete(labels = c("metamorphosis" = "meta.", "narrative" = "narr.")),
+      plot.background = element_rect(color = "black", size = 0.5)
     )
   
   print(p)
@@ -616,7 +658,7 @@ class(df)
 
 refs <- c("MIN", "APO", "IUP")
 for (ref_val in refs) {
-  vis_ana_par_type_et_livre(data, ref_value = ref_val, save = TRUE) ## seems absolutely useless and not what I look for
+  vis_ana_par_type_et_livre(data, ref_value = ref_val, save = TRUE)
 }
 print(vis_ana_par_type_et_livre(data, ref_value = "MIN"))
 
@@ -639,21 +681,22 @@ heatmap_type_ana_generale <- function(data, show_prop = TRUE) {
     geom_text(aes(label = if (show_prop) percent(prop, accuracy = 1) else count), size = 3.5) +
     scale_fill_gradient(low = "#FFEDC0", high = "#93003A", name = if (show_prop) "Proportion" else "Fréquence") +
     labs(
-      title = "Heatmap globale ana × type",
+      #title = "Heatmap globale ana × type",
       x = "ana",
       y = "type"
     ) +
     theme_minimal() +
     theme(
       axis.text.x = element_text(angle = 45, hjust = 1),
-      plot.title = element_text(hjust = 0.5, face = "bold")
+      plot.title = element_text(hjust = 0.5, face = "bold"),
+      plot.background = element_rect(color = "black", size = 0.5)
     )
   
   return(p)
 }
 
 heatmap_type_ana_globale <- heatmap_type_ana_generale(data) #
-print(heatmap_globale) # pas assez précis pour en sortir une analyse 
+print(heatmap_type_ana_globale) # pas assez précis pour en sortir une analyse 
 
 ## V2
 heatmap_type_ana_par_livre <- function(df, show_prop = TRUE) {
@@ -674,7 +717,7 @@ heatmap_type_ana_par_livre <- function(df, show_prop = TRUE) {
     geom_text(aes(label = if (show_prop) percent(prop, accuracy = 1) else count), size = 3) +
     scale_fill_gradient(low = "#FFEDC0", high = "#93003A", name = if (show_prop) "Proportion" else "Fréquence") +
     labs(
-      title = "Heatmap 'ana' × 'type' par livre",
+      #title = "Heatmap 'ana' × 'type' par livre",
       x = "ana",
       y = "type"
     ) +
@@ -683,7 +726,8 @@ heatmap_type_ana_par_livre <- function(df, show_prop = TRUE) {
     theme(
       strip.text = element_text(face = "bold"),
       axis.text.x = element_text(angle = 45, hjust = 1),
-      plot.title = element_text(hjust = 0.5, face = "bold", size = 14)
+      plot.title = element_text(hjust = 0.5, face = "bold", size = 14),
+      plot.background = element_rect(color = "black", size = 0.5)
     )
   
   return(p)
@@ -696,40 +740,251 @@ ggsave("plots/heatmap_par_livre.png", plot = heatmap_par_livre, width = 10, heig
 # Présence narrative et discursive (persName et sp who)
 
 ## Comparaison narration vs discours direct (barplot groupé) ## not ding what I want yet 
+
 ### persName x ref (?) # crossing persName and sp-corresp
-narration_df <- data %>%
+pers_ana_df <- data %>%
+  filter(!is.na(ref), ana %in% c("act", "auto")) %>%
+  group_by(ref, ana) %>%
+  summarise(count = n(), .groups = "drop") %>%
+  pivot_wider(names_from = ana, values_from = count, values_fill = 0)
+
+sp_nodes <- xml_find_all(ovid_deities, ".//tei:sp", ns = tei_ns)
+
+sp_df <- tibble(
+  corresp = xml_attr(sp_nodes, "corresp")
+) %>%
+  filter(corresp %in% c("MIN", "APO", "IUP")) %>%
+  group_by(ref = corresp) %>%
+  summarise(parole_directe = n(), .groups = "drop")
+
+combined_df <- pers_ana_df %>%
+  full_join(sp_df, by = "ref") %>%
+  replace_na(list(act = 0, auto = 0, parole_directe = 0))
+
+plot_df <- combined_df %>%
+  pivot_longer(cols = c("act", "auto", "parole_directe"), 
+               names_to = "source", values_to = "count")
+summary(plot_df)
+
+plot_comp_narr_dis <- ggplot(plot_df, aes(x = ref, y = count, fill = source)) +
+  geom_col(position = "dodge", color = "black", size = 0.2) +
+  labs(
+    #title = "Modes de présence des divinités : action, reflexivité, parole directe",
+    x = "Divinité ('ref')",
+    y = "Nombre de mentions",
+    fill = "Type de présence"
+  ) +
+  scale_fill_manual(
+    values = c("act" = "#FFC857", "auto" = "#4D908E", "parole_directe" = "#6A4C93"),
+    labels = c("act" = "Acteur", "auto" = "Reflexif", "parole_directe" = "Parole directe")
+  ) +
+  scale_y_continuous(
+    breaks = seq(0, max(plot_df$count), by = 5),  
+    minor_breaks = 0:max(plot_df$count),        
+    expand = expansion(mult = c(0, 0.05))
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    panel.grid.major.y = element_line(color = "grey75", size = 0.4),
+    panel.grid.minor.y = element_line(color = "grey90", size = 0.2),
+    panel.grid.minor.x = element_blank(),
+    plot.background = element_rect(color = "black", size = 0.5)
+    )
+
+print(plot_comp_narr_dis)
+ggsave("plots/comparaison_narration_discours.png", plot = plot_comp_narr_dis, width = 8, height = 5)
+
+### en pourcentage 
+combined_df_2 <- pers_ana_df %>%
+  full_join(sp_df, by = "ref") %>%
+  replace_na(list(act = 0, auto = 0, parole_directe = 0))
+
+combined_df_100 <- combined_df_2 %>%
+  mutate(total = act + auto + parole_directe) %>%
+  mutate(across(c(act, auto, parole_directe), ~ .x / total * 100)) %>%
+  select(-total)
+
+plot_df_100 <- combined_df_100 %>%
+  pivot_longer(cols = c("act", "auto", "parole_directe"), 
+               names_to = "source", values_to = "percent")
+
+plot_comp_narr_dis_100 <- ggplot(plot_df_100, aes(x = ref, y = percent, fill = source)) +
+  geom_col(position = "dodge",  color = "black", size = 0.2) +
+  labs(
+    #title = "Modes de présence des divinités (en fréquence relative)",
+    x = "Divinité (ref)",
+    y = "Pourcentage de mentions (%)",
+    fill = "Type de présence"
+  ) +
+  scale_fill_manual(
+    values = c("act" = "#FFC857", "auto" = "#4D908E", "parole_directe" = "#6A4C93"),
+    labels = c("act" = "Acteur", "auto" = "Réflexif", "parole_directe" = "Parole directe")
+  ) + 
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    panel.grid.major.y = element_line(color = "grey75", size = 0.3),
+    plot.background = element_rect(color = "black", size = 0.5)
+    )
+
+print(plot_comp_narr_dis_100)
+ggsave("plots/comparaison_narration_discours_100.png", plot = plot_comp_narr_dis_100, width = 8, height = 5)
+
+# et puis par livre ? 
+
+## Autre visualisation : scatterplot 
+
+narration_counts <- data %>%
   filter(!is.na(ref)) %>%
   group_by(ref) %>%
-  summarise(count = n(), .groups = "drop") %>%
-  mutate(source = "narration")
+  summarise(narration = n(), .groups = "drop")
 
-### sp x corresp 
-sp_nodes <- xml_find_all(ovid_deities, ".//sp")
-sp_data <- tibble(
-  who = xml_attr(sp_nodes, "who"),
-  corresp = xml_attr(sp_nodes, "corresp"),
-  ana = xml_attr(sp_nodes, "ana")
+sp_nodes <- xml_find_all(ovid_deities, ".//tei:sp", ns = tei_ns)
+sp_df <- tibble(
+  corresp = xml_attr(sp_nodes, "corresp")
 ) %>%
-  filter(!is.na(corresp), !is.na(who))
+  filter(corresp %in% c("MIN", "APO", "IUP")) %>%
+  group_by(ref = corresp) %>%
+  summarise(parole_directe = n(), .groups = "drop")
 
-discours_df <- sp_data %>%
-  filter(!is.na(corresp)) %>%
-  group_by(corresp) %>%
-  summarise(count = n(), .groups = "drop") %>%
-  rename(ref = corresp) %>%
-  mutate(source = "parole_directe")
+scatter_df <- full_join(narration_counts, sp_df, by = "ref") %>%
+  replace_na(list(narration = 0, parole = 0))
 
-comparaison_df <- bind_rows(narration_df, discours_df)
-
-ggplot(comparaison_df, aes(x = ref, y = count, fill = source)) + # not what I want no
-  geom_col(position = "dodge") +
-  labs(title = "Présence des divinités : narration vs parole directe", x = "Divinité", y = "Nombre de mentions", fill = "Source") +
+# --- Scatterplot ---
+##V1 # miss objet parole
+ggplot(scatter_df, aes(x = narration, y = parole, label = ref)) +
+  geom_point(size = 4, color = "#93003A") +
+  geom_text(vjust = -1, fontface = "bold") +
+  labs(title = "Comparaison : narration vs discours direct", x = "Mentions narratives", y = "Mentions en parole directe") +
   theme_minimal() +
-  scale_fill_manual(values = c("narration" = "#FF7EB6", "parole_directe" = "#93003A")) +
-  theme(plot.title = element_text(hjust = 0.5, face = "bold"))
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.background = element_rect(color = "black", size = 0.5)
+  )
+
+## V2 # pas ce que je veux du TOUT
+ggplot(scatter_df, aes(x = narration, y = parole_directe, label = ref)) +
+  geom_point(color = "#6A4C93", size = 4) +
+  geom_text(vjust = -0.8, fontface = "bold") +
+  labs(
+    # title = "Narration vs Parole directe des divinités",
+    x = "Mentions dans la narration",
+    y = "Mentions en parole directe"
+  ) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.background = element_rect(color = "black", size = 0.5)
+  ) +
+  coord_equal()
+
+# V3
+### préparation des données 
+#### pour les persName
+pers_nodes
+livre_pers <- vapply(pers_nodes, function(node) {
+  livre_parent <- xml_find_first(node, "ancestor::tei:div[@type='textpart' and @subtype='book']", ns = tei_ns)
+  if (!is.na(livre_parent)) {
+    livre_num <- xml_attr(livre_parent, "n")
+    if (!is.na(livre_num)) {
+      return(as.numeric(livre_num))
+    }
+  }
+  return(NA_real_)
+}, numeric(1))
+
+ref_pers <- xml_attr(pers_nodes, "ref")
+ana_pers <- xml_attr(pers_nodes, "ana")
+
+#### pour les sp
+sp_nodes <- xml_find_all(ovid_deities, ".//tei:sp[@corresp and normalize-space(@corresp) != '']", ns = tei_ns)
+livre_sp <- vapply(sp_nodes, function(node) {
+  livre_parent <- xml_find_first(node, "ancestor::tei:div[@type='textpart' and @subtype='book']", ns = tei_ns)
+  if (!is.na(livre_parent)) {
+    livre_num <- xml_attr(livre_parent, "n")
+    if (!is.na(livre_num)) {
+      return(as.numeric(livre_num))
+    }
+  }
+  return(NA_real_)
+}, numeric(1))
+
+corresp_sp <- xml_attr(sp_nodes, "corresp")
+
+### fusion 
+pers_df <- tibble(
+  ref = ref_pers,
+  livre = livre_pers
+) %>%
+  filter(ref %in% c("MIN", "APO", "IUP")) %>%
+  mutate(
+    type_mention = "narration",
+    type_visuel = paste0(ref, "_narr")
+  )
+
+sp_df <- tibble(
+  ref = corresp_sp,
+  livre = livre_sp
+) %>%
+  filter(ref %in% c("MIN", "APO", "IUP")) %>%
+  mutate(
+    type_mention = "parole_directe",
+    type_visuel = paste0(ref, "_parole")
+  )
+
+mentions_df <- bind_rows(pers_df, sp_df)
+#mentions_df <- bind_rows(pers_df, sp_df) %>%
+ # mutate(
+  #  type_visuel = paste0(ref, "_", ifelse(type_mention == "narration", "narr", "parole"))
+#  )
+
+print(mentions_df)
+print(mentions_df, n=250)
+
+table(mentions_df$type_mention)
+table(mentions_df$ref)
+table(mentions_df$livre)
 
 
-# --- Sauvegarde possible ---
-ggsave("plots/comparaison_narration_discours.png", width = 8, height = 5)
+### le plot 
+palette_visuel <- c(
+  "MIN_narr" = "#b497bd",        
+  "MIN_parole" = "#6a4c93",      
+  "APO_narr" = "#f7cac9",        
+  "APO_parole" = "#d94f70",     
+  "IUP_narr" = "#9ad1d4",        
+  "IUP_parole" = "#437a8f"      
+)
 
-      
+scatter_persN_sp <- ggplot(mentions_df, aes(x = livre, y = ref, color = type_visuel, fill = type_visuel, shape = ref)) +
+  geom_jitter(width = 0.25, height = 0.1, size = 3, stroke = 0.5) +
+  scale_x_continuous(breaks = seq(min(mentions_df$livre, na.rm = TRUE), max(mentions_df$livre, na.rm = TRUE), by = 1)) +
+  scale_fill_manual(values = palette_visuel) +
+  scale_color_manual(values = palette_visuel,
+                     labels = c(
+                       "MIN_narr" = "MIN - narration",
+                       "MIN_parole" = "MIN - parole directe",
+                       "APO_narr" = "APO - narration",
+                       "APO_parole" = "APO - parole directe",
+                       "IUP_narr" = "IUP - narration",
+                       "IUP_parole" = "IUP - parole directe"
+                     )) +
+  scale_shape_manual(values = c("MIN" = 21, "APO" = 22, "IUP" = 23)) + 
+  labs(
+    #title = "Mentions narratives et discursives des divinités par livre",
+    x = "Livre",
+    y = "Divinité",
+    color = "Type de mention",
+    shape = "Divinité",
+    fill = NULL
+  ) +
+  guides(fill = "none") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    plot.background = element_rect(color = "black", size = 0.5)
+  )
+
+print(scatter_persN_sp)
+ggsave("plots/scatterplot_narr_disc.png", plot = plot_comp_narr_dis_100, width = 8, height = 5)

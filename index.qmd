@@ -1,53 +1,46 @@
 ---
-title: Le rôle des divinités dans les **Métamorphoses** d'Ovide
-author:
-  - name: Axelle Penture
-    orcid: 
-    corresponding: true
-    email: pentureaxelle@gmail.com
-    roles: Étudiante M2 HCHN 
-    affiliations:
-      - Paris Nanterre Université
-  #- name: Aurélien Berra
-    #orcid: 
-    #corresponding: false
-    #roles: [Directeur de recherche]
-    #affiliations:
-      #- Paris Nanterre Université 
-  #- name: Bénédicte Delignon
-    #orcid: 
-    #corresponding: false
-    #roles: [Jury]
-    #affiliations:
-      #- Paris Nanterre Université 
-keywords:
-  - Ovide
-  - Les Métamorphoses
-  - Divinités
-  - Minerve
-  - Apollon 
-  - Jupiter
-abstract: |
-  none
-plain-language-summary: |
-  none
-key-points:
-  - none
-  - none
-date: last-modified
-bibliography: 
-  - ./bibliographie/bib_memoire_m2_v4.bib
-  - ./bibliographie/oeuvres_antiques.bib
-  - ./bibliographie/ouvrages_articles_scientifiques.bib
-  - ./bibliographie/textes_ovide.bib
-  - ./bibliographie/outils_numeriques.bib
+title: "Remerciements"
+# author: 
+  #- name: Axelle Penture
+   # orcid: 
+  #  corresponding: true
+  #  email: pentureaxelle@gmail.com
+  #  roles: Étudiante M2 HCHN 
+  #  affiliations:
+  #    - Paris Nanterre Université
+#  - name: Aurélien Berra
+ #   orcid: 
+ #   corresponding: false
+ #   roles: [Directeur de recherche]
+#    affiliations:
+ #     - Paris Nanterre Université 
+#  - name: Bénédicte Delignon
+ #   orcid: 
+  #  corresponding: false
+   # roles: [Jury]
+  #  affiliations:
+   #   - Paris Nanterre Université 
+# keywords:
+#  - Ovide
+#  - Les Métamorphoses
+#  - Divinités
+#  - Minerve
+#  - Apollon 
+#  - Jupiter
+abstract: ""
+# plain-language-summary: |
+#  none
+# key-points:
+# date: last-modified
+bibliography: ./bibliographie/bib_memoire_m2_v5.bib
 citation:
   container-title: None
-number-sections: true
+number-sections: false
 format:
   html:
+    include-before-body: titlepage.tex
     toc: true
-    toc-title: "Table des matières"
+    toc-title: "Sommaire"
     toc-depth: 3
     toc-location: left
     toc-collapse: true
@@ -66,132 +59,48 @@ format:
     toc-active-background: "#e9ecef"
     toc-active-border-color: "#0056b3"
   pdf:
+    header-includes: |
+        \usepackage{setspace}
+        \onehalfspacing
+        \usepackage{ragged2e}
+        \justifying
+    includes:
+      in_header: preamble.tex
+      before-body: titlepage.tex
+    title: ""
+    author: ""
+    date: ""
+    abstract: ""
     toc: true
+    include-in-toc: false
+    number-sections: false
     toc-depth: 3
     toc-font-size: 10
     toc-color: "#000000"
     toc-background: "#ffffff"
+    colorlinks: true
+    documentclass: report
+    geometry: top=3cm, bottom=3cm, left=3cm, right=2.5cm
+    latex-engine: xelatex
+    filters:
+      - filtre-biblio.lua
+    
 ---
 
-<!-- # Proposition de plan (points clés) -->
+Je remercie monsieur Aurélien Berra, qui en sa qualité de directeur de recherche, n'a jamais cessé de croire en ma capacité à produire ce travail, tout comme le précédent et m'a accompagné jusque dans les derniers instants du rendu.
 
-```{=html}
-<!--## Plan du M1 
+Je remercie madame Bénedicte Delignon, qui suit depuis maintenant deux ans mes travaux en tant que jury et accepte volontiers de suivre mes prégrinations en humanités numériques dans les *Métamorphoses*.
 
-I. La structure des *Métamorphoses* : le travail de Gilles Tronchet 
+Je remercie mes parents, qui ont toujours eu les mots ou la présence pour me pousser à aller au bout de mes engagements, et ce même depuis la Guadeloupe.
 
-1. Le découpage des *Métamorphoses* 
-Considérations générales 
-La définition de l’épisode 
-Le premier découpage de Gilles Tronchet 
+Je remercie mes amis pour leur soutien et leurs mots d'encouragements dans les dernières étapes de la rédaction.
 
-2. Les typologies des métamorphoses 
-Métamorphose : définitions 
-Typologie des métamorphoses par catégorie et par genre 
+Merci à Clara, avec qui je partage ce riche et beau corpus. Ton édition de Marie Cosnay qui m'a chaudement accompagnée dans la dernière ligne intense de rédaction.
 
-3. Les schémas narratifs actanciels ou « algorithmes » 
 
-II. Préparation à l’exploration numérique de la structure dans les Métamorphoses
-
-1. Extraction de la méthode et des données 
-Les restrictions de la méthode de Gilles Tronchet dans le cadre d’une démarche
-numérique 
-Vers une exploration numérique 
-
-2. Exploration numérique : adapter les données 
-Travail autour des classifications 
-Traitement numérique du texte 
-
-3. Balayage lexical préliminaire avec Voyant Tools 
-Exploration de l’oeuvre 
-Exploration des épisodes des métamorphoses 
-
-III. Exploration numérique des Métamorphoses : réseaux et échelles de la
-métamorphose. 
-
-1. Analyse structurelle globale 
-Visualisation et analyse de la place des métamorphoses au sein du texte selon la
-caractérisation de Tronchet
-Analyse quantitative des vers dédiés à la métamorphose à l’échelle de l'oeuvre 
-
-2. Analyse de réseaux 
-Qui transforme qui ?
-En quoi transforme qui ?
-
-3. Modèle d’analyse d’une métamorphose
--->
+```{=latex}
+\vfill
+\begin{center}
+\textit{Compilation réalisée le 7 juillet 2025}
+\end{center}
 ```
-
-## **(I.) Fondations : corpus, méthodes et données**
-
--   **1. Constitution du corpus numérique**
-    -   Numérisation et encodage des *Métamorphoses* : travail de Nadine Rakofsky et dépassement
-    -   Identification et extraction des mentions divines : pré travail d'encodage
-    -   Critères et limites méthodologiques
--   **2. Méthodologie d'analyse **
-    -   Théorie des graphes appliquée aux textes & construction des réseaux de personnages
-    -   Mesures de centralité et d'influence
-    -   Présentation des résultats avec un outil de navigation dans le texte : édition EVT 
--   **3. Minerve, Apollon, Jupiter : portraits établis**
-    -   Origine et figure de Minerve chez Ovide 
-    -   Origine et figure d’Apollon chez Ovide
-    -   Origine et figure de Jupiter chez Ovide
-
-
-## **(II.) Exploration des données : schémas et structures**
-
--   **1. Analyse structurelle globale : profils quantitatifs des divinités**
-    -   Statistiques descriptives des divinités choisies dans l'architecture de l'œuvre
-    -   Corrélations entre livres, épisodes et interventions divines
-    -   Visualisation des clusters et typologie des épisodes (graphiques de distribution et heatmaps)
--   **2. Réseaux relationnels et interactions**
-    -   Méthodologie d'analyse de réseau avec R
-    -   Cartographie des interactions divines/Graphes de co-occurrence et d'interactions
-    -   Centralité et influence narrative
-<!-- -   \[**3. Analyse lexicale et sémantique (préparation **
-    -   Champs lexicaux associés à chaque divinité
-    -   Analyse des contextes et collocations] -->
- 
-## **(III.)Interprétation & analyse**
-
--   Relecture des portraits divins :
-    -   Jupiter (- Fréquence et typologie des métamorphoses jupitériennes
-        -   Différences entre pouvoir théorique et pratiques narrative)
-    -   Apollon (//)
-    -   Minerve (//)
--   Études d'épisodes : entre données et interprétations
-    -   *Arachné* : Minerve 
-    -   *Daphné* : Apollon
-    -   *Europe* : Jupiter 
-(à fixer avec certitude selon les articles de la biblio)
--   Synthèse 
-    -   Ce que les données révèlent des divinités
-    -   Apports, limites et perspectives de l'approche numérique
-
-## Conclusion
-
--   Synthèse des résultats quantitatifs et qualitatifs
--   Confirmation des profils des divinités et précisions/apports de l'approche numérique
--   Apports méthodologiques : reproductibilité et nouvelles perspectives
-<!-- [-   Limites de l'approche computationnelle
--   Perspectives --> 
-
-## *Annexes*
-
--   Annexe 1 : description de l'entrepôt GitHub (//Readme)
-
--   Annexe 2 : Corpus des mentions des divinités par livre
-
--   Annexe 3 : Code R principal et visualisations
-
--   Annexe 4 : Visualisation.s de réseau détaillée.s
-
--   Bibliographie
-
-# Introduction
-
--   État de l'art sur les études des divinités dans les textes d'Ovide (quantitativement et thématiquement); état des travaux sur les *Métamorphoses*, parcellaires et problème de la taille du corpus. Proposition d'une approche numérique pour l'étude transversale à travers un fil rouge des divinités et de leur dynamique dans les récits de mtamorphoses, essai d'une méthode numérique à vocation d'analyse littéraire.
--   Mention des précédents travaux sur lesquels je me base pour les analyses : Guillaume Tronchet, les découpages des éditions que j'utilise, mes travaux de l'année passée et le fichier XML de Nadine Rakofsky.
-
-::: {#refs}
-:::

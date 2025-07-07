@@ -4,20 +4,29 @@ project:
 book:
   title: "Le rôle des divinités dans les *Métamorphoses* d’Ovide : étude des cas de Minerve, Apollon et Jupiter"
   author: "Axelle Penture"
-  date: 03-07-2025
+  date: 07-07-2025
   chapters:
     - index.qmd
+    - introduction.qmd
     - partie1.qmd
     - partie2.qmd
     - partie3.qmd
     - conclusion.qmd
+    - annexe_readmd_github.qmd
+    - annexe_tab_data_plus.qmd
+    - lof.qmd
+    - lot.qmd
+    - bibliographie.qmd
 
-csl: chicago-annotated-bibliography.csl # ou autre à voir dans le dépôt GitHub
+csl: chicago-annotated-bibliography.csl 
 execute:
   freeze: auto
+  
+bibliography: ./bibliographie/bib_memoire_m2_v5.bib
 
 format:
   html:
+    number_sections: true
     toc: true
     comments:
       hypothesis: true
@@ -27,11 +36,25 @@ format:
   agu-pdf: default
   pdf:
     toc: true
-    number-sections: true
+    lof: true
+    lot: true
+    number-sections: false
     latex-engine: xelatex
+    colorlinks: true
+    documentclass: report
+    geometry: top=3cm, bottom=3cm, left=3cm, right=2.5cm
+    title: ""
+    include-before-body: titlepage.tex
     include-in-header:
       text: |
         \usepackage{ragged2e}
         \setlength{\emergencystretch}{3em}
         \raggedbottom
         \raggedright
+    number_sections: true
+    fig-caption: true
+    fig-pos: 'H'
+    fig-align: center
+    echo: false
+    fig-cap-location: bottom
+    

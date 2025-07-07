@@ -1,0 +1,11 @@
+---
+title: "Liste des figures"
+format: pdf
+toc: true
+number-sections: false
+---
+
+```{=tex}
+\renewcommand{\listfigurename}{}
+\listoffigures
+```

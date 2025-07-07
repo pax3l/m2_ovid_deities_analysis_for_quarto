@@ -1,7 +1,7 @@
 # ---+
 # Analyse lexicale globale
 # Axelle Penture
-# Version 2.0 - 102.06.2025
+# Version 2.0 - 27.06.2025
 # ---+
 
 # Librairies 
@@ -25,6 +25,7 @@ library(text2vec)
 library(readxl)       
 library(stringr)
 library(widyr)
+library (purrr)
 
 # Charger le script & les données
 source("scripts/data_deities.R")
@@ -87,14 +88,23 @@ vocab <- prune_vocabulary(vocab, term_count_min = 5) # filtre
 
 vectorizer <- vocab_vectorizer(vocab) # vectorisation
 
-dtm <- create_dtm(it, vectorizer) # matrice terme-doc
+tcm <- create_tcm(it, vectorizer, skip_grams_window = 10L) # matrice terme-cooccurrence
 
-# Entraînement Word2Vec (skip-gram) # to change on est avec text2vec
-set.seed(123)
-w2v_model <- word2vec(x = tokens, type = "skip-gram", window = 10, dim = 50, iter = 20)
+glove <- GlobalVectors$new(rank = 50, x_max = 10) # modèle Word2Vec via `GlobalVectors` (proche du skip-gram par structure)
+w2v_model <- glove$fit_transform(tcm, n_iter = 20)
 
-# Trouver mots proches de "Minerva"
-nearest <- predict(w2v_model, newdata = "minerva", type = "nearest", top_n = 10)
+context_vectors <- glove$components # combinaison matrice pour vecteurs finaux
+word_vectors <- w2v_model + t(context_vectors)
+
+"apolline" %in% rownames(word_vectors)
+"phoebe" %in% vocab$term
+
+## Application aux divinités
+### Fonction de distance cosinus
+cos_sim <- sim2(x = word_vectors, y = word_vectors["apolline", , drop = FALSE], method = "cosine", norm = "l2")
+
+# Voir les 10 plus proches voisins
+nearest <- sort(cos_sim[,1], decreasing = TRUE)[2:11] # [1] est "apolline" lui-même
 print(nearest)
 
 # Collocation 
@@ -106,9 +116,9 @@ bigram_counts <- bigrams %>%       # Fréquences des bigrammes
   count(bigram, sort = TRUE) %>%
   filter(n > 5)
 
-print(head(bigram_counts, 20))
+print(head(bigram_counts, 20)) 
 
-## filtrage sur la PMI (Pointwise Mutual Information)
+## Filtrage sur la PMI (Pointwise Mutual Information)
 
 bigram_pmi <- bigrams %>% 
   separate(bigram, into = c("word1", "word2"), sep = " ") %>%
@@ -119,42 +129,89 @@ bigram_pmi <- bigrams %>%
 
 print(head(bigram_pmi, 20))
 
-## Co-occurrences de 20 mots 
-tokens_window <- pers_contexts %>%
+
+## Co-occurrences du vers prcédent au vers suivant 
+
+get_parent_l <- function(node) {
+  xml_find_first(node, "ancestor::tei:l", ns = tei_ns)
+}
+
+get_siblings_l <- function(l_node) {
+  prev_l <- xml_find_first(l_node, "preceding-sibling::tei:l[1]", ns = tei_ns)
+  next_l <- xml_find_first(l_node, "following-sibling::tei:l[1]", ns = tei_ns)
+  list(prev = prev_l, current = l_node, following = next_l)
+}
+
+contexts_l <- map_chr(pers_nodes, function(n) { # extraction ctxt avant/pendant/après
+  l_node <- get_parent_l(n)
+  if (is.na(l_node)) return(NA_character_)
+  siblings <- get_siblings_l(l_node)
+  
+  # Extraire texte en concaténant les trois balises (si elles existent)
+  texts <- c(
+    if (!is.na(siblings$prev)) xml_text(siblings$prev) else NULL,
+    xml_text(siblings$current),
+    if (!is.na(siblings$following)) xml_text(siblings$following) else NULL
+  )
+  
+  paste(texts, collapse = " ")
+})
+
+pers_contexts_l <- tibble(
+  context = contexts_l,
+  ref = xml_attr(pers_nodes, "ref"),
+  livre = vapply(pers_nodes, function(n) {
+    div <- xml_find_first(n, "ancestor::tei:div[@type='textpart' and @subtype='book']", ns = tei_ns)
+    if (!is.na(div)) xml_attr(div, "n") else NA_character_
+  }, character(1))
+) %>%
+  filter(!is.na(context), !is.na(ref), !is.na(livre)) %>%
+  mutate(livre = as.integer(livre))
+
+
+tokens_window <- pers_contexts_l %>%
   mutate(id = row_number()) %>%
   unnest_tokens(word, context)
 
 cooccurrence <- tokens_window %>%
-  pairwise_count(word, id, window = 20, sort = TRUE)
+  pairwise_count(word, id, sort = TRUE)
 
 print(head(cooccurrence, 20))
 
 # Visualisation en réseau 
-plot_word_network <- function(ref_name, min_cooc = 5) {
+plot_word_network <- function(ref_value, min_cooc = 2, node_color = "steelblue") {
   subset_tokens <- pers_contexts %>%
-    filter(ref == ref_name) %>%
+    filter(ref == ref_value) %>%
     mutate(id = row_number()) %>%
     unnest_tokens(word, context)
   
   cooc <- subset_tokens %>%
-    pairwise_count(word, id, window = 20, sort = TRUE) %>%
+    pairwise_count(word, id, sort = TRUE) %>%
     filter(n >= min_cooc)
   
-  graph <- graph_from_data_frame(cooc)
+  graph <- igraph::graph_from_data_frame(cooc)
   
   set.seed(123)
-  ggraph(graph, layout = "fr") +
-    geom_edge_link(aes(width = n), alpha = 0.8, color = "darkgrey") +
-    geom_node_point(size = 5, color = "steelblue") +
-    geom_node_text(aes(label = name), repel = TRUE) +
+  layout <- igraph::layout_with_fr(graph, niter = 1500)
+  ggraph::ggraph(graph, layout = layout) +
+    ggraph::geom_edge_link(aes(width = n, color = n), alpha = 0.8, color = "grey", edge_curvature = 0.2) +
+    ggraph::geom_node_point(size = 2, color = node_color, alpha = 0.8) +
+    ggraph::geom_node_text(aes(label = name), repel = TRUE, size = 3, force = 5, max.overlaps = 10) +
+    scale_edge_color_gradientn(colors = c("#0000FF", "#FFA500", "#FF0000")) +
     theme_void() +
-    ggtitle(paste("Réseau de co-occurrences pour", ref_name))
+    #ggtitle(paste("Réseau de co-occurrences pour", ref_value)) +
+    theme(
+      plot.title = element_text(hjust = 0.5, face = "bold"),  
+      legend.title = element_text(face = "bold"),
+      panel.border = element_rect(colour = "black", fill = NA, size = 1)
+    )
 }
 
 # Exemples de plots
-plot_word_network("MIN")
-plot_word_network("APO")
-plot_word_network("IUP")
+plot_word_network("APO", node_color = "#FFB3D9")
+plot_word_network("IUP", node_color = "#A3BFFF" )
+plot_word_network("MIN", node_color = "#C8B9F7")
+
 
 
 

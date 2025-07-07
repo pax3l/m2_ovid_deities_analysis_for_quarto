@@ -1,12 +1,50 @@
 ---
 title: "Bibliographie"
-format: html
-bibliography: 
-  - ./bibliographie/textes_ovide.bib
-  - ./bibliographie/oeuvres_antiques.bib
-  - ./bibliographie/outils_numeriques.bib
-  - ./bibliographie/bib_memoire_m2_v4.bib
+format: pdf
+csl: chicago-author-date.csl
+filters:
+  - pandoc-citeproc
+bibliography: ./bibliographie/bib_memoire_m2_v5.bib
 nocite: |
   @*
 ---
 
+### Références des *Métamorphoses*
+
+:::{.biblist}
+```{=mardown}
+@metamorphoses
+```
+:::
+
+
+::: {.refs}
+::: {.nocite}
+@ovid_metamorphoses_t1
+@*{keyword=metamorphoses}
+:::
+:::
+
+### Ouvrages antiques
+
+::: {.refs}
+::: {.nocite}
+@*{keyword=antique}
+:::
+:::
+
+### Outils numériques
+
+::: {.refs}
+::: {.nocite}
+@*{keyword=outils}
+:::
+:::
+
+### Articles et ouvrages scientifiques
+
+::: {.refs}
+::: {.nocite}
+@*{keyword=scientifique}
+:::
+:::

@@ -1,0 +1,43 @@
+% pour essayer de retirer la page de garde inutile
+
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}  
+\usepackage[french]{babel}  
+
+\usepackage{lmodern}        
+
+\usepackage[a4paper,
+            top=3cm,
+            bottom=3cm,
+            left=3cm,
+            right=2.5cm]{geometry}
+
+
+\usepackage{microtype}
+
+\usepackage{xcolor}
+\definecolor{violetSombre}{HTML}{4B0082} 
+
+
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=violetSombre,
+  urlcolor=violetSombre,
+  citecolor=violetSombre
+}
+
+\renewcommand{\maketitle}{}
+
+\usepackage{setspace}
+\onehalfspacing     
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{justification=centering}
+
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{*0}{*1} 
+
+

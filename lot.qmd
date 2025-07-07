@@ -1,0 +1,9 @@
+---
+title: "Liste des tableaux"
+format: pdf
+---
+
+```{=tex}
+\renewcommand{\listtablename}{}
+\listoftables
+```

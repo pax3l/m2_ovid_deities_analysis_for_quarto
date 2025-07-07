@@ -1,0 +1,60 @@
+---
+title: "Annexe 2 : tableaux de données"
+format: pdf
+---
+Cette annexe présente les deux tableaux de données suivant : 
+
+- le tableau des données extraites par les encodages successifs, que l'on trouve dans le fichier `extract_episode.R` ;
+- le tableau de tous les épisodes extraits du fichier de travail `ovid_MIN_APO_IUP.xml`, qui sert de référence pour situer les épisodes dans le présent travail. 
+
+```{r}
+#| label: Chargement des données de extract_episode.R
+#| echo: false
+#| message: false 
+#| warning: false
+#| include: false 
+
+library(knitr)
+library(kableExtra)
+library(formatR)
+
+
+source("scripts/extract_episode.R")
+```
+
+
+```{r}
+#| echo: false
+#| message: false 
+#| warning: false
+#| include: true 
+
+# Data-frame data_plus_ext contenant toutes les mentions <persName> associées à 
+# leurs attributs ref, type, ana, à leur vers exact, leur épisode et leur livre. 
+
+knitr::kable(
+  data_plus_ext, 
+  caption = "Tableau des données encodées avec <persName> : attributs et localisation", 
+  bookstabs = TRUE) %>%
+    kable_styling(latex_options = c("hold_position", "striped", "scale_down", "center"), position = "center", font_size = 7)
+
+```
+
+
+```{r}
+#| echo: false
+#| message: false 
+#| warning: false
+#| include: true 
+
+# Data-frame data_plus_ext contenant toutes les mentions <persName> associées à 
+# leurs attributs ref, type, ana, à leur vers exact, leur épisode et leur livre. 
+
+knitr::kable(
+  episodes_table, 
+  caption = "Tableau des épisodes", 
+  bookstabs = TRUE) %>%
+    kable_styling(latex_options = c("hold_position", "striped", "scale_down"), position = "center")
+
+```
+

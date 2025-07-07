@@ -1,0 +1,24 @@
+---
+title: "Liste des figures et des tableaux"
+format: pdf
+---
+
+```{=latex}
+
+\vspace*{-5em}
+\section*{\phantom{Liste des figures et des tableaux}} % titre vide mais section incluse
+\addcontentsline{toc}{section}{Liste des figures et des tableaux}
+```
+
+
+```{=tex}
+\renewcommand{\listfigurename}{Liste des figures}
+\vspace*{-10em}
+\listoffigures
+
+\vspace{1.5em}
+
+\renewcommand{\listtablename}{Liste des tableaux }
+\vspace*{-10em}
+\listoftables
+```

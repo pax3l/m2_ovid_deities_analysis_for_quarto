@@ -1,0 +1,10 @@
+---
+title: "Remerciements"
+format: html
+---
+
+Je remercie monsieur Aurélien Berra, qui en sa qualité de directeur de recherche, n'a jamais cessé de croire en ma capacité à produire ce travail, et m'a accompagné jusque dans les derniers instants du rendu de ce travail.
+
+Je remercie également madame Bénedicte Delignon, qui suit depuis maintenant deux ans mes travaux en tant que jury et accepte volontiers de suivre mes prégrinations en humanités numériques chez Ovide.
+
+Je remercie mes parents qui ont toujours eu les mots pour me pousser à aller au bout de mes engagements, même depuis là où ils sont.
