@@ -14,8 +14,7 @@ book:
     - conclusion.qmd
     - annexe_readmd_github.qmd
     - annexe_tab_data_plus.qmd
-    - lof.qmd
-    - lot.qmd
+    - loft.qmd
     - bibliographie.qmd
 
 csl: chicago-annotated-bibliography.csl 
@@ -36,8 +35,8 @@ format:
   agu-pdf: default
   pdf:
     toc: true
-    lof: true
-    lot: true
+    lof: false
+    lot: false
     number-sections: false
     latex-engine: xelatex
     colorlinks: true

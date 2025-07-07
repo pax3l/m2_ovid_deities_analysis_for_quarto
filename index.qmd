@@ -72,6 +72,7 @@ format:
     date: ""
     abstract: ""
     toc: true
+    toc-title: "Sommaire"
     include-in-toc: false
     number-sections: false
     toc-depth: 3

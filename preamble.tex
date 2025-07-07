@@ -27,6 +27,11 @@
   citecolor=violetSombre
 }
 
+\makeatletter
+\renewcommand\@makefntext[1]{%
+  \hspace*{2em}\@thefnmark.\hspace{2em}#1}
+\makeatother
+
 \renewcommand{\maketitle}{}
 
 \usepackage{setspace}
